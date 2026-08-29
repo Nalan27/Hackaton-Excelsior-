@@ -1,2 +1,2 @@
 # Hackaton-Excelsior-
-Projeto ganhador da hackaton de análise de dados Uniceusmar 2026
+Projeto para o 2º Hackathon Unicesumar x Qlik (2026)
