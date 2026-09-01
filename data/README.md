@@ -14,15 +14,9 @@ Os dados das seguintes fontes foram extraídos e organizados para análise:
 | :--- | :--- | :--- |
 | **Painel TCE-RS (Reconstrução RS)** | Dados estruturados do Tribunal de Contas do Estado sobre os recursos e ações de reconstrução. | [Acessar Painel](https://paineis.tcers.tc.br/extensions/ReconstrucaoRS/fundec.html) |
 | **Portal da Transparência RS** | Dados temáticos das movimentações e transferências do FUNDEC (Calamidade Pública 2024). | [Acessar Transparência RS](https://www.transparencia.rs.gov.br/calamidade-publica-2024/1-2-tematico-fundo-de-defesa-civil-fundec/dados/) |
-
----
-
-### 🟡 Dados Pendentes (A Baixar / Mapear)
-
-Fontes identificadas que necessitam de extração, automação de raspagem (*scraping*) ou consolidação:
-
-| Fonte / Portal | Descrição / Contexto | Link de Origem |
-| :--- | :--- | :--- |
-| **Notícias do Governo do RS** | Matéria com dados sobre repasses da Defesa Civil via modalidade *fundo a fundo* para 138 municípios. | [Ler Notícia Oficial](https://www.estado.rs.gov.br/autorizado-repasse-de-recurso-da-defesa-civil-para-138-municipios-gauchos-via-fundo-a-fundo) |
-| **Sistema FUNDEC (Defesa Civil)** | Portal/Sistema restrito ou de gestão interna de recursos do FUNDEC da Defesa Civil. | [Acessar Sistema FUNDEC](https://sistemas.defesacivil.rs.gov.br/fundec) |
-| **Prestação de Contas Casa Militar** | Documentos e relatórios formais de prestação de contas dos recursos geridos pela Casa Militar. | [Acessar Prestação de Contas](https://casamilitar-rs.com.br/prestacao-contas/) |
+| **Lei Complementar nº 16.263/2024** | Institui a PEPDEC/SIEPDEC; revoga a Lei 13.599/2010 (criação do FUNDEC). | [Acessar](https://www.defesacivil.rs.gov.br/legislacao-geral-de-defesa-civil) |
+| **Decreto (= materia1351760.pdf)** | Regulamenta o SIEPDEC e procedimentos de declaração de emergência/calamidade. | [Acessar](https://www.defesacivil.rs.gov.br/legislacao-geral-de-defesa-civil) |
+| **Decreto nº 57.604/2024** | Critérios excepcionais de transferência de recursos do FUNDEC/RS aos municípios em calamidade — base legal direta dos repasses de 2024. | [Acessar](https://leisestaduais.com.br/rs/decreto-n-57604-2024-rio-grande-do-sul-dispoe-sobre-criterios-excepcionais-para-transferencia-de-recursos-no-fundo-estadual-de-defesa-civil-do-estado-do-rio-grande-do-sul-fundec-rs-aos-municipios-em-estado-de-calamidade-publica-ou-em-situacao-de-emergencia-decorrente-dos-eventos-climaticos-de-chuvas-intensas-no-territorio-do-estado-do-rio-grande-do-sul-de-que-trata-o-decreto-no-57-596-de-1-o-de-maio-de-2024) |
+| **PLE 27/2024 (Três Forquilhas)** | Projeto de lei de crédito suplementar de R$200 mil com repasse extraordinário do FUNDEC. | [Acessar](https://camaratresforquilhas.rs.gov.br/wp-content/uploads/2024/08/PLE_27_2024.pdf) |
+| **Recursos Recebidos (Portal da Transparência)** | Recursos recebidos pelo favorecido vinculado ao FUNDEC (fonte do recurso, não destino). | [Acessar](https://portaldatransparencia.gov.br/despesas/favorecido?faseDespesa=3&favorecido=319734&ordenarPor=valor&direcao=desc) |
+| **Convênios e outros acordos firmados** | Convênios firmados pelo mesmo favorecido. | [Acessar](https://portaldatransparencia.gov.br/convenios/consulta?convenente=319734) |
