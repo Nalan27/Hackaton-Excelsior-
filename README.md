@@ -1,4 +1,3 @@
-
 # SQLite + Qlik Sense — Integração FUNDEC/RS
 
 Tutorial de integração do banco SQLite com o Qlik Sense para visualização dos dados de repasses do **FUNDEC** (Fundo de Defesa Civil do Estado do Rio Grande do Sul) — enchentes de 2024.
