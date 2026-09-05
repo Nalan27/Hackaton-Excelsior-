@@ -20,3 +20,15 @@ Os dados das seguintes fontes foram extraídos e organizados para análise:
 | **PLE 27/2024 (Três Forquilhas)** | Projeto de lei de crédito suplementar de R$200 mil com repasse extraordinário do FUNDEC. | [Acessar](https://camaratresforquilhas.rs.gov.br/wp-content/uploads/2024/08/PLE_27_2024.pdf) |
 | **Recursos Recebidos (Portal da Transparência)** | Recursos recebidos pelo favorecido vinculado ao FUNDEC (fonte do recurso, não destino). | [Acessar](https://portaldatransparencia.gov.br/despesas/favorecido?faseDespesa=3&favorecido=319734&ordenarPor=valor&direcao=desc) |
 | **Convênios e outros acordos firmados** | Convênios firmados pelo mesmo favorecido. | [Acessar](https://portaldatransparencia.gov.br/convenios/consulta?convenente=319734) |
+        
+### Arquivo de dados
+
+O arquivo de população utilizado no projeto é:
+
+`data/raw/csv/populacao_rs_2024.csv`
+
+**Fonte:** IBGE — Sistema IBGE de Recuperação Automática (SIDRA), Tabela 6579.
+
+[Consultar dados no SIDRA](https://sidra.ibge.gov.br/tabela/6579)
+
+---
