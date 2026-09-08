@@ -11,6 +11,14 @@ Este documento registra o estado do repositório em **8 de setembro de 2026**.
 
 Um arquivo existente não é considerado concluído se estiver vazio, inconsistente com a estrutura atual ou sem evidência de funcionamento.
 
+### Prazos atualizados informados pela equipe
+
+- Workshops: de **03/08 a 24/08/2026**.
+- Cursos na Qlik: de **29/06 a 10/09/2026**, com conclusão até **10/09/2026**.
+- Construção e entrega do desafio: de **01/09 a 20/09/2026**, com submissão até **20/09/2026**.
+
+Esses períodos substituem as datas anteriores dessas etapas. O período atualizado de seleção interna e os horários-limite não foram informados; consulte o [cronograma](./edital-hackathon-qlik-2026.md#15-cronograma-do-evento) para as ressalvas.
+
 ## 2. Resumo do estado atual
 
 | Área | Estado | Evidência principal |
@@ -153,7 +161,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Não comprovado — Equipe formada por 3 a 5 integrantes elegíveis.**
 - [ ] **Não comprovado — Todos os integrantes estão regularmente matriculados e ativos em curso aceito.**
 - [ ] **Não comprovado — Nenhum integrante é colaborador da Unicesumar.**
-- [ ] **Não comprovado — Trilhas obrigatórias concluídas por todos.**
+- [ ] **Não comprovado — Trilhas obrigatórias concluídas por todos até 10/09/2026.**
 - [ ] **Não comprovado — Certificados reunidos e legíveis.**
 - [ ] **Não comprovado — Representante responsável pela submissão definido.**
 
@@ -176,7 +184,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Pendente — Confirmar que os links permanecerão ativos até o encerramento oficial.**
 - [ ] **Pendente — Conferir pesos da rubrica no edital original.** O PDF fornecido não permitiu leitura confiável de toda a coluna.
 - [ ] **Pendente — Realizar revisão eliminatória independente antes do envio.**
-- [ ] **Pendente — Fazer uma única submissão pelo representante até 15/09/2026.**
+- [ ] **Pendente — Fazer uma única submissão pelo representante até 20/09/2026, dentro do período de construção e entrega de 01/09 a 20/09/2026.**
 
 ## 15. Ordem de execução recomendada
 

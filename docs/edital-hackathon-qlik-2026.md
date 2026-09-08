@@ -311,17 +311,20 @@ São especialmente valorizados:
 
 ## 15. Cronograma do evento
 
+Os períodos de workshops, cursos na Qlik e construção e entrega abaixo foram atualizados conforme informação fornecida pela equipe nesta conversa. Eles substituem os períodos anteriormente recuperados do PDF para essas etapas.
+
 | Etapa | Período |
 |---|---|
 | Inscrição das equipes | 29/06 a 27/07/2026 |
-| Início das trilhas de aprendizagem | 29/06/2026, às 19h |
-| Oficinas | 03/08, 10/08, 17/08 e 24/08/2026, às 19h |
-| Encerramento das trilhas | 31/08/2026, às 19h |
-| Submissão dos trabalhos | Até 15/09/2026 |
-| Seleção interna dos 10 melhores trabalhos | 16/09 a 30/09/2026 |
-| Apresentação e premiação | 07/10/2026 |
+| Workshops | De 03/08 a 24/08/2026 |
+| Cursos na Qlik | De 29/06 a 10/09/2026 |
+| Construção e entrega do desafio | De 01/09 a 20/09/2026 |
+| Seleção interna dos 10 melhores trabalhos | A confirmar após a atualização do prazo de entrega |
+| Apresentação e premiação | 07/10/2026, conforme o PDF; atualização não informada |
 
-Datas e horários devem ser conferidos novamente na página oficial antes de qualquer submissão.
+O prazo de conclusão dos cursos é **10/09/2026** e o prazo de entrega do desafio é **20/09/2026**. Não foi informado horário-limite para essas etapas.
+
+O PDF indicava seleção interna de 16/09 a 30/09/2026. Como esse período começa antes do novo prazo de entrega, sua atualização ainda precisa ser confirmada. A inscrição e a apresentação/premiação permanecem registradas como referência do PDF.
 
 ## 16. Participação e formação da equipe
 
