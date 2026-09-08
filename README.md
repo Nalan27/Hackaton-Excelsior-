@@ -2,6 +2,11 @@
 
 Tutorial de integração do banco SQLite com o Qlik Sense para visualização dos dados de repasses do **FUNDEC** (Fundo de Defesa Civil do Estado do Rio Grande do Sul) — enchentes de 2024.
 
+## Documentação do Hackathon
+
+- [Edital explicado e especificação do projeto](docs/edital-hackathon-qlik-2026.md)
+- [Requisitos e status do projeto](docs/requisitos-e-status.md)
+
 ---
 
 ## O que é este projeto
