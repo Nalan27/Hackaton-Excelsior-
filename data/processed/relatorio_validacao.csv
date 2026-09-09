@@ -1,0 +1,16 @@
+metrica,valor,esperado,status
+total_registros_fato,658.0,658.0,OK
+total_municipios_dim,334.0,334.0,OK
+negativos_preservados,18.0,18.0,OK
+soma_total_fato,288699999.97,288699999.97,OK
+soma_total_ranking,289176004.25,289176004.25,OK
+diferenca_conciliacao,-476004.28,-476004.28,OK
+municipios_sem_ibge,0.0,0.0,OK
+codigos_ibge_duplicados,0.0,0.0,OK
+fato_sem_chave_municipal,0.0,0.0,OK
+chaves_municipais_orfas,0.0,0.0,OK
+duplicatas_exatas,0.0,0.0,OK
+datas_invalidas,0.0,0.0,OK
+valores_nulos,0.0,0.0,OK
+movimentacoes_sem_municipio,0.0,0.0,OK
+indicadores_ausentes,1.0,0.0,AVISO

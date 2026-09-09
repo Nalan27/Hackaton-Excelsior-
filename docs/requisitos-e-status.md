@@ -2,7 +2,7 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **8 de setembro de 2026**.
+Este documento registra o estado do repositório em **9 de setembro de 2026**.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -26,9 +26,9 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Dados brutos do FUNDEC | Concluído | 658 movimentações e ranking de 334 municípios em `data/raw/csv/` |
 | Dados de população e indicadores socioeconômicos | Concluído | SIDRA 2024 e base municipal com código IBGE, PIB e IDH-M |
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
-| Pipeline de tratamento reproduzível | Parcial | Existe `etl/analis_de_dados.py`, mas caminhos, separadores e tipos não correspondem aos arquivos atuais |
-| Banco analítico validado | Pendente | Nenhum banco versionado; arquivos `*.db` são ignorados pelo Git |
-| Aplicativo e dashboard Qlik Sense | Pendente | Não há exportação, script final de carga nem link público no repositório |
+| Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
+| Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
+| Aplicativo e dashboard Qlik Sense | Pendente | Há CSVs e script de carga; ainda não há aplicativo nem link público |
 | Análises e achados finais | Pendente | Não há resultados validados, conclusões ou recomendações finais |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
 | Certificados e elegibilidade da equipe | Não comprovado | Evidência externa ao repositório |
@@ -53,8 +53,8 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Dados brutos separados em `data/raw/`.
 - [x] Dependências Python registradas em `requirements.txt`.
 - [x] Fontes públicas catalogadas em [`data/README.md`](../data/README.md).
-- [ ] **Pendente — Criar instruções de execução que correspondam ao pipeline final.** O `README.md` atual descreve caminhos e um banco que não correspondem integralmente ao estado observado.
-- [ ] **Pendente — Adicionar testes automatizados ou verificações reproduzíveis de qualidade dos dados.**
+- [x] Instruções de execução correspondem ao pipeline e aos artefatos gerados.
+- [x] Validações críticas interrompem o ETL em caso de erro e são verificadas por testes automatizados.
 - [ ] **Pendente — Definir política para artefatos do Qlik e arquivos gerados.** Registrar o que será versionado e o que será publicado externamente.
 
 ## 5. Aquisição e cobertura dos dados
@@ -71,26 +71,26 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ## 6. ETL e qualidade dos dados
 
-- [x] Existe um script inicial de ETL: [`etl/analis_de_dados.py`](../etl/analis_de_dados.py).
-- [ ] **Parcial — Leitura dos CSVs.** O script procura os arquivos em `data/raw/`, mas eles estão em `data/raw/csv/`; também usa separador `;` nas duas bases principais, que usam vírgula.
-- [ ] **Pendente — Corrigir tipos de dados.** O script converte datas, valor e identificadores para `Int64`/texto em um mesmo laço. Data deve permanecer data, valor deve ser decimal com sinal e identificadores devem ser texto.
-- [ ] **Pendente — Preservar estornos e ajustes.** Foram observadas 18 movimentações negativas; elas precisam ser interpretadas e mantidas no cálculo líquido.
-- [ ] **Pendente — Conciliar bases principal e ranking.** A soma líquida observada na base detalhada é R$ 288.699.999,97, enquanto o ranking soma R$ 289.176.004,25. A diferença precisa ser explicada antes da publicação.
-- [ ] **Pendente — Tratar o arquivo do SIDRA.** Remover metadados, cabeçalhos extras e notas de rodapé, preservando os 497 registros municipais.
-- [ ] **Pendente — Criar chave municipal confiável.** Priorizar código IBGE e validar nomes sem acento ou com grafia divergente.
-- [ ] **Pendente — Definir e tratar duplicidades.** Documentar a chave natural de uma movimentação e distinguir repetição legítima de duplicação.
-- [ ] **Pendente — Criar relatório de qualidade.** Incluir contagens, nulos, intervalo de datas, valores negativos, duplicidades, municípios não associados e conciliação de totais.
-- [ ] **Pendente — Gerar banco ou arquivos tratados de forma reproduzível.** O caminho documentado `database/banco_hackathon.db` não existe no repositório e `*.db` está no `.gitignore`.
-- [ ] **Pendente — Validar o pipeline em ambiente limpo.** Instalar dependências, executar do zero e registrar a saída esperada.
+- [x] Existe um script de ETL: [`etl/analis_de_dados.py`](../etl/analis_de_dados.py).
+- [x] Leitura dos CSVs correta (caminhos, separadores e encoding consistentes).
+- [x] Tipos de dados corrigidos: data como datetime, valor como decimal com sinal, cnpj/processo/empenho como string.
+- [x] Estornos e ajustes preservados: 18 valores negativos mantidos no cálculo líquido.
+- [x] Conciliação gerada em CSV: fato R$ 288.699.999,97 vs ranking R$ 289.176.004,25 (diferença R$ -476.004,28, concentrada em 3 municípios).
+- [x] Chave municipal confiável criada via `municipios-brasil.csv` com normalização de acentos (334/334 municípios com código IBGE).
+- [x] Duplicidades verificadas (0 duplicatas exatas encontradas).
+- [x] Relatório de qualidade gerado: `data/processed/relatorio_validacao.csv`.
+- [x] Arquivos tratados gerados de forma reproduzível (CSVs em `data/processed/` + SQLite na raiz).
+- [x] Pipeline validado: execução bem-sucedida com 658 registros, 18 negativos, 0 chaves nulas.
+- [x] Ausências nos indicadores documentadas: `idhm_2010` indisponível para Pinto Bandeira na fonte.
 
 ## 7. Modelo de dados e carga no Qlik Sense
 
-- [ ] **Pendente — Implementar `fato_repasses` com valor numérico assinado.**
-- [ ] **Pendente — Implementar `dim_municipio` com código IBGE e atributos geográficos.**
-- [ ] **Pendente — Implementar dimensão socioeconômica com ano de referência explícito.**
-- [ ] **Pendente — Implementar calendário principal.**
+- [x] **Implementar `fato_repasses` com valor numérico assinado.** Coluna `valor` como float com sinal, incluindo 18 estornos negativos.
+- [x] **Implementar `dim_municipio` com código IBGE e atributos geográficos.** `chave_municipal`, `codigo_ibge`, `regiao`, `populacao_2025`, `densidade_hab_km2`, `area_km2`.
+- [x] **Implementar dimensão socioeconômica com ano de referência explícito.** `idhm_2010`, `pib_per_capita_2023_reais`, `pib_2023_mil_reais`.
+- [x] **Implementar calendário principal.** `dim_calendario.csv` com data, ano e mês.
 - [ ] **Pendente — Incorporar dimensão ou indicador de impacto, caso a fonte seja obtida.**
-- [ ] **Pendente — Criar script de carga do Qlik compatível com os artefatos gerados.**
+- [x] **Criar script de carga do Qlik compatível com os artefatos gerados.** Disponível em `qlik/load_data.qvs`.
 - [ ] **Pendente — Evitar chaves sintéticas e associações circulares.** Validar o modelo no visualizador do Qlik.
 - [ ] **Pendente — Registrar fórmulas e regras das medidas mestres.**
 - [ ] **Pendente — Testar recarga completa e incremental, se aplicável.**

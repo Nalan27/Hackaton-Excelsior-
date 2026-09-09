@@ -1,55 +1,535 @@
 import pandas as pd
 import sqlite3
 import os
+import unicodedata
 
-# Descobre o caminho raiz do projeto automaticamente baseado na localização deste script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 if os.path.basename(BASE_DIR) == 'etl':
     BASE_DIR = os.path.dirname(BASE_DIR)
 
-path_ranking = os.path.join(BASE_DIR, 'data', 'raw', 'ranking_oficial_fundec_2024.csv')
-path_repasses = os.path.join(BASE_DIR, 'data', 'raw', 'repasses_fundec_2024.csv')
+path_ranking = os.path.join(BASE_DIR, 'data', 'raw', 'csv', 'ranking_oficial_fundec_2024.csv')
+path_repasses = os.path.join(BASE_DIR, 'data', 'raw', 'csv', 'repasses_fundec_2024.csv')
+path_municipios_br = os.path.join(BASE_DIR, 'data', 'raw', 'csv', 'municipios-brasil.csv')
+
+processed_dir = os.path.join(BASE_DIR, 'data', 'processed')
+os.makedirs(processed_dir, exist_ok=True)
 db_path = os.path.join(BASE_DIR, 'banco_hackathon.db')
 
-print("--- PROCESSANDO RANKING ---")
+EXPECTED_TOTAL_REGISTROS = 658
+EXPECTED_TOTAL_MUNICIPIOS = 334
+EXPECTED_NEGATIVOS = 18
+EXPECTED_TOTAL_FATO = 288_699_999.97
+EXPECTED_TOTAL_RANKING = 289_176_004.25
+EXPECTED_DIFERENCA = -476_004.28
+TOLERANCIA_MONETARIA = 0.01
 
-df_ranking = pd.read_csv(path_ranking, sep=';', encoding='utf-8')
+
+def normaliza_nome(s):
+    if pd.isna(s):
+        return pd.NA
+    nfkd = unicodedata.normalize('NFKD', str(s))
+    sem_acentos = ''.join(c for c in nfkd if not unicodedata.combining(c))
+    return ' '.join(sem_acentos.upper().split())
+
+
+def cria_chave_municipal(codigo_ibge):
+    if pd.isna(codigo_ibge):
+        return pd.NA
+    return f'{int(codigo_ibge):07d}'
+
+
+def exige_colunas(df, colunas, fonte):
+    ausentes = sorted(set(colunas) - set(df.columns))
+    if ausentes:
+        raise ValueError(f'Colunas ausentes em {fonte}: {", ".join(ausentes)}')
+
+
+def exportar_sqlite(df_ranking, dim_municipio, fato_repasses, dim_calendario):
+    """Exporta o modelo com PKs e FKs efetivamente declaradas no SQLite."""
+    with sqlite3.connect(db_path) as conn:
+        conn.execute('PRAGMA foreign_keys = ON')
+        conn.execute('DROP TABLE IF EXISTS fato_repasses')
+        conn.execute('DROP TABLE IF EXISTS dim_calendario')
+        conn.execute('DROP TABLE IF EXISTS dim_municipio')
+        conn.execute('DROP TABLE IF EXISTS dim_ranking')
+
+        conn.execute('''
+            CREATE TABLE dim_municipio (
+                chave_municipal TEXT PRIMARY KEY,
+                "município" TEXT NOT NULL,
+                codigo_ibge INTEGER NOT NULL UNIQUE,
+                regiao TEXT,
+                populacao_2025 INTEGER,
+                populacao_censo_2022 REAL,
+                idhm_2010 REAL,
+                pib_per_capita_2023_reais REAL,
+                pib_2023_mil_reais REAL,
+                densidade_hab_km2 REAL,
+                area_km2 REAL,
+                valor_pago REAL,
+                total_repasses REAL,
+                qtd_repasses INTEGER,
+                valor_medio REAL
+            )
+        ''')
+        conn.execute('''
+            CREATE TABLE dim_calendario (
+                data TEXT PRIMARY KEY,
+                ano INTEGER NOT NULL,
+                mes INTEGER NOT NULL
+            )
+        ''')
+        conn.execute('''
+            CREATE TABLE fato_repasses (
+                data TEXT NOT NULL,
+                chave_municipal TEXT NOT NULL,
+                processo TEXT,
+                empenho TEXT,
+                cnpj TEXT,
+                credor TEXT,
+                recurso TEXT,
+                valor REAL NOT NULL,
+                FOREIGN KEY (data) REFERENCES dim_calendario(data),
+                FOREIGN KEY (chave_municipal)
+                    REFERENCES dim_municipio(chave_municipal)
+            )
+        ''')
+
+        dim_municipio.to_sql('dim_municipio', conn, if_exists='append', index=False)
+        dim_calendario.to_sql('dim_calendario', conn, if_exists='append', index=False)
+        fato_repasses.to_sql('fato_repasses', conn, if_exists='append', index=False)
+        df_ranking.to_sql('dim_ranking', conn, if_exists='replace', index=False)
+
+
+# =========================================================================
+# 1. LEITURA DOS DADOS BRUTOS
+# =========================================================================
+
+print("--- PROCESSANDO RANKING ---")
+df_ranking = pd.read_csv(path_ranking, sep=',', encoding='utf-8')
 df_ranking.columns = df_ranking.columns.str.strip().str.replace(' ', '_').str.lower()
 
-print(f"Shape Ranking: {df_ranking.shape}")
-print(df_ranking.head(2))
-
-
 print("\n--- PROCESSANDO REPASSES ---")
-df_repasses = pd.read_csv(path_repasses, sep=';', encoding='utf-8')
+df_repasses = pd.read_csv(
+    path_repasses,
+    sep=',',
+    encoding='utf-8',
+    dtype={'Processo': 'string', 'CNPJ': 'string', 'Empenho': 'string'},
+)
 df_repasses.columns = df_repasses.columns.str.strip().str.replace(' ', '_').str.lower()
 
-print(f"Shape Repasses: {df_repasses.shape}")
-print(df_repasses.head(2))
+print("COLUNAS REPASSES:", df_repasses.columns.tolist())
 
+print("\n--- LENDO MUNICIPIOS-BRASIL.CSV ---")
+df_mun_br = pd.read_csv(path_municipios_br, sep=',', encoding='utf-8')
 
-if 'município' in df_repasses.columns:
-    df_repasses_limpo = df_repasses.dropna(subset=['município']).copy()
+exige_colunas(df_ranking, {'município', 'valor_pago_(r$)'}, path_ranking)
+exige_colunas(
+    df_repasses,
+    {'data', 'processo', 'recurso', 'empenho', 'cnpj', 'credor', 'município', 'valor'},
+    path_repasses,
+)
+exige_colunas(
+    df_mun_br,
+    {
+        'municipio', 'uf', 'codigo_ibge', 'regiao', 'populacao_2025',
+        'populacao_censo_2022', 'pib_2023_mil_reais',
+        'pib_per_capita_2023_reais', 'area_km2', 'densidade_hab_km2',
+        'idhm_2010',
+    },
+    path_municipios_br,
+)
+
+# =========================================================================
+# 2. LIMPEZA E TRATAMENTO DE TIPOS
+# =========================================================================
+
+municipios_ausentes_origem = df_repasses[
+    df_repasses['município'].isna()
+    | df_repasses['município'].astype('string').str.strip().eq('').fillna(False)
+].copy()
+
+if 'data' in df_repasses.columns:
+    df_repasses['data'] = pd.to_datetime(df_repasses['data'], errors='coerce')
+
+# --- CORREÇÃO CRÍTICA: conversão de valores monetários ---
+# Formato original: "R$ 784.883,72" ou "-R$ 400.000,00"
+# Passos: 1) remover R$, 2) strip, 3) remover pontos (separador de milhar),
+#         4) trocar vírgula por ponto, 5) remover espaços internos
+if 'valor' in df_repasses.columns:
+    if df_repasses['valor'].dtype == 'object' or df_repasses['valor'].dtype == 'string':
+        df_repasses['valor'] = (
+            df_repasses['valor']
+            .str.replace('R$', '', regex=False)
+            .str.strip()
+            .str.replace('.', '', regex=False)
+            .str.replace(',', '.', regex=False)
+            .str.replace(' ', '', regex=False)
+        )
+    df_repasses['valor'] = pd.to_numeric(df_repasses['valor'], errors='coerce')
+
+# CNPJ, processo e empenho já foram lidos como dtype='string',
+# mas garantimos a limpeza caso tenham vindo com ".0"
+for col in ['cnpj', 'processo', 'empenho']:
+    if col in df_repasses.columns:
+        df_repasses[col] = (
+            df_repasses[col]
+            .astype(str)
+            .str.replace(r'\.0$', '', regex=True)
+            .replace(['nan', '<NA>', 'NaN'], pd.NA)
+        )
+
+duplicadas = df_repasses.duplicated().sum()
+print(f"Duplicidades na base de repasses: {duplicadas}")
+df_repasses = df_repasses.drop_duplicates()
+
+valores_negativos = df_repasses[df_repasses['valor'] < 0]
+print(f"Registros negativos preservados: {len(valores_negativos)}")
+if not valores_negativos.empty:
+    valores_negativos.to_csv(
+        os.path.join(processed_dir, 'doc_18_valores_negativos.csv'), index=False
+    )
+
+# =========================================================================
+# 3. CONSTRUÇÃO DE dim_municipio VIA MUNICIPIOS-BRASIL.CSV
+# =========================================================================
+
+print("\nGerando dim_municipio (via municipios-brasil.csv)...")
+
+df_mun_br_rs = df_mun_br[df_mun_br['uf'] == 'RS'].copy()
+df_mun_br_rs['municipio_norm'] = df_mun_br_rs['municipio'].apply(normaliza_nome)
+
+df_ranking['municipio_norm'] = df_ranking['município'].apply(normaliza_nome)
+df_repasses['municipio_norm'] = df_repasses['município'].apply(normaliza_nome)
+
+dim_municipio = pd.merge(
+    df_ranking,
+    df_mun_br_rs[[
+        'municipio_norm', 'codigo_ibge', 'regiao',
+        'populacao_2025', 'populacao_censo_2022',
+        'pib_2023_mil_reais', 'pib_per_capita_2023_reais',
+        'area_km2', 'densidade_hab_km2', 'idhm_2010',
+    ]],
+    on='municipio_norm',
+    how='left',
+)
+# Converter valor_pago_(r$) de "5958562,42" para float
+if 'valor_pago_(r$)' in dim_municipio.columns:
+    dim_municipio['valor_pago'] = (
+        dim_municipio['valor_pago_(r$)']
+        .astype(str)
+        .str.replace('.', '', regex=False)
+        .str.replace(',', '.', regex=False)
+        .str.replace('R$', '', regex=False)
+        .str.strip()
+    )
+    dim_municipio['valor_pago'] = pd.to_numeric(dim_municipio['valor_pago'], errors='coerce')
+
+# Enriquecer com métricas agregadas da fato
+print("Enriquecendo dim_municipio com métricas da fato...")
+resumo_fato = df_repasses.groupby('municipio_norm').agg(
+    total_repasses=('valor', 'sum'),
+    qtd_repasses=('valor', 'count'),
+    valor_medio=('valor', 'mean'),
+).reset_index()
+dim_municipio = pd.merge(dim_municipio, resumo_fato, on='municipio_norm', how='left')
+dim_municipio['total_repasses'] = dim_municipio['total_repasses'].fillna(0)
+dim_municipio['qtd_repasses'] = dim_municipio['qtd_repasses'].fillna(0).astype(int)
+dim_municipio['valor_medio'] = dim_municipio['valor_medio'].fillna(0)
+
+# chave_municipal: 7 dígitos zero-padded a partir do codigo_ibge
+dim_municipio['chave_municipal'] = (
+    dim_municipio['codigo_ibge']
+    .apply(cria_chave_municipal)
+    .astype('string')
+)
+mapa_municipios = dim_municipio[
+    ['municipio_norm', 'chave_municipal', 'codigo_ibge']
+].copy()
+
+# Reordenar colunas para clareza
+ordem_dim = [
+    'chave_municipal', 'município', 'codigo_ibge', 'regiao',
+    'populacao_2025', 'populacao_censo_2022',
+    'idhm_2010', 'pib_per_capita_2023_reais', 'pib_2023_mil_reais',
+    'densidade_hab_km2', 'area_km2',
+    'valor_pago', 'total_repasses', 'qtd_repasses', 'valor_medio',
+]
+ordem_dim = [c for c in ordem_dim if c in dim_municipio.columns]
+dim_municipio = dim_municipio[ordem_dim]
+
+# Verificar cobertura IBGE
+sem_ibge = dim_municipio[dim_municipio['codigo_ibge'].isna()]
+if not sem_ibge.empty:
+    print(f"ATENÇÃO: {len(sem_ibge)} municípios sem código IBGE: {sem_ibge['município'].tolist()}")
 else:
-    df_repasses_limpo = df_repasses.copy()
+    print(f"Todos os {len(dim_municipio)} municípios associados ao IBGE.")
+
+dim_municipio.to_csv(os.path.join(processed_dir, 'dim_municipio.csv'), index=False)
+
+# =========================================================================
+# 4. CONSTRUÇÃO DE fato_repasses
+# =========================================================================
+
+print("\nGerando fato_repasses...")
+
+colunas_fato = [
+    'data', 'município', 'municipio_norm', 'processo', 'empenho',
+    'cnpj', 'credor', 'recurso', 'valor',
+]
+colunas_fato = [c for c in colunas_fato if c in df_repasses.columns]
+fato_repasses = df_repasses[colunas_fato].copy()
+
+# Trazer chave_municipal da dim_municipio
+fato_repasses = pd.merge(
+    fato_repasses,
+    mapa_municipios,
+    on='municipio_norm',
+    how='left',
+)
+
+# Registros sem chave_municipal recebem nulo (não 0000000)
+fato_repasses['chave_municipal'] = fato_repasses['chave_municipal'].where(
+    fato_repasses['chave_municipal'].notna(), other=pd.NA
+)
+
+sem_chave_info = fato_repasses.loc[
+    fato_repasses['chave_municipal'].isna(),
+    ['município', 'data', 'processo'],
+].copy()
+
+if 'data' in fato_repasses.columns:
+    fato_repasses['data'] = fato_repasses['data'].dt.strftime('%Y-%m-%d')
+
+# Reordenar: data e chave_municipal primeiro, depois atributos
+ordem_fato = ['data', 'chave_municipal', 'processo', 'empenho', 'cnpj', 'credor', 'recurso', 'valor']
+ordem_fato = [c for c in ordem_fato if c in fato_repasses.columns]
+fato_repasses = fato_repasses[ordem_fato]
+
+fato_repasses.to_csv(os.path.join(processed_dir, 'fato_repasses.csv'), index=False)
+
+# =========================================================================
+# 5. CONSTRUÇÃO DE dim_calendario
+# =========================================================================
+
+print("Gerando dim_calendario...")
+df_datas = pd.to_datetime(fato_repasses['data'], errors='coerce')
+dim_calendario = pd.DataFrame({
+    'data': sorted(df_datas.dropna().dt.strftime('%Y-%m-%d').unique())
+})
+dim_calendario['ano'] = pd.to_datetime(dim_calendario['data']).dt.year
+dim_calendario['mes'] = pd.to_datetime(dim_calendario['data']).dt.month
+dim_calendario.to_csv(os.path.join(processed_dir, 'dim_calendario.csv'), index=False)
+
+# =========================================================================
+# 6. CONCILIAÇÃO
+# =========================================================================
+
+print("\n--- CONCILIAÇÃO ---")
+total_fato = fato_repasses['valor'].sum()
+print(f"Total Detalhado (Fato): R$ {total_fato:,.2f}")
+
+if 'valor_pago' in dim_municipio.columns:
+    total_ranking = dim_municipio['valor_pago'].sum()
+    diferenca = total_fato - total_ranking
+    print(f"Total Oficial (Ranking): R$ {total_ranking:,.2f}")
+    print(f"Diferença: R$ {diferenca:,.2f}")
+
+    # Gerar CSV de conciliação por município (usa dim_municipio como referência)
+    conciliacao = dim_municipio[['município', 'chave_municipal', 'valor_pago']].copy()
+    soma_fato = fato_repasses.groupby('chave_municipal')['valor'].sum().reset_index()
+    soma_fato.columns = ['chave_municipal', 'total_fato']
+    conciliacao = pd.merge(conciliacao, soma_fato, on='chave_municipal', how='left')
+    conciliacao['total_fato'] = conciliacao['total_fato'].fillna(0)
+    conciliacao['diferenca'] = (
+        conciliacao['total_fato'] - conciliacao['valor_pago']
+    ).round(2)
+    conciliacao = conciliacao.sort_values('diferenca')
+    conciliacao.to_csv(os.path.join(processed_dir, 'conciliacao.csv'), index=False)
+    print(f"Conciliação salva em: {os.path.join(processed_dir, 'conciliacao.csv')}")
+
+# =========================================================================
+# 7. RELATÓRIO DE INCONSISTÊNCIAS
+# =========================================================================
+
+print("\n--- RELATÓRIO DE INCONSISTÊNCIAS ---")
+inconsistencias = []
+
+for _, row in municipios_ausentes_origem.iterrows():
+    inconsistencias.append({
+        'severidade': 'ERRO',
+        'tipo': 'fato_sem_municipio',
+        'municipio': '',
+        'detalhe': f'Processo {row.get("processo", "")} sem município informado',
+    })
+
+for _, row in sem_chave_info.iterrows():
+    data = row.get('data')
+    data = data.strftime('%Y-%m-%d') if pd.notna(data) else ''
+    inconsistencias.append({
+        'severidade': 'ERRO',
+        'tipo': 'fato_sem_chave_municipal',
+        'municipio': row.get('município', ''),
+        'detalhe': f'Registro na data {data} sem chave_municipal associada',
+    })
+
+# Municípios ranking sem código IBGE na dim
+for _, row in sem_ibge.iterrows():
+    inconsistencias.append({
+        'severidade': 'ERRO',
+        'tipo': 'ranking_sem_ibge',
+        'municipio': row.get('município', ''),
+        'detalhe': 'Município no ranking sem código IBGE em municipios-brasil.csv',
+    })
+
+# Valores nulos na fato
+nulos_valor = fato_repasses[fato_repasses['valor'].isna()]
+for _, row in nulos_valor.iterrows():
+    inconsistencias.append({
+        'severidade': 'ERRO',
+        'tipo': 'valor_nulo',
+        'municipio': '',
+        'detalhe': f'Valor nulo na data {row.get("data", "")}',
+    })
+
+datas_invalidas = int(df_repasses['data'].isna().sum())
+for _, row in df_repasses[df_repasses['data'].isna()].iterrows():
+    inconsistencias.append({
+        'severidade': 'ERRO',
+        'tipo': 'data_invalida',
+        'municipio': row.get('município', ''),
+        'detalhe': f'Data inválida no processo {row.get("processo", "")}',
+    })
+
+# Pinto Bandeira não possui IDH-M 2010 na fonte. A ausência é preservada,
+# em vez de ser preenchida com um valor estimado sem respaldo.
+indicadores = [
+    'populacao_2025', 'idhm_2010', 'pib_per_capita_2023_reais',
+    'densidade_hab_km2', 'area_km2',
+]
+indicadores_ausentes = dim_municipio[indicadores].isna().sum()
+for indicador, quantidade in indicadores_ausentes.items():
+    if quantidade:
+        for _, row in dim_municipio[dim_municipio[indicador].isna()].iterrows():
+            inconsistencias.append({
+                'severidade': 'AVISO',
+                'tipo': 'indicador_ausente',
+                'municipio': row['município'],
+                'detalhe': f'{indicador} ausente na fonte municipios-brasil.csv',
+            })
+
+df_inc = pd.DataFrame(
+    inconsistencias,
+    columns=['severidade', 'tipo', 'municipio', 'detalhe'],
+)
+df_inc.to_csv(os.path.join(processed_dir, 'inconsistencias.csv'), index=False)
+print(f"Inconsistências documentadas: {len(df_inc)}")
+print(f"Salvo em: {os.path.join(processed_dir, 'inconsistencias.csv')}")
+
+# =========================================================================
+# 8. RELATÓRIO DE VALIDAÇÃO
+# =========================================================================
+
+print("\n--- RELATÓRIO DE VALIDAÇÃO ---")
+chaves_dim = set(dim_municipio['chave_municipal'].dropna())
+chaves_fato = set(fato_repasses['chave_municipal'].dropna())
+chaves_orfas = len(chaves_fato - chaves_dim)
+codigos_ibge_duplicados = int(dim_municipio['codigo_ibge'].duplicated().sum())
+
+validacoes = []
 
 
-if 'data' in df_repasses_limpo.columns:
-    df_repasses_limpo['data'] = pd.to_datetime(df_repasses_limpo['data'], errors='coerce')
+def registra_validacao(metrica, valor, esperado, aprovada, critica=True):
+    validacoes.append({
+        'metrica': metrica,
+        'valor': valor,
+        'esperado': esperado,
+        'status': 'OK' if aprovada else ('ERRO' if critica else 'AVISO'),
+    })
 
 
-colunas_ids = ['data', 'processo', 'empenho', 'cnpj', 'credor', 'município', 'recurso', 'valor']
-for col in colunas_ids:
-    if col in df_repasses_limpo.columns:
-        df_repasses_limpo[col] = df_repasses_limpo[col].astype('Int64').astype(str).replace('<NA>', '')
+registra_validacao(
+    'total_registros_fato', len(fato_repasses), EXPECTED_TOTAL_REGISTROS,
+    len(fato_repasses) == EXPECTED_TOTAL_REGISTROS,
+)
+registra_validacao(
+    'total_municipios_dim', len(dim_municipio), EXPECTED_TOTAL_MUNICIPIOS,
+    len(dim_municipio) == EXPECTED_TOTAL_MUNICIPIOS,
+)
+registra_validacao(
+    'negativos_preservados', len(valores_negativos), EXPECTED_NEGATIVOS,
+    len(valores_negativos) == EXPECTED_NEGATIVOS,
+)
+registra_validacao(
+    'soma_total_fato', round(total_fato, 2), EXPECTED_TOTAL_FATO,
+    abs(total_fato - EXPECTED_TOTAL_FATO) <= TOLERANCIA_MONETARIA,
+)
+registra_validacao(
+    'soma_total_ranking', round(total_ranking, 2), EXPECTED_TOTAL_RANKING,
+    abs(total_ranking - EXPECTED_TOTAL_RANKING) <= TOLERANCIA_MONETARIA,
+)
+registra_validacao(
+    'diferenca_conciliacao', round(diferenca, 2), EXPECTED_DIFERENCA,
+    abs(diferenca - EXPECTED_DIFERENCA) <= TOLERANCIA_MONETARIA,
+)
+registra_validacao(
+    'municipios_sem_ibge', int(dim_municipio['codigo_ibge'].isna().sum()), 0,
+    dim_municipio['codigo_ibge'].notna().all(),
+)
+registra_validacao(
+    'codigos_ibge_duplicados', codigos_ibge_duplicados, 0,
+    codigos_ibge_duplicados == 0,
+)
+registra_validacao(
+    'fato_sem_chave_municipal', int(fato_repasses['chave_municipal'].isna().sum()), 0,
+    fato_repasses['chave_municipal'].notna().all(),
+)
+registra_validacao(
+    'chaves_municipais_orfas', chaves_orfas, 0, chaves_orfas == 0,
+)
+registra_validacao(
+    'duplicatas_exatas', int(duplicadas), 0, duplicadas == 0,
+)
+registra_validacao(
+    'datas_invalidas', datas_invalidas, 0, datas_invalidas == 0,
+)
+registra_validacao(
+    'valores_nulos', len(nulos_valor), 0, len(nulos_valor) == 0,
+)
+registra_validacao(
+    'movimentacoes_sem_municipio', len(municipios_ausentes_origem), 0,
+    len(municipios_ausentes_origem) == 0,
+)
+registra_validacao(
+    'indicadores_ausentes', int(indicadores_ausentes.sum()), 0,
+    indicadores_ausentes.sum() == 0,
+    critica=False,
+)
 
+df_validacao = pd.DataFrame(validacoes)
+df_validacao.to_csv(os.path.join(processed_dir, 'relatorio_validacao.csv'), index=False)
 
-conn = sqlite3.connect(db_path)
+for _, row in df_validacao.iterrows():
+    print(f"  [{row['status']}] {row['metrica']}: {row['valor']} (esperado: {row['esperado']})")
 
-# Salva as duas tabelas separadamente no SQLite
-df_ranking.to_sql('dim_ranking', conn, if_exists='replace', index=False)
-df_repasses_limpo.to_sql('fato_repasses', conn, if_exists='replace', index=False)
+print(f"\nRelatório de validação salvo em: {os.path.join(processed_dir, 'relatorio_validacao.csv')}")
 
-conn.close()
-print(f"\nBanco SQLite atualizado com sucesso em: {db_path}")
+falhas_criticas = df_validacao[df_validacao['status'] == 'ERRO']
+if not falhas_criticas.empty:
+    metricas = ', '.join(falhas_criticas['metrica'])
+    raise RuntimeError(f'Validação do ETL falhou: {metricas}')
+
+# =========================================================================
+# 9. EXPORTAÇÃO SQLITE
+# =========================================================================
+
+exportar_sqlite(df_ranking, dim_municipio, fato_repasses, dim_calendario)
+
+print(f"\nCSVs prontos para o Qlik Sense em: {processed_dir}")
+print(f"  - fato_repasses.csv (com chave_municipal)")
+print(f"  - dim_municipio.csv (com indicadores IBGE, IDH-M, PIB)")
+print(f"  - dim_calendario.csv")
+print(f"  - conciliacao.csv")
+print(f"  - inconsistencias.csv")
+print(f"  - relatorio_validacao.csv")
+print(f"\nBanco SQLite atualizado em: {db_path}")
