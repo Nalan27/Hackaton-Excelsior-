@@ -1,0 +1,13 @@
+metrica,valor
+total_registros_fato,658.0
+total_municipios_dim,334.0
+negativos_preservados,18.0
+negativos_esperados,18.0
+soma_total_fato,288699999.97
+soma_total_ranking,289176004.25
+diferenca_conciliacao,-476004.28
+municipios_com_ibge,334.0
+municipios_sem_ibge,0.0
+fato_com_chave_municipal,658.0
+fato_sem_chave_municipal,0.0
+duplicatas_exatas,0.0
