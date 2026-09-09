@@ -1,0 +1,16 @@
+// Ajuste "Data" para o nome da conexão de pasta no Qlik Sense.
+
+dim_municipio:
+LOAD *
+FROM [lib://Data/data/processed/dim_municipio.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
+
+fato_repasses:
+LOAD *
+FROM [lib://Data/data/processed/fato_repasses.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
+
+dim_calendario:
+LOAD *
+FROM [lib://Data/data/processed/dim_calendario.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);

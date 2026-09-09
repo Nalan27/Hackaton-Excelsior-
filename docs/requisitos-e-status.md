@@ -2,7 +2,7 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **8 de setembro de 2026**.
+Este documento registra o estado do repositório em **9 de setembro de 2026**.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -28,7 +28,7 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Pendente | Não há exportação, script final de carga nem link público no repositório |
+| Aplicativo e dashboard Qlik Sense | Pendente | Há CSVs e script de carga; ainda não há aplicativo nem link público |
 | Análises e achados finais | Pendente | Não há resultados validados, conclusões ou recomendações finais |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
 | Certificados e elegibilidade da equipe | Não comprovado | Evidência externa ao repositório |
@@ -53,8 +53,8 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Dados brutos separados em `data/raw/`.
 - [x] Dependências Python registradas em `requirements.txt`.
 - [x] Fontes públicas catalogadas em [`data/README.md`](../data/README.md).
-- [ ] **Pendente — Criar instruções de execução que correspondam ao pipeline final.** O `README.md` atual descreve caminhos e um banco que não correspondem integralmente ao estado observado.
-- [ ] **Pendente — Adicionar testes automatizados ou verificações reproduzíveis de qualidade dos dados.**
+- [x] Instruções de execução correspondem ao pipeline e aos artefatos gerados.
+- [x] Validações críticas interrompem o ETL em caso de erro e são verificadas por testes automatizados.
 - [ ] **Pendente — Definir política para artefatos do Qlik e arquivos gerados.** Registrar o que será versionado e o que será publicado externamente.
 
 ## 5. Aquisição e cobertura dos dados
@@ -79,8 +79,9 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Chave municipal confiável criada via `municipios-brasil.csv` com normalização de acentos (334/334 municípios com código IBGE).
 - [x] Duplicidades verificadas (0 duplicatas exatas encontradas).
 - [x] Relatório de qualidade gerado: `data/processed/relatorio_validacao.csv`.
-- [x] Arquivos tratados gerados de forma reproduzível (CSVs + SQLite em `data/processed/`).
+- [x] Arquivos tratados gerados de forma reproduzível (CSVs em `data/processed/` + SQLite na raiz).
 - [x] Pipeline validado: execução bem-sucedida com 658 registros, 18 negativos, 0 chaves nulas.
+- [x] Ausências nos indicadores documentadas: `idhm_2010` indisponível para Pinto Bandeira na fonte.
 
 ## 7. Modelo de dados e carga no Qlik Sense
 
@@ -89,7 +90,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] **Implementar dimensão socioeconômica com ano de referência explícito.** `idhm_2010`, `pib_per_capita_2023_reais`, `pib_2023_mil_reais`.
 - [x] **Implementar calendário principal.** `dim_calendario.csv` com data, ano e mês.
 - [ ] **Pendente — Incorporar dimensão ou indicador de impacto, caso a fonte seja obtida.**
-- [ ] **Pendente — Criar script de carga do Qlik compatível com os artefatos gerados.**
+- [x] **Criar script de carga do Qlik compatível com os artefatos gerados.** Disponível em `qlik/load_data.qvs`.
 - [ ] **Pendente — Evitar chaves sintéticas e associações circulares.** Validar o modelo no visualizador do Qlik.
 - [ ] **Pendente — Registrar fórmulas e regras das medidas mestres.**
 - [ ] **Pendente — Testar recarga completa e incremental, se aplicável.**

@@ -92,6 +92,7 @@ Após executar o ETL, os seguintes arquivos são salvos em `data/processed/`:
 | `dim_calendario.csv` | Dimensão tempo para carga no Qlik |
 | `conciliacao.csv` | Comparativo fato vs ranking por município |
 | `relatorio_validacao.csv` | Métricas de validação do pipeline |
+| `inconsistencias.csv` | Erros e ausências conhecidas nas fontes |
 | `doc_18_valores_negativos.csv` | Documentação dos 18 estornos |
 
 O banco SQLite `banco_hackathon.db` também é gerado na raiz do projeto.
@@ -114,7 +115,8 @@ python etl/analis_de_dados.py
 
 ### 3. Validar a saída
 
-O ETL imprime métricas de validação. Resultados esperados:
+O ETL imprime métricas de validação e termina com erro caso um critério
+crítico não seja atendido. Resultados esperados:
 
 ```
 Registros negativos preservados: 18
@@ -128,6 +130,12 @@ Verificar o relatório detalhado:
 
 ```bash
 cat data/processed/relatorio_validacao.csv
+```
+
+Executar também os testes dos artefatos e do esquema SQLite:
+
+```bash
+python -m unittest discover -s tests -v
 ```
 
 ---
@@ -146,27 +154,30 @@ No **Data Load Editor** do Qlik Sense, aponte para os CSVs em `data/processed/`:
 ```qlik
 // Dimensão municipal
 dim_municipio:
-LOAD *;
-[CSV (txt, utf-8, comma is field separator)]
-FROM [lib://Data/data/processed/dim_municipio.csv] (txt, utf8, CsvSimple,iculo is field separator);
+LOAD *
+FROM [lib://Data/data/processed/dim_municipio.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
 
 // Fato de repasses
 fato_repasses:
-LOAD *;
-[CSV (txt, utf-8, comma is field separator)]
-FROM [lib://Data/data/processed/fato_repasses.csv] (txt, utf8, CsvSimple, iculo is field separator);
+LOAD *
+FROM [lib://Data/data/processed/fato_repasses.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
 
 // Dimensão calendário
 dim_calendario:
-LOAD *;
-[CSV (txt, utf-8, comma is field separator)]
-FROM [lib://Data/data/processed/dim_calendario.csv] (txt, utf8, CsvSimple, iculo is field separator);
+LOAD *
+FROM [lib://Data/data/processed/dim_calendario.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
 ```
+
+O mesmo script está disponível em `qlik/load_data.qvs`. Substitua `Data`
+pelo nome da conexão de pasta configurada no seu ambiente.
 
 ### Opção 2: Carregar via SQLite
 
 ```qlik
-LIB SQL [/caminho/para/banco_hackathon.db];
+LIB CONNECT TO 'SQLite_FUNDEC';
 
 dim_municipio:
 LOAD *;
@@ -182,6 +193,12 @@ SQL SELECT * FROM dim_calendario;
 ```
 
 > **Importante:** Ajuste os caminhos conforme seu ambiente.
+
+### Limitação conhecida dos indicadores
+
+`Pinto Bandeira` não possui `idhm_2010` na fonte `municipios-brasil.csv`.
+O valor permanece nulo, sem imputação, e a ausência é registrada em
+`data/processed/inconsistencias.csv`.
 
 ### Modelo de associação no Qlik
 
