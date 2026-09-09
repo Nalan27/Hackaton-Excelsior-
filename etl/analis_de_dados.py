@@ -76,7 +76,11 @@ def exportar_sqlite(df_ranking, dim_municipio, fato_repasses, dim_calendario):
             CREATE TABLE dim_calendario (
                 data TEXT PRIMARY KEY,
                 ano INTEGER NOT NULL,
-                mes INTEGER NOT NULL
+                trimestre TEXT NOT NULL,
+                mes INTEGER NOT NULL,
+                mes_nome TEXT NOT NULL,
+                ano_mes TEXT NOT NULL,
+                ano_mes_ordem INTEGER NOT NULL
             )
         ''')
         conn.execute('''
@@ -313,13 +317,59 @@ fato_repasses.to_csv(os.path.join(processed_dir, 'fato_repasses.csv'), index=Fal
 # =========================================================================
 
 print("Gerando dim_calendario...")
-df_datas = pd.to_datetime(fato_repasses['data'], errors='coerce')
+
+# Interpreta as datas da fato. errors='raise' interrompe o ETL se houver
+# alguma data inválida.
+datas_fato = pd.to_datetime(
+    fato_repasses['data'],
+    format='%Y-%m-%d',
+    errors='raise',
+)
+
+# Cria uma linha para cada dia entre a primeira e a última movimentação.
 dim_calendario = pd.DataFrame({
-    'data': sorted(df_datas.dropna().dt.strftime('%Y-%m-%d').unique())
+    'data': pd.date_range(
+        start=datas_fato.min(),
+        end=datas_fato.max(),
+        freq='D',
+    )
 })
-dim_calendario['ano'] = pd.to_datetime(dim_calendario['data']).dt.year
-dim_calendario['mes'] = pd.to_datetime(dim_calendario['data']).dt.month
-dim_calendario.to_csv(os.path.join(processed_dir, 'dim_calendario.csv'), index=False)
+
+nomes_meses = {
+    1: 'Janeiro',
+    2: 'Fevereiro',
+    3: 'Março',
+    4: 'Abril',
+    5: 'Maio',
+    6: 'Junho',
+    7: 'Julho',
+    8: 'Agosto',
+    9: 'Setembro',
+    10: 'Outubro',
+    11: 'Novembro',
+    12: 'Dezembro',
+}
+
+dim_calendario['ano'] = dim_calendario['data'].dt.year
+dim_calendario['trimestre'] = (
+    'T' + dim_calendario['data'].dt.quarter.astype(str)
+)
+dim_calendario['mes'] = dim_calendario['data'].dt.month
+dim_calendario['mes_nome'] = dim_calendario['mes'].map(nomes_meses)
+dim_calendario['ano_mes'] = dim_calendario['data'].dt.strftime('%Y-%m')
+
+# Essa coluna permite ordenar ano-mês corretamente no Qlik.
+dim_calendario['ano_mes_ordem'] = (
+    dim_calendario['ano'] * 100 + dim_calendario['mes']
+)
+
+# Exporta a chave de data no mesmo formato utilizado pela fato.
+dim_calendario['data'] = dim_calendario['data'].dt.strftime('%Y-%m-%d')
+
+dim_calendario.to_csv(
+    os.path.join(processed_dir, 'dim_calendario.csv'),
+    index=False,
+)
 
 # =========================================================================
 # 6. CONCILIAÇÃO

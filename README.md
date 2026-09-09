@@ -67,13 +67,17 @@ Todos os municípios do ranking com código IBGE e indicadores socioeconômicos.
 | `qtd_repasses` | INT | Quantidade de repasses |
 | `valor_medio` | FLOAT | Valor médio por repasse |
 
-### `dim_calendario` — Dimensão tempo (49 registros)
+### `dim_calendario` — Dimensão tempo (133 registros)
 
 | Coluna | Tipo | Descrição |
 |--------|------|-----------|
-| `data` | DATE | Data única |
+| `data` | DATE | Data diária entre 17/05/2024 e 26/09/2024 |
 | `ano` | INT | Ano |
-| `mes` | INT | Mês |
+| `trimestre` | TEXT | Trimestre no formato T1–T4 |
+| `mes` | INT | Número do mês |
+| `mes_nome` | TEXT | Nome do mês em português |
+| `ano_mes` | TEXT | Ano e mês no formato YYYY-MM |
+| `ano_mes_ordem` | INT | Campo numérico para ordenação cronológica |
 
 ### `dim_ranking` — Ranking oficial (334 registros)
 
@@ -149,25 +153,25 @@ https://www.ch-werner.de/sqliteodbd/
 
 ### Opção 1: Carregar via CSV (recomendado)
 
-No **Data Load Editor** do Qlik Sense, aponte para os CSVs em `data/processed/`:
+Envie os CSVs de `data/processed/` para a conexão `DataFiles` e execute o script no **Data Load Editor** do Qlik Sense:
 
 ```qlik
 // Dimensão municipal
 dim_municipio:
 LOAD *
-FROM [lib://Data/data/processed/dim_municipio.csv]
+FROM [lib://DataFiles/dim_municipio.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
 
 // Fato de repasses
 fato_repasses:
 LOAD *
-FROM [lib://Data/data/processed/fato_repasses.csv]
+FROM [lib://DataFiles/fato_repasses.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
 
 // Dimensão calendário
 dim_calendario:
 LOAD *
-FROM [lib://Data/data/processed/dim_calendario.csv]
+FROM [lib://DataFiles/dim_calendario.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
 ```
 
