@@ -198,6 +198,16 @@ SQL SELECT * FROM dim_calendario;
 
 > **Importante:** Ajuste os caminhos conforme seu ambiente.
 
+### Versionamento do app Qlik
+
+Os snapshots do app ficam em `qlik/versoes-do-app/`. Ao baixar um app do
+Qlik para criar uma nova versão, selecione obrigatoriamente a opção **com
+dados**. Assim, o arquivo QVF preserva os dados carregados e pode ser
+visualizado após a importação sem exigir uma recarga imediata.
+
+Consulte `qlik/versoes-do-app/README.md` para a convenção de nomes e o processo
+de inclusão de novas versões.
+
 ### Limitação conhecida dos indicadores
 
 `Pinto Bandeira` não possui `idhm_2010` na fonte `municipios-brasil.csv`.
