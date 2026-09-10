@@ -113,6 +113,65 @@ class EtlOutputsTest(unittest.TestCase):
         self.assertEqual(script.count("(utf8, txt, embedded labels, delimiter is ',', msq);"), 3)
         self.assertNotIn('CsvSimple', script)
 
+    def test_calendario_e_continuo_e_cobre_a_fato(self):
+        datas_calendario = [
+            datetime.strptime(row['data'], '%Y-%m-%d').date()
+            for row in self.calendario
+        ]
+        datas_fato = {
+            datetime.strptime(row['data'], '%Y-%m-%d').date()
+            for row in self.fato
+        }
 
+        # O período de 17/05/2024 até 26/09/2024 possui 133 dias.
+        self.assertEqual(len(datas_calendario), 133)
+
+        # Não pode haver datas duplicadas.
+        self.assertEqual(
+            len(datas_calendario),
+            len(set(datas_calendario)),
+        )
+
+        # Todas as datas da fato devem existir no calendário.
+        self.assertTrue(datas_fato <= set(datas_calendario))
+
+        # Confirma os limites do calendário.
+        self.assertEqual(
+            datas_calendario[0].isoformat(),
+            '2024-05-17',
+        )
+        self.assertEqual(
+            datas_calendario[-1].isoformat(),
+            '2024-09-26',
+        )
+
+        # Confirma que não existem dias faltando.
+        for anterior, seguinte in zip(
+            datas_calendario,
+            datas_calendario[1:],
+        ):
+            self.assertEqual((seguinte - anterior).days, 1)
+
+    def test_atributos_do_calendario(self):
+        calendario_por_data = {
+            row['data']: row
+            for row in self.calendario
+        }
+
+        maio = calendario_por_data['2024-05-17']
+        self.assertEqual(maio['ano'], '2024')
+        self.assertEqual(maio['trimestre'], 'T2')
+        self.assertEqual(maio['mes'], '5')
+        self.assertEqual(maio['mes_nome'], 'Maio')
+        self.assertEqual(maio['ano_mes'], '2024-05')
+        self.assertEqual(maio['ano_mes_ordem'], '202405')
+
+        setembro = calendario_por_data['2024-09-26']
+        self.assertEqual(setembro['ano'], '2024')
+        self.assertEqual(setembro['trimestre'], 'T3')
+        self.assertEqual(setembro['mes'], '9')
+        self.assertEqual(setembro['mes_nome'], 'Setembro')
+        self.assertEqual(setembro['ano_mes'], '2024-09')
+        self.assertEqual(setembro['ano_mes_ordem'], '202409')
 if __name__ == '__main__':
     unittest.main()

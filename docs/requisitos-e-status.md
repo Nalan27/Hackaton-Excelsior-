@@ -88,10 +88,10 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] **Implementar `fato_repasses` com valor numérico assinado.** Coluna `valor` como float com sinal, incluindo 18 estornos negativos.
 - [x] **Implementar `dim_municipio` com código IBGE e atributos geográficos.** `chave_municipal`, `codigo_ibge`, `regiao`, `populacao_2025`, `densidade_hab_km2`, `area_km2`.
 - [x] **Implementar dimensão socioeconômica com ano de referência explícito.** `idhm_2010`, `pib_per_capita_2023_reais`, `pib_2023_mil_reais`.
-- [x] **Implementar calendário principal.** `dim_calendario.csv` com data, ano e mês.
+- [x] **Implementar calendário principal.** `dim_calendario.csv` possui 133 datas contínuas, com ano, trimestre, mês, nome do mês e ano-mês.
 - [ ] **Pendente — Incorporar dimensão ou indicador de impacto, caso a fonte seja obtida.**
 - [x] **Criar script de carga do Qlik compatível com os artefatos gerados.** Disponível em `qlik/load_data.qvs`.
-- [ ] **Pendente — Evitar chaves sintéticas e associações circulares.** Validar o modelo no visualizador do Qlik.
+- [x] **Evitar chaves sintéticas e associações circulares.** Modelo validado no Qlik sem chaves sintéticas ou associações circulares.
 - [ ] **Pendente — Registrar fórmulas e regras das medidas mestres.**
 - [ ] **Pendente — Testar recarga completa e incremental, se aplicável.**
 

@@ -1,16 +1,69 @@
-// Ajuste "Data" para o nome da conexão de pasta no Qlik Sense.
+// Arquivos enviados para a conexão DataFiles do Qlik Cloud.
+
+// ================================================================
+// DIMENSÃO MUNICIPAL
+// ================================================================
 
 dim_municipio:
-LOAD *
-FROM [lib://Data/data/processed/dim_municipio.csv]
+LOAD
+    Text(chave_municipal) AS chave_municipal,
+    [município],
+    codigo_ibge,
+    regiao,
+    populacao_2025,
+    populacao_censo_2022,
+    idhm_2010,
+    pib_per_capita_2023_reais,
+    pib_2023_mil_reais,
+    densidade_hab_km2,
+    area_km2,
+    valor_pago,
+    total_repasses,
+    qtd_repasses,
+    valor_medio
+FROM [lib://DataFiles/dim_municipio.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
+
+// ================================================================
+// FATO DE REPASSES
+// ================================================================
 
 fato_repasses:
-LOAD *
-FROM [lib://Data/data/processed/fato_repasses.csv]
+LOAD
+    Date(
+        Date#(data, 'YYYY-MM-DD'),
+        'YYYY-MM-DD'
+    ) AS data,
+    Text(chave_municipal) AS chave_municipal,
+    Text(processo) AS processo,
+    Text(empenho) AS empenho,
+    Text(cnpj) AS cnpj,
+    credor,
+    recurso,
+    Num#(
+        valor,
+        '############0.############',
+        '.',
+        ','
+    ) AS valor
+FROM [lib://DataFiles/fato_repasses.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
 
+// ================================================================
+// DIMENSÃO CALENDÁRIO
+// ================================================================
+
 dim_calendario:
-LOAD *
-FROM [lib://Data/data/processed/dim_calendario.csv]
+LOAD
+    Date(
+        Date#(data, 'YYYY-MM-DD'),
+        'YYYY-MM-DD'
+    ) AS data,
+    ano,
+    trimestre,
+    mes,
+    mes_nome,
+    ano_mes,
+    ano_mes_ordem
+FROM [lib://DataFiles/dim_calendario.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
