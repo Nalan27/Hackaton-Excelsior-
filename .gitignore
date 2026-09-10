@@ -1,5 +1,6 @@
 *.xlsx
 *.db
+!banco_hackathon.db
 __pycache__/
 *.py[cod]
 .venv/
