@@ -9,7 +9,10 @@ LOAD
     Text(chave_municipal) AS chave_municipal,
     [município],
     codigo_ibge,
+    municipio_ibge_2024,
+    localizacao_mapa,
     regiao,
+    populacao_2024,
     populacao_2025,
     populacao_censo_2022,
     idhm_2010,
@@ -19,6 +22,7 @@ LOAD
     area_km2,
     valor_pago,
     total_repasses,
+    valor_por_pessoa_2024,
     qtd_repasses,
     valor_medio
 FROM [lib://DataFiles/dim_municipio.csv]
