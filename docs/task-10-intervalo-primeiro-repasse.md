@@ -71,6 +71,25 @@ crédito de 17/07 como primeiro repasse, apesar do estorno posterior de 18/07.
 - testes de regra e qualidade: `tests/test_metricas_repasses.py` e
   `tests/test_etl_outputs.py`.
 
+## Validação no Qlik Cloud
+
+A recarga foi concluída com quatro tabelas. O gerenciador indicou zero tabelas
+sem associação e nenhuma recomendação pendente.
+
+![Carregamento concluído](evidencias/task-10/01-carregamento-de-dados.png)
+
+O modelo associou `dim_municipio`, `fato_repasses` e
+`intervalo_primeiro_repasse` por `chave_municipal`, além da associação entre
+`fato_repasses` e `dim_calendario` por `data`. Não foi apresentada chave
+sintética ou associação circular.
+
+![Modelo de dados](evidencias/task-10/02-modelo-de-dados.png)
+
+A pasta de conferência confirmou 334 municípios com intervalo válido, mínimo
+de 23 dias, mediana de 28 dias e máximo de 135 dias.
+
+![Validação dos intervalos](evidencias/task-10/03-validacao-dos-intervalos.png)
+
 ## Limites de interpretação
 
 Esta métrica não mede o tempo desde o impacto local, a solicitação municipal,
