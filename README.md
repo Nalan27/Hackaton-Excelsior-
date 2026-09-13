@@ -83,6 +83,14 @@ Todos os municípios do ranking com código IBGE e indicadores socioeconômicos.
 
 Tabela original do ranking, mantida como referência.
 
+### `intervalo_primeiro_repasse` — Intervalo municipal (334 registros)
+
+Calcula a menor data com `valor > 0` para cada município. O marco adotado é
+24/04/2024, início do período estadual dos eventos documentado pelo Decreto
+Estadual RS nº 57.604/2024. A medida se chama
+`intervalo_desde_marco_adotado_dias`: ela não representa necessariamente o
+tempo desde o impacto local e não atribui causa ao prazo.
+
 ---
 
 ## Arquivos gerados
@@ -94,6 +102,7 @@ Após executar o ETL, os seguintes arquivos são salvos em `data/processed/`:
 | `fato_repasses.csv` | Tabela fato para carga no Qlik |
 | `dim_municipio.csv` | Dimensão municipal para carga no Qlik |
 | `dim_calendario.csv` | Dimensão tempo para carga no Qlik |
+| `intervalo_primeiro_repasse.csv` | Marco documentado, primeiro crédito positivo e intervalo por município |
 | `conciliacao.csv` | Comparativo fato vs ranking por município |
 | `relatorio_validacao.csv` | Métricas de validação do pipeline |
 | `inconsistencias.csv` | Erros e ausências conhecidas nas fontes |
@@ -219,6 +228,7 @@ O valor permanece nulo, sem imputação, e a ausência é registrada em
 ```
 dim_municipio (chave_municipal) ←→ fato_repasses (chave_municipal)
 dim_calendario (data) ←→ fato_repasses (data)
+dim_municipio (chave_municipal) ←→ intervalo_primeiro_repasse (chave_municipal)
 ```
 
 Não há chaves sintéticas — `chave_municipal` é a única FK na fato.

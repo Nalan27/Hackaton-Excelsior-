@@ -3,6 +3,8 @@ import sqlite3
 import os
 import unicodedata
 
+from metricas_repasses import calcular_intervalo_primeiro_repasse
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if os.path.basename(BASE_DIR) == 'etl':
     BASE_DIR = os.path.dirname(BASE_DIR)
@@ -21,6 +23,8 @@ EXPECTED_NEGATIVOS = 18
 EXPECTED_TOTAL_FATO = 288_699_999.97
 EXPECTED_TOTAL_RANKING = 289_176_004.25
 EXPECTED_DIFERENCA = -476_004.28
+EXPECTED_INTERVALOS = 334
+DATA_MARCO_ADOTADO = '2024-04-24'
 TOLERANCIA_MONETARIA = 0.01
 
 
@@ -44,10 +48,17 @@ def exige_colunas(df, colunas, fonte):
         raise ValueError(f'Colunas ausentes em {fonte}: {", ".join(ausentes)}')
 
 
-def exportar_sqlite(df_ranking, dim_municipio, fato_repasses, dim_calendario):
+def exportar_sqlite(
+    df_ranking,
+    dim_municipio,
+    fato_repasses,
+    dim_calendario,
+    intervalo_primeiro_repasse,
+):
     """Exporta o modelo com PKs e FKs efetivamente declaradas no SQLite."""
     with sqlite3.connect(db_path) as conn:
         conn.execute('PRAGMA foreign_keys = ON')
+        conn.execute('DROP TABLE IF EXISTS intervalo_primeiro_repasse')
         conn.execute('DROP TABLE IF EXISTS fato_repasses')
         conn.execute('DROP TABLE IF EXISTS dim_calendario')
         conn.execute('DROP TABLE IF EXISTS dim_municipio')
@@ -98,10 +109,28 @@ def exportar_sqlite(df_ranking, dim_municipio, fato_repasses, dim_calendario):
                     REFERENCES dim_municipio(chave_municipal)
             )
         ''')
+        conn.execute('''
+            CREATE TABLE intervalo_primeiro_repasse (
+                chave_municipal TEXT PRIMARY KEY,
+                data_marco_adotado TEXT,
+                tipo_marco_adotado TEXT NOT NULL,
+                fonte_marco_adotado TEXT NOT NULL,
+                data_primeiro_repasse_elegivel TEXT,
+                intervalo_desde_marco_adotado_dias INTEGER,
+                status_intervalo TEXT NOT NULL,
+                criterio_primeiro_repasse TEXT NOT NULL,
+                qtd_estornos_ignorados INTEGER NOT NULL,
+                FOREIGN KEY (chave_municipal)
+                    REFERENCES dim_municipio(chave_municipal)
+            )
+        ''')
 
         dim_municipio.to_sql('dim_municipio', conn, if_exists='append', index=False)
         dim_calendario.to_sql('dim_calendario', conn, if_exists='append', index=False)
         fato_repasses.to_sql('fato_repasses', conn, if_exists='append', index=False)
+        intervalo_primeiro_repasse.to_sql(
+            'intervalo_primeiro_repasse', conn, if_exists='append', index=False
+        )
         df_ranking.to_sql('dim_ranking', conn, if_exists='replace', index=False)
 
 
@@ -313,7 +342,44 @@ fato_repasses = fato_repasses[ordem_fato]
 fato_repasses.to_csv(os.path.join(processed_dir, 'fato_repasses.csv'), index=False)
 
 # =========================================================================
-# 5. CONSTRUÇÃO DE dim_calendario
+# 5. INTERVALO DESDE O MARCO ADOTADO ATÉ O PRIMEIRO REPASSE
+# =========================================================================
+
+print("Gerando intervalo_primeiro_repasse...")
+
+# O Decreto Estadual nº 57.604/2024 vincula os repasses excepcionais do
+# FUNDEC/RS aos eventos climáticos cujo período estadual iniciou em
+# 24/04/2024. Esta data não representa necessariamente o impacto local em
+# cada município; é somente o marco documental comum adotado para a métrica.
+marcos_temporais = dim_municipio[['chave_municipal']].copy()
+marcos_temporais['data_marco_adotado'] = DATA_MARCO_ADOTADO
+marcos_temporais['tipo_marco_adotado'] = (
+    'início do período estadual dos eventos climáticos'
+)
+marcos_temporais['fonte_marco_adotado'] = (
+    'Decreto Estadual RS nº 57.604/2024, art. 1º'
+)
+
+intervalo_primeiro_repasse = calcular_intervalo_primeiro_repasse(
+    fato_repasses,
+    marcos_temporais,
+)
+
+for coluna_data in [
+    'data_marco_adotado',
+    'data_primeiro_repasse_elegivel',
+]:
+    intervalo_primeiro_repasse[coluna_data] = (
+        intervalo_primeiro_repasse[coluna_data].dt.strftime('%Y-%m-%d')
+    )
+
+intervalo_primeiro_repasse.to_csv(
+    os.path.join(processed_dir, 'intervalo_primeiro_repasse.csv'),
+    index=False,
+)
+
+# =========================================================================
+# 6. CONSTRUÇÃO DE dim_calendario
 # =========================================================================
 
 print("Gerando dim_calendario...")
@@ -372,7 +438,7 @@ dim_calendario.to_csv(
 )
 
 # =========================================================================
-# 6. CONCILIAÇÃO
+# 7. CONCILIAÇÃO
 # =========================================================================
 
 print("\n--- CONCILIAÇÃO ---")
@@ -399,11 +465,23 @@ if 'valor_pago' in dim_municipio.columns:
     print(f"Conciliação salva em: {os.path.join(processed_dir, 'conciliacao.csv')}")
 
 # =========================================================================
-# 7. RELATÓRIO DE INCONSISTÊNCIAS
+# 8. RELATÓRIO DE INCONSISTÊNCIAS
 # =========================================================================
 
 print("\n--- RELATÓRIO DE INCONSISTÊNCIAS ---")
 inconsistencias = []
+
+for _, row in intervalo_primeiro_repasse[
+    intervalo_primeiro_repasse['status_intervalo'] != 'ok'
+].iterrows():
+    inconsistencias.append({
+        'severidade': 'AVISO',
+        'tipo': row['status_intervalo'],
+        'municipio': '',
+        'detalhe': (
+            f'Chave municipal {row["chave_municipal"]} sem intervalo publicável'
+        ),
+    })
 
 for _, row in municipios_ausentes_origem.iterrows():
     inconsistencias.append({
@@ -477,7 +555,7 @@ print(f"Inconsistências documentadas: {len(df_inc)}")
 print(f"Salvo em: {os.path.join(processed_dir, 'inconsistencias.csv')}")
 
 # =========================================================================
-# 8. RELATÓRIO DE VALIDAÇÃO
+# 9. RELATÓRIO DE VALIDAÇÃO
 # =========================================================================
 
 print("\n--- RELATÓRIO DE VALIDAÇÃO ---")
@@ -555,6 +633,25 @@ registra_validacao(
     indicadores_ausentes.sum() == 0,
     critica=False,
 )
+registra_validacao(
+    'total_intervalos_municipais', len(intervalo_primeiro_repasse),
+    EXPECTED_INTERVALOS,
+    len(intervalo_primeiro_repasse) == EXPECTED_INTERVALOS,
+)
+status_intervalos_invalidos = int(
+    intervalo_primeiro_repasse['status_intervalo'].ne('ok').sum()
+)
+registra_validacao(
+    'intervalos_sem_status_ok', status_intervalos_invalidos, 0,
+    status_intervalos_invalidos == 0,
+)
+registra_validacao(
+    'estornos_ignorados_no_primeiro_repasse',
+    int(intervalo_primeiro_repasse['qtd_estornos_ignorados'].sum()),
+    EXPECTED_NEGATIVOS,
+    int(intervalo_primeiro_repasse['qtd_estornos_ignorados'].sum())
+    == EXPECTED_NEGATIVOS,
+)
 
 df_validacao = pd.DataFrame(validacoes)
 df_validacao.to_csv(os.path.join(processed_dir, 'relatorio_validacao.csv'), index=False)
@@ -570,15 +667,22 @@ if not falhas_criticas.empty:
     raise RuntimeError(f'Validação do ETL falhou: {metricas}')
 
 # =========================================================================
-# 9. EXPORTAÇÃO SQLITE
+# 10. EXPORTAÇÃO SQLITE
 # =========================================================================
 
-exportar_sqlite(df_ranking, dim_municipio, fato_repasses, dim_calendario)
+exportar_sqlite(
+    df_ranking,
+    dim_municipio,
+    fato_repasses,
+    dim_calendario,
+    intervalo_primeiro_repasse,
+)
 
 print(f"\nCSVs prontos para o Qlik Sense em: {processed_dir}")
 print(f"  - fato_repasses.csv (com chave_municipal)")
 print(f"  - dim_municipio.csv (com indicadores IBGE, IDH-M, PIB)")
 print(f"  - dim_calendario.csv")
+print(f"  - intervalo_primeiro_repasse.csv")
 print(f"  - conciliacao.csv")
 print(f"  - inconsistencias.csv")
 print(f"  - relatorio_validacao.csv")

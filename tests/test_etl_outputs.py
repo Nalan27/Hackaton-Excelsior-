@@ -27,6 +27,7 @@ class EtlOutputsTest(unittest.TestCase):
         cls.fato = read_csv('fato_repasses.csv')
         cls.municipios = read_csv('dim_municipio.csv')
         cls.calendario = read_csv('dim_calendario.csv')
+        cls.intervalos = read_csv('intervalo_primeiro_repasse.csv')
         cls.conciliacao = read_csv('conciliacao.csv')
         cls.inconsistencias = read_csv('inconsistencias.csv')
         cls.validacao = read_csv('relatorio_validacao.csv')
@@ -66,9 +67,13 @@ class EtlOutputsTest(unittest.TestCase):
         campos_fato = set(self.fato[0])
         campos_municipio = set(self.municipios[0])
         campos_calendario = set(self.calendario[0])
+        campos_intervalos = set(self.intervalos[0])
         self.assertEqual(campos_fato & campos_municipio, {'chave_municipal'})
         self.assertEqual(campos_fato & campos_calendario, {'data'})
         self.assertEqual(campos_municipio & campos_calendario, set())
+        self.assertEqual(campos_fato & campos_intervalos, {'chave_municipal'})
+        self.assertEqual(campos_municipio & campos_intervalos, {'chave_municipal'})
+        self.assertEqual(campos_calendario & campos_intervalos, set())
 
     def test_conciliacao_documenta_as_tres_diferencas(self):
         divergencias = {
@@ -108,10 +113,52 @@ class EtlOutputsTest(unittest.TestCase):
                 ('dim_calendario', 'data', 'data'),
             })
 
+            fks_intervalos = conn.execute(
+                'PRAGMA foreign_key_list(intervalo_primeiro_repasse)'
+            ).fetchall()
+            referencias_intervalos = {
+                (fk[2], fk[3], fk[4]) for fk in fks_intervalos
+            }
+            self.assertEqual(referencias_intervalos, {
+                ('dim_municipio', 'chave_municipal', 'chave_municipal'),
+            })
+
     def test_script_qlik_usa_sintaxe_csv_valida(self):
         script = (ROOT / 'qlik' / 'load_data.qvs').read_text(encoding='utf-8')
-        self.assertEqual(script.count("(utf8, txt, embedded labels, delimiter is ',', msq);"), 3)
+        self.assertEqual(script.count("(utf8, txt, embedded labels, delimiter is ',', msq);"), 4)
         self.assertNotIn('CsvSimple', script)
+
+    def test_intervalo_usa_primeiro_credito_e_marco_documentado(self):
+        self.assertEqual(len(self.intervalos), 334)
+        self.assertEqual(
+            {row['status_intervalo'] for row in self.intervalos},
+            {'ok'},
+        )
+        self.assertEqual(
+            {row['data_marco_adotado'] for row in self.intervalos},
+            {'2024-04-24'},
+        )
+        self.assertEqual(
+            {row['criterio_primeiro_repasse'] for row in self.intervalos},
+            {'valor > 0 e data válida'},
+        )
+
+        primeiras_datas = [
+            datetime.strptime(row['data_primeiro_repasse_elegivel'], '%Y-%m-%d').date()
+            for row in self.intervalos
+        ]
+        intervalos = [
+            int(row['intervalo_desde_marco_adotado_dias'])
+            for row in self.intervalos
+        ]
+        self.assertEqual(min(primeiras_datas).isoformat(), '2024-05-17')
+        self.assertEqual(max(primeiras_datas).isoformat(), '2024-09-06')
+        self.assertEqual(min(intervalos), 23)
+        self.assertEqual(max(intervalos), 135)
+        self.assertEqual(
+            sum(int(row['qtd_estornos_ignorados']) for row in self.intervalos),
+            18,
+        )
 
     def test_calendario_e_continuo_e_cobre_a_fato(self):
         datas_calendario = [
