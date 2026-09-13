@@ -67,7 +67,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Bases auxiliares de recursos recebidos e convênios disponíveis.
 - [ ] **Pendente — Registrar data de extração, URL exata, filtros e versão junto a cada arquivo.** O catálogo contém fontes, mas não toda a linhagem necessária para reprodução.
 - [ ] **Pendente — Obter indicador de impacto por município.** Selecionar uma medida comparável, como pessoas afetadas, danos estimados, população desalojada ou reconhecimento de calamidade.
-- [ ] **Pendente — Obter marco temporal por município.** Necessário para calcular dias entre evento crítico e primeiro repasse.
+- [x] **Adotar marco temporal documentado para os municípios atendidos.** Foi adotado 24/04/2024, início do período estadual dos eventos segundo o Decreto nº 57.604/2024. O marco é comum e não equivale à data do impacto local.
 
 ## 6. ETL e qualidade dos dados
 
@@ -107,8 +107,8 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 ### 8.2 Tempo de repasse
 
 - [ ] **Pendente — Construir timeline de créditos e estornos.**
-- [ ] **Pendente — Calcular a data do primeiro repasse por município.**
-- [ ] **Pendente — Calcular dias desde o evento ou marco oficial.** Depende da fonte temporal municipal.
+- [x] **Calcular a data do primeiro repasse por município.** A menor data com `valor > 0` foi calculada para os 334 municípios; estornos não iniciam atendimento.
+- [x] **Calcular dias desde o marco oficial adotado.** O artefato `intervalo_primeiro_repasse.csv` calcula o intervalo desde 24/04/2024 e explicita que a medida não representa tempo desde o impacto local.
 - [ ] **Pendente — Identificar municípios atendidos sistematicamente mais tarde.**
 
 ### 8.3 Concentração, lacunas e equidade

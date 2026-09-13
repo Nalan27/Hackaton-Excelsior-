@@ -14,3 +14,6 @@ datas_invalidas,0.0,0.0,OK
 valores_nulos,0.0,0.0,OK
 movimentacoes_sem_municipio,0.0,0.0,OK
 indicadores_ausentes,1.0,0.0,AVISO
+total_intervalos_municipais,334.0,334.0,OK
+intervalos_sem_status_ok,0.0,0.0,OK
+estornos_ignorados_no_primeiro_repasse,18.0,18.0,OK

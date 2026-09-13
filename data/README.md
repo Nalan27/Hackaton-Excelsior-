@@ -21,6 +21,10 @@ Os dados das seguintes fontes foram extraídos e organizados para análise:
 | **Recursos Recebidos (Portal da Transparência)** | Recursos recebidos pelo favorecido vinculado ao FUNDEC (fonte do recurso, não destino). | [Acessar](https://portaldatransparencia.gov.br/despesas/favorecido?faseDespesa=3&favorecido=319734&ordenarPor=valor&direcao=desc) |
 | **Convênios e outros acordos firmados** | Convênios firmados pelo mesmo favorecido. | [Acessar](https://portaldatransparencia.gov.br/convenios/consulta?convenente=319734) |
 | **Atlas Cidade — Dados Municipais** | Base compilada com IDH-M (2010), população, PIB e código IBGE dos municípios brasileiros. | [Acessar](https://www.atlascidade.com.br/dados) |
+
+O art. 1º do Decreto nº 57.604/2024 registra 24/04/2024 como início do
+período estadual dos eventos climáticos. A task 10 usa essa data somente como
+marco documental comum dos repasses, sem tratá-la como data do impacto local.
         
 ### Arquivo de dados
 

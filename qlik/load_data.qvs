@@ -67,3 +67,27 @@ LOAD
     ano_mes_ordem
 FROM [lib://DataFiles/dim_calendario.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
+
+// ================================================================
+// INTERVALO ATÉ O PRIMEIRO REPASSE ELEGÍVEL
+// ================================================================
+
+intervalo_primeiro_repasse:
+LOAD
+    Text(chave_municipal) AS chave_municipal,
+    Date(
+        Date#(data_marco_adotado, 'YYYY-MM-DD'),
+        'YYYY-MM-DD'
+    ) AS data_marco_adotado,
+    tipo_marco_adotado,
+    fonte_marco_adotado,
+    Date(
+        Date#(data_primeiro_repasse_elegivel, 'YYYY-MM-DD'),
+        'YYYY-MM-DD'
+    ) AS data_primeiro_repasse_elegivel,
+    intervalo_desde_marco_adotado_dias,
+    status_intervalo,
+    criterio_primeiro_repasse,
+    qtd_estornos_ignorados
+FROM [lib://DataFiles/intervalo_primeiro_repasse.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
