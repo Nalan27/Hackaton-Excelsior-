@@ -63,6 +63,24 @@ class EtlOutputsTest(unittest.TestCase):
         self.assertTrue(chaves_fato <= chaves_dim)
         self.assertNotIn('', chaves_fato)
 
+    def test_mapa_tem_populacao_localizacao_e_valor_por_pessoa(self):
+        self.assertEqual(len(self.municipios), 334)
+        self.assertTrue(all(row['populacao_2024'] for row in self.municipios))
+        self.assertTrue(all(row['municipio_ibge_2024'] for row in self.municipios))
+        self.assertTrue(all(
+            row['localizacao_mapa'].endswith(', Rio Grande do Sul, Brasil')
+            for row in self.municipios
+        ))
+        self.assertEqual(
+            len({row['localizacao_mapa'] for row in self.municipios}),
+            334,
+        )
+
+        for row in self.municipios:
+            esperado = Decimal(row['total_repasses']) / Decimal(row['populacao_2024'])
+            obtido = Decimal(row['valor_por_pessoa_2024'])
+            self.assertLess(abs(obtido - esperado), Decimal('0.000000001'))
+
     def test_modelo_nao_cria_chaves_sinteticas(self):
         campos_fato = set(self.fato[0])
         campos_municipio = set(self.municipios[0])
@@ -127,6 +145,9 @@ class EtlOutputsTest(unittest.TestCase):
         script = (ROOT / 'qlik' / 'load_data.qvs').read_text(encoding='utf-8')
         self.assertEqual(script.count("(utf8, txt, embedded labels, delimiter is ',', msq);"), 4)
         self.assertNotIn('CsvSimple', script)
+        self.assertIn('localizacao_mapa', script)
+        self.assertIn('populacao_2024', script)
+        self.assertIn('valor_por_pessoa_2024', script)
 
     def test_intervalo_usa_primeiro_credito_e_marco_documentado(self):
         self.assertEqual(len(self.intervalos), 334)

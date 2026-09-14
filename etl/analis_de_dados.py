@@ -2,6 +2,7 @@ import pandas as pd
 import sqlite3
 import os
 import unicodedata
+import csv
 
 from metricas_repasses import calcular_intervalo_primeiro_repasse
 
@@ -12,6 +13,9 @@ if os.path.basename(BASE_DIR) == 'etl':
 path_ranking = os.path.join(BASE_DIR, 'data', 'raw', 'csv', 'ranking_oficial_fundec_2024.csv')
 path_repasses = os.path.join(BASE_DIR, 'data', 'raw', 'csv', 'repasses_fundec_2024.csv')
 path_municipios_br = os.path.join(BASE_DIR, 'data', 'raw', 'csv', 'municipios-brasil.csv')
+path_populacao_rs_2024 = os.path.join(
+    BASE_DIR, 'data', 'raw', 'csv', 'populacao_rs_2024.csv'
+)
 
 processed_dir = os.path.join(BASE_DIR, 'data', 'processed')
 os.makedirs(processed_dir, exist_ok=True)
@@ -24,6 +28,7 @@ EXPECTED_TOTAL_FATO = 288_699_999.97
 EXPECTED_TOTAL_RANKING = 289_176_004.25
 EXPECTED_DIFERENCA = -476_004.28
 EXPECTED_INTERVALOS = 334
+EXPECTED_MUNICIPIOS_RS = 497
 DATA_MARCO_ADOTADO = '2024-04-24'
 TOLERANCIA_MONETARIA = 0.01
 
@@ -48,6 +53,41 @@ def exige_colunas(df, colunas, fonte):
         raise ValueError(f'Colunas ausentes em {fonte}: {", ".join(ausentes)}')
 
 
+def ler_populacao_rs_2024(caminho):
+    """Le as linhas municipais da exportacao bruta da SIDRA Tabela 6579."""
+    registros = []
+    with open(caminho, encoding='utf-8-sig', newline='') as arquivo:
+        for linha in csv.reader(arquivo, delimiter=';'):
+            if len(linha) < 5 or linha[0] != 'MU':
+                continue
+
+            nome_ibge = linha[2].strip()
+            if nome_ibge.endswith(' (RS)'):
+                nome_ibge = nome_ibge[:-5]
+
+            registros.append({
+                'codigo_ibge': int(linha[1]),
+                'municipio_ibge_2024': nome_ibge,
+                'populacao_2024': int(linha[3]),
+                'unidade_populacao_2024': linha[4].strip(),
+            })
+
+    populacao = pd.DataFrame(registros)
+    if len(populacao) != EXPECTED_MUNICIPIOS_RS:
+        raise ValueError(
+            'Cobertura inesperada na populacao SIDRA 2024: '
+            f'{len(populacao)} municipios; esperado {EXPECTED_MUNICIPIOS_RS}'
+        )
+    if populacao['codigo_ibge'].duplicated().any():
+        raise ValueError('Codigos IBGE duplicados na populacao SIDRA 2024')
+    if populacao['populacao_2024'].le(0).any():
+        raise ValueError('Populacao SIDRA 2024 nula ou nao positiva')
+    if set(populacao['unidade_populacao_2024']) != {'Pessoas'}:
+        raise ValueError('Unidade inesperada na populacao SIDRA 2024')
+
+    return populacao.drop(columns='unidade_populacao_2024')
+
+
 def exportar_sqlite(
     df_ranking,
     dim_municipio,
@@ -69,7 +109,10 @@ def exportar_sqlite(
                 chave_municipal TEXT PRIMARY KEY,
                 "município" TEXT NOT NULL,
                 codigo_ibge INTEGER NOT NULL UNIQUE,
+                municipio_ibge_2024 TEXT NOT NULL,
+                localizacao_mapa TEXT NOT NULL UNIQUE,
                 regiao TEXT,
+                populacao_2024 INTEGER NOT NULL,
                 populacao_2025 INTEGER,
                 populacao_censo_2022 REAL,
                 idhm_2010 REAL,
@@ -79,6 +122,7 @@ def exportar_sqlite(
                 area_km2 REAL,
                 valor_pago REAL,
                 total_repasses REAL,
+                valor_por_pessoa_2024 REAL NOT NULL,
                 qtd_repasses INTEGER,
                 valor_medio REAL
             )
@@ -155,6 +199,9 @@ print("COLUNAS REPASSES:", df_repasses.columns.tolist())
 
 print("\n--- LENDO MUNICIPIOS-BRASIL.CSV ---")
 df_mun_br = pd.read_csv(path_municipios_br, sep=',', encoding='utf-8')
+
+print("\n--- LENDO POPULACAO SIDRA 2024 ---")
+df_populacao_rs_2024 = ler_populacao_rs_2024(path_populacao_rs_2024)
 
 exige_colunas(df_ranking, {'município', 'valor_pago_(r$)'}, path_ranking)
 exige_colunas(
@@ -246,6 +293,16 @@ dim_municipio = pd.merge(
     on='municipio_norm',
     how='left',
 )
+dim_municipio = pd.merge(
+    dim_municipio,
+    df_populacao_rs_2024,
+    on='codigo_ibge',
+    how='left',
+    validate='many_to_one',
+)
+dim_municipio['localizacao_mapa'] = (
+    dim_municipio['municipio_ibge_2024'] + ', Rio Grande do Sul, Brasil'
+)
 # Converter valor_pago_(r$) de "5958562,42" para float
 if 'valor_pago_(r$)' in dim_municipio.columns:
     dim_municipio['valor_pago'] = (
@@ -269,6 +326,9 @@ dim_municipio = pd.merge(dim_municipio, resumo_fato, on='municipio_norm', how='l
 dim_municipio['total_repasses'] = dim_municipio['total_repasses'].fillna(0)
 dim_municipio['qtd_repasses'] = dim_municipio['qtd_repasses'].fillna(0).astype(int)
 dim_municipio['valor_medio'] = dim_municipio['valor_medio'].fillna(0)
+dim_municipio['valor_por_pessoa_2024'] = (
+    dim_municipio['total_repasses'] / dim_municipio['populacao_2024']
+)
 
 # chave_municipal: 7 dígitos zero-padded a partir do codigo_ibge
 dim_municipio['chave_municipal'] = (
@@ -282,11 +342,13 @@ mapa_municipios = dim_municipio[
 
 # Reordenar colunas para clareza
 ordem_dim = [
-    'chave_municipal', 'município', 'codigo_ibge', 'regiao',
-    'populacao_2025', 'populacao_censo_2022',
+    'chave_municipal', 'município', 'codigo_ibge',
+    'municipio_ibge_2024', 'localizacao_mapa', 'regiao',
+    'populacao_2024', 'populacao_2025', 'populacao_censo_2022',
     'idhm_2010', 'pib_per_capita_2023_reais', 'pib_2023_mil_reais',
     'densidade_hab_km2', 'area_km2',
-    'valor_pago', 'total_repasses', 'qtd_repasses', 'valor_medio',
+    'valor_pago', 'total_repasses', 'valor_por_pessoa_2024',
+    'qtd_repasses', 'valor_medio',
 ]
 ordem_dim = [c for c in ordem_dim if c in dim_municipio.columns]
 dim_municipio = dim_municipio[ordem_dim]
@@ -297,6 +359,17 @@ if not sem_ibge.empty:
     print(f"ATENÇÃO: {len(sem_ibge)} municípios sem código IBGE: {sem_ibge['município'].tolist()}")
 else:
     print(f"Todos os {len(dim_municipio)} municípios associados ao IBGE.")
+
+sem_populacao_2024 = dim_municipio[dim_municipio['populacao_2024'].isna()]
+localizacoes_duplicadas = int(dim_municipio['localizacao_mapa'].duplicated().sum())
+if sem_populacao_2024.empty:
+    print(
+        f"Todos os {len(dim_municipio)} municipios possuem populacao SIDRA 2024."
+    )
+else:
+    print(
+        f"ATENCAO: {len(sem_populacao_2024)} municipios sem populacao SIDRA 2024."
+    )
 
 dim_municipio.to_csv(os.path.join(processed_dir, 'dim_municipio.csv'), index=False)
 
@@ -532,7 +605,8 @@ for _, row in df_repasses[df_repasses['data'].isna()].iterrows():
 # Pinto Bandeira não possui IDH-M 2010 na fonte. A ausência é preservada,
 # em vez de ser preenchida com um valor estimado sem respaldo.
 indicadores = [
-    'populacao_2025', 'idhm_2010', 'pib_per_capita_2023_reais',
+    'populacao_2024', 'populacao_2025', 'idhm_2010',
+    'pib_per_capita_2023_reais',
     'densidade_hab_km2', 'area_km2',
 ]
 indicadores_ausentes = dim_municipio[indicadores].isna().sum()
@@ -607,6 +681,19 @@ registra_validacao(
 registra_validacao(
     'codigos_ibge_duplicados', codigos_ibge_duplicados, 0,
     codigos_ibge_duplicados == 0,
+)
+registra_validacao(
+    'municipios_rs_populacao_sidra_2024', len(df_populacao_rs_2024),
+    EXPECTED_MUNICIPIOS_RS,
+    len(df_populacao_rs_2024) == EXPECTED_MUNICIPIOS_RS,
+)
+registra_validacao(
+    'municipios_receptores_sem_populacao_2024', len(sem_populacao_2024), 0,
+    sem_populacao_2024.empty,
+)
+registra_validacao(
+    'localizacoes_mapa_duplicadas', localizacoes_duplicadas, 0,
+    localizacoes_duplicadas == 0,
 )
 registra_validacao(
     'fato_sem_chave_municipal', int(fato_repasses['chave_municipal'].isna().sum()), 0,

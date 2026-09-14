@@ -2,7 +2,7 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **9 de setembro de 2026**.
+Este documento registra o estado do repositório em **13 de setembro de 2026**.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -28,7 +28,7 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Pendente | Há CSVs e script de carga; ainda não há aplicativo nem link público |
+| Aplicativo e dashboard Qlik Sense | Parcial | App versionado com mapa municipal de teste e validações; ainda não há link público nem telas finais |
 | Análises e achados finais | Pendente | Não há resultados validados, conclusões ou recomendações finais |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
 | Certificados e elegibilidade da equipe | Não comprovado | Evidência externa ao repositório |
@@ -38,7 +38,7 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 Todos os itens desta seção precisam estar concluídos. O atendimento parcial não habilita o trabalho para avaliação.
 
 - [ ] **Pendente — Link público e funcional do aplicativo Qlik Sense.** Não há URL pública registrada.
-- [ ] **Pendente — Visualização geográfica por município.** Os dados municipais existem, mas o mapa ainda não foi implementado.
+- [ ] **Parcial — Visualização geográfica por município.** Protótipo por pontos validado para 334 recebedores; a tela geográfica final será construída na task 14.
 - [ ] **Pendente — Análise temporal dos repasses ou pagamentos.** A base possui datas, mas não há timeline no Qlik Sense.
 - [ ] **Pendente — Pelo menos um KPI quantitativo.** As métricas estão propostas, mas não implementadas no aplicativo.
 - [ ] **Pendente — Vídeo pitch público com até 5 minutos.** Não há vídeo nem link.
@@ -99,8 +99,8 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ### 8.1 Distribuição geográfica
 
-- [ ] **Pendente — Construir mapa municipal.**
-- [ ] **Pendente — Exibir valor total e valor per capita.**
+- [ ] **Parcial — Construir mapa municipal.** Protótipo por pontos concluído na task 11; faltam polígonos e acabamento da tela final na task 14.
+- [x] **Exibir valor total e valor per capita.** O ETL fornece total líquido e valor por pessoa com população IBGE 2024; o protótipo colore os pontos pelo indicador per capita.
 - [ ] **Pendente — Identificar maiores e menores recebedores com contexto.**
 - [ ] **Pendente — Comparar repasse com indicador de impacto.** Depende da fonte ainda não incorporada.
 

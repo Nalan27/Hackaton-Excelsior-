@@ -7,6 +7,9 @@ soma_total_ranking,289176004.25,289176004.25,OK
 diferenca_conciliacao,-476004.28,-476004.28,OK
 municipios_sem_ibge,0.0,0.0,OK
 codigos_ibge_duplicados,0.0,0.0,OK
+municipios_rs_populacao_sidra_2024,497.0,497.0,OK
+municipios_receptores_sem_populacao_2024,0.0,0.0,OK
+localizacoes_mapa_duplicadas,0.0,0.0,OK
 fato_sem_chave_municipal,0.0,0.0,OK
 chaves_municipais_orfas,0.0,0.0,OK
 duplicatas_exatas,0.0,0.0,OK

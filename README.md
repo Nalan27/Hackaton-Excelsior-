@@ -22,7 +22,7 @@ Este projeto coleta dados públicos sobre esses repasses, aplica um pipeline de 
 | `repasses_fundec_2024.csv` | 658 transferências individuais do FUNDEC | Tabela fato (`fato_repasses`) |
 | `ranking_oficial_fundec_2024.csv` | Ranking dos 334 municípios por valor total | Referência para conciliação |
 | `municipios-brasil.csv` | 5.571 municípios brasileiros com código IBGE, IDH-M, PIB, densidade | Dimensão municipal (`dim_municipio`) |
-| `populacao_rs_2024.csv` | População estimada dos municípios do RS (SIDRA T6579) | Referência complementar |
+| `populacao_rs_2024.csv` | População estimada dos 497 municípios do RS (SIDRA T6579) | Denominador municipal dos repasses por pessoa |
 
 > Os PDFs em `data/raw/pdf/` são documentos legais de referência, não são dados para o banco.
 
@@ -54,7 +54,10 @@ Todos os municípios do ranking com código IBGE e indicadores socioeconômicos.
 | `chave_municipal` | TEXT | Chave municipal IBGE (PK, 7 dígitos) |
 | `município` | TEXT | Nome do município |
 | `codigo_ibge` | INT | Código IBGE (7 dígitos) |
+| `municipio_ibge_2024` | TEXT | Nome oficial usado na fonte populacional do IBGE |
+| `localizacao_mapa` | TEXT | Município, estado e país para geocodificação no Qlik |
 | `regiao` | TEXT | Região (Sul) |
+| `populacao_2024` | INT | População municipal estimada pelo IBGE/SIDRA em 2024 |
 | `populacao_2025` | INT | População estimada 2025 |
 | `populacao_censo_2022` | FLOAT | População Censo 2022 |
 | `idhm_2010` | FLOAT | IDHM 2010 (0 a 1) |
@@ -64,6 +67,7 @@ Todos os municípios do ranking com código IBGE e indicadores socioeconômicos.
 | `area_km2` | FLOAT | Área territorial (km²) |
 | `valor_pago` | FLOAT | Total pago conforme ranking oficial |
 | `total_repasses` | FLOAT | Soma dos repasses na fato |
+| `valor_por_pessoa_2024` | FLOAT | Total líquido dividido pela população estimada de 2024 |
 | `qtd_repasses` | INT | Quantidade de repasses |
 | `valor_medio` | FLOAT | Valor médio por repasse |
 
