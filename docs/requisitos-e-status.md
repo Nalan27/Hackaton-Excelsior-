@@ -2,7 +2,7 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **13 de setembro de 2026**.
+Este documento registra o estado do repositório em **15 de setembro de 2026**.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -92,7 +92,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Pendente — Incorporar dimensão ou indicador de impacto, caso a fonte seja obtida.**
 - [x] **Criar script de carga do Qlik compatível com os artefatos gerados.** Disponível em `qlik/load_data.qvs`.
 - [x] **Evitar chaves sintéticas e associações circulares.** Modelo validado no Qlik sem chaves sintéticas ou associações circulares.
-- [ ] **Pendente — Registrar fórmulas e regras das medidas mestres.**
+- [ ] **Parcial — Registrar fórmulas e regras das medidas mestres.** O catálogo reproduzível está em `qlik/medidas-mestras.md`; falta criar e validar os itens mestres no Qlik Cloud.
 - [ ] **Pendente — Testar recarga completa e incremental, se aplicável.**
 
 ## 8. Análises exigidas e recomendadas
