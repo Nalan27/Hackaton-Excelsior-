@@ -122,12 +122,12 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ## 9. Dashboard e experiência no Qlik Sense
 
-- [ ] **Pendente — Criar página de visão geral com KPIs e narrativa.**
+- [x] **Concluído — Criar página de visão geral com KPIs e narrativa.** (Task 13)
 - [ ] **Pendente — Criar página geográfica.**
 - [ ] **Pendente — Criar página temporal.**
 - [ ] **Pendente — Criar página de equidade e vulnerabilidade.**
 - [ ] **Pendente — Criar página de método, limitações e recomendações.**
-- [ ] **Pendente — Adicionar filtros úteis e consistentes entre páginas.**
+- [x] **Concluído — Adicionar filtros úteis e consistentes entre páginas.** (Task 13)
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**
 - [ ] **Pendente — Testar legibilidade, contraste, unidades, escalas e tooltips.**
 - [ ] **Pendente — Exibir fonte, período e data de atualização.**
