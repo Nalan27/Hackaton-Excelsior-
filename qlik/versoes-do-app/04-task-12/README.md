@@ -1,6 +1,6 @@
 # Snapshot 04 — Task 12
 
-## Conteúdo esperado
+## Conteúdo
 
 - seis medidas criadas como itens mestres;
 - pasta `Validação — Task 12` com KPIs e filtros;
@@ -10,16 +10,16 @@
 
 ## Arquivo
 
-Após concluir a validação no Qlik Cloud, exportar o aplicativo **com dados** e
-salvar nesta pasta como `app.qvf`.
+Aplicativo exportado **com dados** e salvo como `app.qvf`.
 
 ## Validação
 
-- Exportação com dados: pendente.
-- Tamanho: pendente.
-- SHA-256: pendente.
+- Exportado com dados em 15/09/2026.
+- Tamanho: 360.448 bytes.
+- SHA-256:
+  `2E818571CDF50B092FD6C0D94A9886C4CD1A3EC775462AB659E85CAF2512E58E`.
 - Evidências visuais: `docs/evidencias/task-12/`.
 
 ## Estado
 
-Pendente de criação das medidas mestras e validação no Qlik Cloud.
+Concluído e validado.
