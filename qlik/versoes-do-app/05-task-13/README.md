@@ -12,7 +12,7 @@
 
 ## Arquivo
 
-Aplicativo exportado **com dados** e salvo como `Excelsior.qvf`.
+Aplicativo exportado **com dados** e salvo como `app.qvf`.
 
 ## Validação
 
