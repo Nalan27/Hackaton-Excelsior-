@@ -84,11 +84,19 @@ Os 17 testes do `tests/test_etl_outputs.py` foram executados com sucesso, confir
 
 ## Evidências
 
-As capturas devem ser adicionadas em `docs/evidencias/task-13/`:
+As capturas foram adicionadas em `docs/evidencias/task-13/`:
 
-1. `01-capa-geral.png` — visão geral da página com os 4 KPIs
-2. `02-capa-filtros.png` — filtros aplicados e KPIs atualizados
-3. `03-capa-selecao-multipla.png` — seleção de municípios específicos
+| Arquivo | Descrição | Status |
+|---------|-----------|--------|
+| `01-capa-geral.png` | Visão geral da página com os 4 KPIs | ✅ Concluído |
+| `02-capa-filtros.png` | Filtros aplicados e KPIs atualizados | ✅ Concluído |
+| `03-capa-seleção-mutipla.png` | Seleção de municípios específicos | ✅ Concluído |
+
+![Capa geral](./evidencias/task-13/01-capa-geral.png)
+
+![Filtros](./evidencias/task-13/02-capa-filtros.png)
+
+![Seleção múltipla](./evidencias/task-13/03-capa-seleção-mutipla.png)
 
 ## Conclusão
 
@@ -99,6 +107,8 @@ A capa do app foi criada na página inicial do aplicativo Qlik Sense com:
 - ✅ Medidas consistentes com as master measures da Task #12
 - ✅ Indicador de espera incluído (validado na Task #10)
 - ✅ Todos os testes automatizados aprovados (17/17)
+- ✅ Snapshot do aplicativo exportado com dados
+- ✅ Evidências visuais documentadas
 
 ## Próximas Tasks Desbloqueadas
 
