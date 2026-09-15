@@ -48,6 +48,122 @@ class EtlOutputsTest(unittest.TestCase):
         self.assertEqual(sum(negativos), Decimal('-18634883.72'))
         self.assertEqual(sum(valores), Decimal('288699999.97'))
 
+    def test_medidas_mestras_sem_filtros(self):
+        valores = [Decimal(row['valor']) for row in self.fato]
+        creditos = sum(valor for valor in valores if valor > 0)
+        ajustes_negativos = sum(valor for valor in valores if valor < 0)
+        valor_liquido = sum(valores)
+        municipios_atendidos = {
+            row['chave_municipal'] for row in self.fato
+        }
+        populacao_atendida = sum(
+            Decimal(row['populacao_2024']) for row in self.municipios
+        )
+        valor_por_pessoa = valor_liquido / populacao_atendida
+        intervalos = [
+            Decimal(row['intervalo_desde_marco_adotado_dias'])
+            for row in self.intervalos
+            if row['status_intervalo'] == 'ok'
+        ]
+        tempo_medio = sum(intervalos) / Decimal(len(intervalos))
+
+        self.assertEqual(creditos, Decimal('307334883.69'))
+        self.assertEqual(ajustes_negativos, Decimal('-18634883.72'))
+        self.assertEqual(creditos + ajustes_negativos, valor_liquido)
+        self.assertEqual(valor_liquido, Decimal('288699999.97'))
+        self.assertEqual(len(municipios_atendidos), 334)
+        self.assertEqual(populacao_atendida, Decimal('8778780'))
+        self.assertEqual(
+            valor_por_pessoa.quantize(Decimal('0.01')),
+            Decimal('32.89'),
+        )
+        self.assertEqual(
+            tempo_medio.quantize(Decimal('0.01')),
+            Decimal('40.13'),
+        )
+
+    def test_per_capita_de_selecao_divide_totais_agregados(self):
+        municipios_por_chave = {
+            row['chave_municipal']: row for row in self.municipios
+        }
+        chaves_selecionadas = {'4314902', '4304606'}
+        valor_selecionado = sum(
+            Decimal(row['valor'])
+            for row in self.fato
+            if row['chave_municipal'] in chaves_selecionadas
+        )
+        populacao_selecionada = sum(
+            Decimal(municipios_por_chave[chave]['populacao_2024'])
+            for chave in chaves_selecionadas
+        )
+        per_capita_agregado = valor_selecionado / populacao_selecionada
+        soma_incorreta_das_razoes = sum(
+            Decimal(municipios_por_chave[chave]['valor_por_pessoa_2024'])
+            for chave in chaves_selecionadas
+        )
+
+        self.assertEqual(valor_selecionado, Decimal('11565116.28'))
+        self.assertEqual(populacao_selecionada, Decimal('1748876'))
+        self.assertEqual(
+            per_capita_agregado.quantize(Decimal('0.01')),
+            Decimal('6.61'),
+        )
+        self.assertNotEqual(
+            per_capita_agregado.quantize(Decimal('0.01')),
+            soma_incorreta_das_razoes.quantize(Decimal('0.01')),
+        )
+
+    def test_medidas_mestras_municipios_de_controle(self):
+        municipios_por_chave = {
+            row['chave_municipal']: row for row in self.municipios
+        }
+        intervalos_por_chave = {
+            row['chave_municipal']: row for row in self.intervalos
+        }
+        controles = {
+            '4314902': {
+                'creditos': Decimal('16247674.42'),
+                'ajustes': Decimal('-10465116.28'),
+                'liquido': Decimal('5782558.14'),
+                'per_capita': Decimal('4.16'),
+                'espera': '84',
+            },
+            '4304606': {
+                'creditos': Decimal('5782558.14'),
+                'ajustes': Decimal('0'),
+                'liquido': Decimal('5782558.14'),
+                'per_capita': Decimal('16.08'),
+                'espera': '57',
+            },
+        }
+
+        for chave, esperado in controles.items():
+            valores = [
+                Decimal(row['valor'])
+                for row in self.fato
+                if row['chave_municipal'] == chave
+            ]
+            creditos = sum(valor for valor in valores if valor > 0)
+            ajustes = sum(valor for valor in valores if valor < 0)
+            liquido = sum(valores)
+            populacao = Decimal(
+                municipios_por_chave[chave]['populacao_2024']
+            )
+
+            self.assertEqual(creditos, esperado['creditos'])
+            self.assertEqual(ajustes, esperado['ajustes'])
+            self.assertEqual(liquido, esperado['liquido'])
+            self.assertEqual(
+                (liquido / populacao).quantize(Decimal('0.01')),
+                esperado['per_capita'],
+            )
+            self.assertEqual(
+                intervalos_por_chave[chave][
+                    'intervalo_desde_marco_adotado_dias'
+                ],
+                esperado['espera'],
+            )
+
     def test_identificadores_textuais_foram_preservados(self):
         self.assertEqual(len(self.repasses_origem), len(self.fato))
         for origem, tratado in zip(self.repasses_origem, self.fato):

@@ -2,7 +2,7 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **13 de setembro de 2026**.
+Este documento registra o estado do repositório em **15 de setembro de 2026**.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -40,7 +40,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Pendente — Link público e funcional do aplicativo Qlik Sense.** Não há URL pública registrada.
 - [ ] **Parcial — Visualização geográfica por município.** Protótipo por pontos validado para 334 recebedores; a tela geográfica final será construída na task 14.
 - [ ] **Pendente — Análise temporal dos repasses ou pagamentos.** A base possui datas, mas não há timeline no Qlik Sense.
-- [ ] **Pendente — Pelo menos um KPI quantitativo.** As métricas estão propostas, mas não implementadas no aplicativo.
+- [x] **Pelo menos um KPI quantitativo.** Seis medidas mestras foram implementadas e validadas na pasta `Validação — Task 12` do aplicativo.
 - [ ] **Pendente — Vídeo pitch público com até 5 minutos.** Não há vídeo nem link.
 - [ ] **Parcial — Documento descritivo completo.** A contextualização, as bases e a metodologia planejada estão em [`edital-hackathon-qlik-2026.md`](./edital-hackathon-qlik-2026.md); faltam análises executadas, achados, conclusões e recomendações finais.
 - [ ] **Não comprovado — Certificados das trilhas obrigatórias de todos os integrantes.** Não há comprovação no repositório.
@@ -92,7 +92,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Pendente — Incorporar dimensão ou indicador de impacto, caso a fonte seja obtida.**
 - [x] **Criar script de carga do Qlik compatível com os artefatos gerados.** Disponível em `qlik/load_data.qvs`.
 - [x] **Evitar chaves sintéticas e associações circulares.** Modelo validado no Qlik sem chaves sintéticas ou associações circulares.
-- [ ] **Pendente — Registrar fórmulas e regras das medidas mestres.**
+- [x] **Registrar fórmulas e regras das medidas mestres.** Catálogo reproduzível em `qlik/medidas-mestras.md`, com seis itens mestres validados no Qlik Cloud.
 - [ ] **Pendente — Testar recarga completa e incremental, se aplicável.**
 
 ## 8. Análises exigidas e recomendadas
