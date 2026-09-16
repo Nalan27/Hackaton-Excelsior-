@@ -59,7 +59,20 @@ Todos os filtros atualizam os 4 KPIs de forma consistente com as master measures
 
 ### Testes Automatizados
 
-Os 17 testes do `tests/test_etl_outputs.py` foram executados com sucesso, confirmando:
+A suíte automatizada contém 20 testes:
+
+- 17 testes de integração e validação dos artefatos em
+  `tests/test_etl_outputs.py`;
+- 3 testes unitários das métricas de repasse em
+  `tests/test_metricas_repasses.py`.
+
+Execução:
+
+```powershell
+.\.venv\Scripts\python.exe -B -m unittest discover -s tests -p "test_*.py" -v
+```
+
+Os 20 testes foram executados com sucesso, confirmando:
 
 - ✅ Valores das medidas mestras sem filtros
 - ✅ Seleção conjunta de municípios (Porto Alegre + Canoas)
@@ -110,7 +123,7 @@ A capa do app foi criada na página inicial do aplicativo Qlik Sense com:
 - ✅ 3 filtros interativos (município, data, recurso)
 - ✅ Medidas consistentes com as master measures da Task #12
 - ✅ Indicador de espera incluído (validado na Task #10)
-- ✅ Todos os testes automatizados aprovados (17/17)
+- ✅ Todos os testes automatizados aprovados (20/20)
 - ✅ Snapshot do aplicativo exportado com dados
 - ✅ Evidências visuais documentadas
 - ✅ Fonte, período e regra de arredondamento identificados na página
