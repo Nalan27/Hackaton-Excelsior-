@@ -31,16 +31,16 @@ O agrupamento do `data/processed/fato_repasses.csv` por mês da data confirma os
 
 Essa conferência valida os totais da base usada como referência. A comparação visual com os valores mostrados pelo Qlik ainda precisa ser documentada com capturas do app.
 
-## Validação visual pendente
+## Evidências visuais
 
-O responsável informou que o eixo aparece na ordem 202405, 202406, 202407, 202408, 202409 e que o saldo líquido coincide com as telas "Validação do calendário" (Task #9) e "Visão Geral" (Task #13). O PR #40 ainda não contém os prints necessários para confirmar essas observações durante a revisão.
+O primeiro print confirma que o eixo aparece na ordem 202405, 202406, 202407, 202408, 202409 e que as três medidas estão presentes no gráfico. O segundo mostra a seleção de julho (`ano_mes_ordem = 202407`) e a redução da visualização a esse mês.
 
-O roteiro e os valores mensais de referência estão em [`docs/evidencias/task-15/README.md`](../../../docs/evidencias/task-15/README.md). Adicionar nessa pasta:
+As duas capturas e os valores mensais de referência estão em [`docs/evidencias/task-15/README.md`](../../../docs/evidencias/task-15/README.md):
 
-1. `01-tela2-evolucao-mensal.png`: Tela 2 em modo de visualização, sem filtros, com os cinco meses e as três medidas visíveis;
-2. `02-tela2-filtro.png`: captura com seleção de mês ou município para mostrar o comportamento dos filtros.
+1. `01-tela2-evolucao-mensal.png`: Tela 2 sem filtros, com os cinco meses e as três medidas;
+2. `02-tela2-filtro.png`: Tela 2 com julho selecionado.
 
-Após incluir as capturas, atualizar o roteiro e esta seção com os valores conferidos no Qlik. O rótulo numérico do eixo (por exemplo, 202406) também deve ser avaliado quanto à legibilidade antes da submissão final.
+O gráfico mostra escala abreviada em milhões. As capturas permitem validar a apresentação e o efeito da seleção, mas não os valores exatos exibidos pelo Qlik. A conciliação numérica com as medidas da Task #12 depende de uma visualização ou exportação dos dados do gráfico com precisão completa. O rótulo numérico do eixo (por exemplo, 202406) também pode ser melhorado quanto à legibilidade antes da submissão final.
 
 ## Dependências e restauração
 
@@ -50,4 +50,4 @@ Para restaurar, importe `app.qvf` no Qlik Cloud. Para uma nova recarga, envie os
 
 ## Estado
 
-Implementação entregue no snapshot 06; confirmação visual pendente no PR #40. A revisão final da Task #15 depende dos prints do Qlik.
+Implementação e evidências visuais entregues no snapshot 06. Conferência dos valores exatos exibidos pelo Qlik pendente antes da conclusão da Task #15.

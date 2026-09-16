@@ -1,15 +1,17 @@
 # Evidências da Task 15 — Tela 2 (Linha do Tempo)
 
-**Estado:** capturas do Qlik Cloud pendentes no PR #40. Este arquivo é um roteiro de conferência; ele não substitui os prints reais do aplicativo.
+**Estado:** duas capturas do Qlik Cloud adicionadas. A conferência dos valores exatos exibidos pelo app ainda está pendente.
 
-## Capturas a incluir
+## Capturas
 
 | Arquivo | O que deve aparecer |
 |---|---|
-| `01-tela2-evolucao-mensal.png` | Tela 2 em modo de visualização, sem filtros; título, eixo de 202405 a 202409 em ordem cronológica, legenda e séries de créditos, ajustes negativos e saldo líquido. |
-| `02-tela2-filtro.png` | A mesma tela após selecionar um mês ou município, com seleção e valores resultantes visíveis. Registrar abaixo qual seleção foi usada. |
+| [`01-tela2-evolucao-mensal.png`](01-tela2-evolucao-mensal.png) | Tela 2 em modo de visualização, sem filtros; título, eixo de 202405 a 202409 em ordem cronológica, legenda e séries de créditos, ajustes negativos e saldo líquido. |
+| [`02-tela2-filtro.png`](02-tela2-filtro.png) | Seleção de julho de 2024 no campo `ano_mes_ordem`; o gráfico passa a exibir apenas 202407. |
 
-**Seleção usada no segundo print:** preencher após a captura.
+**Seleção usada no segundo print:** `ano_mes_ordem = 202407` (julho de 2024).
+
+As capturas mostram a ordem dos meses, as três medidas e o efeito da seleção. A caixa de seleção aberta no segundo print cobre parte do título e do gráfico; o primeiro print registra a visualização completa. Os eixos usam escala abreviada em milhões, de modo que as imagens não permitem conferir centavos nem os totais exatos calculados no Qlik.
 
 ## Valores de referência
 
@@ -28,8 +30,8 @@ O print do Qlik precisa permitir conferir o resultado exibido com esta tabela, c
 
 ## Conferência após incluir as imagens
 
-- [ ] Os dois arquivos PNG foram adicionados a esta pasta e abrem normalmente.
-- [ ] A ordem do eixo e as três medidas são legíveis no primeiro print.
-- [ ] A seleção e o efeito sobre os valores são legíveis no segundo print.
+- [x] Os dois arquivos PNG foram adicionados a esta pasta e abrem normalmente.
+- [x] A ordem do eixo e as três medidas são legíveis no primeiro print.
+- [x] A seleção e o efeito sobre os valores são legíveis no segundo print, em conjunto com o primeiro.
 - [ ] Os totais exibidos no app foram confrontados com os valores de referência.
-- [ ] O README do snapshot 06 foi atualizado com o resultado da conferência.
+- [x] O README do snapshot 06 foi atualizado com o resultado da conferência visual.
