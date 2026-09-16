@@ -35,13 +35,12 @@ Essa conferência valida os totais da base usada como referência. A comparaçã
 
 O responsável informou que o eixo aparece na ordem 202405, 202406, 202407, 202408, 202409 e que o saldo líquido coincide com as telas "Validação do calendário" (Task #9) e "Visão Geral" (Task #13). O PR #40 ainda não contém os prints necessários para confirmar essas observações durante a revisão.
 
-Adicionar em `docs/evidencias/task-15/`:
+O roteiro e os valores mensais de referência estão em [`docs/evidencias/task-15/README.md`](../../../docs/evidencias/task-15/README.md). Adicionar nessa pasta:
 
 1. `01-tela2-evolucao-mensal.png`: Tela 2 em modo de visualização, sem filtros, com os cinco meses e as três medidas visíveis;
-2. uma captura com seleção de mês ou município para mostrar o comportamento dos filtros;
-3. um `README.md` que explique o que cada imagem confirma.
+2. `02-tela2-filtro.png`: captura com seleção de mês ou município para mostrar o comportamento dos filtros.
 
-Após incluir as capturas, atualizar esta seção com os nomes reais dos arquivos e os valores conferidos no Qlik. O rótulo numérico do eixo (por exemplo, 202406) também deve ser avaliado quanto à legibilidade antes da submissão final.
+Após incluir as capturas, atualizar o roteiro e esta seção com os valores conferidos no Qlik. O rótulo numérico do eixo (por exemplo, 202406) também deve ser avaliado quanto à legibilidade antes da submissão final.
 
 ## Dependências e restauração
 
