@@ -89,14 +89,30 @@ As capturas foram adicionadas em `docs/evidencias/task-13/`:
 | Arquivo | Descrição | Status |
 |---------|-----------|--------|
 | `01-capa-geral.png` | Visão geral da página com os 4 KPIs | ✅ Concluído |
-| `02-capa-filtros.png` | Filtros aplicados e KPIs atualizados | ✅ Concluído |
-| `03-capa-seleção-mutipla.png` | Seleção de municípios específicos | ✅ Concluído |
+| `02-capa-filtros.png` | Município e data aplicados, com atualização dos KPIs | ✅ Concluído |
+| `03-capa-selecao-multipla.png` | Seleção conjunta de sete municípios | ✅ Concluído |
 
 ![Capa geral](./evidencias/task-13/01-capa-geral.png)
 
 ![Filtros](./evidencias/task-13/02-capa-filtros.png)
 
-![Seleção múltipla](./evidencias/task-13/03-capa-seleção-mutipla.png)
+![Seleção múltipla](./evidencias/task-13/03-capa-selecao-multipla.png)
+
+### Limitações visuais registradas
+
+As capturas confirmam a presença dos quatro KPIs, dos três filtros e a
+atualização dos indicadores após as seleções. A revisão também identificou os
+seguintes ajustes de apresentação para uma entrega posterior:
+
+- ampliar os objetos para evitar títulos e valores truncados;
+- padronizar a formatação monetária e decimal para `pt-BR`;
+- exibir a unidade `dias` no indicador de tempo médio;
+- identificar visualmente a fonte e o período analisado;
+- registrar novas evidências para os cenários de Porto Alegre + Canoas e do
+  recurso Judiciário.
+
+Esses ajustes exigem uma nova edição no Qlik Sense e serão acompanhados em uma
+issue de correção separada, com novo snapshot e novas evidências.
 
 ## Conclusão
 
@@ -109,6 +125,7 @@ A capa do app foi criada na página inicial do aplicativo Qlik Sense com:
 - ✅ Todos os testes automatizados aprovados (17/17)
 - ✅ Snapshot do aplicativo exportado com dados
 - ✅ Evidências visuais documentadas
+- ⚠️ Ajustes de apresentação registrados para acompanhamento
 
 ## Próximas Tasks Desbloqueadas
 
@@ -122,4 +139,7 @@ Com esta task concluída, as seguintes tasks podem ser iniciadas:
 
 ## Estado
 
-Concluída em 15/09/2026. A página inicial do aplicativo Qlik Sense foi configurada com os 4 KPIs solicitados, filtros interativos e todas as validações aprovadas.
+Implementação funcional concluída em 15/09/2026. A página inicial do aplicativo
+Qlik Sense foi configurada com os quatro KPIs e os três filtros solicitados. Os
+ajustes visuais identificados na revisão serão tratados em uma issue de correção
+separada.

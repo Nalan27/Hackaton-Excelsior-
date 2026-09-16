@@ -26,8 +26,12 @@ Aplicativo exportado **com dados** e salvo como `app.qvf`.
 | Arquivo | Descrição |
 |---------|-----------|
 | `01-capa-geral.png` | Visão geral com os 4 KPIs |
-| `02-capa-filtros.png` | Filtros aplicados e KPIs atualizados |
-| `03-capa-seleção-mutipla.png` | Seleção de municípios específicos |
+| `02-capa-filtros.png` | Município e data aplicados, com atualização dos KPIs |
+| `03-capa-selecao-multipla.png` | Seleção conjunta de sete municípios |
+
+As limitações visuais encontradas durante a revisão e os ajustes que exigem uma
+nova edição no Qlik Sense estão registrados em
+[`docs/task-13-cap-app.md`](../../../docs/task-13-cap-app.md#limitações-visuais-registradas).
 
 ## Estado
 
