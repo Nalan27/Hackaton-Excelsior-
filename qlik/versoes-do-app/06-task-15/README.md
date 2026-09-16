@@ -1,49 +1,54 @@
-Versão 06 — Task 15
+# Snapshot 06 — Task 15
 
-- Arquivo: app.qvf 
-- Data da exportação: 16/09/2026
-- Ambiente de origem: Qlik Cloud
-- Tipo da exportação: com dados
+## Conteúdo
+
+Snapshot do app Qlik Cloud após a implementação da Tela 2 (Linha do Tempo — H2), conforme registrado pelo responsável pela exportação:
+
+- pasta "Tela 2" com o gráfico "Evolução Mensal dos Repasses FUNDEC — Créditos, Ajustes e Saldo Líquido";
+- três medidas reutilizáveis da Task #12: Ajustes Negativos, Créditos Recebidos e Valor Líquido Recebido;
+- dimensão `ano_mes_ordem` (AAAAMM) para ordenar os meses cronologicamente;
+- campo agregado `valor_pago` fora da análise transacional desta tela.
+
+A numeração 06 segue a sequência de snapshots do app. Ela não representa a ordem de conclusão das tasks ou das demais telas.
+
+## Arquivo
+
+- Arquivo: `app.qvf`
+- Exportação informada: 16/09/2026, Qlik Cloud, com dados
 - Responsável pelo versionamento: John Victor E. Santo
-- Tamanho: 360.448 bytes
-- SHA-256: 1405DAE92224168E41E79CA25FF5AB9A8A084913440ECADFDA145FF183775925
+- Tamanho informado: 360.448 bytes
+- SHA-256 informado: `1405DAE92224168E41E79CA25FF5AB9A8A084913440ECADFDA145FF183775925`
 
-Alterações
-Snapshot do app após a implementação da Task 15 — Linha do Tempo (H2):
+## Conferência dos dados
 
-- criação da pasta "Tela 2", com o gráfico de barras "Evolução Mensal dos Repasses FUNDEC — Créditos, Ajustes e Saldo Líquido";
-- gráfico usa as três medidas reutilizáveis da Task #12 (Ajustes Negativos, Créditos Recebidos, Valor Líquido Recebido), sem reescrever expressões soltas;
-- dimensão configurada como `ano_mes_ordem` (campo numérico inteiro da dim_calendario, formato AAAAMM) em vez de `ano_mes`, corrigindo a ordenação cronológica que saía fora de sequência nas validações anteriores;
-- campo `valor_pago` (oriundo do ranking agregado por município, em dim_municipio) não foi incluído nesta tela, evitando misturar granularidade transacional com granularidade agregada.
+O agrupamento do `data/processed/fato_repasses.csv` por mês da data confirma os cinco períodos de 2024-05 a 2024-09 e os totais abaixo:
 
-Validação
-- Eixo temporal exibe os períodos em ordem cronológica correta: 202405, 202406, 202407, 202408, 202409 — confirmado em modo de visualização.
-- Total líquido bate com o conciliado na Task #12: Créditos Recebidos (R$ 307.334.883,69) + Ajustes Negativos (–R$ 18.634.883,72) = Valor Líquido Recebido (R$ 288.699.999,97), conferido linha a linha por período.
-- Mesmo total (R$ 288.699.999,97 / 288,7M) confirmado de forma independente na pasta "Validação do calendário" (Task 9, via Sum(valor)) e na pasta "Visão Geral" (Task 13, KPI Total Repassado) — consistência de ponta a ponta no app.
-- 5 períodos cobertos: 2024-05 a 2024-09.
+| Medida | Total |
+|---|---:|
+| Créditos positivos | R$ 307.334.883,69 |
+| Ajustes negativos | −R$ 18.634.883,72 |
+| Saldo líquido | R$ 288.699.999,97 |
 
-Observação de melhoria (não bloqueante)
-O rótulo do eixo usa o formato numérico puro (ex. "202406"), sem separador. É funcional e correto, mas menos legível que um formato "jun/2024" ou "2024-06". Fica como sugestão de polimento visual para antes da submissão, não como pendência de correção.
+Essa conferência valida os totais da base usada como referência. A comparação visual com os valores mostrados pelo Qlik ainda precisa ser documentada com capturas do app.
 
-Dependências
-- conexão DataFiles no Qlik Cloud;
-- dim_calendario.csv;
-- fato_repasses.csv;
-- dim_municipio.csv;
-- intervalo_primeiro_repasse.csv;
-- script de carga qlik/load_data.qvs;
-- medidas mestras publicadas na Task #12 (Ajustes Negativos, Créditos Recebidos, Valor Líquido Recebido).
+## Validação visual pendente
 
-Restauração
-- Importe app.qvf no Qlik Cloud.
-- O snapshot já contém os dados carregados no momento da exportação.
-- Para uma nova recarga, envie os quatro CSVs para a conexão DataFiles e confirme ou ajuste a conexão usada pelo script.
+O responsável informou que o eixo aparece na ordem 202405, 202406, 202407, 202408, 202409 e que o saldo líquido coincide com as telas "Validação do calendário" (Task #9) e "Visão Geral" (Task #13). O PR #40 ainda não contém os prints necessários para confirmar essas observações durante a revisão.
 
-Evidências visuais: docs/evidencias/task-15/.
+Adicionar em `docs/evidencias/task-15/`:
 
-| Arquivo | Descrição |
-|---|---|
-| 01-tela2-evolucao-mensal.png | Gráfico de barras da Tela 2 em modo de visualização, com os três períodos-chave (202406 como pico de créditos, 202407 como maior ajuste negativo) |
+1. `01-tela2-evolucao-mensal.png`: Tela 2 em modo de visualização, sem filtros, com os cinco meses e as três medidas visíveis;
+2. uma captura com seleção de mês ou município para mostrar o comportamento dos filtros;
+3. um `README.md` que explique o que cada imagem confirma.
 
-Estado
-Concluído e validado.
+Após incluir as capturas, atualizar esta seção com os nomes reais dos arquivos e os valores conferidos no Qlik. O rótulo numérico do eixo (por exemplo, 202406) também deve ser avaliado quanto à legibilidade antes da submissão final.
+
+## Dependências e restauração
+
+O app utiliza a conexão `DataFiles`, o script `qlik/load_data.qvs`, os CSVs `dim_calendario.csv`, `fato_repasses.csv`, `dim_municipio.csv` e `intervalo_primeiro_repasse.csv`, além das medidas mestras da Task #12.
+
+Para restaurar, importe `app.qvf` no Qlik Cloud. Para uma nova recarga, envie os quatro CSVs à conexão `DataFiles` e confira a conexão usada pelo script.
+
+## Estado
+
+Implementação entregue no snapshot 06; confirmação visual pendente no PR #40. A revisão final da Task #15 depende dos prints do Qlik.
