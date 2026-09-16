@@ -14,10 +14,11 @@ A numeração 06 segue a sequência de snapshots do app. Ela não representa a o
 ## Arquivo
 
 - Arquivo: `app.qvf`
+- Armazenamento no repositório: Git LFS
 - Exportação informada: 16/09/2026, Qlik Cloud, com dados
 - Responsável pelo versionamento: John Victor E. Santo
-- Tamanho informado: 360.448 bytes
-- SHA-256 informado: `1405DAE92224168E41E79CA25FF5AB9A8A084913440ECADFDA145FF183775925`
+- Tamanho verificado: 360.448 bytes
+- SHA-256 verificado: `1405DAE92224168E41E79CA25FF5AB9A8A084913440ECADFDA145FF183775925`
 
 ## Conferência dos dados
 
@@ -29,18 +30,19 @@ O agrupamento do `data/processed/fato_repasses.csv` por mês da data confirma os
 | Ajustes negativos | −R$ 18.634.883,72 |
 | Saldo líquido | R$ 288.699.999,97 |
 
-Essa conferência valida os totais da base usada como referência. A comparação visual com os valores mostrados pelo Qlik ainda precisa ser documentada com capturas do app.
+As cinco linhas da visão de dados do Qlik foram confrontadas com esta base e coincidem nas três medidas. Os totais foram obtidos pela soma das linhas; a tabela do Qlik não exibe uma linha de total.
 
 ## Evidências visuais
 
-O primeiro print confirma que o eixo aparece na ordem 202405, 202406, 202407, 202408, 202409 e que as três medidas estão presentes no gráfico. O segundo mostra a seleção de julho (`ano_mes_ordem = 202407`) e a redução da visualização a esse mês.
+O primeiro print confirma que o eixo aparece na ordem 202405, 202406, 202407, 202408, 202409 e que as três medidas estão presentes no gráfico. O segundo mostra a seleção de julho (`ano_mes_ordem = 202407`) e a redução da visualização a esse mês. O terceiro mostra os valores completos das três medidas para cada mês, sem seleção.
 
 As duas capturas e os valores mensais de referência estão em [`docs/evidencias/task-15/README.md`](../../../docs/evidencias/task-15/README.md):
 
 1. `01-tela2-evolucao-mensal.png`: Tela 2 sem filtros, com os cinco meses e as três medidas;
-2. `02-tela2-filtro.png`: Tela 2 com julho selecionado.
+2. `02-tela2-filtro.png`: Tela 2 com julho selecionado;
+3. `03-tela2-dados-mensais.png`: visão de dados do gráfico, com os valores completos dos cinco meses.
 
-O gráfico mostra escala abreviada em milhões. As capturas permitem validar a apresentação e o efeito da seleção, mas não os valores exatos exibidos pelo Qlik. A conciliação numérica com as medidas da Task #12 depende de uma visualização ou exportação dos dados do gráfico com precisão completa. O rótulo numérico do eixo (por exemplo, 202406) também pode ser melhorado quanto à legibilidade antes da submissão final.
+O gráfico mostra escala abreviada em milhões, mas a terceira captura permite validar os valores exatos exibidos pelo Qlik e conciliá-los com as medidas da Task #12. O rótulo numérico do eixo (por exemplo, 202406) pode ser melhorado quanto à legibilidade antes da submissão final.
 
 ## Dependências e restauração
 
@@ -50,4 +52,4 @@ Para restaurar, importe `app.qvf` no Qlik Cloud. Para uma nova recarga, envie os
 
 ## Estado
 
-Implementação e evidências visuais entregues no snapshot 06. Conferência dos valores exatos exibidos pelo Qlik pendente antes da conclusão da Task #15.
+Implementação e três evidências visuais entregues no snapshot 06. Valores mensais exibidos pelo Qlik conferidos com a base processada. Pronto para revisão no PR #40.
