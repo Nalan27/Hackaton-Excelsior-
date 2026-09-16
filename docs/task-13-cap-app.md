@@ -41,24 +41,18 @@ Todos os filtros atualizam os 4 KPIs de forma consistente com as master measures
 
 ## Layout da Página
 
-```
-┌─────────────────────────────────────┐
-│  TÍTULO: Análise FUNDEC/RS           │
-├─────────────────┬───────────────────┤
-│  FILTROS:        │  KPI 1:           │
-│  - Município     │  Total Repassado  │
-│  - Data          │  R$ 288.699.999   │
-│  - Recurso       │                   │
-├─────────────────┼───────────────────┤
-│                 │  KPI 2:           │
-│                 │  Cidades: 334     │
-├─────────────────┼───────────────────┤
-│                 │  KPI 3:           │
-│                 │  Média: R$ 32,89  │
-├─────────────────┼───────────────────┤
-│                 │  KPI 4:           │
-│                 │  Espera: 40 dias  │
-└─────────────────┴───────────────────┘
+```text
+┌──────────────────────────────────────────────────────────┐
+│  Visão Geral                                             │
+├──────────────────┬──────────────────┬────────────────────┤
+│  Recurso         │  Município       │  Data              │
+├────────────────────────────┬─────────────────────────────┤
+│  Total Repassado           │  Cidades Contempladas      │
+├────────────────────────────┼─────────────────────────────┤
+│  Valor Médio por Pessoa    │  Tempo Médio de Espera     │
+├────────────────────────────┴─────────────────────────────┤
+│  Fonte, período analisado e nota de arredondamento       │
+└──────────────────────────────────────────────────────────┘
 ```
 
 ## Validação
@@ -77,10 +71,13 @@ Os 17 testes do `tests/test_etl_outputs.py` foram executados com sucesso, confir
 
 | Cenário | Total Repassado | Cidades | Média Pessoa | Tempo Espera |
 |---|---|---|---|---|
-| Sem filtros | R$ 288.699.999,97 | 334 | R$ 32,89 | 40,13 dias |
+| Sem filtros | R$ 288.699.999,97 | 334 | R$ 32,89 | 40,13 dias (exibido como 40) |
 | Porto Alegre | R$ 5.782.558,14 | 1 | R$ 4,16 | 84 dias |
-| Porto Alegre + Canoas | R$ 11.565.116,28 | 2 | R$ 6,61 | — |
-| Recurso Judiciário | R$ 180.000.000,00 | 95 | R$ 30,93 | 36,71 dias |
+| Porto Alegre + Canoas | R$ 11.565.116,28 | 2 | R$ 6,61 | 70,50 dias (exibido como 71) |
+| Recurso Judiciário | R$ 179.999.999,97 | 95 | R$ 30,93 | 36,71 dias (exibido como 37) |
+
+O indicador de tempo preserva o cálculo decimal da medida mestra. Apenas sua
+apresentação no painel é arredondada para dias inteiros para facilitar a leitura.
 
 ## Evidências
 
@@ -89,8 +86,8 @@ As capturas foram adicionadas em `docs/evidencias/task-13/`:
 | Arquivo | Descrição | Status |
 |---------|-----------|--------|
 | `01-capa-geral.png` | Visão geral da página com os 4 KPIs | ✅ Concluído |
-| `02-capa-filtros.png` | Município e data aplicados, com atualização dos KPIs | ✅ Concluído |
-| `03-capa-selecao-multipla.png` | Seleção conjunta de sete municípios | ✅ Concluído |
+| `02-capa-filtros.png` | Recurso Judiciário selecionado, com atualização dos KPIs | ✅ Concluído |
+| `03-capa-selecao-multipla.png` | Seleção conjunta de Canoas e Porto Alegre | ✅ Concluído |
 
 ![Capa geral](./evidencias/task-13/01-capa-geral.png)
 
@@ -98,21 +95,12 @@ As capturas foram adicionadas em `docs/evidencias/task-13/`:
 
 ![Seleção múltipla](./evidencias/task-13/03-capa-selecao-multipla.png)
 
-### Limitações visuais registradas
+### Apresentação validada
 
-As capturas confirmam a presença dos quatro KPIs, dos três filtros e a
-atualização dos indicadores após as seleções. A revisão também identificou os
-seguintes ajustes de apresentação para uma entrega posterior:
-
-- ampliar os objetos para evitar títulos e valores truncados;
-- padronizar a formatação monetária e decimal para `pt-BR`;
-- exibir a unidade `dias` no indicador de tempo médio;
-- identificar visualmente a fonte e o período analisado;
-- registrar novas evidências para os cenários de Porto Alegre + Canoas e do
-  recurso Judiciário.
-
-Esses ajustes exigem uma nova edição no Qlik Sense e serão acompanhados em uma
-issue de correção separada, com novo snapshot e novas evidências.
+As capturas confirmam que os objetos foram ampliados, os valores monetários
+foram formatados em `pt-BR`, a unidade `dias` está visível e a página identifica
+a fonte e o período analisado. Também registram os cenários com o recurso
+Judiciário e com a seleção conjunta de Canoas e Porto Alegre.
 
 ## Conclusão
 
@@ -125,7 +113,7 @@ A capa do app foi criada na página inicial do aplicativo Qlik Sense com:
 - ✅ Todos os testes automatizados aprovados (17/17)
 - ✅ Snapshot do aplicativo exportado com dados
 - ✅ Evidências visuais documentadas
-- ⚠️ Ajustes de apresentação registrados para acompanhamento
+- ✅ Fonte, período e regra de arredondamento identificados na página
 
 ## Próximas Tasks Desbloqueadas
 
@@ -139,7 +127,7 @@ Com esta task concluída, as seguintes tasks podem ser iniciadas:
 
 ## Estado
 
-Implementação funcional concluída em 15/09/2026. A página inicial do aplicativo
-Qlik Sense foi configurada com os quatro KPIs e os três filtros solicitados. Os
-ajustes visuais identificados na revisão serão tratados em uma issue de correção
-separada.
+Concluída e validada em 15/09/2026. A página inicial do aplicativo Qlik Sense
+foi configurada com os quatro KPIs e os três filtros solicitados, fonte e período
+identificados, valores formatados em `pt-BR` e evidências dos cenários de
+validação.
