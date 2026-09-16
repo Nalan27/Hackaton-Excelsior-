@@ -1,12 +1,12 @@
 Versão 06 — Task 15
 
-Arquivo: app.qvf
-Data da exportação: 16/09/2026
-Ambiente de origem: Qlik Cloud
-Tipo da exportação: com dados
-Responsável pelo versionamento: equipe Hackaton Excelsior
-Tamanho: 360.448 bytes
-SHA-256: 1405DAE92224168E41E79CA25FF5AB9A8A084913440ECADFDA145FF183775925
+- Arquivo: app.qvf 
+- Data da exportação: 16/09/2026
+- Ambiente de origem: Qlik Cloud
+- Tipo da exportação: com dados
+- Responsável pelo versionamento: John Victor E. Santo
+- Tamanho: 360.448 bytes
+- SHA-256: 1405DAE92224168E41E79CA25FF5AB9A8A084913440ECADFDA145FF183775925
 
 Alterações
 Snapshot do app após a implementação da Task 15 — Linha do Tempo (H2):
