@@ -12,13 +12,21 @@ task correspondente:
 02-task-10/
 03-task-11/
 04-task-12/
+05-task-13/
+06-task-15/
+07-task-14/
 ```
+
+A sequência representa a ordem de exportação e versionamento do aplicativo.
+Ela não precisa coincidir com a ordem numérica das tasks ou das telas.
 
 Dentro de cada pasta:
 
 - baixe o app do Qlik no formato QVF usando a opção **com dados**;
 - salve o arquivo exportado com o nome `app.qvf`;
 - preencha o `README.md` da versão;
+- registre data, ambiente, responsável, tamanho, SHA-256, evidências e
+  dependências de restauração;
 - não altere snapshots anteriores; crie uma nova pasta para cada entrega.
 
 O download com dados é obrigatório para que cada snapshot preserve o estado
