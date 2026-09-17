@@ -39,7 +39,13 @@ identificou ponto ou área fora do Rio Grande do Sul.
 - [x] Filtros de recurso, mês e município aplicados aos dois mapas.
 - [x] Tooltips com valores exatos e código IBGE.
 - [x] Valores de Porto Alegre conciliados com a base processada.
-- [ ] QVF final importado novamente em ambiente independente.
+- [x] QVF final reimportado e conferido no Qlik Cloud.
+
+## Reimportação do snapshot 07
+
+Em 17/09/2026, Nalan27 confirmou a reimportação do `app.qvf` e a conferência
+dos mapas, filtros, tooltips e dados. Esta validação foi informada diretamente;
+o ambiente utilizado e uma captura da reimportação não foram registrados.
 
 ## Documentação relacionada
 

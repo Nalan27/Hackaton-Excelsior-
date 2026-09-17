@@ -70,14 +70,16 @@ Para restaurar, importe `app.qvf` no Qlik Cloud. Para recarregar os dados,
 envie os quatro CSVs à conexão `DataFiles` e valide o nome da conexão no editor
 de carga.
 
+Em 17/09/2026, Nalan27 confirmou que reimportou o snapshot e conferiu mapas,
+filtros, tooltips e dados. O ambiente utilizado não foi registrado; a
+confirmação está documentada nas evidências da Task 14.
+
 ## Limitações
 
 - O mapa cobre municípios recebedores, não todo o universo de municípios
   atingidos.
 - O valor por pessoa usa a população estimada pelo IBGE/SIDRA para 2024.
 - O indicador não mede impacto, necessidade ou adequação do repasse.
-- Uma nova importação em ambiente independente deve ser registrada antes da
-  submissão final.
 
 ## Estado
 

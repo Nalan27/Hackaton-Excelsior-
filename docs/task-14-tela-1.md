@@ -123,4 +123,6 @@ Os metadados e as dependências estão no
 
 ## Estado
 
-Implementada e validada em 16/09/2026, com evidências preparadas para revisão.
+Implementada e validada em 16/09/2026. A reimportação do snapshot 07 e a
+conferência do aplicativo foram confirmadas em 17/09/2026 e registradas nas
+evidências da Task 14.
