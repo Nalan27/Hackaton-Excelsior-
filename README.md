@@ -23,6 +23,7 @@ Este projeto coleta dados públicos sobre esses repasses, aplica um pipeline de 
 | `ranking_oficial_fundec_2024.csv` | Ranking dos 334 municípios por valor total | Referência para conciliação |
 | `municipios-brasil.csv` | 5.571 municípios brasileiros com código IBGE, IDH-M, PIB, densidade | Dimensão municipal (`dim_municipio`) |
 | `populacao_rs_2024.csv` | População estimada dos 497 municípios do RS (SIDRA T6579) | Denominador municipal dos repasses por pessoa |
+| `defesa-civil-rs-municipios-afetados-2024-06-11.pdf` | Extrato oficial com 478 municípios afetados em 11/06/2024 | Comparação de cobertura da Task 16; não define elegibilidade ao FUNDEC |
 
 > Os PDFs em `data/raw/pdf/` são documentos legais de referência, não são dados para o banco.
 
@@ -111,6 +112,10 @@ Após executar o ETL, os seguintes arquivos são salvos em `data/processed/`:
 | `relatorio_validacao.csv` | Métricas de validação do pipeline |
 | `inconsistencias.csv` | Erros e ausências conhecidas nas fontes |
 | `doc_18_valores_negativos.csv` | Documentação dos 18 estornos |
+| `municipios_afetados_defesa_civil_2024_06_11.csv` | Lista da Defesa Civil associada aos códigos IBGE |
+| `cobertura_municipal.csv` | 497 municípios do RS com presença na lista e situação na base FUNDEC |
+| `casos_cobertura_investigacao.csv` | Casos para revisar, sem inferir ausência de atendimento |
+| `relatorio_cobertura.csv` | Contagens e períodos do cruzamento de cobertura |
 
 O banco SQLite `banco_hackathon.db` também é gerado na raiz do projeto.
 
@@ -128,6 +133,7 @@ pip install -r requirements.txt
 
 ```bash
 python etl/analis_de_dados.py
+python etl/cobertura_municipal.py
 ```
 
 ### 3. Validar a saída
@@ -188,8 +194,11 @@ FROM [lib://DataFiles/dim_calendario.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
 ```
 
-O mesmo script está disponível em `qlik/load_data.qvs`. Substitua `Data`
-pelo nome da conexão de pasta configurada no seu ambiente.
+O script completo está em `qlik/load_data.qvs` e inclui também
+`intervalo_primeiro_repasse.csv` e `cobertura_municipal.csv` (Task 16).
+Envie os cinco CSVs à conexão e substitua `DataFiles` pelo nome configurado
+no seu ambiente. A nova tabela de cobertura ainda precisa ser carregada e
+validada no aplicativo Qlik.
 
 ### Opção 2: Carregar via SQLite
 
@@ -233,9 +242,12 @@ O valor permanece nulo, sem imputação, e a ausência é registrada em
 dim_municipio (chave_municipal) ←→ fato_repasses (chave_municipal)
 dim_calendario (data) ←→ fato_repasses (data)
 dim_municipio (chave_municipal) ←→ intervalo_primeiro_repasse (chave_municipal)
+cobertura_municipal (chave_municipal) ←→ dim_municipio (chave_municipal)
 ```
 
-Não há chaves sintéticas — `chave_municipal` é a única FK na fato.
+O modelo atual do app não possui chaves sintéticas. A associação da nova tabela
+de cobertura deve ser reconferida após a recarga no Qlik; `chave_municipal` é
+o único campo compartilhado com as tabelas já carregadas.
 
 ---
 
