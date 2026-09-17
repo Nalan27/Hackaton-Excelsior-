@@ -2,7 +2,7 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **15 de setembro de 2026**.
+Este documento registra o estado do repositório em **16 de setembro de 2026**.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -28,7 +28,7 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Parcial | App versionado com mapa municipal de teste e validações; ainda não há link público nem telas finais |
+| Aplicativo e dashboard Qlik Sense | Parcial | Visão geral, distribuição geográfica e linha do tempo versionadas; ainda não há link público nem todas as telas finais |
 | Análises e achados finais | Pendente | Não há resultados validados, conclusões ou recomendações finais |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
 | Certificados e elegibilidade da equipe | Não comprovado | Evidência externa ao repositório |
@@ -38,8 +38,8 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 Todos os itens desta seção precisam estar concluídos. O atendimento parcial não habilita o trabalho para avaliação.
 
 - [ ] **Pendente — Link público e funcional do aplicativo Qlik Sense.** Não há URL pública registrada.
-- [ ] **Parcial — Visualização geográfica por município.** Protótipo por pontos validado para 334 recebedores; a tela geográfica final será construída na task 14.
-- [ ] **Pendente — Análise temporal dos repasses ou pagamentos.** A base possui datas, mas não há timeline no Qlik Sense.
+- [x] **Visualização geográfica por município.** A Task 14 implementa mapa de pontos por valor líquido e mapa de áreas por valor por pessoa.
+- [x] **Análise temporal dos repasses ou pagamentos.** A Task 15 apresenta créditos, ajustes e saldo líquido por mês.
 - [x] **Pelo menos um KPI quantitativo.** Seis medidas mestras foram implementadas e validadas na pasta `Validação — Task 12` do aplicativo.
 - [ ] **Pendente — Vídeo pitch público com até 5 minutos.** Não há vídeo nem link.
 - [ ] **Parcial — Documento descritivo completo.** A contextualização, as bases e a metodologia planejada estão em [`edital-hackathon-qlik-2026.md`](./edital-hackathon-qlik-2026.md); faltam análises executadas, achados, conclusões e recomendações finais.
@@ -55,7 +55,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Fontes públicas catalogadas em [`data/README.md`](../data/README.md).
 - [x] Instruções de execução correspondem ao pipeline e aos artefatos gerados.
 - [x] Validações críticas interrompem o ETL em caso de erro e são verificadas por testes automatizados.
-- [ ] **Pendente — Definir política para artefatos do Qlik e arquivos gerados.** Registrar o que será versionado e o que será publicado externamente.
+- [ ] **Parcial — Definir política para artefatos do Qlik e arquivos gerados.** QVFs com dados, metadados e Git LFS estão documentados; falta definir publicação e retenção externas.
 
 ## 5. Aquisição e cobertura dos dados
 
@@ -99,14 +99,14 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ### 8.1 Distribuição geográfica
 
-- [ ] **Parcial — Construir mapa municipal.** Protótipo por pontos concluído na task 11; faltam polígonos e acabamento da tela final na task 14.
+- [x] **Construir mapa municipal.** A Task 14 combina pontos dimensionados pelo valor líquido e áreas coloridas pelo valor por pessoa.
 - [x] **Exibir valor total e valor per capita.** O ETL fornece total líquido e valor por pessoa com população IBGE 2024; o protótipo colore os pontos pelo indicador per capita.
 - [ ] **Pendente — Identificar maiores e menores recebedores com contexto.**
 - [ ] **Pendente — Comparar repasse com indicador de impacto.** Depende da fonte ainda não incorporada.
 
 ### 8.2 Tempo de repasse
 
-- [ ] **Pendente — Construir timeline de créditos e estornos.**
+- [x] **Construir timeline de créditos e estornos.** A Task 15 exibe créditos, ajustes negativos e saldo líquido entre maio e setembro de 2024.
 - [x] **Calcular a data do primeiro repasse por município.** A menor data com `valor > 0` foi calculada para os 334 municípios; estornos não iniciam atendimento.
 - [x] **Calcular dias desde o marco oficial adotado.** O artefato `intervalo_primeiro_repasse.csv` calcula o intervalo desde 24/04/2024 e explicita que a medida não representa tempo desde o impacto local.
 - [ ] **Pendente — Identificar municípios atendidos sistematicamente mais tarde.**
@@ -123,13 +123,13 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 ## 9. Dashboard e experiência no Qlik Sense
 
 - [x] **Concluído — Criar página de visão geral com KPIs e narrativa.** (Task 13)
-- [ ] **Pendente — Criar página geográfica.**
-- [ ] **Pendente — Criar página temporal.**
+- [x] **Concluído — Criar página geográfica.** (Task 14)
+- [x] **Concluído — Criar página temporal.** (Task 15)
 - [ ] **Pendente — Criar página de equidade e vulnerabilidade.**
 - [ ] **Pendente — Criar página de método, limitações e recomendações.**
 - [x] **Concluído — Adicionar filtros úteis e consistentes entre páginas.** (Task 13)
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**
-- [ ] **Pendente — Testar legibilidade, contraste, unidades, escalas e tooltips.**
+- [ ] **Parcial — Testar legibilidade, contraste, unidades, escalas e tooltips.** Tasks 14 e 15 possuem evidências visuais; falta auditoria final entre dispositivos.
 - [ ] **Pendente — Exibir fonte, período e data de atualização.**
 - [ ] **Pendente — Testar acesso público sem credenciais da equipe.**
 
