@@ -259,11 +259,12 @@ class EtlOutputsTest(unittest.TestCase):
 
     def test_script_qlik_usa_sintaxe_csv_valida(self):
         script = (ROOT / 'qlik' / 'load_data.qvs').read_text(encoding='utf-8')
-        self.assertEqual(script.count("(utf8, txt, embedded labels, delimiter is ',', msq);"), 4)
+        self.assertEqual(script.count("(utf8, txt, embedded labels, delimiter is ',', msq);"), 5)
         self.assertNotIn('CsvSimple', script)
         self.assertIn('localizacao_mapa', script)
         self.assertIn('populacao_2024', script)
         self.assertIn('valor_por_pessoa_2024', script)
+        self.assertIn('cobertura_municipal.csv', script)
 
     def test_intervalo_usa_primeiro_credito_e_marco_documentado(self):
         self.assertEqual(len(self.intervalos), 334)

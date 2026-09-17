@@ -95,3 +95,25 @@ LOAD
     qtd_estornos_ignorados
 FROM [lib://DataFiles/intervalo_primeiro_repasse.csv]
 (utf8, txt, embedded labels, delimiter is ',', msq);
+
+// ================================================================
+// COBERTURA MUNICIPAL: LISTA DA DEFESA CIVIL EM 11/06/2024
+// A presença na lista não estabelece elegibilidade ao FUNDEC.
+// ================================================================
+
+cobertura_municipal:
+LOAD
+    Text(chave_municipal) AS chave_municipal,
+    municipio_cobertura,
+    localizacao_cobertura,
+    Num#(afetado_lista_2024_06_11, '0') AS afetado_lista_2024_06_11,
+    Num#(qtd_movimentacoes_base, '0') AS qtd_movimentacoes_base,
+    Num#(creditos_base, '############0.00', '.', ',') AS creditos_base,
+    Num#(ajustes_negativos_base, '############0.00', '.', ',') AS ajustes_negativos_base,
+    Num#(saldo_liquido_base, '############0.00', '.', ',') AS saldo_liquido_base,
+    Num#(qtd_movimentacoes_ate_extrato, '0') AS qtd_movimentacoes_ate_extrato,
+    Num#(saldo_liquido_ate_extrato, '############0.00', '.', ',') AS saldo_liquido_ate_extrato,
+    situacao_na_base,
+    situacao_comparacao
+FROM [lib://DataFiles/cobertura_municipal.csv]
+(utf8, txt, embedded labels, delimiter is ',', msq);
