@@ -3,97 +3,124 @@
 ## Objetivo
 
 Construir no Qlik Cloud uma página geográfica do Rio Grande do Sul que permita
-comparar, por município recebedor do FUNDEC, o valor líquido recebido e o valor
-líquido recebido por pessoa. A comparação por pessoa evita interpretar o valor
-total isoladamente como uma medida proporcional ao porte municipal.
+comparar, entre os 334 municípios com movimentações registradas na base
+detalhada do FUNDEC/RS, o valor líquido recebido e o valor líquido recebido por
+pessoa.
 
-## Pré-requisito
+A comparação por pessoa usa a população estimada pelo IBGE/SIDRA para 2024. O
+indicador não mede população afetada, intensidade do impacto, necessidade ou
+adequação do repasse.
 
-A Task #12 definiu e validou as medidas mestras reutilizadas nesta tela. O
-protótipo de geocodificação da Task #11 forneceu o campo `localizacao_mapa` e
-validou a cobertura dos 334 municípios recebedores.
+## Dependências e escopo
 
-## Medidas utilizadas
+- A Task 11 validou `localizacao_mapa` e o protótipo com os 334 municípios
+  recebedores.
+- A Task 12 definiu as medidas mestras reutilizadas nos mapas.
+- A Task 13 estabeleceu o padrão de filtros e apresentação do aplicativo.
+- A Task 15, já presente no aplicativo, corresponde ao snapshot 06. A
+  exportação desta task é o snapshot 07.
+
+O universo exibido não representa todos os 497 municípios do Rio Grande do Sul
+nem um cadastro completo de municípios atingidos pelas enchentes.
+
+## Medidas reutilizadas
 
 | Indicador | Expressão Qlik | Unidade | Uso na tela |
-|-----------|----------------|---------|-------------|
-| Valor líquido recebido | `Sum(valor)` | R$ | Mapa de pontos |
-| Valor líquido recebido por pessoa | `If(Sum(Aggr(Only(populacao_2024), chave_municipal)) > 0, Sum(valor) / Sum(Aggr(Only(populacao_2024), chave_municipal)))` | R$/pessoa | Mapa de áreas |
+|---|---|---|---|
+| Valor líquido recebido | `Sum(valor)` | R$ | Tamanho das bolhas no mapa de pontos |
+| Valor líquido recebido por pessoa | `If(Sum(Aggr(Only(populacao_2024), chave_municipal)) > 0, Sum(valor) / Sum(Aggr(Only(populacao_2024), chave_municipal)))` | R$/pessoa | Cor das áreas municipais |
 
-As expressões e regras completas estão em
-[`qlik/medidas-mestras.md`](../qlik/medidas-mestras.md). O valor líquido
-preserva créditos e ajustes negativos; o denominador do indicador por pessoa é
-a população estimada pelo IBGE/SIDRA para 2024, agregada uma vez por município.
+As regras completas estão em
+[`qlik/medidas-mestras.md`](../qlik/medidas-mestras.md). O valor líquido preserva
+créditos e ajustes negativos. A população é agregada uma única vez por
+município.
 
-## Configuração da página
+## Configuração da tela
 
-### Mapas
+### Filtros
 
-- **Valor líquido recebido — FUNDEC/RS 2024:** camada de pontos com
-  `localizacao_mapa` e cor por valor líquido recebido. A legenda usa R$ e
-  permite localizar os valores totais municipais.
-- **Valor líquido recebido por pessoa — FUNDEC/RS 2024:** camada de área com
-  `localizacao_mapa` e cor por valor líquido recebido por pessoa. O título
-  explicita que os valores em R$ representam R$/pessoa.
-
-As duas camadas usam a mesma identificação geográfica municipal. A inspeção
-visual confirma que os pontos e as áreas estão no Rio Grande do Sul. A
-validação do ETL registrada na Task #11 confirmou 334/334 localizações
-municipais distintas, sem população ausente ou não positiva entre os
-recebedores.
-
-### Filtros e tooltips
-
-| Elemento | Campo ou comportamento |
-|----------|------------------------|
+| Título | Campo |
+|---|---|
+| Recurso | `recurso` |
 | Mês | `mes_nome` |
 | Município | `município` |
-| Tooltip de pontos | Localização e valor líquido recebido da camada de pontos. |
-| Tooltip de áreas | Localização e valor líquido recebido por pessoa da camada de áreas. |
 
-Os filtros atuam sobre ambos os mapas por meio do modelo associativo do Qlik.
+Os três filtros atuam sobre os dois mapas por meio do modelo associativo do
+Qlik.
 
-## Validação
+### Mapa de valor líquido recebido
 
-| Cenário | Resultado comprovado |
-|---------|----------------------|
-| Sem seleções | Os dois mapas exibem municípios do RS, com legendas distintas para valor total e valor por pessoa. |
-| Filtro de mês | A seleção de julho altera simultaneamente as duas camadas. |
-| Filtro de município | A seleção de Porto Alegre isola o ponto e a área municipal; o mapa mostra R$ 5,78 milhões no valor total e R$ 4,16 por pessoa. |
-| Tooltip de pontos | Exibe municípios e respectivos valores líquidos recebidos. |
-| Tooltip de áreas | Exibe municípios e respectivos valores líquidos por pessoa. |
+- camada de pontos localizada por `localizacao_mapa`;
+- tamanho das bolhas definido pela medida **Valor líquido recebido**;
+- cor fixa para não codificar a mesma medida simultaneamente por cor e tamanho;
+- título **Valor líquido recebido — FUNDEC/RS 2024**.
 
-As evidências estão em `docs/evidencias/task-14/`:
+### Mapa de valor líquido recebido por pessoa
 
-1. `01-distribuicao-geografica-geral.png`
-2. `02-distribuicao-geografica-filtro-mes.png`
-3. `03-distribuicao-geografica-filtro-municipio.png`
-4. `04-tooltip-valor-total.png`
-5. `05-tooltip-valor-por-pessoa.png`
+- camada de áreas municipais localizada por `localizacao_mapa`;
+- cor definida pela medida **Valor líquido recebido por pessoa**;
+- unidade apresentada como R$/pessoa;
+- título **Valor líquido recebido por pessoa — FUNDEC/RS 2024**.
 
-![Distribuição geográfica sem filtros](./evidencias/task-14/01-distribuicao-geografica-geral.png)
+### Tooltips
 
-![Filtro de mês aplicado](./evidencias/task-14/02-distribuicao-geografica-filtro-mes.png)
+Os dois mapas apresentam tooltip personalizado com:
 
-![Filtro de município aplicado](./evidencias/task-14/03-distribuicao-geografica-filtro-municipio.png)
+- município;
+- código IBGE;
+- valor líquido da seleção atual;
+- população estimada de 2024;
+- valor líquido por pessoa da seleção atual.
+
+As medidas dos tooltips são dinâmicas. Elas não usam os campos estáticos
+`total_repasses` ou `valor_por_pessoa_2024`, pois esses campos representam o
+período completo e não responderiam corretamente aos filtros de mês e recurso.
+
+## Validação reproduzível
+
+| Cenário | Resultado esperado e conferido |
+|---|---|
+| Sem seleções | Os mapas exibem os municípios recebedores no Rio Grande do Sul e usam legendas distintas para valor líquido e valor por pessoa. |
+| Mês = Julho | Os dois mapas respondem à seleção e exibem somente municípios associados às movimentações de julho. |
+| Município = Porto Alegre | O ponto e a área municipal são isolados; valor líquido de R$ 5.782.558,14 e valor por pessoa de R$ 4,16. |
+| Tooltip de Porto Alegre | Código IBGE 4314902, população 1.389.322, valor líquido de R$ 5.782.558,14 e R$ 4,16 por pessoa. |
+| Recurso = Judiciário | O filtro atualiza simultaneamente as duas visualizações. |
+
+A validação da fonte confirma 334 chaves municipais, 334 localizações distintas,
+população positiva para todos os recebedores e ausência de chaves órfãs na
+tabela fato. A inspeção visual no Qlik não identificou geometrias fora do Rio
+Grande do Sul.
+
+## Evidências visuais
+
+As capturas e seus estados de seleção estão catalogados em
+[`docs/evidencias/task-14/README.md`](./evidencias/task-14/README.md):
+
+1. `01-distribuicao-geografica-geral.png`;
+2. `02-distribuicao-geografica-filtro-mes.png`;
+3. `03-distribuicao-geografica-filtro-municipio.png`;
+4. `04-tooltip-valor-total.png`;
+5. `05-tooltip-valor-por-pessoa.png`;
+6. `06-distribuicao-geografica-filtro-recurso.png`.
 
 ## Limitações
 
-- A tela compara valores recebidos e população; ela não mede diretamente a
-  intensidade do impacto, a necessidade de recursos ou a adequação do repasse.
-- Sem uma fonte municipal de impacto, não é possível concluir apenas pelos
-  mapas se municípios pequenos receberam proporcionalmente menos.
-- A interpretação dos limites municipais depende da resolução geográfica do
-  Qlik para `localizacao_mapa`; qualquer ausência de associação deve ser
-  investigada no campo de origem antes de interpretar o mapa.
+- A tela descreve valores recebidos e população, mas não mede diretamente
+  impacto, necessidade, efetividade ou equidade.
+- Os mapas cobrem municípios com movimentações na base analisada, não todo o
+  universo de municípios atingidos.
+- Os limites e pontos dependem da resolução geográfica do Qlik para
+  `localizacao_mapa`.
+- Diferenças de valor por pessoa não demonstram, isoladamente, distribuição
+  justa ou injusta dos recursos.
 
-## Snapshot
+## Snapshot 07
 
 O aplicativo foi exportado com dados em
-[`qlik/versoes-do-app/06-task-14/app.qvf`](../qlik/versoes-do-app/06-task-14/app.qvf).
-Os metadados de tamanho e SHA-256 estão no
-[`README do snapshot`](../qlik/versoes-do-app/06-task-14/README.md).
+[`qlik/versoes-do-app/07-task-14/app.qvf`](../qlik/versoes-do-app/07-task-14/app.qvf).
+Os metadados e as dependências estão no
+[`README do snapshot`](../qlik/versoes-do-app/07-task-14/README.md).
 
 ## Estado
 
-Concluída e validada em 16/09/2026.
+Implementada e validada em 16/09/2026, com evidências preparadas para revisão.
