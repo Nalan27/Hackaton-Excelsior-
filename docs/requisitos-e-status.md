@@ -115,7 +115,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 - [ ] **Pendente — Calcular participação dos top 5, 10 e 20 municípios.**
 - [ ] **Pendente — Comparar média, mediana, percentis e distribuição per capita.**
-- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base; falta validar a Tela 3 no Qlik. Ausência de registro não demonstra ausência de atendimento.
+- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi conferida no Qlik e exportada no snapshot 09; ainda faltam a reimportação do QVF e a corroboração externa dos casos antes de recomendações. Ausência de registro não demonstra ausência de atendimento.
 - [ ] **Pendente — Definir critério reproduzível de subatendimento.**
 - [ ] **Pendente — Analisar relação com IDH-M, PIB per capita, população e densidade.**
 - [ ] **Pendente — Explicar limites e evitar interpretar correlação como causalidade.**

@@ -23,7 +23,7 @@ As 4 medidas foram criadas como **itens mestres** no Qlik Sense, conforme defini
 | KPI | Expressão Qlik | Valor sem filtros |
 |---|---|---|
 | **Total Repassado** | `Sum(valor)` | R$ 288.699.999,97 |
-| **Cidades Contempladas** | `Count(DISTINCT chave_municipal)` | 334 |
+| **Cidades Contempladas** | `Count(DISTINCT chave_municipal)` — expressão documentada nesta task | 334 |
 | **Média por Pessoa** | `Sum(valor) / Sum(Aggr(Only(populacao_2024), chave_municipal))` | R$ 32,89 |
 | **Tempo Médio de Espera** | `Avg({$<status_intervalo={"ok"}>} intervalo_desde_marco_adotado_dias)` | 40,13 dias |
 
@@ -38,6 +38,14 @@ Três filtros foram adicionados à página inicial para interatividade:
 | **Recurso** | `recurso` | `fato_repasses` |
 
 Todos os filtros atualizam os 4 KPIs de forma consistente com as master measures da Task #12.
+
+Antes da correção da Task 16, a expressão observada no app era
+`Count(chave_municipal)` e passou a mostrar 831 ao incluir os 497 municípios da
+tabela de cobertura. O KPI passou então a usar
+`Count(DISTINCT municipio_ibge_2024)` para manter o universo dos 334
+municípios com movimentação. A expressão acima é a regra registrada na
+documentação original desta task; a configuração atual está em
+[`qlik/medidas-mestras.md`](../qlik/medidas-mestras.md).
 
 ## Layout da Página
 

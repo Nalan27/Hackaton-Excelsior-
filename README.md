@@ -197,8 +197,10 @@ FROM [lib://DataFiles/dim_calendario.csv]
 O script completo está em `qlik/load_data.qvs` e inclui também
 `intervalo_primeiro_repasse.csv` e `cobertura_municipal.csv` (Task 16).
 Envie os cinco CSVs à conexão e substitua `DataFiles` pelo nome configurado
-no seu ambiente. A nova tabela de cobertura ainda precisa ser carregada e
-validada no aplicativo Qlik.
+no seu ambiente. A tabela de cobertura foi carregada e conferida no Qlik no
+snapshot 09. Adicione o arquivo à conexão sem carregá-lo outra vez pelo
+Gerenciador de dados: duas cargas do mesmo CSV criam campos duplicados e uma
+chave sintética.
 
 ### Opção 2: Carregar via SQLite
 

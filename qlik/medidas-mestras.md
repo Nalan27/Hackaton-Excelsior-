@@ -62,11 +62,13 @@ Créditos recebidos + Ajustes negativos = Valor líquido recebido
 - **Expressão:**
 
   ```qlik
-  Count(DISTINCT chave_municipal)
+  Count(DISTINCT municipio_ibge_2024)
   ```
 
 - **Formato:** inteiro.
-- **Regra:** conta as chaves municipais distintas associadas à seleção.
+- **Regra:** conta os nomes oficiais únicos da dimensão dos 334 municípios com
+  movimentação. A tabela de cobertura da Task 16 contém 497 municípios; contar
+  o campo compartilhado `chave_municipal` ampliaria o universo deste KPI.
 - **Valor sem filtros:** 334.
 
 ## 5. Valor líquido por pessoa

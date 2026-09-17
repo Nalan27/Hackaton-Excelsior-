@@ -95,7 +95,10 @@ a comparação com a base até setembro inclui mais 97 municípios com registro.
 1. Envie `cobertura_municipal.csv` à conexão `DataFiles`, acrescente a seção
    correspondente de [`qlik/load_data.qvs`](../qlik/load_data.qvs) e recarregue.
    A única chave compartilhada com as tabelas atuais deve ser
-   `chave_municipal`; confira que o modelo não criou chaves sintéticas.
+   `chave_municipal`; confira que o modelo não criou chaves sintéticas. O
+   arquivo deve ficar disponível em `DataFiles` sem ser adicionado também como
+   tabela pelo Gerenciador de dados. Se isso ocorrer, remova apenas a tabela
+   gerada pelo Gerenciador e mantenha a carga escrita no editor.
 2. Crie a pasta **Tela 3 — Cobertura e lacunas (H4)**. Mostre KPIs para 478
    municípios listados, 334 listados com movimentação e 144 listados sem
    movimentação na base completa. Indique no subtítulo as datas das fontes.
@@ -108,4 +111,29 @@ a comparação com a base até setembro inclui mais 97 municípios com registro.
    municípios de cada categoria contra os CSVs.
 5. Exporte o aplicativo **com dados** em um novo snapshot sequencial após o 08,
    registre tamanho, SHA-256 e evidências, e reimporte para conferir a
-   restauração. A tela e o novo QVF ainda dependem desse trabalho no Qlik.
+   restauração.
+
+## Conferência da Tela 3 e snapshot 09
+
+O usuário informou em 17/09/2026 que carregou a cobertura, eliminou a carga
+duplicada e conferiu o modelo sem `$Syn`, com `cobertura_municipal` associada
+por `chave_municipal`. A seção `Normalização`, que restaura nomes de campos da
+dimensão municipal, foi posicionada **depois** da seção gerada automaticamente:
+`RENAME FIELD` precisa ser executado após a carga dos campos correspondentes.
+Isso recuperou os gráficos da Tela 4 e o mapa de áreas da distribuição
+geográfica. No mapa, a dimensão `localizacao_mapa` foi atribuída novamente à
+camada de áreas.
+
+Os três KPIs da Tela 3 mostraram **478**, **334** e **144** sem seleções. O
+usuário informou que acrescentou a tabela municipal, os filtros, a nota de
+limites e conferiu os controles solicitados. A expressão da medida mestra
+**Municípios atendidos** na Visão Geral passou a ser
+`Count(DISTINCT municipio_ibge_2024)`, preservando o recorte dos 334 municípios
+com movimentação após a inclusão dos 497 municípios na cobertura.
+
+O aplicativo exportado com dados foi colocado em
+[`qlik/versoes-do-app/09-task-16/app.qvf`](../qlik/versoes-do-app/09-task-16/app.qvf).
+O [README do snapshot](../qlik/versoes-do-app/09-task-16/README.md) registra
+tamanho, SHA-256 e dependências de restauração. Os controles e limites da
+evidência estão no [registro da Task 16](./evidencias/task-16/README.md).
+A reimportação desse QVF ainda não foi confirmada.
