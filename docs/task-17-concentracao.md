@@ -83,3 +83,8 @@ snapshot exportado do Qlik está em
 Os totais exatos desta página foram recalculados a partir dos CSVs processados.
 O KPI do print mostra **98,24M** e **34%** por arredondamento visual; a captura
 da tabela mostra as linhas municipais com valores monetários completos.
+
+Em 17/09/2026, o snapshot 08 foi atualizado após a integração do snapshot 07.
+A captura da visão geral registra as páginas geográfica e de concentração entre
+as sete pastas públicas do aplicativo; o estado observado está descrito no
+README das evidências.

@@ -35,3 +35,16 @@ nesse estado, a seleção exibida no topo da tela define o recorte real. Sem o
 marcador, o gráfico mostra mais de 20 barras e permite rolagem. A captura 04
 documenta o ranking completo, incluindo seus primeiros 20, e não um limite
 fixo de 20 barras.
+
+## Consolidação do snapshot 08
+
+Em 17/09/2026, Nalan27 informou que atualizou e reimportou o aplicativo com
+dados. Uma captura da visão geral, compartilhada na revisão e não armazenada no
+repositório, mostra sete pastas em **Públicos**: `Validação do calendário`,
+`Mapa de teste`, `Validação do primeiro repasse`, `Visão Geral`, `Tela 2`,
+`Distribuição geográfica` e `Tela 4 — Concentração (H5)`. A seleção visível é
+`município: 20 de 334`. Duas pastas `Mapa de teste` aparecem em **Meus próprios**,
+separadas das sete pastas públicas.
+
+A captura confirma que as páginas das Tasks 14 e 17 aparecem juntas no Qlik.
+Ela não verifica o conteúdo interno do QVF nem o acesso sem credenciais.
