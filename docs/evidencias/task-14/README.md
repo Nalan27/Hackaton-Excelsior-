@@ -45,7 +45,24 @@ identificou ponto ou área fora do Rio Grande do Sul.
 
 Em 17/09/2026, Nalan27 confirmou a reimportação do `app.qvf` e a conferência
 dos mapas, filtros, tooltips e dados. Esta validação foi informada diretamente;
-o ambiente utilizado e uma captura da reimportação não foram registrados.
+o ambiente utilizado não foi registrado.
+
+### Progressão das pastas no Qlik Cloud
+
+Três capturas da visão geral, fornecidas por Nalan27 em 17/09/2026, mostram a
+seguinte sequência de versões:
+
+| Snapshot | Pastas públicas | Pasta acrescentada |
+|---|---:|---|
+| 05 — Task 13 | 4 | Visão Geral |
+| 06 — Task 15 | 5 | Tela 2 |
+| 07 — Task 14 | 6 | Distribuição geográfica |
+
+Na versão 07, `Distribuição geográfica` aparece entre as pastas **Públicos**.
+Também aparecem duas pastas `Mapa de teste` em **Meus próprios**, separadas das
+seis pastas públicas. As três capturas foram compartilhadas na revisão, mas não
+estão armazenadas no repositório. Elas comprovam a sequência de pastas exibida
+no Qlik; não verificam acesso sem credenciais nem a identidade binária do QVF.
 
 ## Documentação relacionada
 

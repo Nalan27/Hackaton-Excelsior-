@@ -71,8 +71,10 @@ envie os quatro CSVs à conexão `DataFiles` e valide o nome da conexão no edit
 de carga.
 
 Em 17/09/2026, Nalan27 confirmou que reimportou o snapshot e conferiu mapas,
-filtros, tooltips e dados. O ambiente utilizado não foi registrado; a
-confirmação está documentada nas evidências da Task 14.
+filtros, tooltips e dados. O ambiente utilizado não foi registrado. Capturas
+adicionais da visão geral mostram `Distribuição geográfica` entre as seis
+pastas públicas da versão 07; a progressão desde os snapshots 05 e 06 está
+documentada nas evidências da Task 14.
 
 ## Limitações
 
