@@ -21,9 +21,11 @@ tabela e nota de método. O script de análise da Task 18 verifica a conciliaç�
 dos saldos e o recorte de **333 municípios com IDH-M** entre os **334 com
 repasses**.
 
-O tamanho e o hash identificam o QVF recebido; **a reimportação e a abertura
-das telas ainda não foram confirmadas**. Essa validação deve ser registrada
-antes de tratar o snapshot como restaurado.
+O tamanho e o hash identificam o QVF recebido. Em **18/09/2026**, o usuário
+confirmou que **reimportou o aplicativo e que estava tudo certo**. A restauração
+foi, portanto, conferida pelo usuário; não há uma captura separada do aplicativo
+reimportado nem verificação independente de cada objeto. As capturas acima são
+da versão original antes da exportação.
 
 ## Restauração
 

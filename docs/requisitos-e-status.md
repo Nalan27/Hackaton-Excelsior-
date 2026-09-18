@@ -2,7 +2,9 @@
 
 ## 1. Como ler este checklist
 
-Este documento registra o estado do repositório em **16 de setembro de 2026**.
+Este documento foi iniciado em **16 de setembro de 2026**, com atualização
+pontual das Tasks 16 e 18 em **18 de setembro de 2026**. Os demais itens ainda
+precisam de uma revisão geral antes da submissão.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -28,8 +30,8 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Parcial | Visão geral, distribuição geográfica e linha do tempo versionadas; ainda não há link público nem todas as telas finais |
-| Análises e achados finais | Pendente | Não há resultados validados, conclusões ou recomendações finais |
+| Aplicativo e dashboard Qlik Sense | Parcial | Visão geral e Telas 3 a 5 versionadas; snapshot 10 reimportado segundo o usuário; ainda não há link público nem todas as telas finais |
+| Análises e achados finais | Parcial | Tasks 16 e 18 têm análises e limites documentados; faltam conclusões e recomendações finais |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
 | Certificados e elegibilidade da equipe | Não comprovado | Evidência externa ao repositório |
 
@@ -115,9 +117,9 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 - [ ] **Pendente — Calcular participação dos top 5, 10 e 20 municípios.**
 - [ ] **Pendente — Comparar média, mediana, percentis e distribuição per capita.**
-- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi conferida no Qlik e exportada no snapshot 09; ainda faltam a reimportação do QVF e a corroboração externa dos casos antes de recomendações. Ausência de registro não demonstra ausência de atendimento.
+- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi conferida no Qlik, exportada nos snapshots 09 e 10 e reimportada no snapshot 10 segundo o usuário. Falta corroboração externa dos casos antes de recomendações. Ausência de registro não demonstra ausência de atendimento.
 - [ ] **Pendente — Definir critério reproduzível de subatendimento.**
-- [ ] **Pendente — Analisar relação com IDH-M, PIB per capita, população e densidade.**
+- [ ] **Parcial — Analisar relação com IDH-M, PIB per capita, população e densidade.** A Task 18 concluiu a comparação descritiva entre IDH-M 2010 e valor líquido por habitante, com teste de sensibilidade por porte populacional. PIB per capita e densidade ainda não foram examinados nessa análise.
 - [ ] **Pendente — Explicar limites e evitar interpretar correlação como causalidade.**
 
 ## 9. Dashboard e experiência no Qlik Sense
@@ -125,7 +127,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] **Concluído — Criar página de visão geral com KPIs e narrativa.** (Task 13)
 - [x] **Concluído — Criar página geográfica.** (Task 14)
 - [x] **Concluído — Criar página temporal.** (Task 15)
-- [ ] **Pendente — Criar página de equidade e vulnerabilidade.**
+- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; o usuário confirmou a reimportação do snapshot 10.
 - [ ] **Pendente — Criar página de método, limitações e recomendações.**
 - [x] **Concluído — Adicionar filtros úteis e consistentes entre páginas.** (Task 13)
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**

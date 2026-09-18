@@ -40,7 +40,8 @@ colunas. A primeira captura mostra também municípios **fora** da lista de
 afetados; o KPI de 144 refere-se apenas aos **listados** sem registro, isolados
 na segunda captura. Os CSVs vinculados acima permitem a conferência por código.
 
-O QVF do snapshot 10 foi verificado por tamanho e SHA-256, mas ainda não foi
-reimportado para testar a restauração. A [análise da Task 16](../../task-16-cobertura-lacunas.md)
+O QVF do snapshot 10 foi verificado por tamanho e SHA-256. Em 18/09/2026, o
+usuário confirmou a reimportação e informou que o app estava correto; não há
+captura separada da cópia reimportada. A [análise da Task 16](../../task-16-cobertura-lacunas.md)
 explica por que ausência de registro não equivale a ausência de atendimento ou
 de elegibilidade.

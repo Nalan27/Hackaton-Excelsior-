@@ -141,4 +141,6 @@ Em 18/09/2026, a tabela dinâmica foi substituída por uma tabela simples que
 exibe código IBGE, classificações, movimentações e saldo em colunas. A captura
 filtrada confirma **144 / 0 / 144** para `afetado_sem_registro`. A correção foi
 exportada no [snapshot 10](../qlik/versoes-do-app/10-task-18/README.md), junto
-com a Tela 5. A reimportação do QVF 10 ainda não foi confirmada.
+com a Tela 5. Em 18/09/2026, o usuário confirmou que reimportou o QVF 10 e
+informou que o aplicativo estava correto. A corroboração externa dos casos
+permanece necessária antes de recomendações sobre atendimento.

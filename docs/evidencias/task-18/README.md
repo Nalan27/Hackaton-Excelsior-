@@ -16,3 +16,7 @@ A nota do app apresenta as correlações calculadas **sem filtros**. Elas não s
 recalculam quando o usuário seleciona municípios ou outros campos no Qlik. O
 registro do QVF correspondente está no
 [`snapshot 10`](../../../qlik/versoes-do-app/10-task-18/README.md).
+
+Em **18/09/2026**, o usuário confirmou a reimportação do snapshot 10 e
+informou que o aplicativo estava correto. A captura desta pasta mostra a Tela 5
+antes da exportação; não há captura separada da cópia restaurada.

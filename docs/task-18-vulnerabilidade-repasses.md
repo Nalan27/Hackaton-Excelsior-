@@ -113,18 +113,18 @@ formatadas, fontes e nota metodológica visíveis.
 
 ## Ajustes herdados da Task 16 e evidência final
 
-Antes de exportar o próximo snapshot, melhore a legibilidade da Tela 3:
-substitua ou complemente a tabela dinâmica por uma tabela simples que exiba
-diretamente município, código IBGE, situação na lista, situação na base,
-quantidade de movimentações e saldo líquido. Registre uma captura sem filtros
-e outra com `afetado_sem_registro` selecionado. Preserve a nota de que
+A Tela 3 recebeu uma tabela simples que exibe diretamente município, código
+IBGE, situação na lista, situação na base, quantidade de movimentações e saldo
+líquido. Foram registradas capturas sem filtros e com
+`afetado_sem_registro` selecionado. A nota preserva o limite de que
 **ausência de registro FUNDEC não equivale a ausência de atendimento**.
 
 As capturas atualizadas da [Tela 3](./evidencias/task-16/README.md) mostram a
 tabela simples com os campos de auditoria visíveis, os KPIs sem seleção e a
 seleção `afetado_sem_registro` com **144 / 0 / 144**. O aplicativo foi exportado
 com dados, segundo o usuário, no [snapshot 10](../qlik/versoes-do-app/10-task-18/README.md),
-com tamanho e SHA-256 registrados. **Ainda falta reimportar o QVF** e conferir
-as Telas 3 e 5, a Visão Geral e as visualizações afetadas anteriormente pela
-normalização do modelo. Registre essa conferência antes de marcar a task como
-concluída.
+com tamanho e SHA-256 registrados. Em **18/09/2026**, o usuário confirmou a
+reimportação do aplicativo e informou que estava tudo certo. Essa é uma
+conferência relatada pelo usuário, sem captura separada da cópia reimportada.
+Com a análise reproduzível, a Tela 5, as evidências e o teste de restauração
+registrados, a entrega técnica da Task 18 está concluída.
