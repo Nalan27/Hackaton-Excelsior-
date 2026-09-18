@@ -1,6 +1,36 @@
-### Tela 6 — Resumo
+# Snapshot 11 — Task 19
 
-![Tela 6 - Resumo](docs/screenshots/tela-6-resumo/tela-6-resumo.png)
+Aplicativo Qlik com a **Tela 6 — Resumo**. É o sucessor do
+[snapshot 10](../10-task-18/README.md).
+
+## Arquivo e evidências
+
+- Arquivo: [`app.qvf`](./app.qvf).
+- Exportação informada pelo usuário: **18/09/2026**, na plataforma Qlik,
+  com a opção **com dados**. Responsável: **John** (`JohnVictor777`),
+  autor da entrega no PR.
+- Tamanho verificado: **655.360 bytes**.
+- SHA-256 verificado: `2864377BABD75CC681690DEC6D83A4DC4BDED80C87277EDE03D7CEED5D585BBF`.
+- Armazenamento: Git LFS, pela regra `*.qvf` em `.gitattributes`.
+- Capturas: [Telas 0 a 6](../../../docs/screenshots/tela-6-resumo/).
+
+As capturas mostram o aplicativo original antes da exportação. Em
+**18/09/2026**, o usuário confirmou que já reimportou este QVF. A restauração
+foi, portanto, conferida pelo usuário; não há uma captura separada do
+aplicativo reimportado nem verificação independente de cada objeto.
+
+## Restauração
+
+Faça upload de `app.qvf` no Qlik Cloud como um novo aplicativo. Com as
+seleções limpas, confira as sete telas, os quatro achados da Tela 6 e se os
+dados aparecem sem recarga. Para recarregar, disponibilize os cinco CSVs de
+`data/processed/` na conexão `DataFiles` e ajuste o caminho da conexão ao
+espaço de destino, conforme
+as [instruções do snapshot 10](../10-task-18/README.md#restauração).
+
+## Tela 6 — Resumo
+
+![Tela 6 - Resumo](../../../docs/screenshots/tela-6-resumo/tela-6-resumo.png)
 
 **Achado 1 — Visão geral:** total líquido repassado de R$ 288.699.999,97
 em 334 municípios (média/pessoa e tempo de espera: conferir KPIs da
