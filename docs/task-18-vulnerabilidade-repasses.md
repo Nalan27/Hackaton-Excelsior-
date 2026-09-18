@@ -100,6 +100,17 @@ confirma a configuração de uma dimensão e duas medidas. A
 [tabela simples](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Visualizations/StraightTable/create-sn-straight-tables.htm)
 permite mostrar os campos de auditoria lado a lado.
 
+### Conferência manual em 18/09/2026
+
+Uma captura compartilhada na revisão mostrou a Tela 5 com gráfico de dispersão
+e tabela municipal. A tabela exibiu **R$ 288.699.999,97** como saldo líquido
+total, igual ao CSV. O usuário confirmou os dois casos de controle:
+**Coqueiro Baixo (`4305835`)** com IDH-M 0,692, população 1.311, saldo de
+R$ 1.334.883,72 e R$ 1.018,22 por habitante; e **Pinto Bandeira (`4314548`)**
+presente na tabela com IDH-M ausente. A captura ainda não foi arquivada no
+repositório e a apresentação final da tabela e da nota metodológica segue em
+andamento.
+
 ## Ajustes herdados da Task 16 e evidência final
 
 Antes de exportar o próximo snapshot, melhore a legibilidade da Tela 3:
