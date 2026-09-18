@@ -32,8 +32,8 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
 | Aplicativo e dashboard Qlik Sense | Parcial para entrega | Telas 0 a 6 capturadas no [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md), exportado com dados e reimportado segundo o usuário; acesso público e teste final de usabilidade pendentes |
-| Análises e achados finais | Concluídos no app | A Tela 6 reúne quatro achados, recomendações e limites; falta consolidá-los e revisá-los no documento final |
-| Documento descritivo final | Pendente | Há documentação de métodos e análises, mas não um relatório final consolidado e revisado ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
+| Análises e achados finais | Concluídos no app e consolidados no relatório | A Tela 6 reúne quatro achados, recomendações e limites; o relatório final os vincula às bases, cálculos e evidências |
+| Documento descritivo final | Consolidado para revisão | [`docs/relatorio-final.md`](relatorio-final.md) está escrito; revisão por segundo integrante, auditoria do link público e envio continuam pendentes ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
 | Certificados e elegibilidade da equipe | Parcial | Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; faltam a conferência por integrante e a comprovação dos demais critérios ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
 | Publicação e envio | Pendente | Não há links públicos registrados nem comprovante de submissão ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
@@ -146,12 +146,12 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Contextualização do problema documentada.
 - [x] Inventário das bases disponíveis documentado.
 - [x] Metodologia planejada documentada.
-- [ ] **Pendente — Consolidar no relatório a metodologia realmente executada.** As regras constam nas Tasks 12 e 16 a 18, mas ainda não formam um documento final único.
-- [ ] **Pendente — Consolidar no relatório as análises e os achados com evidências.** A Tela 6 e o [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md) registram quatro achados para revisão editorial.
-- [ ] **Pendente — Inserir conclusões que respondam às perguntas do edital.**
-- [ ] **Pendente — Consolidar no relatório as recomendações ligadas aos achados.** A Tela 6 já apresenta recomendações e limites, ainda não transpostos ao documento final.
-- [ ] **Pendente — Declarar limitações, vieses, períodos e diferenças entre fontes.**
-- [ ] **Pendente — Inserir declaração final de uso de IA com validação humana.** Há uma declaração preliminar na especificação.
+- [x] **Concluído para revisão — Consolidar no relatório a metodologia realmente executada.** Ver [`docs/relatorio-final.md`](relatorio-final.md).
+- [x] **Concluído para revisão — Consolidar no relatório as análises e os achados com evidências.** A Tela 6, o snapshot 11 e os CSVs processados estão vinculados no relatório.
+- [x] **Concluído para revisão — Inserir conclusões que respondam às perguntas do edital.**
+- [x] **Concluído para revisão — Consolidar no relatório as recomendações ligadas aos achados.**
+- [x] **Concluído para revisão — Declarar limitações, vieses, períodos e diferenças entre fontes.**
+- [x] **Concluído para revisão — Inserir declaração final de uso de IA com validação humana.** A revisão final por outro integrante ainda precisa ser registrada.
 - [ ] **Pendente — Revisar texto, números e referências por pelo menos outro integrante.**
 
 ## 11. Vídeo pitch

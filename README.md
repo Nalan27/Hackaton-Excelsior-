@@ -6,6 +6,7 @@ Análise da distribuição de recursos do **FUNDEC** (Fundo de Defesa Civil do E
 
 - [Edital explicado e especificação do projeto](docs/edital-hackathon-qlik-2026.md)
 - [Requisitos e status do projeto](docs/requisitos-e-status.md)
+- [Relatório descritivo final](docs/relatorio-final.md)
 
 ---
 

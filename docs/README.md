@@ -4,6 +4,7 @@ Esta pasta concentra a interpretação do edital e o acompanhamento do projeto d
 
 - [Edital explicado e especificação do projeto](./edital-hackathon-qlik-2026.md): contexto, objetivos, dados, metodologia, produto esperado, cronograma e critérios de avaliação.
 - [Requisitos e status do projeto](./requisitos-e-status.md): checklist auditável do que está concluído, parcial, pendente ou ainda não comprovado.
+- [Relatório descritivo final](./relatorio-final.md): contexto, bases, metodologia executada, achados, conclusões, recomendações, limitações e declaração de uso de IA.
 - [Task 9 — calendário principal](./task-9-calendario.md): construção e validação inicial da dimensão temporal no Qlik.
 - [Task 10 — intervalo até o primeiro repasse](./task-10-intervalo-primeiro-repasse.md): regra, fonte do marco adotado, validação e limites da métrica.
 - [Task 11 — mapa de teste](./task-11-mapa-teste.md): cobertura, denominador populacional, cálculo per capita, roteiro Qlik e validação do protótipo.
