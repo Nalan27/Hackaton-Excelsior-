@@ -1,0 +1,498 @@
+chave_municipal,municipio_cobertura,localizacao_cobertura,afetado_lista_2024_06_11,qtd_movimentacoes_base,creditos_base,ajustes_negativos_base,saldo_liquido_base,qtd_movimentacoes_ate_extrato,saldo_liquido_ate_extrato,situacao_na_base,situacao_comparacao
+4300034,Aceguá,"Aceguá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4300109,Agudo,"Agudo, Rio Grande do Sul, Brasil",1,3,1858139.53,0.00,1858139.53,2,550000.00,saldo_positivo,afetado_com_registro
+4300208,Ajuricaba,"Ajuricaba, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4300307,Alecrim,"Alecrim, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4300406,Alegrete,"Alegrete, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4300455,Alegria,"Alegria, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4300471,Almirante Tamandaré do Sul,"Almirante Tamandaré do Sul, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4300505,Alpestre,"Alpestre, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4300554,Alto Alegre,"Alto Alegre, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4300570,Alto Feliz,"Alto Feliz, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4300604,Alvorada,"Alvorada, Rio Grande do Sul, Brasil",1,2,5432558.14,0.00,5432558.14,0,0.00,saldo_positivo,afetado_com_registro
+4300638,Amaral Ferrador,"Amaral Ferrador, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4300646,Ametista do Sul,"Ametista do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4300661,André da Rocha,"André da Rocha, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4300703,Anta Gorda,"Anta Gorda, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4300802,Antônio Prado,"Antônio Prado, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4300851,Arambaré,"Arambaré, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,350000.00,saldo_positivo,afetado_com_registro
+4300877,Araricá,"Araricá, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4300901,Aratiba,"Aratiba, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4301305,Arroio Grande,"Arroio Grande, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4301008,Arroio do Meio,"Arroio do Meio, Rio Grande do Sul, Brasil",1,3,2119767.44,0.00,2119767.44,2,550000.00,saldo_positivo,afetado_com_registro
+4301073,Arroio do Padre,"Arroio do Padre, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4301057,Arroio do Sal,"Arroio do Sal, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4301206,Arroio do Tigre,"Arroio do Tigre, Rio Grande do Sul, Brasil",1,3,1596511.63,0.00,1596511.63,2,550000.00,saldo_positivo,afetado_com_registro
+4301107,Arroio dos Ratos,"Arroio dos Ratos, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4301404,Arvorezinha,"Arvorezinha, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4301503,Augusto Pestana,"Augusto Pestana, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4301602,Bagé,"Bagé, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4301636,Balneário Pinhal,"Balneário Pinhal, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4301958,Barra Funda,"Barra Funda, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4301859,Barra do Guarita,"Barra do Guarita, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4301875,Barra do Quaraí,"Barra do Quaraí, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4301909,Barra do Ribeiro,"Barra do Ribeiro, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4301925,Barra do Rio Azul,"Barra do Rio Azul, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4301800,Barracão,"Barracão, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4302006,Barros Cassal,"Barros Cassal, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4301651,Barão,"Barão, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4301701,Barão de Cotegipe,"Barão de Cotegipe, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4301750,Barão do Triunfo,"Barão do Triunfo, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302055,Benjamin Constant do Sul,"Benjamin Constant do Sul, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4302105,Bento Gonçalves,"Bento Gonçalves, Rio Grande do Sul, Brasil",1,3,4997674.42,0.00,4997674.42,1,200000.00,saldo_positivo,afetado_com_registro
+4302154,Boa Vista das Missões,"Boa Vista das Missões, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4302204,Boa Vista do Buricá,"Boa Vista do Buricá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302220,Boa Vista do Cadeado,"Boa Vista do Cadeado, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302238,Boa Vista do Incra,"Boa Vista do Incra, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302253,Boa Vista do Sul,"Boa Vista do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302303,Bom Jesus,"Bom Jesus, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4302352,Bom Princípio,"Bom Princípio, Rio Grande do Sul, Brasil",1,3,1596511.63,0.00,1596511.63,2,550000.00,saldo_positivo,afetado_com_registro
+4302378,Bom Progresso,"Bom Progresso, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302402,Bom Retiro do Sul,"Bom Retiro do Sul, Rio Grande do Sul, Brasil",1,2,1246511.63,0.00,1246511.63,1,200000.00,saldo_positivo,afetado_com_registro
+4302451,Boqueirão do Leão,"Boqueirão do Leão, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4302501,Bossoroca,"Bossoroca, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302584,Bozano,"Bozano, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4302600,Braga,"Braga, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4302659,Brochier,"Brochier, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4302709,Butiá,"Butiá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4302907,Cacequi,"Cacequi, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303004,Cachoeira do Sul,"Cachoeira do Sul, Rio Grande do Sul, Brasil",1,3,3951162.79,0.00,3951162.79,1,200000.00,saldo_positivo,afetado_com_registro
+4303103,Cachoeirinha,"Cachoeirinha, Rio Grande do Sul, Brasil",1,5,5959302.33,-700000.00,5259302.33,0,0.00,saldo_positivo,afetado_com_registro
+4303202,Cacique Doble,"Cacique Doble, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303301,Caibaté,"Caibaté, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4303400,Caiçara,"Caiçara, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303509,Camaquã,"Camaquã, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303558,Camargo,"Camargo, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303608,Cambará do Sul,"Cambará do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4303673,Campestre da Serra,"Campestre da Serra, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303707,Campina das Missões,"Campina das Missões, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4303806,Campinas do Sul,"Campinas do Sul, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4303905,Campo Bom,"Campo Bom, Rio Grande do Sul, Brasil",1,3,3689534.88,0.00,3689534.88,1,200000.00,saldo_positivo,afetado_com_registro
+4304002,Campo Novo,"Campo Novo, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4304101,Campos Borges,"Campos Borges, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304200,Candelária,"Candelária, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,2,550000.00,saldo_positivo,afetado_com_registro
+4304358,Candiota,"Candiota, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304408,Canela,"Canela, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4304507,Canguçu,"Canguçu, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304606,Canoas,"Canoas, Rio Grande do Sul, Brasil",1,3,5782558.14,0.00,5782558.14,0,0.00,saldo_positivo,afetado_com_registro
+4304614,Canudos do Vale,"Canudos do Vale, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,0,0.00,saldo_positivo,afetado_com_registro
+4304689,Capela de Santana,"Capela de Santana, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4304697,Capitão,"Capitão, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304671,Capivari do Sul,"Capivari do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4304622,Capão Bonito do Sul,"Capão Bonito do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304630,Capão da Canoa,"Capão da Canoa, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4304655,Capão do Cipó,"Capão do Cipó, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4304663,Capão do Leão,"Capão do Leão, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4304705,Carazinho,"Carazinho, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4304713,Caraá,"Caraá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4304804,Carlos Barbosa,"Carlos Barbosa, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4304853,Carlos Gomes,"Carlos Gomes, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304903,Casca,"Casca, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4304952,Caseiros,"Caseiros, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305009,Catuípe,"Catuípe, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4305108,Caxias do Sul,"Caxias do Sul, Rio Grande do Sul, Brasil",1,3,5782558.14,0.00,5782558.14,1,200000.00,saldo_positivo,afetado_com_registro
+4302808,Caçapava do Sul,"Caçapava do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305116,Centenário,"Centenário, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305124,Cerrito,"Cerrito, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305132,Cerro Branco,"Cerro Branco, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4305157,Cerro Grande,"Cerro Grande, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305173,Cerro Grande do Sul,"Cerro Grande do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305207,Cerro Largo,"Cerro Largo, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305306,Chapada,"Chapada, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305355,Charqueadas,"Charqueadas, Rio Grande do Sul, Brasil",1,1,2093023.26,0.00,2093023.26,0,0.00,saldo_positivo,afetado_com_registro
+4305371,Charrua,"Charrua, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305405,Chiapetta,"Chiapetta, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305447,Chuvisca,"Chuvisca, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4305439,Chuí,"Chuí, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305454,Cidreira,"Cidreira, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305504,Ciríaco,"Ciríaco, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305587,Colinas,"Colinas, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4305603,Colorado,"Colorado, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305702,Condor,"Condor, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305801,Constantina,"Constantina, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4305835,Coqueiro Baixo,"Coqueiro Baixo, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4305850,Coqueiros do Sul,"Coqueiros do Sul, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4305871,Coronel Barros,"Coronel Barros, Rio Grande do Sul, Brasil",1,3,450000.00,-300000.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4305900,Coronel Bicaco,"Coronel Bicaco, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305934,Coronel Pilar,"Coronel Pilar, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4305959,Cotiporã,"Cotiporã, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4305975,Coxilha,"Coxilha, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4306007,Crissiumal,"Crissiumal, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,1,150000.00,saldo_positivo,afetado_com_registro
+4306056,Cristal,"Cristal, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306072,Cristal do Sul,"Cristal do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306106,Cruz Alta,"Cruz Alta, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306130,Cruzaltense,"Cruzaltense, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306205,Cruzeiro do Sul,"Cruzeiro do Sul, Rio Grande do Sul, Brasil",1,3,1596511.63,0.00,1596511.63,2,550000.00,saldo_positivo,afetado_com_registro
+4304309,Cândido Godói,"Cândido Godói, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306304,David Canabarro,"David Canabarro, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4306320,Derrubadas,"Derrubadas, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306353,Dezesseis de Novembro,"Dezesseis de Novembro, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4306379,Dilermando de Aguiar,"Dilermando de Aguiar, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306403,Dois Irmãos,"Dois Irmãos, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4306429,Dois Irmãos das Missões,"Dois Irmãos das Missões, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306452,Dois Lajeados,"Dois Lajeados, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306502,Dom Feliciano,"Dom Feliciano, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306601,Dom Pedrito,"Dom Pedrito, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4306551,Dom Pedro de Alcântara,"Dom Pedro de Alcântara, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4306700,Dona Francisca,"Dona Francisca, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,0,0.00,saldo_positivo,afetado_com_registro
+4306734,Doutor Maurício Cardoso,"Doutor Maurício Cardoso, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306759,Doutor Ricardo,"Doutor Ricardo, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4306767,Eldorado do Sul,"Eldorado do Sul, Rio Grande do Sul, Brasil",1,2,2554651.16,0.00,2554651.16,0,0.00,saldo_positivo,afetado_com_registro
+4306809,Encantado,"Encantado, Rio Grande do Sul, Brasil",1,3,2119767.44,0.00,2119767.44,1,200000.00,saldo_positivo,afetado_com_registro
+4306908,Encruzilhada do Sul,"Encruzilhada do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4306924,Engenho Velho,"Engenho Velho, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306957,Entre Rios do Sul,"Entre Rios do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4306932,Entre-Ijuís,"Entre-Ijuís, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4306973,Erebango,"Erebango, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4307005,Erechim,"Erechim, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4307054,Ernestina,"Ernestina, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4307203,Erval Grande,"Erval Grande, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4307302,Erval Seco,"Erval Seco, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4307401,Esmeralda,"Esmeralda, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4307450,Esperança do Sul,"Esperança do Sul, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4307500,Espumoso,"Espumoso, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4307559,Estação,"Estação, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4307708,Esteio,"Esteio, Rio Grande do Sul, Brasil",1,7,4751162.79,-800000.00,3951162.79,6,550000.00,saldo_positivo,afetado_com_registro
+4307807,Estrela,"Estrela, Rio Grande do Sul, Brasil",1,3,2643023.26,0.00,2643023.26,2,550000.00,saldo_positivo,afetado_com_registro
+4307815,Estrela Velha,"Estrela Velha, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4307609,Estância Velha,"Estância Velha, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4307831,Eugênio de Castro,"Eugênio de Castro, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4307864,Fagundes Varela,"Fagundes Varela, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4307906,Farroupilha,"Farroupilha, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4308003,Faxinal do Soturno,"Faxinal do Soturno, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4308052,Faxinalzinho,"Faxinalzinho, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4308078,Fazenda Vilanova,"Fazenda Vilanova, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4308102,Feliz,"Feliz, Rio Grande do Sul, Brasil",1,3,1858139.53,0.00,1858139.53,2,550000.00,saldo_positivo,afetado_com_registro
+4308201,Flores da Cunha,"Flores da Cunha, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4308250,Floriano Peixoto,"Floriano Peixoto, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4308300,Fontoura Xavier,"Fontoura Xavier, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,0,0.00,saldo_positivo,afetado_com_registro
+4308409,Formigueiro,"Formigueiro, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4308433,Forquetinha,"Forquetinha, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4308458,Fortaleza dos Valos,"Fortaleza dos Valos, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4308508,Frederico Westphalen,"Frederico Westphalen, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4308607,Garibaldi,"Garibaldi, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4308656,Garruchos,"Garruchos, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4308706,Gaurama,"Gaurama, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4308805,General Câmara,"General Câmara, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4308854,Gentil,"Gentil, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4308904,Getúlio Vargas,"Getúlio Vargas, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4309001,Giruá,"Giruá, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4309050,Glorinha,"Glorinha, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309100,Gramado,"Gramado, Rio Grande do Sul, Brasil",1,3,2904651.16,0.00,2904651.16,0,0.00,saldo_positivo,afetado_com_registro
+4309159,Gramado Xavier,"Gramado Xavier, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4309126,Gramado dos Loureiros,"Gramado dos Loureiros, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4309209,Gravataí,"Gravataí, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309258,Guabiju,"Guabiju, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4309407,Guaporé,"Guaporé, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,1,200000.00,saldo_positivo,afetado_com_registro
+4309506,Guarani das Missões,"Guarani das Missões, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309308,Guaíba,"Guaíba, Rio Grande do Sul, Brasil",1,3,4474418.60,0.00,4474418.60,1,200000.00,saldo_positivo,afetado_com_registro
+4309555,Harmonia,"Harmonia, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4307104,Herval,"Herval, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4309571,Herveiras,"Herveiras, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309605,Horizontina,"Horizontina, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309654,Hulha Negra,"Hulha Negra, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4309704,Humaitá,"Humaitá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309753,Ibarama,"Ibarama, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4309803,Ibiaçá,"Ibiaçá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309902,Ibiraiaras,"Ibiraiaras, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4309951,Ibirapuitã,"Ibirapuitã, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4310009,Ibirubá,"Ibirubá, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4310108,Igrejinha,"Igrejinha, Rio Grande do Sul, Brasil",1,3,2643023.26,0.00,2643023.26,2,550000.00,saldo_positivo,afetado_com_registro
+4310207,Ijuí,"Ijuí, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4310306,Ilópolis,"Ilópolis, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4310330,Imbé,"Imbé, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310363,Imigrante,"Imigrante, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4310405,Independência,"Independência, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310413,Inhacorá,"Inhacorá, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4310462,Ipiranga do Sul,"Ipiranga do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310439,Ipê,"Ipê, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310504,Iraí,"Iraí, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4310538,Itaara,"Itaara, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310553,Itacurubi,"Itacurubi, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4310579,Itapuca,"Itapuca, Rio Grande do Sul, Brasil",1,4,750000.00,-400000.00,350000.00,4,350000.00,saldo_positivo,afetado_com_registro
+4310603,Itaqui,"Itaqui, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4310652,Itati,"Itati, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4310702,Itatiba do Sul,"Itatiba do Sul, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4310751,Ivorá,"Ivorá, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,0,0.00,saldo_positivo,afetado_com_registro
+4310801,Ivoti,"Ivoti, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310850,Jaboticaba,"Jaboticaba, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4310876,Jacuizinho,"Jacuizinho, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4310900,Jacutinga,"Jacutinga, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311106,Jaguari,"Jaguari, Rio Grande do Sul, Brasil",1,3,1596511.63,0.00,1596511.63,1,200000.00,saldo_positivo,afetado_com_registro
+4311007,Jaguarão,"Jaguarão, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4311122,Jaquirana,"Jaquirana, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4311130,Jari,"Jari, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4311155,Jóia,"Jóia, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4311205,Júlio de Castilhos,"Júlio de Castilhos, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4311239,Lagoa Bonita do Sul,"Lagoa Bonita do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311304,Lagoa Vermelha,"Lagoa Vermelha, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311270,Lagoa dos Três Cantos,"Lagoa dos Três Cantos, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311254,Lagoão,"Lagoão, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311403,Lajeado,"Lajeado, Rio Grande do Sul, Brasil",1,2,4124418.60,0.00,4124418.60,1,200000.00,saldo_positivo,afetado_com_registro
+4311429,Lajeado do Bugre,"Lajeado do Bugre, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311502,Lavras do Sul,"Lavras do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4311601,Liberato Salzano,"Liberato Salzano, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311627,Lindolfo Collor,"Lindolfo Collor, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311643,Linha Nova,"Linha Nova, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311700,Machadinho,"Machadinho, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311734,Mampituba,"Mampituba, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311759,Manoel Viana,"Manoel Viana, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311775,Maquiné,"Maquiné, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4311791,Maratá,"Maratá, Rio Grande do Sul, Brasil",1,4,750000.00,-400000.00,350000.00,4,350000.00,saldo_positivo,afetado_com_registro
+4311809,Marau,"Marau, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311908,Marcelino Ramos,"Marcelino Ramos, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4311981,Mariana Pimentel,"Mariana Pimentel, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312005,Mariano Moro,"Mariano Moro, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312054,Marques de Souza,"Marques de Souza, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4312104,Mata,"Mata, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312138,Mato Castelhano,"Mato Castelhano, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4312153,Mato Leitão,"Mato Leitão, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4312179,Mato Queimado,"Mato Queimado, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312203,Maximiliano de Almeida,"Maximiliano de Almeida, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4311718,Maçambará,"Maçambará, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312252,Minas do Leão,"Minas do Leão, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312302,Miraguaí,"Miraguaí, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4312351,Montauri,"Montauri, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4312377,Monte Alegre dos Campos,"Monte Alegre dos Campos, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312385,Monte Belo do Sul,"Monte Belo do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4312401,Montenegro,"Montenegro, Rio Grande do Sul, Brasil",1,3,3689534.88,0.00,3689534.88,1,200000.00,saldo_positivo,afetado_com_registro
+4312427,Mormaço,"Mormaço, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312443,Morrinhos do Sul,"Morrinhos do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4312450,Morro Redondo,"Morro Redondo, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4312476,Morro Reuter,"Morro Reuter, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4312500,Mostardas,"Mostardas, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4312617,Muitos Capões,"Muitos Capões, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4312625,Muliterno,"Muliterno, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4312609,Muçum,"Muçum, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4312674,Nicolau Vergueiro,"Nicolau Vergueiro, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4312708,Nonoai,"Nonoai, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4312757,Nova Alvorada,"Nova Alvorada, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4312807,Nova Araçá,"Nova Araçá, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4312906,Nova Bassano,"Nova Bassano, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4312955,Nova Boa Vista,"Nova Boa Vista, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313003,Nova Bréscia,"Nova Bréscia, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313011,Nova Candelária,"Nova Candelária, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4313037,Nova Esperança do Sul,"Nova Esperança do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4313060,Nova Hartz,"Nova Hartz, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313102,Nova Palma,"Nova Palma, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4313201,Nova Petrópolis,"Nova Petrópolis, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313300,Nova Prata,"Nova Prata, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4313086,Nova Pádua,"Nova Pádua, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313334,Nova Ramada,"Nova Ramada, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313359,Nova Roma do Sul,"Nova Roma do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313375,Nova Santa Rita,"Nova Santa Rita, Rio Grande do Sul, Brasil",1,2,2031395.35,0.00,2031395.35,0,0.00,saldo_positivo,afetado_com_registro
+4313490,Novo Barreiro,"Novo Barreiro, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4313391,Novo Cabrais,"Novo Cabrais, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313409,Novo Hamburgo,"Novo Hamburgo, Rio Grande do Sul, Brasil",1,2,5432558.14,0.00,5432558.14,1,200000.00,saldo_positivo,afetado_com_registro
+4313425,Novo Machado,"Novo Machado, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4313441,Novo Tiradentes,"Novo Tiradentes, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313466,Novo Xingu,"Novo Xingu, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4312658,Não-Me-Toque,"Não-Me-Toque, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313508,Osório,"Osório, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313607,Paim Filho,"Paim Filho, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313656,Palmares do Sul,"Palmares do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313706,Palmeira das Missões,"Palmeira das Missões, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313805,Palmitinho,"Palmitinho, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4313904,Panambi,"Panambi, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4313953,Pantano Grande,"Pantano Grande, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4314001,Paraí,"Paraí, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4314027,Paraíso do Sul,"Paraíso do Sul, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4314035,Pareci Novo,"Pareci Novo, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4314050,Parobé,"Parobé, Rio Grande do Sul, Brasil",1,2,3077906.98,0.00,3077906.98,1,200000.00,saldo_positivo,afetado_com_registro
+4314068,Passa Sete,"Passa Sete, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4314100,Passo Fundo,"Passo Fundo, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4314076,Passo do Sobrado,"Passo do Sobrado, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4314134,Paulo Bento,"Paulo Bento, Rio Grande do Sul, Brasil",1,3,600000.00,-400000.00,200000.00,3,200000.00,saldo_positivo,afetado_com_registro
+4314159,Paverama,"Paverama, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4314175,Pedras Altas,"Pedras Altas, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4314209,Pedro Osório,"Pedro Osório, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4314308,Pejuçara,"Pejuçara, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4314407,Pelotas,"Pelotas, Rio Grande do Sul, Brasil",1,3,5782558.14,0.00,5782558.14,2,550000.00,saldo_positivo,afetado_com_registro
+4314423,Picada Café,"Picada Café, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4314456,Pinhal,"Pinhal, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4314472,Pinhal Grande,"Pinhal Grande, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4314464,Pinhal da Serra,"Pinhal da Serra, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4314498,Pinheirinho do Vale,"Pinheirinho do Vale, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4314506,Pinheiro Machado,"Pinheiro Machado, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4314548,Pinto Bandeira,"Pinto Bandeira, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4314555,Pirapó,"Pirapó, Rio Grande do Sul, Brasil",1,5,1000000.00,-800000.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4314605,Piratini,"Piratini, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4314704,Planalto,"Planalto, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4314787,Ponte Preta,"Ponte Preta, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4314779,Pontão,"Pontão, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4314902,Porto Alegre,"Porto Alegre, Rio Grande do Sul, Brasil",1,5,16247674.42,-10465116.28,5782558.14,0,0.00,saldo_positivo,afetado_com_registro
+4315008,Porto Lucena,"Porto Lucena, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4315057,Porto Mauá,"Porto Mauá, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4315073,Porto Vera Cruz,"Porto Vera Cruz, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4315107,Porto Xavier,"Porto Xavier, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4314803,Portão,"Portão, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4315131,Pouso Novo,"Pouso Novo, Rio Grande do Sul, Brasil",1,1,784883.72,0.00,784883.72,0,0.00,saldo_positivo,afetado_com_registro
+4314753,Poço das Antas,"Poço das Antas, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4315149,Presidente Lucena,"Presidente Lucena, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4315156,Progresso,"Progresso, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4315172,Protásio Alves,"Protásio Alves, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4315206,Putinga,"Putinga, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4315305,Quaraí,"Quaraí, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4315313,Quatro Irmãos,"Quatro Irmãos, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4315321,Quevedos,"Quevedos, Rio Grande do Sul, Brasil",1,4,750000.00,-400000.00,350000.00,3,200000.00,saldo_positivo,afetado_com_registro
+4315354,Quinze de Novembro,"Quinze de Novembro, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4315404,Redentora,"Redentora, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4315453,Relvado,"Relvado, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4315503,Restinga Sêca,"Restinga Sêca, Rio Grande do Sul, Brasil",1,3,1858139.53,0.00,1858139.53,1,200000.00,saldo_positivo,afetado_com_registro
+4315602,Rio Grande,"Rio Grande, Rio Grande do Sul, Brasil",1,3,5782558.14,0.00,5782558.14,2,550000.00,saldo_positivo,afetado_com_registro
+4315701,Rio Pardo,"Rio Pardo, Rio Grande do Sul, Brasil",1,2,2443023.26,0.00,2443023.26,0,0.00,saldo_positivo,afetado_com_registro
+4315552,Rio dos Índios,"Rio dos Índios, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4315750,Riozinho,"Riozinho, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4315800,Roca Sales,"Roca Sales, Rio Grande do Sul, Brasil",1,2,1246511.63,0.00,1246511.63,1,200000.00,saldo_positivo,afetado_com_registro
+4315909,Rodeio Bonito,"Rodeio Bonito, Rio Grande do Sul, Brasil",1,3,600000.00,-400000.00,200000.00,3,200000.00,saldo_positivo,afetado_com_registro
+4315958,Rolador,"Rolador, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4316006,Rolante,"Rolante, Rio Grande do Sul, Brasil",1,3,2119767.44,0.00,2119767.44,2,550000.00,saldo_positivo,afetado_com_registro
+4316105,Ronda Alta,"Ronda Alta, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4316204,Rondinha,"Rondinha, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4316303,Roque Gonzales,"Roque Gonzales, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4316402,Rosário do Sul,"Rosário do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4316428,Sagrada Família,"Sagrada Família, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4316436,Saldanha Marinho,"Saldanha Marinho, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4316451,Salto do Jacuí,"Salto do Jacuí, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4316477,Salvador das Missões,"Salvador das Missões, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4316501,Salvador do Sul,"Salvador do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4316600,Sananduva,"Sananduva, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317103,Sant'Ana do Livramento,"Sant'Ana do Livramento, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4316709,Santa Bárbara do Sul,"Santa Bárbara do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4316733,Santa Cecília do Sul,"Santa Cecília do Sul, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4316758,Santa Clara do Sul,"Santa Clara do Sul, Rio Grande do Sul, Brasil",1,4,750000.00,-400000.00,350000.00,3,200000.00,saldo_positivo,afetado_com_registro
+4316808,Santa Cruz do Sul,"Santa Cruz do Sul, Rio Grande do Sul, Brasil",1,1,4709302.33,0.00,4709302.33,0,0.00,saldo_positivo,afetado_com_registro
+4316972,Santa Margarida do Sul,"Santa Margarida do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4316907,Santa Maria,"Santa Maria, Rio Grande do Sul, Brasil",1,4,5832558.14,-400000.00,5432558.14,3,200000.00,saldo_positivo,afetado_com_registro
+4316956,Santa Maria do Herval,"Santa Maria do Herval, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317202,Santa Rosa,"Santa Rosa, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317251,Santa Tereza,"Santa Tereza, Rio Grande do Sul, Brasil",1,5,2904651.16,-1569767.44,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4317301,Santa Vitória do Palmar,"Santa Vitória do Palmar, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4317004,Santana da Boa Vista,"Santana da Boa Vista, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4317400,Santiago,"Santiago, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317608,Santo Antônio da Patrulha,"Santo Antônio da Patrulha, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4317707,Santo Antônio das Missões,"Santo Antônio das Missões, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317558,Santo Antônio do Palma,"Santo Antônio do Palma, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4317756,Santo Antônio do Planalto,"Santo Antônio do Planalto, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4317806,Santo Augusto,"Santo Augusto, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317905,Santo Cristo,"Santo Cristo, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4317954,Santo Expedito do Sul,"Santo Expedito do Sul, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4317509,Santo Ângelo,"Santo Ângelo, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4319901,Sapiranga,"Sapiranga, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4320008,Sapucaia do Sul,"Sapucaia do Sul, Rio Grande do Sul, Brasil",1,3,5259302.33,0.00,5259302.33,1,200000.00,saldo_positivo,afetado_com_registro
+4320107,Sarandi,"Sarandi, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4320206,Seberi,"Seberi, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320230,Sede Nova,"Sede Nova, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320263,Segredo,"Segredo, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4320305,Selbach,"Selbach, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4320321,Senador Salgado Filho,"Senador Salgado Filho, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4320354,Sentinela do Sul,"Sentinela do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320404,Serafina Corrêa,"Serafina Corrêa, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320503,Sertão,"Sertão, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4320552,Sertão Santana,"Sertão Santana, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320578,Sete de Setembro,"Sete de Setembro, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320602,Severiano de Almeida,"Severiano de Almeida, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4320651,Silveira Martins,"Silveira Martins, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4320677,Sinimbu,"Sinimbu, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4320701,Sobradinho,"Sobradinho, Rio Grande do Sul, Brasil",1,3,1858139.53,0.00,1858139.53,1,200000.00,saldo_positivo,afetado_com_registro
+4320800,Soledade,"Soledade, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318002,São Borja,"São Borja, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318051,São Domingos do Sul,"São Domingos do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318101,São Francisco de Assis,"São Francisco de Assis, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318200,São Francisco de Paula,"São Francisco de Paula, Rio Grande do Sul, Brasil",1,4,750000.00,-400000.00,350000.00,3,200000.00,saldo_positivo,afetado_com_registro
+4318309,São Gabriel,"São Gabriel, Rio Grande do Sul, Brasil",1,3,600000.00,-400000.00,200000.00,3,200000.00,saldo_positivo,afetado_com_registro
+4318408,São Jerônimo,"São Jerônimo, Rio Grande do Sul, Brasil",1,2,1769767.44,0.00,1769767.44,1,200000.00,saldo_positivo,afetado_com_registro
+4318440,São Jorge,"São Jorge, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318457,São José das Missões,"São José das Missões, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4318465,São José do Herval,"São José do Herval, Rio Grande do Sul, Brasil",1,2,984883.72,0.00,984883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4318481,São José do Hortêncio,"São José do Hortêncio, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318499,São José do Inhacorá,"São José do Inhacorá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4318507,São José do Norte,"São José do Norte, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,1,200000.00,saldo_positivo,afetado_com_registro
+4318606,São José do Ouro,"São José do Ouro, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4318614,São José do Sul,"São José do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4318622,São José dos Ausentes,"São José dos Ausentes, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4318424,São João da Urtiga,"São João da Urtiga, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4318432,São João do Polêsine,"São João do Polêsine, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,0,0.00,saldo_positivo,afetado_com_registro
+4318705,São Leopoldo,"São Leopoldo, Rio Grande do Sul, Brasil",1,1,5232558.14,0.00,5232558.14,0,0.00,saldo_positivo,afetado_com_registro
+4318804,São Lourenço do Sul,"São Lourenço do Sul, Rio Grande do Sul, Brasil",1,3,2904651.16,0.00,2904651.16,1,200000.00,saldo_positivo,afetado_com_registro
+4318903,São Luiz Gonzaga,"São Luiz Gonzaga, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4319000,São Marcos,"São Marcos, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4319109,São Martinho,"São Martinho, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4319125,São Martinho da Serra,"São Martinho da Serra, Rio Grande do Sul, Brasil",1,2,1134883.72,0.00,1134883.72,0,0.00,saldo_positivo,afetado_com_registro
+4319158,São Miguel das Missões,"São Miguel das Missões, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4319208,São Nicolau,"São Nicolau, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4319307,São Paulo das Missões,"São Paulo das Missões, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4319356,São Pedro da Serra,"São Pedro da Serra, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4319364,São Pedro das Missões,"São Pedro das Missões, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4319372,São Pedro do Butiá,"São Pedro do Butiá, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4319406,São Pedro do Sul,"São Pedro do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4319505,São Sebastião do Caí,"São Sebastião do Caí, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,2,550000.00,saldo_positivo,afetado_com_registro
+4319604,São Sepé,"São Sepé, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4319703,São Valentim,"São Valentim, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4319711,São Valentim do Sul,"São Valentim do Sul, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,2,550000.00,saldo_positivo,afetado_com_registro
+4319737,São Valério do Sul,"São Valério do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4319752,São Vendelino,"São Vendelino, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4319802,São Vicente do Sul,"São Vicente do Sul, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4320453,Sério,"Sério, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4320859,Tabaí,"Tabaí, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4320909,Tapejara,"Tapejara, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4321006,Tapera,"Tapera, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321105,Tapes,"Tapes, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4321204,Taquara,"Taquara, Rio Grande do Sul, Brasil",1,3,3427906.98,0.00,3427906.98,2,550000.00,saldo_positivo,afetado_com_registro
+4321303,Taquari,"Taquari, Rio Grande do Sul, Brasil",1,2,2031395.35,0.00,2031395.35,1,200000.00,saldo_positivo,afetado_com_registro
+4321329,Taquaruçu do Sul,"Taquaruçu do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321352,Tavares,"Tavares, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321402,Tenente Portela,"Tenente Portela, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321436,Terra de Areia,"Terra de Areia, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321451,Teutônia,"Teutônia, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321469,Tio Hugo,"Tio Hugo, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4321477,Tiradentes do Sul,"Tiradentes do Sul, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4321493,Toropi,"Toropi, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4321501,Torres,"Torres, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321600,Tramandaí,"Tramandaí, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4321626,Travesseiro,"Travesseiro, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4321956,Trindade do Sul,"Trindade do Sul, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4322004,Triunfo,"Triunfo, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,2,550000.00,saldo_positivo,afetado_com_registro
+4321634,Três Arroios,"Três Arroios, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4321667,Três Cachoeiras,"Três Cachoeiras, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4321709,Três Coroas,"Três Coroas, Rio Grande do Sul, Brasil",1,5,2781395.35,-400000.00,2381395.35,4,550000.00,saldo_positivo,afetado_com_registro
+4321832,Três Forquilhas,"Três Forquilhas, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4321857,Três Palmeiras,"Três Palmeiras, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4321907,Três Passos,"Três Passos, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4321808,Três de Maio,"Três de Maio, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322103,Tucunduva,"Tucunduva, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322152,Tunas,"Tunas, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4322186,Tupanci do Sul,"Tupanci do Sul, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322202,Tupanciretã,"Tupanciretã, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4322251,Tupandi,"Tupandi, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4322301,Tuparendi,"Tuparendi, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322327,Turuçu,"Turuçu, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322343,Ubiretama,"Ubiretama, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4322376,Unistalda,"Unistalda, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322350,União da Serra,"União da Serra, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4322400,Uruguaiana,"Uruguaiana, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4322509,Vacaria,"Vacaria, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4322541,Vale Real,"Vale Real, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4322525,Vale Verde,"Vale Verde, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4322533,Vale do Sol,"Vale do Sol, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4322558,Vanini,"Vanini, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4322608,Venâncio Aires,"Venâncio Aires, Rio Grande do Sul, Brasil",1,3,3689534.88,0.00,3689534.88,1,200000.00,saldo_positivo,afetado_com_registro
+4322707,Vera Cruz,"Vera Cruz, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,2,550000.00,saldo_positivo,afetado_com_registro
+4322806,Veranópolis,"Veranópolis, Rio Grande do Sul, Brasil",1,3,2381395.35,0.00,2381395.35,1,200000.00,saldo_positivo,afetado_com_registro
+4322855,Vespasiano Corrêa,"Vespasiano Corrêa, Rio Grande do Sul, Brasil",1,3,1334883.72,0.00,1334883.72,1,200000.00,saldo_positivo,afetado_com_registro
+4322905,Viadutos,"Viadutos, Rio Grande do Sul, Brasil",1,1,150000.00,0.00,150000.00,0,0.00,saldo_positivo,afetado_com_registro
+4323002,Viamão,"Viamão, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4323101,Vicente Dutra,"Vicente Dutra, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4323200,Victor Graeff,"Victor Graeff, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4323309,Vila Flores,"Vila Flores, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4323358,Vila Lângaro,"Vila Lângaro, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4323408,Vila Maria,"Vila Maria, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4323457,Vila Nova do Sul,"Vila Nova do Sul, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,0,0.00,saldo_positivo,afetado_com_registro
+4323507,Vista Alegre,"Vista Alegre, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro
+4323606,Vista Alegre do Prata,"Vista Alegre do Prata, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4323705,Vista Gaúcha,"Vista Gaúcha, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,1,200000.00,saldo_positivo,afetado_com_registro
+4323754,Vitória das Missões,"Vitória das Missões, Rio Grande do Sul, Brasil",1,1,200000.00,0.00,200000.00,0,0.00,saldo_positivo,afetado_com_registro
+4323770,Westfália,"Westfália, Rio Grande do Sul, Brasil",1,2,350000.00,0.00,350000.00,2,350000.00,saldo_positivo,afetado_com_registro
+4323804,Xangri-lá,"Xangri-lá, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4300059,Água Santa,"Água Santa, Rio Grande do Sul, Brasil",0,0,0.00,0.00,0.00,0,0.00,sem_registro,nao_listado_sem_registro
+4301552,Áurea,"Áurea, Rio Grande do Sul, Brasil",1,0,0.00,0.00,0.00,0,0.00,sem_registro,afetado_sem_registro

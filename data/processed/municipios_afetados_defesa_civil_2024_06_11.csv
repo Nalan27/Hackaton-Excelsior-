@@ -1,0 +1,479 @@
+ordem_fonte,chave_municipal,municipio_fonte,municipio_ibge,data_extrato
+1,4300034,Aceguá,Aceguá,2024-06-11
+2,4300109,Agudo,Agudo,2024-06-11
+3,4300208,Ajuricaba,Ajuricaba,2024-06-11
+4,4300307,Alecrim,Alecrim,2024-06-11
+5,4300406,Alegrete,Alegrete,2024-06-11
+6,4300455,Alegria,Alegria,2024-06-11
+7,4300505,Alpestre,Alpestre,2024-06-11
+8,4300554,Alto Alegre,Alto Alegre,2024-06-11
+9,4300570,Alto Feliz,Alto Feliz,2024-06-11
+10,4300604,Alvorada,Alvorada,2024-06-11
+11,4300638,Amaral Ferrador,Amaral Ferrador,2024-06-11
+12,4300646,Ametista do Sul,Ametista do Sul,2024-06-11
+13,4300661,André da Rocha,André da Rocha,2024-06-11
+14,4300703,Anta Gorda,Anta Gorda,2024-06-11
+15,4300802,Antônio Prado,Antônio Prado,2024-06-11
+16,4300851,Arambaré,Arambaré,2024-06-11
+17,4300877,Araricá,Araricá,2024-06-11
+18,4300901,Aratiba,Aratiba,2024-06-11
+19,4301008,Arroio do Meio,Arroio do Meio,2024-06-11
+20,4301073,Arroio do Padre,Arroio do Padre,2024-06-11
+21,4301206,Arroio do Tigre,Arroio do Tigre,2024-06-11
+22,4301107,Arroio Dos Ratos,Arroio dos Ratos,2024-06-11
+23,4301305,Arroio Grande,Arroio Grande,2024-06-11
+24,4301404,Arvorezinha,Arvorezinha,2024-06-11
+25,4301503,Augusto Pestana,Augusto Pestana,2024-06-11
+26,4301552,Áurea,Áurea,2024-06-11
+27,4301602,Bagé,Bagé,2024-06-11
+28,4301636,Balneário Pinhal,Balneário Pinhal,2024-06-11
+29,4301651,Barão,Barão,2024-06-11
+30,4301701,Barão de Cotegipe,Barão de Cotegipe,2024-06-11
+31,4301750,Barão do Triunfo,Barão do Triunfo,2024-06-11
+32,4301859,Barra do Guarita,Barra do Guarita,2024-06-11
+33,4301875,Barra do Quaraí,Barra do Quaraí,2024-06-11
+34,4301909,Barra do Ribeiro,Barra do Ribeiro,2024-06-11
+35,4301925,Barra do Rio Azul,Barra do Rio Azul,2024-06-11
+36,4301958,Barra Funda,Barra Funda,2024-06-11
+37,4302006,Barros Cassal,Barros Cassal,2024-06-11
+38,4302055,Benjamin Constant do Sul,Benjamin Constant do Sul,2024-06-11
+39,4302105,Bento Gonçalves,Bento Gonçalves,2024-06-11
+40,4302154,Boa Vista Das Missões,Boa Vista das Missões,2024-06-11
+41,4302204,Boa Vista do Buricá,Boa Vista do Buricá,2024-06-11
+42,4302220,Boa Vista do Cadeado,Boa Vista do Cadeado,2024-06-11
+43,4302238,Boa Vista do Incra,Boa Vista do Incra,2024-06-11
+44,4302253,Boa Vista do Sul,Boa Vista do Sul,2024-06-11
+45,4302303,Bom Jesus,Bom Jesus,2024-06-11
+46,4302352,Bom Princípio,Bom Princípio,2024-06-11
+47,4302378,Bom Progresso,Bom Progresso,2024-06-11
+48,4302402,Bom Retiro do Sul,Bom Retiro do Sul,2024-06-11
+49,4302451,Boqueirão do Leão,Boqueirão do Leão,2024-06-11
+50,4302501,Bossoroca,Bossoroca,2024-06-11
+51,4302584,Bozano,Bozano,2024-06-11
+52,4302600,Braga,Braga,2024-06-11
+53,4302659,Brochier,Brochier,2024-06-11
+54,4302709,Butiá,Butiá,2024-06-11
+55,4302808,Caçapava do Sul,Caçapava do Sul,2024-06-11
+56,4302907,Cacequi,Cacequi,2024-06-11
+57,4303004,Cachoeira do Sul,Cachoeira do Sul,2024-06-11
+58,4303103,Cachoeirinha,Cachoeirinha,2024-06-11
+59,4303202,Cacique Doble,Cacique Doble,2024-06-11
+60,4303301,Caibaté,Caibaté,2024-06-11
+61,4303400,Caiçara,Caiçara,2024-06-11
+62,4303509,Camaquã,Camaquã,2024-06-11
+63,4303558,Camargo,Camargo,2024-06-11
+64,4303608,Cambará do Sul,Cambará do Sul,2024-06-11
+65,4303673,Campestre da Serra,Campestre da Serra,2024-06-11
+66,4303707,Campina Das Missões,Campina das Missões,2024-06-11
+67,4303806,Campinas do Sul,Campinas do Sul,2024-06-11
+68,4303905,Campo Bom,Campo Bom,2024-06-11
+69,4304002,Campo Novo,Campo Novo,2024-06-11
+70,4304101,Campos Borges,Campos Borges,2024-06-11
+71,4304200,Candelária,Candelária,2024-06-11
+72,4304309,Cândido Godói,Cândido Godói,2024-06-11
+73,4304358,Candiota,Candiota,2024-06-11
+74,4304408,Canela,Canela,2024-06-11
+75,4304507,Canguçu,Canguçu,2024-06-11
+76,4304606,Canoas,Canoas,2024-06-11
+77,4304614,Canudos do Vale,Canudos do Vale,2024-06-11
+78,4304622,Capão Bonito do Sul,Capão Bonito do Sul,2024-06-11
+79,4304655,Capão do Cipó,Capão do Cipó,2024-06-11
+80,4304663,Capão do Leão,Capão do Leão,2024-06-11
+81,4304689,Capela de Santana,Capela de Santana,2024-06-11
+82,4304697,Capitão,Capitão,2024-06-11
+83,4304671,Capivari do Sul,Capivari do Sul,2024-06-11
+84,4304713,Caraá,Caraá,2024-06-11
+85,4304804,Carlos Barbosa,Carlos Barbosa,2024-06-11
+86,4304853,Carlos Gomes,Carlos Gomes,2024-06-11
+87,4304903,Casca,Casca,2024-06-11
+88,4304952,Caseiros,Caseiros,2024-06-11
+89,4305009,Catuípe,Catuípe,2024-06-11
+90,4305108,Caxias do Sul,Caxias do Sul,2024-06-11
+91,4305116,Centenário,Centenário,2024-06-11
+92,4305124,Cerrito,Cerrito,2024-06-11
+93,4305132,Cerro Branco,Cerro Branco,2024-06-11
+94,4305157,Cerro Grande,Cerro Grande,2024-06-11
+95,4305173,Cerro Grande do Sul,Cerro Grande do Sul,2024-06-11
+96,4305207,Cerro Largo,Cerro Largo,2024-06-11
+97,4305306,Chapada,Chapada,2024-06-11
+98,4305355,Charqueadas,Charqueadas,2024-06-11
+99,4305371,Charrua,Charrua,2024-06-11
+100,4305405,Chiapetta,Chiapetta,2024-06-11
+101,4305439,Chuí,Chuí,2024-06-11
+102,4305447,Chuvisca,Chuvisca,2024-06-11
+103,4305454,Cidreira,Cidreira,2024-06-11
+104,4305504,Ciríaco,Ciríaco,2024-06-11
+105,4305587,Colinas,Colinas,2024-06-11
+106,4305603,Colorado,Colorado,2024-06-11
+107,4305702,Condor,Condor,2024-06-11
+108,4305801,Constantina,Constantina,2024-06-11
+109,4305835,Coqueiro Baixo,Coqueiro Baixo,2024-06-11
+110,4305871,Coronel Barros,Coronel Barros,2024-06-11
+111,4305900,Coronel Bicaco,Coronel Bicaco,2024-06-11
+112,4305934,Coronel Pilar,Coronel Pilar,2024-06-11
+113,4305959,Cotiporã,Cotiporã,2024-06-11
+114,4305975,Coxilha,Coxilha,2024-06-11
+115,4306007,Crissiumal,Crissiumal,2024-06-11
+116,4306056,Cristal,Cristal,2024-06-11
+117,4306072,Cristal do Sul,Cristal do Sul,2024-06-11
+118,4306106,Cruz Alta,Cruz Alta,2024-06-11
+119,4306130,Cruzaltense,Cruzaltense,2024-06-11
+120,4306205,Cruzeiro do Sul,Cruzeiro do Sul,2024-06-11
+121,4306304,David Canabarro,David Canabarro,2024-06-11
+122,4306320,Derrubadas,Derrubadas,2024-06-11
+123,4306353,Dezesseis de Novembro,Dezesseis de Novembro,2024-06-11
+124,4306379,Dilermando de Aguiar,Dilermando de Aguiar,2024-06-11
+125,4306403,Dois Irmãos,Dois Irmãos,2024-06-11
+126,4306429,Dois Irmãos Das Missões,Dois Irmãos das Missões,2024-06-11
+127,4306452,Dois Lajeados,Dois Lajeados,2024-06-11
+128,4306502,Dom Feliciano,Dom Feliciano,2024-06-11
+129,4306601,Dom Pedrito,Dom Pedrito,2024-06-11
+130,4306551,Dom Pedro de Alcântara,Dom Pedro de Alcântara,2024-06-11
+131,4306700,Dona Francisca,Dona Francisca,2024-06-11
+132,4306734,Doutor Maurício Cardoso,Doutor Maurício Cardoso,2024-06-11
+133,4306759,Doutor Ricardo,Doutor Ricardo,2024-06-11
+134,4306767,Eldorado do Sul,Eldorado do Sul,2024-06-11
+135,4306809,Encantado,Encantado,2024-06-11
+136,4306908,Encruzilhada do Sul,Encruzilhada do Sul,2024-06-11
+137,4306924,Engenho Velho,Engenho Velho,2024-06-11
+138,4306957,Entre Rios do Sul,Entre Rios do Sul,2024-06-11
+139,4306932,Entre-ijuís,Entre-Ijuís,2024-06-11
+140,4306973,Erebango,Erebango,2024-06-11
+141,4307005,Erechim,Erechim,2024-06-11
+142,4307203,Erval Grande,Erval Grande,2024-06-11
+143,4307302,Erval Seco,Erval Seco,2024-06-11
+144,4307401,Esmeralda,Esmeralda,2024-06-11
+145,4307450,Esperança do Sul,Esperança do Sul,2024-06-11
+146,4307500,Espumoso,Espumoso,2024-06-11
+147,4307559,Estação,Estação,2024-06-11
+148,4307609,Estância Velha,Estância Velha,2024-06-11
+149,4307708,Esteio,Esteio,2024-06-11
+150,4307807,Estrela,Estrela,2024-06-11
+151,4307815,Estrela Velha,Estrela Velha,2024-06-11
+152,4307831,Eugênio de Castro,Eugênio de Castro,2024-06-11
+153,4307864,Fagundes Varela,Fagundes Varela,2024-06-11
+154,4307906,Farroupilha,Farroupilha,2024-06-11
+155,4308003,Faxinal do Soturno,Faxinal do Soturno,2024-06-11
+156,4308052,Faxinalzinho,Faxinalzinho,2024-06-11
+157,4308078,Fazenda Vilanova,Fazenda Vilanova,2024-06-11
+158,4308102,Feliz,Feliz,2024-06-11
+159,4308201,Flores da Cunha,Flores da Cunha,2024-06-11
+160,4308250,Floriano Peixoto,Floriano Peixoto,2024-06-11
+161,4308300,Fontoura Xavier,Fontoura Xavier,2024-06-11
+162,4308409,Formigueiro,Formigueiro,2024-06-11
+163,4308433,Forquetinha,Forquetinha,2024-06-11
+164,4308458,Fortaleza Dos Valos,Fortaleza dos Valos,2024-06-11
+165,4308508,Frederico Westphalen,Frederico Westphalen,2024-06-11
+166,4308607,Garibaldi,Garibaldi,2024-06-11
+167,4308656,Garruchos,Garruchos,2024-06-11
+168,4308706,Gaurama,Gaurama,2024-06-11
+169,4308805,General Câmara,General Câmara,2024-06-11
+170,4308854,Gentil,Gentil,2024-06-11
+171,4308904,Getúlio Vargas,Getúlio Vargas,2024-06-11
+172,4309001,Giruá,Giruá,2024-06-11
+173,4309050,Glorinha,Glorinha,2024-06-11
+174,4309100,Gramado,Gramado,2024-06-11
+175,4309126,Gramado Dos Loureiros,Gramado dos Loureiros,2024-06-11
+176,4309159,Gramado Xavier,Gramado Xavier,2024-06-11
+177,4309209,Gravataí,Gravataí,2024-06-11
+178,4309258,Guabiju,Guabiju,2024-06-11
+179,4309308,Guaíba,Guaíba,2024-06-11
+180,4309407,Guaporé,Guaporé,2024-06-11
+181,4309506,Guarani Das Missões,Guarani das Missões,2024-06-11
+182,4309555,Harmonia,Harmonia,2024-06-11
+183,4307104,Herval,Herval,2024-06-11
+184,4309571,Herveiras,Herveiras,2024-06-11
+185,4309605,Horizontina,Horizontina,2024-06-11
+186,4309654,Hulha Negra,Hulha Negra,2024-06-11
+187,4309704,Humaitá,Humaitá,2024-06-11
+188,4309753,Ibarama,Ibarama,2024-06-11
+189,4309803,Ibiaçá,Ibiaçá,2024-06-11
+190,4309902,Ibiraiaras,Ibiraiaras,2024-06-11
+191,4309951,Ibirapuitã,Ibirapuitã,2024-06-11
+192,4310009,Ibirubá,Ibirubá,2024-06-11
+193,4310108,Igrejinha,Igrejinha,2024-06-11
+194,4310207,Ijuí,Ijuí,2024-06-11
+195,4310306,Ilópolis,Ilópolis,2024-06-11
+196,4310330,Imbé,Imbé,2024-06-11
+197,4310363,Imigrante,Imigrante,2024-06-11
+198,4310405,Independência,Independência,2024-06-11
+199,4310413,Inhacorá,Inhacorá,2024-06-11
+200,4310439,Ipê,Ipê,2024-06-11
+201,4310462,Ipiranga do Sul,Ipiranga do Sul,2024-06-11
+202,4310504,Iraí,Iraí,2024-06-11
+203,4310538,Itaara,Itaara,2024-06-11
+204,4310553,Itacurubi,Itacurubi,2024-06-11
+205,4310579,Itapuca,Itapuca,2024-06-11
+206,4310603,Itaqui,Itaqui,2024-06-11
+207,4310652,Itati,Itati,2024-06-11
+208,4310702,Itatiba do Sul,Itatiba do Sul,2024-06-11
+209,4310751,Ivorá,Ivorá,2024-06-11
+210,4310801,Ivoti,Ivoti,2024-06-11
+211,4310850,Jaboticaba,Jaboticaba,2024-06-11
+212,4310876,Jacuizinho,Jacuizinho,2024-06-11
+213,4310900,Jacutinga,Jacutinga,2024-06-11
+214,4311007,Jaguarão,Jaguarão,2024-06-11
+215,4311106,Jaguari,Jaguari,2024-06-11
+216,4311122,Jaquirana,Jaquirana,2024-06-11
+217,4311130,Jari,Jari,2024-06-11
+218,4311155,Jóia,Jóia,2024-06-11
+219,4311205,Júlio de Castilhos,Júlio de Castilhos,2024-06-11
+220,4311239,Lagoa Bonita do Sul,Lagoa Bonita do Sul,2024-06-11
+221,4311270,Lagoa Dos Três Cantos,Lagoa dos Três Cantos,2024-06-11
+222,4311304,Lagoa Vermelha,Lagoa Vermelha,2024-06-11
+223,4311254,Lagoão,Lagoão,2024-06-11
+224,4311403,Lajeado,Lajeado,2024-06-11
+225,4311429,Lajeado do Bugre,Lajeado do Bugre,2024-06-11
+226,4311502,Lavras do Sul,Lavras do Sul,2024-06-11
+227,4311601,Liberato Salzano,Liberato Salzano,2024-06-11
+228,4311627,Lindolfo Collor,Lindolfo Collor,2024-06-11
+229,4311643,Linha Nova,Linha Nova,2024-06-11
+230,4311718,Maçambara,Maçambará,2024-06-11
+231,4311700,Machadinho,Machadinho,2024-06-11
+232,4311734,Mampituba,Mampituba,2024-06-11
+233,4311759,Manoel Viana,Manoel Viana,2024-06-11
+234,4311775,Maquiné,Maquiné,2024-06-11
+235,4311791,Maratá,Maratá,2024-06-11
+236,4311809,Marau,Marau,2024-06-11
+237,4311908,Marcelino Ramos,Marcelino Ramos,2024-06-11
+238,4311981,Mariana Pimentel,Mariana Pimentel,2024-06-11
+239,4312005,Mariano Moro,Mariano Moro,2024-06-11
+240,4312054,Marques de Souza,Marques de Souza,2024-06-11
+241,4312104,Mata,Mata,2024-06-11
+242,4312138,Mato Castelhano,Mato Castelhano,2024-06-11
+243,4312153,Mato Leitão,Mato Leitão,2024-06-11
+244,4312179,Mato Queimado,Mato Queimado,2024-06-11
+245,4312203,Maximiliano de Almeida,Maximiliano de Almeida,2024-06-11
+246,4312252,Minas do Leão,Minas do Leão,2024-06-11
+247,4312302,Miraguaí,Miraguaí,2024-06-11
+248,4312351,Montauri,Montauri,2024-06-11
+249,4312377,Monte Alegre Dos Campos,Monte Alegre dos Campos,2024-06-11
+250,4312385,Monte Belo do Sul,Monte Belo do Sul,2024-06-11
+251,4312401,Montenegro,Montenegro,2024-06-11
+252,4312427,Mormaço,Mormaço,2024-06-11
+253,4312443,Morrinhos do Sul,Morrinhos do Sul,2024-06-11
+254,4312450,Morro Redondo,Morro Redondo,2024-06-11
+255,4312476,Morro Reuter,Morro Reuter,2024-06-11
+256,4312500,Mostardas,Mostardas,2024-06-11
+257,4312609,Muçum,Muçum,2024-06-11
+258,4312617,Muitos Capões,Muitos Capões,2024-06-11
+259,4312658,Não-me-toque,Não-Me-Toque,2024-06-11
+260,4312708,Nonoai,Nonoai,2024-06-11
+261,4312757,Nova Alvorada,Nova Alvorada,2024-06-11
+262,4312906,Nova Bassano,Nova Bassano,2024-06-11
+263,4312955,Nova Boa Vista,Nova Boa Vista,2024-06-11
+264,4313003,Nova Bréscia,Nova Bréscia,2024-06-11
+265,4313037,Nova Esperança do Sul,Nova Esperança do Sul,2024-06-11
+266,4313060,Nova Hartz,Nova Hartz,2024-06-11
+267,4313086,Nova Pádua,Nova Pádua,2024-06-11
+268,4313102,Nova Palma,Nova Palma,2024-06-11
+269,4313201,Nova Petrópolis,Nova Petrópolis,2024-06-11
+270,4313300,Nova Prata,Nova Prata,2024-06-11
+271,4313334,Nova Ramada,Nova Ramada,2024-06-11
+272,4313359,Nova Roma do Sul,Nova Roma do Sul,2024-06-11
+273,4313375,Nova Santa Rita,Nova Santa Rita,2024-06-11
+274,4313490,Novo Barreiro,Novo Barreiro,2024-06-11
+275,4313391,Novo Cabrais,Novo Cabrais,2024-06-11
+276,4313409,Novo Hamburgo,Novo Hamburgo,2024-06-11
+277,4313425,Novo Machado,Novo Machado,2024-06-11
+278,4313441,Novo Tiradentes,Novo Tiradentes,2024-06-11
+279,4313466,Novo Xingu,Novo Xingu,2024-06-11
+280,4313508,Osório,Osório,2024-06-11
+281,4313607,Paim Filho,Paim Filho,2024-06-11
+282,4313656,Palmares do Sul,Palmares do Sul,2024-06-11
+283,4313706,Palmeira Das Missões,Palmeira das Missões,2024-06-11
+284,4313805,Palmitinho,Palmitinho,2024-06-11
+285,4313904,Panambi,Panambi,2024-06-11
+286,4313953,Pantano Grande,Pantano Grande,2024-06-11
+287,4314001,Paraí,Paraí,2024-06-11
+288,4314027,Paraíso do Sul,Paraíso do Sul,2024-06-11
+289,4314035,Pareci Novo,Pareci Novo,2024-06-11
+290,4314050,Parobé,Parobé,2024-06-11
+291,4314068,Passa Sete,Passa Sete,2024-06-11
+292,4314076,Passo do Sobrado,Passo do Sobrado,2024-06-11
+293,4314100,Passo Fundo,Passo Fundo,2024-06-11
+294,4314134,Paulo Bento,Paulo Bento,2024-06-11
+295,4314159,Paverama,Paverama,2024-06-11
+296,4314175,Pedras Altas,Pedras Altas,2024-06-11
+297,4314209,Pedro Osório,Pedro Osório,2024-06-11
+298,4314308,Pejuçara,Pejuçara,2024-06-11
+299,4314407,Pelotas,Pelotas,2024-06-11
+300,4314423,Picada Café,Picada Café,2024-06-11
+301,4314456,Pinhal,Pinhal,2024-06-11
+302,4314464,Pinhal da Serra,Pinhal da Serra,2024-06-11
+303,4314472,Pinhal Grande,Pinhal Grande,2024-06-11
+304,4314498,Pinheirinho do Vale,Pinheirinho do Vale,2024-06-11
+305,4314506,Pinheiro Machado,Pinheiro Machado,2024-06-11
+306,4314548,Pinto Bandeira,Pinto Bandeira,2024-06-11
+307,4314555,Pirapó,Pirapó,2024-06-11
+308,4314605,Piratini,Piratini,2024-06-11
+309,4314704,Planalto,Planalto,2024-06-11
+310,4314753,Poço Das Antas,Poço das Antas,2024-06-11
+311,4314779,Pontão,Pontão,2024-06-11
+312,4314787,Ponte Preta,Ponte Preta,2024-06-11
+313,4314803,Portão,Portão,2024-06-11
+314,4314902,Porto Alegre,Porto Alegre,2024-06-11
+315,4315008,Porto Lucena,Porto Lucena,2024-06-11
+316,4315057,Porto Mauá,Porto Mauá,2024-06-11
+317,4315073,Porto Vera Cruz,Porto Vera Cruz,2024-06-11
+318,4315107,Porto Xavier,Porto Xavier,2024-06-11
+319,4315131,Pouso Novo,Pouso Novo,2024-06-11
+320,4315149,Presidente Lucena,Presidente Lucena,2024-06-11
+321,4315156,Progresso,Progresso,2024-06-11
+322,4315172,Protásio Alves,Protásio Alves,2024-06-11
+323,4315206,Putinga,Putinga,2024-06-11
+324,4315305,Quaraí,Quaraí,2024-06-11
+325,4315313,Quatro Irmãos,Quatro Irmãos,2024-06-11
+326,4315321,Quevedos,Quevedos,2024-06-11
+327,4315354,Quinze de Novembro,Quinze de Novembro,2024-06-11
+328,4315404,Redentora,Redentora,2024-06-11
+329,4315453,Relvado,Relvado,2024-06-11
+330,4315503,Restinga Seca,Restinga Sêca,2024-06-11
+331,4315552,Rio Dos Índios,Rio dos Índios,2024-06-11
+332,4315602,Rio Grande,Rio Grande,2024-06-11
+333,4315701,Rio Pardo,Rio Pardo,2024-06-11
+334,4315750,Riozinho,Riozinho,2024-06-11
+335,4315800,Roca Sales,Roca Sales,2024-06-11
+336,4315909,Rodeio Bonito,Rodeio Bonito,2024-06-11
+337,4315958,Rolador,Rolador,2024-06-11
+338,4316006,Rolante,Rolante,2024-06-11
+339,4316105,Ronda Alta,Ronda Alta,2024-06-11
+340,4316204,Rondinha,Rondinha,2024-06-11
+341,4316303,Roque Gonzales,Roque Gonzales,2024-06-11
+342,4316402,Rosário do Sul,Rosário do Sul,2024-06-11
+343,4316428,Sagrada Família,Sagrada Família,2024-06-11
+344,4316436,Saldanha Marinho,Saldanha Marinho,2024-06-11
+345,4316451,Salto do Jacuí,Salto do Jacuí,2024-06-11
+346,4316477,Salvador Das Missões,Salvador das Missões,2024-06-11
+347,4316501,Salvador do Sul,Salvador do Sul,2024-06-11
+348,4316600,Sananduva,Sananduva,2024-06-11
+349,4316709,Santa Bárbara do Sul,Santa Bárbara do Sul,2024-06-11
+350,4316758,Santa Clara do Sul,Santa Clara do Sul,2024-06-11
+351,4316808,Santa Cruz do Sul,Santa Cruz do Sul,2024-06-11
+352,4316972,Santa Margarida do Sul,Santa Margarida do Sul,2024-06-11
+353,4316907,Santa Maria,Santa Maria,2024-06-11
+354,4316956,Santa Maria do Herval,Santa Maria do Herval,2024-06-11
+355,4317202,Santa Rosa,Santa Rosa,2024-06-11
+356,4317251,Santa Tereza,Santa Tereza,2024-06-11
+357,4317301,Santa Vitória do Palmar,Santa Vitória do Palmar,2024-06-11
+358,4317004,Santana da Boa Vista,Santana da Boa Vista,2024-06-11
+359,4317103,Santana do Livramento,Sant'Ana do Livramento,2024-06-11
+360,4317400,Santiago,Santiago,2024-06-11
+361,4317509,Santo Ângelo,Santo Ângelo,2024-06-11
+362,4317608,Santo Antônio da Patrulha,Santo Antônio da Patrulha,2024-06-11
+363,4317707,Santo Antônio Das Missões,Santo Antônio das Missões,2024-06-11
+364,4317558,Santo Antônio do Palma,Santo Antônio do Palma,2024-06-11
+365,4317806,Santo Augusto,Santo Augusto,2024-06-11
+366,4317905,Santo Cristo,Santo Cristo,2024-06-11
+367,4317954,Santo Expedito do Sul,Santo Expedito do Sul,2024-06-11
+368,4318002,São Borja,São Borja,2024-06-11
+369,4318051,São Domingos do Sul,São Domingos do Sul,2024-06-11
+370,4318101,São Francisco de Assis,São Francisco de Assis,2024-06-11
+371,4318200,São Francisco de Paula,São Francisco de Paula,2024-06-11
+372,4318309,São Gabriel,São Gabriel,2024-06-11
+373,4318408,São Jerônimo,São Jerônimo,2024-06-11
+374,4318424,São João da Urtiga,São João da Urtiga,2024-06-11
+375,4318432,São João do Polêsine,São João do Polêsine,2024-06-11
+376,4318440,São Jorge,São Jorge,2024-06-11
+377,4318457,São José Das Missões,São José das Missões,2024-06-11
+378,4318465,São José do Herval,São José do Herval,2024-06-11
+379,4318481,São José do Hortêncio,São José do Hortêncio,2024-06-11
+380,4318499,São José do Inhacorá,São José do Inhacorá,2024-06-11
+381,4318507,São José do Norte,São José do Norte,2024-06-11
+382,4318614,São José do Sul,São José do Sul,2024-06-11
+383,4318622,São José Dos Ausentes,São José dos Ausentes,2024-06-11
+384,4318705,São Leopoldo,São Leopoldo,2024-06-11
+385,4318804,São Lourenço do Sul,São Lourenço do Sul,2024-06-11
+386,4318903,São Luiz Gonzaga,São Luiz Gonzaga,2024-06-11
+387,4319000,São Marcos,São Marcos,2024-06-11
+388,4319109,São Martinho,São Martinho,2024-06-11
+389,4319125,São Martinho da Serra,São Martinho da Serra,2024-06-11
+390,4319158,São Miguel Das Missões,São Miguel das Missões,2024-06-11
+391,4319208,São Nicolau,São Nicolau,2024-06-11
+392,4319307,São Paulo Das Missões,São Paulo das Missões,2024-06-11
+393,4319356,São Pedro da Serra,São Pedro da Serra,2024-06-11
+394,4319364,São Pedro Das Missões,São Pedro das Missões,2024-06-11
+395,4319372,São Pedro do Butiá,São Pedro do Butiá,2024-06-11
+396,4319406,São Pedro do Sul,São Pedro do Sul,2024-06-11
+397,4319505,São Sebastião do Caí,São Sebastião do Caí,2024-06-11
+398,4319604,São Sepé,São Sepé,2024-06-11
+399,4319703,São Valentim,São Valentim,2024-06-11
+400,4319711,São Valentim do Sul,São Valentim do Sul,2024-06-11
+401,4319737,São Valério do Sul,São Valério do Sul,2024-06-11
+402,4319752,São Vendelino,São Vendelino,2024-06-11
+403,4319802,São Vicente do Sul,São Vicente do Sul,2024-06-11
+404,4319901,Sapiranga,Sapiranga,2024-06-11
+405,4320008,Sapucaia do Sul,Sapucaia do Sul,2024-06-11
+406,4320107,Sarandi,Sarandi,2024-06-11
+407,4320206,Seberi,Seberi,2024-06-11
+408,4320230,Sede Nova,Sede Nova,2024-06-11
+409,4320263,Segredo,Segredo,2024-06-11
+410,4320305,Selbach,Selbach,2024-06-11
+411,4320321,Senador Salgado Filho,Senador Salgado Filho,2024-06-11
+412,4320354,Sentinela do Sul,Sentinela do Sul,2024-06-11
+413,4320404,Serafina Corrêa,Serafina Corrêa,2024-06-11
+414,4320453,Sério,Sério,2024-06-11
+415,4320503,Sertão,Sertão,2024-06-11
+416,4320552,Sertão Santana,Sertão Santana,2024-06-11
+417,4320578,Sete de Setembro,Sete de Setembro,2024-06-11
+418,4320602,Severiano de Almeida,Severiano de Almeida,2024-06-11
+419,4320651,Silveira Martins,Silveira Martins,2024-06-11
+420,4320677,Sinimbu,Sinimbu,2024-06-11
+421,4320701,Sobradinho,Sobradinho,2024-06-11
+422,4320800,Soledade,Soledade,2024-06-11
+423,4320859,Tabaí,Tabaí,2024-06-11
+424,4321006,Tapera,Tapera,2024-06-11
+425,4321105,Tapes,Tapes,2024-06-11
+426,4321204,Taquara,Taquara,2024-06-11
+427,4321303,Taquari,Taquari,2024-06-11
+428,4321329,Taquaruçu do Sul,Taquaruçu do Sul,2024-06-11
+429,4321352,Tavares,Tavares,2024-06-11
+430,4321402,Tenente Portela,Tenente Portela,2024-06-11
+431,4321436,Terra de Areia,Terra de Areia,2024-06-11
+432,4321451,Teutônia,Teutônia,2024-06-11
+433,4321477,Tiradentes do Sul,Tiradentes do Sul,2024-06-11
+434,4321493,Toropi,Toropi,2024-06-11
+435,4321501,Torres,Torres,2024-06-11
+436,4321600,Tramandaí,Tramandaí,2024-06-11
+437,4321626,Travesseiro,Travesseiro,2024-06-11
+438,4321634,Três Arroios,Três Arroios,2024-06-11
+439,4321667,Três Cachoeiras,Três Cachoeiras,2024-06-11
+440,4321709,Três Coroas,Três Coroas,2024-06-11
+441,4321808,Três de Maio,Três de Maio,2024-06-11
+442,4321832,Três Forquilhas,Três Forquilhas,2024-06-11
+443,4321857,Três Palmeiras,Três Palmeiras,2024-06-11
+444,4321907,Três Passos,Três Passos,2024-06-11
+445,4321956,Trindade do Sul,Trindade do Sul,2024-06-11
+446,4322004,Triunfo,Triunfo,2024-06-11
+447,4322103,Tucunduva,Tucunduva,2024-06-11
+448,4322152,Tunas,Tunas,2024-06-11
+449,4322186,Tupanci do Sul,Tupanci do Sul,2024-06-11
+450,4322202,Tupanciretã,Tupanciretã,2024-06-11
+451,4322251,Tupandi,Tupandi,2024-06-11
+452,4322301,Tuparendi,Tuparendi,2024-06-11
+453,4322327,Turuçu,Turuçu,2024-06-11
+454,4322343,Ubiretama,Ubiretama,2024-06-11
+455,4322350,União da Serra,União da Serra,2024-06-11
+456,4322376,Unistalda,Unistalda,2024-06-11
+457,4322400,Uruguaiana,Uruguaiana,2024-06-11
+458,4322509,Vacaria,Vacaria,2024-06-11
+459,4322533,Vale do Sol,Vale do Sol,2024-06-11
+460,4322541,Vale Real,Vale Real,2024-06-11
+461,4322525,Vale Verde,Vale Verde,2024-06-11
+462,4322558,Vanini,Vanini,2024-06-11
+463,4322608,Venâncio Aires,Venâncio Aires,2024-06-11
+464,4322707,Vera Cruz,Vera Cruz,2024-06-11
+465,4322806,Veranópolis,Veranópolis,2024-06-11
+466,4322855,Vespasiano Correa,Vespasiano Corrêa,2024-06-11
+467,4322905,Viadutos,Viadutos,2024-06-11
+468,4323002,Viamão,Viamão,2024-06-11
+469,4323101,Vicente Dutra,Vicente Dutra,2024-06-11
+470,4323200,Victor Graeff,Victor Graeff,2024-06-11
+471,4323309,Vila Flores,Vila Flores,2024-06-11
+472,4323408,Vila Maria,Vila Maria,2024-06-11
+473,4323457,Vila Nova do Sul,Vila Nova do Sul,2024-06-11
+474,4323507,Vista Alegre,Vista Alegre,2024-06-11
+475,4323606,Vista Alegre do Prata,Vista Alegre do Prata,2024-06-11
+476,4323705,Vista Gaúcha,Vista Gaúcha,2024-06-11
+477,4323754,Vitória Das Missões,Vitória das Missões,2024-06-11
+478,4323770,Westfalia,Westfália,2024-06-11

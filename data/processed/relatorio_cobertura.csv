@@ -1,0 +1,16 @@
+metrica,valor
+data_extrato_lista,2024-06-11
+inicio_base_repasses,2024-05-17
+fim_base_repasses,2024-09-26
+movimentacoes_base,658
+saldo_total_base,288699999.97
+municipios_rs,497
+municipios_lista_afetados,478
+municipios_com_movimentacao,334
+afetados_com_movimentacao,334
+afetados_sem_movimentacao,144
+afetados_com_movimentacao_ate_extrato,237
+nao_listados_com_movimentacao,0
+nao_listados_sem_movimentacao,19
+saldo_zero_com_movimentacao,0
+casos_para_investigacao,144
