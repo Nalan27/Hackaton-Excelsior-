@@ -2,9 +2,10 @@
 
 ## 1. Como ler este checklist
 
-Este documento foi iniciado em **16 de setembro de 2026**, com atualização
-pontual das Tasks 16 e 18 em **18 de setembro de 2026**. Os demais itens ainda
-precisam de uma revisão geral antes da submissão.
+Este documento foi iniciado em **16 de setembro de 2026** e revisado em
+**18 de setembro de 2026** após a conclusão da Task 19 ([PR #46](https://github.com/Nalan27/Hackaton-Excelsior-/pull/46)).
+O estado de publicação e das entregas externas ainda precisa ser confirmado
+antes da submissão.
 
 - `[x]` significa que há evidência verificável no repositório.
 - `[ ] Parcial` significa que existe um artefato inicial, mas ele ainda não atende ao requisito completo.
@@ -30,10 +31,12 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Parcial | Visão geral e Telas 3 a 5 versionadas; snapshot 10 reimportado segundo o usuário; ainda não há link público nem todas as telas finais |
-| Análises e achados finais | Parcial | Tasks 16 e 18 têm análises e limites documentados; faltam conclusões e recomendações finais |
+| Aplicativo e dashboard Qlik Sense | Parcial para entrega | Telas 0 a 6 capturadas no [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md), exportado com dados e reimportado segundo o usuário; acesso público e teste final de usabilidade pendentes |
+| Análises e achados finais | Concluídos no app | A Tela 6 reúne quatro achados, recomendações e limites; falta consolidá-los e revisá-los no documento final |
+| Documento descritivo final | Pendente | Há documentação de métodos e análises, mas não um relatório final consolidado e revisado ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
 | Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
-| Certificados e elegibilidade da equipe | Não comprovado | Evidência externa ao repositório |
+| Certificados e elegibilidade da equipe | Parcial | Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; faltam a conferência por integrante e a comprovação dos demais critérios ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
+| Publicação e envio | Pendente | Não há links públicos registrados nem comprovante de submissão ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
 
 ## 3. Requisitos eliminatórios
 
@@ -44,8 +47,8 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] **Análise temporal dos repasses ou pagamentos.** A Task 15 apresenta créditos, ajustes e saldo líquido por mês.
 - [x] **Pelo menos um KPI quantitativo.** Seis medidas mestras foram implementadas e validadas na pasta `Validação — Task 12` do aplicativo.
 - [ ] **Pendente — Vídeo pitch público com até 5 minutos.** Não há vídeo nem link.
-- [ ] **Parcial — Documento descritivo completo.** A contextualização, as bases e a metodologia planejada estão em [`edital-hackathon-qlik-2026.md`](./edital-hackathon-qlik-2026.md); faltam análises executadas, achados, conclusões e recomendações finais.
-- [ ] **Não comprovado — Certificados das trilhas obrigatórias de todos os integrantes.** Não há comprovação no repositório.
+- [ ] **Parcial — Documento descritivo completo.** Contexto e bases constam em [`edital-hackathon-qlik-2026.md`](./edital-hackathon-qlik-2026.md); análises, achados e recomendações estão distribuídos nas Tasks 16 a 19. Falta o relatório final consolidado, com metodologia executada, conclusões, declaração de IA e revisão por outro integrante.
+- [ ] **Parcial — Certificados das trilhas obrigatórias de todos os integrantes.** Há 11 PDFs em [`certificates/`](../certificates/), mas a lista final da equipe, os cursos exigidos e a conclusão por pessoa ainda não foram conferidos; a pasta de Henrique não contém PDF versionado.
 
 ## 4. Organização e conformidade do repositório
 
@@ -115,24 +118,27 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ### 8.3 Concentração, lacunas e equidade
 
-- [ ] **Pendente — Calcular participação dos top 5, 10 e 20 municípios.**
+- [x] **Calcular participação dos top 5, 10 e 20 municípios.** A [Task 17](./task-17-concentracao.md) registra 10,01%, 19,30% e 34,03% do saldo líquido, respectivamente.
 - [ ] **Pendente — Comparar média, mediana, percentis e distribuição per capita.**
-- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi conferida no Qlik, exportada nos snapshots 09 e 10 e reimportada no snapshot 10 segundo o usuário. Falta corroboração externa dos casos antes de recomendações. Ausência de registro não demonstra ausência de atendimento.
+- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi capturada no snapshot 11, reimportado segundo o usuário. Falta corroboração externa dos casos antes de recomendações sobre atendimento. Ausência de registro não demonstra ausência de atendimento.
 - [ ] **Pendente — Definir critério reproduzível de subatendimento.**
 - [ ] **Parcial — Analisar relação com IDH-M, PIB per capita, população e densidade.** A Task 18 concluiu a comparação descritiva entre IDH-M 2010 e valor líquido por habitante, com teste de sensibilidade por porte populacional. PIB per capita e densidade ainda não foram examinados nessa análise.
-- [ ] **Pendente — Explicar limites e evitar interpretar correlação como causalidade.**
+- [x] **Explicar limites e evitar interpretar correlação como causalidade.** A [Task 18](./task-18-vulnerabilidade-repasses.md) e a Tela 6 delimitam o universo de 333 municípios comparáveis, os anos das fontes e o caráter descritivo da associação com IDH-M.
 
 ## 9. Dashboard e experiência no Qlik Sense
 
 - [x] **Concluído — Criar página de visão geral com KPIs e narrativa.** (Task 13)
 - [x] **Concluído — Criar página geográfica.** (Task 14)
 - [x] **Concluído — Criar página temporal.** (Task 15)
-- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; o usuário confirmou a reimportação do snapshot 10.
-- [ ] **Pendente — Criar página de método, limitações e recomendações.**
+- [x] **Concluído — Criar página de cobertura e lacunas.** A Tela 3 cruza os 478 municípios listados pela Defesa Civil com as movimentações FUNDEC e identifica 144 sem registro nesta base. (Task 16)
+- [x] **Concluído — Criar página de concentração.** A Tela 4 compara os maiores saldos, a participação no total e valores por pessoa. (Task 17)
+- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; o usuário confirmou a reimportação dos snapshots 10 e 11.
+- [x] **Concluído — Criar página final de resumo.** A Tela 6 reúne quatro achados validados, recomendações e limites; há [captura e QVF no snapshot 11](../qlik/versoes-do-app/11-task-19/README.md). (Task 19)
+- [ ] **Parcial — Exibir método, limitações e recomendações no aplicativo.** A Tela 6 explicita recomendações e limites; a metodologia está distribuída entre telas e documentação, sem página própria de método.
 - [x] **Concluído — Adicionar filtros úteis e consistentes entre páginas.** (Task 13)
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**
-- [ ] **Parcial — Testar legibilidade, contraste, unidades, escalas e tooltips.** Tasks 14 e 15 possuem evidências visuais; falta auditoria final entre dispositivos.
-- [ ] **Pendente — Exibir fonte, período e data de atualização.**
+- [ ] **Parcial — Testar legibilidade, contraste, unidades, escalas e tooltips.** Há capturas das sete telas, mas falta a [revisão final de usabilidade](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) com filtros e estados sem dados.
+- [ ] **Parcial — Exibir fonte, período e data de atualização.** Fontes e períodos aparecem nas notas de algumas telas; falta conferir cobertura uniforme e explicitar a data de atualização do aplicativo.
 - [ ] **Pendente — Testar acesso público sem credenciais da equipe.**
 
 ## 10. Documento descritivo final
@@ -140,10 +146,10 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] Contextualização do problema documentada.
 - [x] Inventário das bases disponíveis documentado.
 - [x] Metodologia planejada documentada.
-- [ ] **Pendente — Atualizar a metodologia com o que foi realmente executado.**
-- [ ] **Pendente — Inserir principais análises e achados com evidências.**
+- [ ] **Pendente — Consolidar no relatório a metodologia realmente executada.** As regras constam nas Tasks 12 e 16 a 18, mas ainda não formam um documento final único.
+- [ ] **Pendente — Consolidar no relatório as análises e os achados com evidências.** A Tela 6 e o [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md) registram quatro achados para revisão editorial.
 - [ ] **Pendente — Inserir conclusões que respondam às perguntas do edital.**
-- [ ] **Pendente — Inserir recomendações diretamente ligadas aos achados.**
+- [ ] **Pendente — Consolidar no relatório as recomendações ligadas aos achados.** A Tela 6 já apresenta recomendações e limites, ainda não transpostos ao documento final.
 - [ ] **Pendente — Declarar limitações, vieses, períodos e diferenças entre fontes.**
 - [ ] **Pendente — Inserir declaração final de uso de IA com validação humana.** Há uma declaração preliminar na especificação.
 - [ ] **Pendente — Revisar texto, números e referências por pelo menos outro integrante.**
@@ -163,8 +169,8 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Não comprovado — Equipe formada por 3 a 5 integrantes elegíveis.**
 - [ ] **Não comprovado — Todos os integrantes estão regularmente matriculados e ativos em curso aceito.**
 - [ ] **Não comprovado — Nenhum integrante é colaborador da Unicesumar.**
-- [ ] **Não comprovado — Trilhas obrigatórias concluídas por todos até 10/09/2026.**
-- [ ] **Não comprovado — Certificados reunidos e legíveis.**
+- [ ] **Parcial — Trilhas obrigatórias concluídas por todos até 10/09/2026.** Há 11 PDFs versionados para três pessoas; falta conferir a lista final de integrantes, cursos e datas de conclusão. A pasta de Henrique não contém PDF versionado.
+- [ ] **Parcial — Certificados reunidos e legíveis.** Há PDFs em `certificates/`, mas a conferência de nomes, cursos, legibilidade e acesso pelo responsável pelo envio não foi registrada.
 - [ ] **Não comprovado — Representante responsável pela submissão definido.**
 
 ## 13. Originalidade, ética e uso de IA
@@ -192,19 +198,17 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ### Prioridade 0 — Evitar desclassificação
 
-1. Confirmar equipe, trilhas, certificados e responsável pela submissão.
-2. Corrigir e validar o ETL.
-3. Criar mapa, timeline e KPI no Qlik Sense.
-4. Publicar e testar o link do aplicativo.
-5. Finalizar documento descritivo e vídeo de até 5 minutos.
+1. Conferir equipe, trilhas, certificados e responsável pela submissão ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)).
+2. Finalizar e revisar o documento descritivo e o vídeo de até 5 minutos ([issues #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21) e [#22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)).
+3. Testar usabilidade, publicar e auditar os links do aplicativo, documento e vídeo fora das contas da equipe ([issues #20](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) e [#24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)).
+4. Fazer uma única submissão completa e guardar o comprovante até 20/09/2026 ([issue #25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)).
 
 ### Prioridade 1 — Garantir consistência analítica
 
-1. Conciliar os totais das bases.
-2. Tratar corretamente valores negativos.
-3. Normalizar municípios com código IBGE.
-4. Documentar métricas, períodos e limitações.
-5. Revisar conclusões contra os dados de origem.
+1. Conferir os números e conclusões do documento final contra os CSVs validados e as Telas 0 a 6.
+2. Preservar no documento o tratamento dos 18 lançamentos negativos e a diferença de R$ 476.004,28 entre fato e ranking.
+3. Explicitar os universos, anos e limites dos indicadores; não interpretar correlação ou ausência de registro como causalidade ou falta de atendimento.
+4. Registrar a causa do ajuste negativo de julho, se for confirmada por fonte verificável; até lá, manter sua causa como desconhecida.
 
 ### Prioridade 2 — Buscar pontuação bônus
 
