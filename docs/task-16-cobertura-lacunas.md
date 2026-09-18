@@ -136,4 +136,7 @@ O aplicativo exportado com dados foi colocado em
 O [README do snapshot](../qlik/versoes-do-app/09-task-16/README.md) registra
 tamanho, SHA-256 e dependências de restauração. Os controles e limites da
 evidência estão no [registro da Task 16](./evidencias/task-16/README.md).
+As capturas da Tela 3 e do modelo estão arquivadas nesse registro. Elas mostram
+uma tabela dinâmica com código e situação recolhidos; a conferência visual
+direta desses campos ainda pede expansão das linhas ou uma tabela simples.
 A reimportação desse QVF ainda não foi confirmada.

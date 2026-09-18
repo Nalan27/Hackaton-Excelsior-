@@ -10,16 +10,17 @@ snapshot anterior é o 08 da Task 17.
   chave sintética após a remoção da carga duplicada;
 - três KPIs da Tela 3: 478 municípios na lista da Defesa Civil, 334 com
   movimentação na base FUNDEC e 144 sem registro nessa base;
-- tabela com município, código IBGE, situação, quantidade de movimentações e
-  saldo líquido, além de filtros e nota sobre períodos e limites;
+- tabela dinâmica configurada com município, código IBGE, situação, quantidade
+  de movimentações e saldo líquido, além de filtros e nota sobre períodos e
+  limites; nas capturas, as dimensões estão recolhidas;
 - medida **Municípios atendidos** da Visão Geral ajustada para
   `Count(DISTINCT municipio_ibge_2024)`; valor sem filtros de 334;
 - gráficos da Tela 4 e mapa de áreas da página geográfica restaurados após a
   correção da ordem da seção `Normalização` e da dimensão `localizacao_mapa`.
 
 O usuário relatou a validação desses elementos no Qlik em 17/09/2026. Os
-prints compartilhados na revisão não foram salvos no repositório; os controles
-reproduzíveis estão em
+prints da Tela 3 e do modelo de dados estão arquivados com os controles
+reproduzíveis em
 [`docs/evidencias/task-16/README.md`](../../../docs/evidencias/task-16/README.md).
 
 ## Arquivo
