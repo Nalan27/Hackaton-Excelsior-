@@ -38,3 +38,27 @@ O QVF inclui os dados carregados no momento da exportação; após upload, as
 conexões com as fontes podem precisar ser configuradas novamente para uma
 recarga. Os limites da comparação de IDH-M e repasses estão em
 [`docs/task-18-vulnerabilidade-repasses.md`](../../../docs/task-18-vulnerabilidade-repasses.md).
+
+### Erro `Connection not found: Hackaton:DataFiles (space not found)`
+
+Esse erro aparece na **recarga** quando o script importado ainda aponta para o
+espaço `Hackaton`, inexistente ou inacessível no ambiente de destino. Ele não
+prova que os dados já incluídos no QVF ou as telas foram perdidos. Para recarregar:
+
+1. Confirme em qual espaço está o aplicativo e disponibilize nele os cinco CSVs
+   de `data/processed/`: `dim_municipio.csv`, `fato_repasses.csv`,
+   `dim_calendario.csv`, `intervalo_primeiro_repasse.csv` e
+   `cobertura_municipal.csv`.
+2. No Editor da carga de dados, procure **todas** as referências
+   `lib://Hackaton:DataFiles/`. Se os arquivos estão no espaço pessoal de quem
+   recarrega, use `lib://DataFiles/`. Se estão no mesmo espaço compartilhado do
+   app, use `lib://:DataFiles/`; para outro espaço compartilhado, use seu nome
+   exato, por exemplo `lib://NomeDoEspaco:DataFiles/`.
+3. Confira nomes e pastas dos arquivos antes de carregar. Após a recarga,
+   valide o modelo e os indicadores das Telas 3 e 5. Não adicione uma segunda
+   carga de `cobertura_municipal.csv` pelo Gerenciador de dados.
+
+O script versionado em [`qlik/load_data.qvs`](../../load_data.qvs) usa
+`lib://DataFiles/`; a referência ao espaço `Hackaton` foi observada no erro de
+recarga de outro ambiente. Consulte as [regras de caminhos do Qlik](https://help.qlik.com/pt-BR/cloud-services/Subsystems/Hub/Content/Sense_Hub/Scripting/LoadData/connect-data-sources-data-load-editor.htm)
+e a [documentação sobre upload de aplicativos](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Apps/uploading-apps.htm).
