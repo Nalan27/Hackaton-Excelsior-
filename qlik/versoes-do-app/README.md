@@ -17,6 +17,7 @@ task correspondente:
 07-task-14/
 08-task-17/
 09-task-16/
+10-task-18/
 ```
 
 A sequência representa a ordem de exportação e versionamento do aplicativo.
