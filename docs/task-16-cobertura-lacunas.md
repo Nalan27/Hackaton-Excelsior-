@@ -136,7 +136,9 @@ O aplicativo exportado com dados foi colocado em
 O [README do snapshot](../qlik/versoes-do-app/09-task-16/README.md) registra
 tamanho, SHA-256 e dependências de restauração. Os controles e limites da
 evidência estão no [registro da Task 16](./evidencias/task-16/README.md).
-As capturas da Tela 3 e do modelo estão arquivadas nesse registro. Elas mostram
-uma tabela dinâmica com código e situação recolhidos; a conferência visual
-direta desses campos ainda pede expansão das linhas ou uma tabela simples.
-A reimportação desse QVF ainda não foi confirmada.
+As capturas atuais da Tela 3 e do modelo estão arquivadas nesse registro.
+Em 18/09/2026, a tabela dinâmica foi substituída por uma tabela simples que
+exibe código IBGE, classificações, movimentações e saldo em colunas. A captura
+filtrada confirma **144 / 0 / 144** para `afetado_sem_registro`. A correção foi
+exportada no [snapshot 10](../qlik/versoes-do-app/10-task-18/README.md), junto
+com a Tela 5. A reimportação do QVF 10 ainda não foi confirmada.

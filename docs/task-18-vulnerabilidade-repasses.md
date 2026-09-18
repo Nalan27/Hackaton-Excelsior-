@@ -107,9 +107,9 @@ e tabela municipal. A tabela exibiu **R$ 288.699.999,97** como saldo líquido
 total, igual ao CSV. O usuário confirmou os dois casos de controle:
 **Coqueiro Baixo (`4305835`)** com IDH-M 0,692, população 1.311, saldo de
 R$ 1.334.883,72 e R$ 1.018,22 por habitante; e **Pinto Bandeira (`4314548`)**
-presente na tabela com IDH-M ausente. A captura ainda não foi arquivada no
-repositório e a apresentação final da tabela e da nota metodológica segue em
-andamento.
+presente na tabela com IDH-M ausente. A
+[captura final](./evidencias/task-18/README.md) foi arquivada com medidas
+formatadas, fontes e nota metodológica visíveis.
 
 ## Ajustes herdados da Task 16 e evidência final
 
@@ -120,10 +120,11 @@ quantidade de movimentações e saldo líquido. Registre uma captura sem filtros
 e outra com `afetado_sem_registro` selecionado. Preserve a nota de que
 **ausência de registro FUNDEC não equivale a ausência de atendimento**.
 
-Depois de validar as duas telas, exporte o aplicativo **com dados** no
-snapshot sequencial **10**, registre tamanho e SHA-256 e reimporte o QVF para
-conferir modelo, medidas e visualizações restaurados. A reimportação do
-[snapshot 09](../qlik/versoes-do-app/09-task-16/README.md) ainda não foi
-confirmada; o teste do snapshot 10 deve cobrir também as funcionalidades da
-Tela 3. Registre as capturas, resultados de conferência e limitações antes de
-marcar esta task como concluída.
+As capturas atualizadas da [Tela 3](./evidencias/task-16/README.md) mostram a
+tabela simples com os campos de auditoria visíveis, os KPIs sem seleção e a
+seleção `afetado_sem_registro` com **144 / 0 / 144**. O aplicativo foi exportado
+com dados, segundo o usuário, no [snapshot 10](../qlik/versoes-do-app/10-task-18/README.md),
+com tamanho e SHA-256 registrados. **Ainda falta reimportar o QVF** e conferir
+as Telas 3 e 5, a Visão Geral e as visualizações afetadas anteriormente pela
+normalização do modelo. Registre essa conferência antes de marcar a task como
+concluída.

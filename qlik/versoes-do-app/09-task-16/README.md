@@ -22,6 +22,9 @@ O usuário relatou a validação desses elementos no Qlik em 17/09/2026. Os
 prints da Tela 3 e do modelo de dados estão arquivados com os controles
 reproduzíveis em
 [`docs/evidencias/task-16/README.md`](../../../docs/evidencias/task-16/README.md).
+As duas capturas da Tela 3 foram substituídas em 18/09/2026 pela versão com
+tabela simples do [snapshot 10](../10-task-18/README.md). O QVF deste snapshot
+09 permanece como exportado, com a tabela dinâmica anterior.
 
 ## Arquivo
 
