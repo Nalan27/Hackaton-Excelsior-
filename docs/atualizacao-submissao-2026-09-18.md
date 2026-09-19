@@ -59,8 +59,11 @@ comunicado não informou horário-limite. Guardar o comprovante de envio.
   dispensado.
 
 A mensagem não afirma que os **certificados das trilhas** foram dispensados.
-Mantê-los organizados e confirmar com a organização se devem acompanhar a
-entrega, sem confundi-los com os vídeos individuais agora dispensados.
+A pasta [`certificates/`](../certificates/) permanece no repositório com os
+certificados de Alan, John-Victor e Martins-Sallys. Henrique deixou a equipe
+em 12/09/2026; não faz parte da relação atual de integrantes. Confirmar com
+a organização se os certificados devem acompanhar a entrega, sem confundi-los
+com os vídeos individuais agora dispensados.
 
 ## Conferência antes do envio
 
