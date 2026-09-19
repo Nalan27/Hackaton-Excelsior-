@@ -2,7 +2,7 @@
 
 **Versão:** 1.0 — consolidada em 18/09/2026  
 **Período financeiro analisado:** 17/05/2024 a 26/09/2024  
-**Meta interna de disponibilização:** 19/09/2026  
+**Prazo de submissão comunicado pela organização:** 23/09/2026  
 **Produto relacionado:** aplicativo Qlik Sense com as Telas 0 a 6
 
 ## Resumo executivo
@@ -294,6 +294,73 @@ R$/pessoa foram R$ 69,95 no Q1, R$ 56,53 no Q2, R$ 77,67 no Q3 e R$ 57,96 no
 Q4. Não surge uma relação monotônica clara neste recorte. O IDH-M é de 2010 e
 não mede diretamente a vulnerabilidade das enchentes de 2024.
 
+### 4.7 Capturas do dashboard e explicação dos gráficos
+
+As capturas abaixo foram feitas no aplicativo Qlik do
+[snapshot 11](../qlik/versoes-do-app/11-task-19/README.md). Elas integram este
+relatório para compor o documento de texto exigido na
+[orientação de submissão atualizada](atualizacao-submissao-2026-09-18.md).
+Ao levar o texto para o Google Drive, a equipe deve conferir se todas as
+imagens aparecem e permanecem legíveis.
+
+**Tela 0 — visão geral e KPIs.** Os cartões mostram o saldo líquido total
+(R$ 288.699.999,97), os 334 municípios com movimentação, o saldo por pessoa
+(R$ 32,89) e o intervalo médio até o primeiro crédito. O aplicativo exibe a
+espera arredondada para 40 dias; o cálculo sem arredondamento é 40,13 dias.
+Os filtros de recurso, município e data permitem examinar subconjuntos.
+
+![Tela 0: KPIs da visão geral](screenshots/tela-6-resumo/tela-0-visao-geral.png)
+
+**Tela 1 — dois mapas municipais.** O mapa de pontos varia o tamanho dos
+marcadores segundo o valor líquido recebido. O mapa de áreas mostra o saldo
+líquido por pessoa, usando a população municipal estimada em 2024 como
+denominador. Os mapas permitem comparar valor absoluto e valor por habitante,
+mas cobrem apenas municípios com movimentação nesta base.
+
+![Tela 1: mapas de valor líquido e valor por pessoa](screenshots/tela-6-resumo/tela-1-mapa.png)
+
+**Tela 2 — linha do tempo.** As barras mensais separam créditos positivos,
+ajustes negativos e saldo líquido de maio a setembro de 2024. Junho tem o
+maior volume de créditos e o maior saldo; julho concentra o maior ajuste
+negativo. A altura das barras descreve os registros, sem explicar a causa
+administrativa de cada ajuste.
+
+![Tela 2: evolução mensal de créditos, ajustes e saldo](screenshots/tela-6-resumo/tela-2-linha-do-tempo.png)
+
+**Tela 3 — cobertura da lista de afetados.** Os KPIs mostram 478 municípios
+no extrato da Defesa Civil, 334 com movimentação e 144 sem movimentação nesta
+base até 26/09/2024. A tabela permite verificar município, código IBGE,
+situação na lista, quantidade de movimentos e saldo. “Sem registro” não
+significa ausência de assistência por outros meios.
+
+![Tela 3: tabela e KPIs de cobertura](screenshots/tela-6-resumo/tela-3-cobertura-lacunas.png)
+
+**Tela 4 — concentração.** O gráfico superior ordena os 20 maiores saldos
+líquidos municipais. O gráfico inferior ordena os 20 maiores valores por
+pessoa; os grupos não são necessariamente os mesmos. A tabela discrimina
+saldo, créditos e ajustes por município, e o cartão apresenta o total
+líquido do recorte. Na base completa, os 20 maiores por saldo concentram
+34,03% do total, conforme o cálculo da seção 4.5.
+
+![Tela 4: rankings, tabela e KPI de concentração](screenshots/tela-6-resumo/tela-4-concentracao.png)
+
+**Tela 5 — IDH-M e repasse por pessoa.** Cada ponto do gráfico de dispersão
+representa um município com IDH-M 2010 e saldo por habitante calculado com
+população de 2024. A tabela explicita os dados municipais usados na
+comparação. Entre os 333 municípios comparáveis, as correlações sem filtros
+são próximas de zero; o gráfico não demonstra causalidade nem prioridade
+administrativa.
+
+![Tela 5: dispersão e tabela de vulnerabilidade](screenshots/tela-6-resumo/tela-5-vulnerabilidade-repasses.png)
+
+**Tela 6 — resumo dos achados.** Os cartões retomam saldo líquido, saldo por
+pessoa e ajuste negativo de julho. O gráfico de dispersão resume a comparação
+com IDH-M. Os blocos de texto associam cada resultado a uma recomendação e a
+seu limite de interpretação; os valores desta tela representam a visão sem
+filtros do relatório.
+
+![Tela 6: resumo com KPIs, gráfico e interpretações](screenshots/tela-6-resumo/tela-6-resumo.png)
+
 ## 5. Conclusões
 
 1. A base detalhada registra R$ 288,7 milhões líquidos em 658 movimentações e
@@ -331,9 +398,11 @@ não mede diretamente a vulnerabilidade das enchentes de 2024.
    números deste documento contra os CSVs processados, as expressões das
    medidas mestras e as capturas das Telas 0 a 6. Registrar nome, data e
    escopo da revisão.
-4. **Auditar o acesso público.** Abrir o link do aplicativo fora das contas da
-   equipe, testar as sete telas, limpar seleções, verificar carregamento dos
-   dados e registrar o resultado antes do envio oficial.
+4. **Validar a pasta de entrega.** Criar no Google Drive uma pasta com o nome
+   oficial da equipe, colocar o documento com as capturas e o vídeo pitch e
+   testar o acesso como “Qualquer pessoa com o link — Leitor” fora das contas
+   da equipe. O vídeo deve ter até cinco minutos, mostrar navegação pelo
+   dashboard e seguir as regras de apresentação da organização.
 
 ### Melhorias analíticas e de transparência
 
@@ -354,7 +423,8 @@ não mede diretamente a vulnerabilidade das enchentes de 2024.
    conciliação acima da tolerância ou mudança no número de registros.
 10. **Versionar o ciclo de publicação.** Manter o hash do QVF, os CSVs usados,
     a data da recarga, a data da última atualização e a evidência de
-    reimportação. Repetir a auditoria quando os dados ou o link mudarem.
+    reimportação. Conferir novamente as capturas e o vídeo se o aplicativo
+    ou seus dados mudarem.
 
 ## 7. Limitações, vieses e critérios de interpretação
 
@@ -434,18 +504,22 @@ dependência deve continuar visível até que os responsáveis a fechem no
 projeto.
 
 As issues **#24 — auditar o link público** e **#25 — realizar o envio oficial**
-continuam bloqueadas pela necessidade de publicação, teste fora das contas da
-equipe e submissão pelo representante. A issue **#19** e o PR **#30** apoiam a
-redação e a revisão, mas não substituem a conferência independente deste
-documento.
+devem ser atualizadas para a [nova forma de entrega](atualizacao-submissao-2026-09-18.md):
+pasta pública do Google Drive com documento e vídeo, seguida de submissão pela
+Central Hackathon. O link público do Qlik Sense deixou de ser exigido. A issue
+**#19** e o PR **#30** apoiam a redação e a revisão, mas não substituem a
+conferência independente deste documento.
 
 Antes de marcar a entrega como final, registrar neste documento ou na issue
 correspondente:
 
-- nome e data do segundo integrante que revisou texto e números;
-- resultado do teste do link público em janela anônima;
+- nome e data do segundo integrante que revisou texto, números e capturas;
+- link da pasta do Drive, com documento e vídeo, e resultado do teste de acesso
+  como leitor fora das contas da equipe;
+- duração do vídeo, confirmação de navegação pelo dashboard, apresentador
+  visível e ausência de narração por IA;
 - PR ou commit que incorporou a revisão;
-- comprovante do envio oficial até 20/09/2026.
+- comprovante do envio oficial pela Central Hackathon até 23/09/2026.
 
 ## 11. Checklist de conclusão
 
@@ -458,10 +532,13 @@ correspondente:
 - [x] Limitações, vieses e interpretação responsável.
 - [x] Declaração de uso de IA, finalidade e validação humana realizada.
 - [x] Scripts, cálculos, testes e evidências vinculados.
+- [x] Capturas das Telas 0 a 6 e explicação dos gráficos no relatório.
 - [ ] Revisão final por outro integrante registrada.
-- [ ] Auditoria do link público concluída.
+- [ ] Documento transferido ao Drive com imagens legíveis.
+- [ ] Vídeo pitch com até cinco minutos e navegação pelo dashboard concluído.
+- [ ] Pasta pública do Drive testada como leitor fora das contas da equipe.
 - [ ] Envio oficial concluído.
 
-Até a conclusão dos três itens finais, este documento está **consolidado para
+Até a conclusão dos itens pendentes, este documento está **consolidado para
 revisão e publicação**, mas não deve ser tratado como comprovante do envio
 oficial.
