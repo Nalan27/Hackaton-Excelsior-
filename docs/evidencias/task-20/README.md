@@ -10,14 +10,14 @@ Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-a
 - Na cópia do Qlik em revisão, as três pastas de desenvolvimento foram retiradas da lista pública; uma nova captura mostra as sete telas de apresentação na ordem 0–6. As pastas de teste permanecem preservadas nos snapshots anteriores.
 - A Tela 0 recebeu rótulos que explicitam o saldo líquido e o universo de municípios com repasse, além de nota com população IBGE/SIDRA 2024, marco de 24/04/2024 e arredondamento do tempo médio. Uma nova captura confirmou o resultado visual sem filtros.
 - Na Tela 1, o filtro de meses foi ordenado cronologicamente e as dimensões dos mapas passaram a aparecer como “Município”. O reteste com Porto Alegre mostrou o mapa de pontos em escala regional, além de tooltip com código IBGE 4314902, saldo líquido de R$ 5.782.558,14 e população de 1.389.322. O quociente por pessoa é R$ 4,16, mas aparece como `R$4.16` no tooltip. A escala de cor foi fixada de 0 a R$ 1.018,22, inclusive com Porto Alegre selecionado. Na captura seguinte, sem seleções, as duas legendas passaram a ser exibidas na horizontal e os limites aparecem completos. A legenda de pontos ainda usa separadores ingleses (`R$ 5,782,558.14`).
-- Na Tela 2, novas capturas confirmam o eixo horizontal com Maio/2024 a Setembro/2024 em ordem cronológica e o rótulo “Mês do repasse”; as três séries continuam visíveis. A captura mais recente mostra apenas os valores numéricos no eixo Y e um subtítulo que explica `M` como milhões de reais, cita o Portal da Transparência RS — FUNDEC e informa 17/05 a 26/09/2024. Um tooltip de julho mostra ajustes −11,57M, créditos 80,29M e saldo 68,72M, coerentes com os valores de referência após arredondamento. Falta conferir os números completos.
+- Na Tela 2, novas capturas confirmam o eixo horizontal com Maio/2024 a Setembro/2024 em ordem cronológica e o rótulo “Mês do repasse”; as três séries continuam visíveis. A captura mais recente mostra apenas os valores numéricos no eixo Y e um subtítulo que explica `M` como milhões de reais, cita o Portal da Transparência RS — FUNDEC e informa 17/05 a 26/09/2024. A vista “Ver dados” exibe em julho créditos de R$ 80.289.534,88, ajustes de −R$ 11.565.116,28 e saldo de R$ 68.724.418,60, todos iguais à referência. Os cinco saldos mensais da tabela somam R$ 288.699.999,97, igual ao KPI da Tela 0.
 
 As capturas novas foram enviadas na conversa de revisão e **ainda não estão arquivadas no repositório**. O snapshot 11 continua sendo o último QVF versionado; ele não comprova as alterações feitas depois de 18/09.
 
 ## O que falta para concluir a issue
 
 - Finalizar a Tela 1: incluir nota de fonte/período, guardar capturas da versão final e conferir a diferença de cores sem seleção. A equipe decidiu manter a formatação atual da legenda de pontos e do valor por pessoa no tooltip; isso não bloqueia a conclusão da tela. Manter os limites globais da legenda constantes para permitir comparação.
-- Aplicar e retestar os pontos das Telas 2 a 6 descritos abaixo, sem alterar os cálculos validados.
+- Aplicar e retestar os pontos das Telas 3 a 6 descritos abaixo, sem alterar os cálculos validados. Na Tela 2, ainda falta o reteste final de navegação com seleção ativa e arquivar a captura da versão exportada.
 - Executar o roteiro interativo completo, incluindo navegação entre telas com filtros, caso sem movimentação e confronto de KPI, mapa e timeline com os totais de referência.
 - Arquivar os prints finais em modo de análise, exportar o novo QVF **com dados**, registrar sua identificação e verificar a versão usada no documento e no pitch antes de 23/09/2026.
 
@@ -33,13 +33,26 @@ As capturas novas foram enviadas na conversa de revisão e **ainda não estão a
 
 Os filtros de recurso, mês e município foram testados em versões anteriores nas [Tasks 13](../task-13/README.md), [14](../task-14/README.md) e [15](../task-15/README.md). Esses testes não substituem o reteste do QVF final.
 
+Na captura de “Ver dados” da Tela 2, recebida nesta revisão, os saldos líquidos mensais aparecem assim:
+
+| Mês de 2024 | Saldo líquido |
+|---|---:|
+| Maio | R$ 42.200.000,00 |
+| Junho | R$ 164.755.813,93 |
+| Julho | R$ 68.724.418,60 |
+| Agosto | R$ 6.217.441,86 |
+| Setembro | R$ 6.802.325,58 |
+| **Total** | **R$ 288.699.999,97** |
+
+O total foi recalculado a partir das cinco linhas da captura e coincide com o [total validado pelo ETL](../../../data/processed/relatorio_validacao.csv). A captura ainda precisa ser arquivada junto ao QVF final.
+
 ## Ajustes identificados nas capturas
 
 | Tela | Achado observável | Ajuste e reteste esperado |
 |---|---|---|
 | 0 — Visão Geral | Na primeira captura, “Total Repassado” e “Cidades Contempladas” eram ambíguos; a nota não informava o ano da população nem o marco da espera. | **Reteste visual em 19/09:** nova captura mostra “Total líquido repassado”, “Municípios com repasse na base”, população IBGE/SIDRA 2024 e marco 24/04/2024. Os quatro valores continuam R$ 288.699.999,97 / 334 / R$ 32,89 / 40 dias. Falta retestar filtros no QVF final. |
 | 1 — Distribuição geográfica | A primeira captura mostrava `Mês` em ordem alfabética, `localizacao_mapa` e números em formato inglês. **Retestes parciais:** meses e rótulo “Município” corrigidos; com Porto Alegre selecionado, o ponto aparece em escala regional e o tooltip confirma código IBGE 4314902, R$ 5.782.558,14 e população 1.389.322. A escala de cor permanece em 0–R$ 1.018,22 com a cidade selecionada. Nova captura sem seleções mostra as legendas na horizontal com todos os limites visíveis. Os tooltips exibem valores distintos por município. A legenda de pontos ainda exibe `R$ 5,782,558.14` e o tooltip exibe `R$4.16`; a equipe optou por manter essa formatação. | Preservar as medidas, a apresentação horizontal das legendas e a escala fixa. Incluir nota de fonte, período e população 2024. Retestar os dois mapas com filtros de município, mês e recurso e guardar as capturas finais. |
-| 2 — Linha do Tempo | **Reteste visual:** a última captura sem filtros mostra Maio/2024–Setembro/2024 em ordem, “Mês do repasse”, as três séries, eixo Y sem título repetitivo e subtítulo com unidade, fonte e período. O tooltip de julho mostra 80,29M / −11,57M / 68,72M, compatíveis após arredondamento. | Usar “Ver dados” no menu do gráfico para conferir os três valores completos de julho: créditos R$ 80.289.534,88, ajustes −R$ 11.565.116,28 e saldo R$ 68.724.418,60. Se a tabela também abreviar, exportar os dados do gráfico como Excel. Não alterar as medidas. Guardar a captura final em modo de análise. |
+| 2 — Linha do Tempo | **Reteste visual e numérico:** a última captura do gráfico mostra Maio/2024–Setembro/2024 em ordem, “Mês do repasse”, as três séries, eixo Y sem título repetitivo e subtítulo com unidade, fonte e período. Na captura de “Ver dados”, a linha de julho coincide exatamente com a referência: créditos R$ 80.289.534,88, ajustes −R$ 11.565.116,28 e saldo R$ 68.724.418,60. A soma dos cinco saldos é R$ 288.699.999,97, igual à Tela 0. | Guardar as capturas finais do QVF exportado e retestar a propagação do filtro de julho para outras telas. |
 | 3 — Cobertura | O texto provisório `Clique para incluir um título` não aparece mais na captura atual, mas a tabela continua sem título descritivo e mostra códigos como `nao_listado_sem_registro`. | Dar título à tabela e apresentar classificações legíveis, mantendo os códigos originais na base. Conferir que 478 / 334 / 144 continuam iguais. |
 | 4 — Concentração | O título “20 maiores valores por pessoa entre os 334 municípios” permanece mesmo quando o marcador reduz a amostra a 20; sem marcador, o gráfico permite rolar por mais de 20 barras. O KPI de 288,7M e 100% aparece apertado. | Usar um título válido em ambos os estados, por exemplo “Ranking de R$ por pessoa — conforme filtros”; ajustar o espaço/formatação do KPI. Testar com e sem marcador; com marcador, conferir R$ 98.238.372,09 e 34,03%. |
 | 5 — Vulnerabilidade | O texto provisório `Clique para incluir um título` não aparece mais na captura atual; a tabela está sem título descritivo. | Nomear a tabela; conferir que o gráfico mantém 333 municípios comparáveis e a nota de fonte/anos. |
