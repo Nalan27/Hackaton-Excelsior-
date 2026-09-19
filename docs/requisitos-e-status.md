@@ -35,7 +35,7 @@ O comunicado não informou horário-limite nem novo período de seleção intern
 | Análises e achados finais | Concluídos no app e consolidados no relatório | A Tela 6 reúne quatro achados, recomendações e limites; o relatório final os vincula às bases, cálculos e evidências |
 | Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; faltam revisão por segundo integrante e conferência da cópia no Drive ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
 | Vídeo pitch | Pendente | Não há roteiro ou arquivo; deve ter até cinco minutos, mostrar navegação pelo dashboard, apresentador visível e nenhuma narração por IA |
-| Certificados e elegibilidade da equipe | Parcial | Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; faltam a conferência por integrante e a comprovação dos demais critérios ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
+| Certificados e elegibilidade da equipe | Parcial | A equipe remanescente tem Alan, John-Victor e Martins-Sallys; Henrique saiu em 12/09/2026. Há 11 PDFs em `certificates/` para os três integrantes, ainda sem conferência final ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
 | Publicação e envio | Pendente | Não há pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
 
 ## 3. Requisitos eliminatórios
@@ -171,10 +171,10 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 ## 12. Equipe, inscrição e trilhas
 
 - [ ] **Não comprovado — Equipe inscrita no prazo.**
-- [ ] **Não comprovado — Equipe formada por 3 a 5 integrantes elegíveis.**
+- [ ] **Parcial — Equipe com três integrantes após saída de Henrique em 12/09/2026.** Alan, John-Victor e Martins-Sallys permanecem; confirmar elegibilidade e inscrição final.
 - [ ] **Não comprovado — Todos os integrantes estão regularmente matriculados e ativos em curso aceito.**
 - [ ] **Não comprovado — Nenhum integrante é colaborador da Unicesumar.**
-- [ ] **Parcial — Trilhas obrigatórias concluídas por todos até 10/09/2026.** Há 11 PDFs versionados para três pessoas; falta conferir a lista final de integrantes, cursos e datas de conclusão. A pasta de Henrique não contém PDF versionado.
+- [ ] **Parcial — Trilhas obrigatórias concluídas pela equipe remanescente até 10/09/2026.** Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; falta conferir cursos, nomes e datas de conclusão.
 - [ ] **Parcial — Certificados reunidos e legíveis.** Há PDFs em `certificates/`, mas a conferência de nomes, cursos e legibilidade não foi registrada. O comunicado dispensa vídeos individuais, não afirma dispensa dos certificados.
 - [ ] **Não comprovado — Representante responsável pela submissão definido.**
 
