@@ -313,8 +313,9 @@ não mede diretamente a vulnerabilidade das enchentes de 2024.
    para afirmar que o padrão observado foi direcionado pelo IDH-M, tampouco
    para afirmar o contrário sobre critérios de decisão não observados.
 6. A conciliação financeira tem uma diferença documentada de R$ 476.004,28
-   entre a tabela detalhada e o ranking oficial. A diferença está explícita neste relatório e em
-   `qlik/medidas-mestras.md`; o aplicativo usa o total da base detalhada.
+   entre a tabela detalhada e o ranking oficial. A diferença está documentada
+   neste relatório e no [catálogo de medidas](../qlik/medidas-mestras.md). O
+   aplicativo usa o total da base detalhada.
 
 ## 6. Recomendações
 
