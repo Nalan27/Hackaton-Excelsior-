@@ -4,8 +4,10 @@ Análise da distribuição de recursos do **FUNDEC** (Fundo de Defesa Civil do E
 
 ## Documentação do Hackathon
 
+- [Orientações atualizadas de submissão (prazo 23/09/2026)](docs/atualizacao-submissao-2026-09-18.md)
 - [Edital explicado e especificação do projeto](docs/edital-hackathon-qlik-2026.md)
 - [Requisitos e status do projeto](docs/requisitos-e-status.md)
+- [Relatório descritivo final](docs/relatorio-final.md)
 
 ---
 

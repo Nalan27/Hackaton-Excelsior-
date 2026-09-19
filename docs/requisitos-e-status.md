@@ -3,7 +3,7 @@
 ## 1. Como ler este checklist
 
 Este documento foi iniciado em **16 de setembro de 2026** e revisado em
-**18 de setembro de 2026** após a conclusão da Task 19 ([PR #46](https://github.com/Nalan27/Hackaton-Excelsior-/pull/46)).
+**19 de setembro de 2026** após o [comunicado de atualização da entrega](./atualizacao-submissao-2026-09-18.md).
 O estado de publicação e das entregas externas ainda precisa ser confirmado
 antes da submissão.
 
@@ -18,9 +18,9 @@ Um arquivo existente não é considerado concluído se estiver vazio, inconsiste
 
 - Workshops: de **03/08 a 24/08/2026**.
 - Cursos na Qlik: de **29/06 a 10/09/2026**, com conclusão até **10/09/2026**.
-- Construção e entrega do desafio: de **01/09 a 20/09/2026**, com submissão até **20/09/2026**.
+- Prazo final de submissão do projeto: **23/09/2026**, prorrogado pela organização em comunicado recebido em 18/09/2026.
 
-Esses períodos substituem as datas anteriores dessas etapas. O período atualizado de seleção interna e os horários-limite não foram informados; consulte o [cronograma](./edital-hackathon-qlik-2026.md#15-cronograma-do-evento) para as ressalvas.
+O comunicado não informou horário-limite nem novo período de seleção interna. As demais datas acima permanecem como referência anterior; consulte o [cronograma](./edital-hackathon-qlik-2026.md#15-cronograma-do-evento) e a [atualização de entrega](./atualizacao-submissao-2026-09-18.md).
 
 ## 2. Resumo do estado atual
 
@@ -31,24 +31,26 @@ Esses períodos substituem as datas anteriores dessas etapas. O período atualiz
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Parcial para entrega | Telas 0 a 6 capturadas no [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md), exportado com dados e reimportado segundo o usuário; acesso público e teste final de usabilidade pendentes |
-| Análises e achados finais | Concluídos no app | A Tela 6 reúne quatro achados, recomendações e limites; falta consolidá-los e revisá-los no documento final |
-| Documento descritivo final | Pendente | Há documentação de métodos e análises, mas não um relatório final consolidado e revisado ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
-| Vídeo pitch | Pendente | Não há roteiro, arquivo ou link |
-| Certificados e elegibilidade da equipe | Parcial | Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; faltam a conferência por integrante e a comprovação dos demais critérios ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
-| Publicação e envio | Pendente | Não há links públicos registrados nem comprovante de submissão ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
+| Aplicativo e dashboard Qlik Sense | Parcial para entrega | Telas 0 a 6 capturadas no [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md); resta testar a navegação usada no pitch. Link público do Qlik Sense foi dispensado |
+| Análises e achados finais | Concluídos no app e consolidados no relatório | A Tela 6 reúne quatro achados, recomendações e limites; o relatório final os vincula às bases, cálculos e evidências |
+| Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; faltam revisão por segundo integrante e conferência da cópia no Drive ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
+| Vídeo pitch | Pendente | Não há roteiro ou arquivo; deve ter até cinco minutos, mostrar navegação pelo dashboard, apresentador visível e nenhuma narração por IA |
+| Certificados e elegibilidade da equipe | Parcial | A equipe remanescente tem Alan, John-Victor e Martins-Sallys; Henrique saiu em 12/09/2026. Há 11 PDFs em `certificates/` para os três integrantes, ainda sem conferência final ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
+| Publicação e envio | Pendente | Não há pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
 
 ## 3. Requisitos eliminatórios
 
-Todos os itens desta seção precisam estar concluídos. O atendimento parcial não habilita o trabalho para avaliação.
+A [orientação atualizada](./atualizacao-submissao-2026-09-18.md) substitui os
+requisitos antigos de publicação do Qlik e de vídeos individuais das trilhas.
+A entrega externa só estará pronta quando os itens aplicáveis forem conferidos.
 
-- [ ] **Pendente — Link público e funcional do aplicativo Qlik Sense.** Não há URL pública registrada.
-- [x] **Visualização geográfica por município.** A Task 14 implementa mapa de pontos por valor líquido e mapa de áreas por valor por pessoa.
-- [x] **Análise temporal dos repasses ou pagamentos.** A Task 15 apresenta créditos, ajustes e saldo líquido por mês.
-- [x] **Pelo menos um KPI quantitativo.** Seis medidas mestras foram implementadas e validadas na pasta `Validação — Task 12` do aplicativo.
-- [ ] **Pendente — Vídeo pitch público com até 5 minutos.** Não há vídeo nem link.
-- [ ] **Parcial — Documento descritivo completo.** Contexto e bases constam em [`edital-hackathon-qlik-2026.md`](./edital-hackathon-qlik-2026.md); análises, achados e recomendações estão distribuídos nas Tasks 16 a 19. Falta o relatório final consolidado, com metodologia executada, conclusões, declaração de IA e revisão por outro integrante.
-- [ ] **Parcial — Certificados das trilhas obrigatórias de todos os integrantes.** Há 11 PDFs em [`certificates/`](../certificates/), mas a lista final da equipe, os cursos exigidos e a conclusão por pessoa ainda não foram conferidos; a pasta de Henrique não contém PDF versionado.
+- [ ] **Pendente — Pasta pública no Google Drive.** Usar o nome oficial da equipe, colocar todos os documentos na pasta e configurar “Qualquer pessoa com o link — Leitor”.
+- [x] **Visualização geográfica por município.** A Tela 1 tem dois mapas e sua captura está no [relatório](./relatorio-final.md#47-capturas-do-dashboard-e-explicação-dos-gráficos).
+- [x] **Análise temporal dos repasses ou pagamentos.** A Tela 2 apresenta créditos, ajustes e saldo líquido por mês; a captura está no relatório.
+- [x] **Pelo menos um KPI quantitativo.** A Tela 0 e a Tela 6 exibem KPIs; suas capturas estão no relatório.
+- [ ] **Pendente — Vídeo pitch de até cinco minutos.** Deve navegar pelo dashboard, mostrar quem apresenta e não ter narração por IA.
+- [ ] **Parcial — Documento de texto no Drive.** O [relatório](./relatorio-final.md) contém contexto, bases, capturas, explicação dos gráficos, metodologia, achados, conclusões e recomendações; falta revisar e conferir a cópia com imagens legíveis no Drive.
+- [ ] **A confirmar — Certificados das trilhas.** O comunicado dispensou vídeos individuais, mas não declarou dispensa dos certificados; organizar os PDFs e confirmar se precisam acompanhar o envio.
 
 ## 4. Organização e conformidade do repositório
 
@@ -139,38 +141,41 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**
 - [ ] **Parcial — Testar legibilidade, contraste, unidades, escalas e tooltips.** Há capturas das sete telas, mas falta a [revisão final de usabilidade](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) com filtros e estados sem dados.
 - [ ] **Parcial — Exibir fonte, período e data de atualização.** Fontes e períodos aparecem nas notas de algumas telas; falta conferir cobertura uniforme e explicitar a data de atualização do aplicativo.
-- [ ] **Pendente — Testar acesso público sem credenciais da equipe.**
+- [ ] **Pendente — Testar a navegação do dashboard que será gravada no vídeo pitch.**
 
 ## 10. Documento descritivo final
 
 - [x] Contextualização do problema documentada.
 - [x] Inventário das bases disponíveis documentado.
 - [x] Metodologia planejada documentada.
-- [ ] **Pendente — Consolidar no relatório a metodologia realmente executada.** As regras constam nas Tasks 12 e 16 a 18, mas ainda não formam um documento final único.
-- [ ] **Pendente — Consolidar no relatório as análises e os achados com evidências.** A Tela 6 e o [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md) registram quatro achados para revisão editorial.
-- [ ] **Pendente — Inserir conclusões que respondam às perguntas do edital.**
-- [ ] **Pendente — Consolidar no relatório as recomendações ligadas aos achados.** A Tela 6 já apresenta recomendações e limites, ainda não transpostos ao documento final.
-- [ ] **Pendente — Declarar limitações, vieses, períodos e diferenças entre fontes.**
-- [ ] **Pendente — Inserir declaração final de uso de IA com validação humana.** Há uma declaração preliminar na especificação.
-- [ ] **Pendente — Revisar texto, números e referências por pelo menos outro integrante.**
+- [x] **Concluído para revisão — Consolidar no relatório a metodologia realmente executada.** Ver [`docs/relatorio-final.md`](relatorio-final.md).
+- [x] **Concluído para revisão — Consolidar no relatório as análises e os achados com evidências.** As capturas das Telas 0 a 6 e a explicação dos gráficos estão no relatório, junto aos CSVs processados.
+- [x] **Concluído para revisão — Inserir conclusões que respondam às perguntas do edital.**
+- [x] **Concluído para revisão — Consolidar no relatório as recomendações ligadas aos achados.**
+- [x] **Concluído para revisão — Declarar limitações, vieses, períodos e diferenças entre fontes.**
+- [x] **Concluído para revisão — Inserir declaração final de uso de IA com validação humana.** A revisão final por outro integrante ainda precisa ser registrada.
+- [x] **Capturas do dashboard e descrição de cada gráfico incluídas no relatório.**
+- [ ] **Pendente — Revisar texto, números, capturas e referências por pelo menos outro integrante.**
+- [ ] **Pendente — Conferir a cópia do documento no Drive, inclusive imagens e legibilidade.**
 
 ## 11. Vídeo pitch
 
 - [ ] **Pendente — Criar roteiro com problema, método, insights, diferenciais, conclusões e recomendações.**
 - [ ] **Pendente — Selecionar apenas visualizações essenciais para a narrativa.**
-- [ ] **Pendente — Gravar e editar o vídeo.**
+- [ ] **Pendente — Gravar navegação pelo dashboard e editar o vídeo.**
 - [ ] **Pendente — Garantir duração máxima de 5 minutos.**
-- [ ] **Pendente — Publicar com link público.**
-- [ ] **Pendente — Testar áudio, imagem, legenda e acesso em janela anônima.**
+- [ ] **Pendente — Mostrar no vídeo quem apresentar; não usar narração por IA.** Nem todos os integrantes precisam apresentar.
+- [ ] **Pendente — Colocar o vídeo na pasta pública do Drive.**
+- [ ] **Pendente — Testar áudio, imagem e reprodução fora da conta da equipe.**
 
 ## 12. Equipe, inscrição e trilhas
 
 - [ ] **Não comprovado — Equipe inscrita no prazo.**
-- [ ] **Não comprovado — Equipe formada por 3 a 5 integrantes elegíveis.**
+- [ ] **Parcial — Equipe com três integrantes após saída de Henrique em 12/09/2026.** Alan, John-Victor e Martins-Sallys permanecem; confirmar elegibilidade e inscrição final.
 - [ ] **Não comprovado — Todos os integrantes estão regularmente matriculados e ativos em curso aceito.**
 - [ ] **Não comprovado — Nenhum integrante é colaborador da Unicesumar.**
-- [ ] **Parcial — Trilhas obrigatórias concluídas por todos até 10/09/2026.** Há 11 PDFs versionados para três pessoas; falta conferir a lista final de integrantes, cursos e datas de conclusão. A pasta de Henrique não contém PDF versionado.
-- [ ] **Parcial — Certificados reunidos e legíveis.** Há PDFs em `certificates/`, mas a conferência de nomes, cursos, legibilidade e acesso pelo responsável pelo envio não foi registrada.
+- [ ] **Parcial — Trilhas obrigatórias concluídas pela equipe remanescente até 10/09/2026.** Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; falta conferir cursos, nomes e datas de conclusão.
+- [ ] **Parcial — Certificados reunidos e legíveis.** Há PDFs em `certificates/`, mas a conferência de nomes, cursos e legibilidade não foi registrada. O comunicado dispensa vídeos individuais, não afirma dispensa dos certificados.
 - [ ] **Não comprovado — Representante responsável pela submissão definido.**
 
 ## 13. Originalidade, ética e uso de IA
@@ -184,24 +189,23 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 
 ## 14. Publicação e submissão
 
-- [ ] **Pendente — Publicar o aplicativo Qlik Sense e registrar o link.**
-- [ ] **Pendente — Publicar o vídeo e registrar o link.**
-- [ ] **Pendente — Finalizar e publicar o documento descritivo.**
-- [ ] **Pendente — Reunir os certificados de todos os integrantes.**
-- [ ] **Pendente — Testar todos os links fora das contas da equipe.**
-- [ ] **Pendente — Confirmar que os links permanecerão ativos até o encerramento oficial.**
+- [ ] **Pendente — Criar pasta no Google Drive com o nome oficial da equipe e acesso público como Leitor.**
+- [ ] **Pendente — Colocar documento de texto e vídeo pitch na mesma pasta.**
+- [ ] **Pendente — Conferir prints, descrições, áudio e vídeo fora das contas da equipe.**
+- [ ] **A confirmar — Verificar com a organização se os certificados também devem acompanhar a pasta.** Vídeos individuais não são exigidos.
 - [ ] **Pendente — Conferir pesos da rubrica no edital original.** O PDF fornecido não permitiu leitura confiável de toda a coluna.
-- [ ] **Pendente — Realizar revisão eliminatória independente antes do envio.**
-- [ ] **Pendente — Fazer uma única submissão pelo representante até 20/09/2026, dentro do período de construção e entrega de 01/09 a 20/09/2026.**
+- [ ] **Pendente — Realizar revisão independente antes do envio.**
+- [ ] **Pendente — Definir o único integrante que enviará pela [Central Hackathon](https://fabioacs.github.io/painel-hackathon).** Somente quem enviou pode atualizar o projeto.
+- [ ] **Pendente — Fazer a submissão até 23/09/2026 e guardar o comprovante.**
 
 ## 15. Ordem de execução recomendada
 
 ### Prioridade 0 — Evitar desclassificação
 
 1. Conferir equipe, trilhas, certificados e responsável pela submissão ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)).
-2. Finalizar e revisar o documento descritivo e o vídeo de até 5 minutos ([issues #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21) e [#22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)).
-3. Testar usabilidade, publicar e auditar os links do aplicativo, documento e vídeo fora das contas da equipe ([issues #20](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) e [#24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)).
-4. Fazer uma única submissão completa e guardar o comprovante até 20/09/2026 ([issue #25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)).
+2. Revisar o relatório, levar o documento com prints ao Drive e gravar o pitch de até cinco minutos com navegação pelo dashboard ([issues #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21) e [#22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)).
+3. Testar usabilidade do dashboard e acesso de leitor à pasta, ao documento e ao vídeo fora das contas da equipe ([issues #20](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) e [#24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)).
+4. Fazer uma única submissão completa pela Central Hackathon e guardar o comprovante até 23/09/2026 ([issue #25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)).
 
 ### Prioridade 1 — Garantir consistência analítica
 
