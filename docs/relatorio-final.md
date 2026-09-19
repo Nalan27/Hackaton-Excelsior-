@@ -379,10 +379,10 @@ filtros do relatório.
 5. A associação entre IDH-M 2010 e R$/pessoa é próxima de zero. Não há base
    para afirmar que o padrão observado foi direcionado pelo IDH-M, tampouco
    para afirmar o contrário sobre critérios de decisão não observados.
-6. A conciliação financeira tem uma diferença documentada de R$ 476.004,28
-   entre a tabela detalhada e o ranking oficial. A diferença está documentada
-   neste relatório e no [catálogo de medidas](../qlik/medidas-mestras.md). O
-   aplicativo usa o total da base detalhada.
+6. A conciliação financeira identifica uma diferença de R$ 476.004,28 entre
+   a tabela detalhada e o ranking oficial. Ela consta neste relatório e no
+   [catálogo de medidas](../qlik/medidas-mestras.md). O aplicativo usa o total
+   da base detalhada.
 
 ## 6. Recomendações
 
@@ -503,8 +503,9 @@ das telas correspondentes e o snapshot 11 incorpora as sete telas, mas a
 dependência deve continuar visível até que os responsáveis a fechem no
 projeto.
 
-As issues **#24 — auditar o link público** e **#25 — realizar o envio oficial**
-devem ser atualizadas para a [nova forma de entrega](atualizacao-submissao-2026-09-18.md):
+As issues [**#24 — auditar a pasta pública do Drive**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)
+e [**#25 — realizar o envio oficial até 23/09**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)
+acompanham a [nova forma de entrega](atualizacao-submissao-2026-09-18.md):
 pasta pública do Google Drive com documento e vídeo, seguida de submissão pela
 Central Hackathon. O link público do Qlik Sense deixou de ser exigido. A issue
 **#19** e o PR **#30** apoiam a redação e a revisão, mas não substituem a
