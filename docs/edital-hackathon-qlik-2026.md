@@ -4,7 +4,7 @@
 
 Este documento transforma o conteúdo legível do **Edital do 2º Hackathon Unicesumar em parceria com a Qlik** em uma especificação de trabalho para a equipe.
 
-Ele não substitui o edital original. Em caso de divergência, alteração do evento ou dúvida sobre uma regra, deve prevalecer o documento oficial e a orientação da Comissão Organizadora.
+Ele não substitui o edital original. A [atualização de submissão comunicada em 18/09/2026](./atualizacao-submissao-2026-09-18.md) prevalece sobre as instruções anteriores de entrega quando houver conflito. Em caso de dúvida, deve prevalecer a orientação da Comissão Organizadora.
 
 Alguns elementos gráficos do PDF fornecido, principalmente parte da coluna de pesos da rubrica e os links embutidos nos módulos de aprendizagem, não estavam legíveis. Esses pontos estão identificados para conferência no arquivo original, sem preenchimento por suposição.
 
@@ -210,47 +210,31 @@ Nenhuma correlação deve ser apresentada como causalidade. Comparações precis
 7. **Análise exploratória:** procurar padrões geográficos, temporais, concentração, lacunas e anomalias.
 8. **Validação:** revisar amostras contra as fontes, testar totais e submeter achados à revisão da equipe.
 9. **Storytelling:** ordenar as evidências do problema à recomendação, evitando gráficos sem interpretação.
-10. **Publicação:** testar links públicos, filtros, navegação, legibilidade e acesso anônimo.
+10. **Entrega:** testar filtros, navegação e legibilidade no aplicativo; conferir o acesso público como leitor à pasta do Drive, ao documento e ao vídeo.
 
-## 12. Entregáveis obrigatórios
+## 12. Entregáveis e forma de envio atualizados
 
-Cada equipe realiza uma única submissão final, enviada por apenas um representante, contendo:
+Conforme a [orientação recebida em 18/09/2026](./atualizacao-submissao-2026-09-18.md), cada equipe cria uma pasta pública no Google Drive com o nome oficial da equipe, configurada como **Qualquer pessoa com o link — Leitor**. Todos os arquivos da entrega devem estar nela. Um único integrante envia o projeto pela [Central Hackathon](https://fabioacs.github.io/painel-hackathon); somente quem enviou pode atualizá-lo até o prazo final.
 
-1. link público e funcional do aplicativo desenvolvido no Qlik Sense;
-2. link público do vídeo pitch, com duração máxima de 5 minutos;
-3. documento descritivo da análise;
-4. certificados de conclusão das trilhas obrigatórias da Qlik de todos os integrantes.
+A pasta deve conter, no mínimo:
 
-O documento descritivo precisa conter, no mínimo:
+1. **Documento de texto** com contexto do problema, bases utilizadas, metodologia, principais achados, conclusões e recomendações fundamentadas. O documento deve trazer prints do dashboard com uma visualização geográfica por município, uma análise temporal dos repasses ou pagamentos e um KPI quantitativo, além da explicação de cada gráfico apresentado.
+2. **Vídeo pitch** de até cinco minutos, com navegação pelo dashboard. Quem apresentar deve aparecer no vídeo; a apresentação não pode ter narração por IA. A equipe escolhe os apresentadores, sem obrigação de todos aparecerem.
 
-- contextualização do problema;
-- bases de dados utilizadas;
-- metodologia aplicada;
-- principais análises e achados;
-- conclusões;
-- recomendações fundamentadas nos dados.
+O link público do Qlik Sense e os vídeos individuais dos integrantes para comprovar trilhas foram dispensados. O comunicado não afirma que os certificados das trilhas foram dispensados; a equipe deve preservá-los e confirmar se precisam acompanhar a entrega.
 
-O vídeo precisa apresentar de forma objetiva:
+## 13. Checklist da entrega atualizada
 
-- o problema analisado;
-- os principais insights;
-- a metodologia;
-- os diferenciais analíticos da solução;
-- as conclusões e recomendações.
+Antes do envio, conferir:
 
-Os links enviados devem permanecer públicos e funcionais até o encerramento oficial do evento. Submissões incompletas, fora do prazo ou em desconformidade podem ser desclassificadas.
+1. pasta pública do Drive com nome da equipe e permissão de leitor para qualquer pessoa com o link;
+2. documento de texto com todos os itens mínimos, prints visíveis e explicação de cada gráfico;
+3. vídeo com até cinco minutos, navegação pelo dashboard, apresentador visível e sem narração por IA;
+4. acesso ao documento e ao vídeo fora das contas da equipe;
+5. um único representante responsável pelo envio e por eventuais atualizações;
+6. submissão pela Central Hackathon até 23/09/2026 e comprovante guardado.
 
-## 13. Checklist eliminatório de habilitação
-
-Antes de receber nota, o trabalho deve atender integralmente aos sete itens:
-
-1. aplicativo Qlik Sense com link público e funcional;
-2. ao menos uma visualização geográfica por município;
-3. ao menos uma análise temporal dos repasses ou pagamentos;
-4. ao menos um KPI quantitativo;
-5. vídeo pitch público com até 5 minutos;
-6. documento descritivo com todas as seções mínimas;
-7. certificados das trilhas obrigatórias de todos os integrantes.
+A exigência residual de certificados deve ser confirmada com a organização; a dispensa de vídeos individuais não equivale à dispensa das trilhas.
 
 ## 14. Critérios de avaliação
 
@@ -311,20 +295,20 @@ São especialmente valorizados:
 
 ## 15. Cronograma do evento
 
-Os períodos de workshops, cursos na Qlik e construção e entrega abaixo foram atualizados conforme informação fornecida pela equipe nesta conversa. Eles substituem os períodos anteriormente recuperados do PDF para essas etapas.
+Os períodos de workshops e cursos foram informados pela equipe. O prazo de entrega foi posteriormente prorrogado no comunicado da organização recebido em 18/09/2026.
 
 | Etapa | Período |
 |---|---|
 | Inscrição das equipes | 29/06 a 27/07/2026 |
 | Workshops | De 03/08 a 24/08/2026 |
 | Cursos na Qlik | De 29/06 a 10/09/2026 |
-| Construção e entrega do desafio | De 01/09 a 20/09/2026 |
+| Submissão final do desafio | Até 23/09/2026; horário-limite não informado |
 | Seleção interna dos 10 melhores trabalhos | A confirmar após a atualização do prazo de entrega |
 | Apresentação e premiação | 07/10/2026, conforme o PDF; atualização não informada |
 
-O prazo de conclusão dos cursos é **10/09/2026** e o prazo de entrega do desafio é **20/09/2026**. Não foi informado horário-limite para essas etapas.
+O prazo de conclusão dos cursos informado pela equipe é **10/09/2026**. O prazo final de submissão comunicado pela organização é **23/09/2026**, sem horário-limite especificado na mensagem recebida.
 
-O PDF indicava seleção interna de 16/09 a 30/09/2026. Como esse período começa antes do novo prazo de entrega, sua atualização ainda precisa ser confirmada. A inscrição e a apresentação/premiação permanecem registradas como referência do PDF.
+O PDF indicava seleção interna de 16/09 a 30/09/2026. Como esse período começa antes do prazo de entrega prorrogado, sua atualização ainda precisa ser confirmada. A inscrição e a apresentação/premiação permanecem registradas como referência do PDF.
 
 ## 16. Participação e formação da equipe
 
@@ -378,12 +362,12 @@ O projeto só deve ser considerado finalizado quando:
 - o pipeline de dados for reproduzível e documentado;
 - os totais e divergências forem validados;
 - as análises obrigatórias estiverem implementadas no Qlik Sense;
-- o dashboard estiver claro, interativo e acessível publicamente;
+- o dashboard estiver claro e navegável para a gravação do pitch;
 - os achados tiverem evidência rastreável e limitações explícitas;
-- o documento descritivo contiver resultados, conclusões e recomendações finais;
-- o vídeo tiver até 5 minutos e link público testado;
-- todos os certificados tiverem sido reunidos;
+- o documento no Drive contiver resultados, conclusões, recomendações, prints e explicações de cada gráfico;
+- o vídeo no Drive tiver até cinco minutos, navegação pelo dashboard, apresentador visível e nenhuma narração por IA;
+- os certificados tiverem sido reunidos enquanto sua exigência residual é confirmada;
 - a declaração de uso de IA tiver sido revisada;
-- uma segunda pessoa tiver executado o checklist eliminatório e testado todos os links.
+- uma segunda pessoa tiver executado o checklist e testado o acesso à pasta, ao documento e ao vídeo fora das contas da equipe.
 
 O acompanhamento detalhado desses pontos está em [`requisitos-e-status.md`](./requisitos-e-status.md).
