@@ -47,7 +47,7 @@ Os filtros de recurso, mês e município foram testados em versões anteriores n
 
 Os ajustes de texto da Tela 0 aparecem na nova captura enviada em 19/09, mas a tela ainda precisa de reteste interativo. Conferir também se as Telas 1, 2, 4 e 6 mostram ou remetem claramente às fontes, ao período e às unidades sem depender da explicação oral do pitch. A Tela 5 identifica fontes e anos.
 
-Em teste relatado após a última captura da Tela 1, a legenda do mapa de áreas permaneceu igual ao selecionar municípios diferentes. Isso é esperado para os limites globais fixos de 0 a R$ 1.018,22; ainda é necessário conferir se o valor no tooltip e a tonalidade da área distinguem municípios de extremos diferentes, por exemplo Porto Alegre (R$ 4,16/pessoa) e Coqueiro Baixo (R$ 1.018,22/pessoa). Não há captura desse teste comparativo até agora.
+Em teste relatado após a última captura da Tela 1, a legenda do mapa de áreas permaneceu igual ao selecionar municípios diferentes, enquanto o tooltip mostrou valores diferentes. Os limites globais fixos de 0 a R$ 1.018,22 são esperados e permitem comparar municípios na mesma escala. Falta guardar uma captura comparativa de municípios de extremos diferentes, por exemplo Porto Alegre (R$ 4,16/pessoa) e Coqueiro Baixo (R$ 1.018,22/pessoa), e verificar se a cor em modo sem seleção comunica a diferença.
 
 ## Roteiro de teste da versão final
 
