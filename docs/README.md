@@ -2,6 +2,7 @@
 
 Esta pasta concentra a interpretação do edital e o acompanhamento do projeto do **2º Hackathon Unicesumar em parceria com a Qlik**.
 
+- [Orientações atualizadas de submissão](./atualizacao-submissao-2026-09-18.md): pasta pública no Drive, documento, vídeo pitch e prazo de 23/09/2026.
 - [Edital explicado e especificação do projeto](./edital-hackathon-qlik-2026.md): contexto, objetivos, dados, metodologia, produto esperado, cronograma e critérios de avaliação.
 - [Requisitos e status do projeto](./requisitos-e-status.md): checklist auditável do que está concluído, parcial, pendente ou ainda não comprovado.
 - [Relatório descritivo final](./relatorio-final.md): contexto, bases, metodologia executada, achados, conclusões, recomendações, limitações e declaração de uso de IA.
