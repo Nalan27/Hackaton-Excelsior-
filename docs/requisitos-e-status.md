@@ -47,7 +47,7 @@ Todos os itens desta seção precisam estar concluídos. O atendimento parcial n
 - [x] **Análise temporal dos repasses ou pagamentos.** A Task 15 apresenta créditos, ajustes e saldo líquido por mês.
 - [x] **Pelo menos um KPI quantitativo.** Seis medidas mestras foram implementadas e validadas na pasta `Validação — Task 12` do aplicativo.
 - [ ] **Pendente — Vídeo pitch público com até 5 minutos.** Não há vídeo nem link.
-- [ ] **Parcial — Documento descritivo completo.** Contexto e bases constam em [`edital-hackathon-qlik-2026.md`](./edital-hackathon-qlik-2026.md); análises, achados e recomendações estão distribuídos nas Tasks 16 a 19. Falta o relatório final consolidado, com metodologia executada, conclusões, declaração de IA e revisão por outro integrante.
+- [ ] **Parcial — Documento descritivo completo.** O [`relatório final`](./relatorio-final.md) consolida contexto, bases, metodologia executada, achados, conclusões e declaração de IA. Falta registrar a revisão por outro integrante antes da entrega.
 - [ ] **Parcial — Certificados das trilhas obrigatórias de todos os integrantes.** Há 11 PDFs em [`certificates/`](../certificates/), mas a lista final da equipe, os cursos exigidos e a conclusão por pessoa ainda não foram conferidos; a pasta de Henrique não contém PDF versionado.
 
 ## 4. Organização e conformidade do repositório
