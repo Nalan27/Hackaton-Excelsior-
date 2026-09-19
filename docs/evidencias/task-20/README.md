@@ -15,7 +15,7 @@ As capturas novas foram enviadas na conversa de revisão e **ainda não estão a
 
 ## O que falta para concluir a issue
 
-- Finalizar a Tela 1: corrigir os separadores da legenda de pontos e o valor por pessoa no tooltip para `pt-BR`, além de incluir nota de fonte/período; guardar capturas após correção. Retestar a escala fixa com outros filtros.
+- Finalizar a Tela 1: corrigir os separadores da legenda de pontos e o valor por pessoa no tooltip para `pt-BR`, além de incluir nota de fonte/período; guardar capturas após correção. Em seleções de municípios diferentes, conferir o valor e a cor de cada área; manter os limites globais da legenda constantes para permitir comparação.
 - Aplicar e retestar os pontos das Telas 2 a 6 descritos abaixo, sem alterar os cálculos validados.
 - Executar o roteiro interativo completo, incluindo navegação entre telas com filtros, caso sem movimentação e confronto de KPI, mapa e timeline com os totais de referência.
 - Arquivar os prints finais em modo de análise, exportar o novo QVF **com dados**, registrar sua identificação e verificar a versão usada no documento e no pitch antes de 23/09/2026.
@@ -46,6 +46,8 @@ Os filtros de recurso, mês e município foram testados em versões anteriores n
 | Navegação | Uma primeira captura da visão de pastas enviada em 19/09 mostrava dez pastas: as sete telas de apresentação e, antes delas, `Validação do calendário`, `Mapa de teste` e `Validação do primeiro repasse`. A Tela 2 aparecia antes da página geográfica. | **Reteste parcial:** segunda captura enviada em 19/09 mostra apenas sete pastas públicas, na ordem Visão Geral, Distribuição geográfica, Linha do Tempo, Cobertura e lacunas, Concentração, Vulnerabilidade, Resumo; `Meus próprios (0)`. Falta percorrer as sete telas com seleções limpas e com uma seleção ativa. Os snapshots anteriores preservam as páginas de teste. |
 
 Os ajustes de texto da Tela 0 aparecem na nova captura enviada em 19/09, mas a tela ainda precisa de reteste interativo. Conferir também se as Telas 1, 2, 4 e 6 mostram ou remetem claramente às fontes, ao período e às unidades sem depender da explicação oral do pitch. A Tela 5 identifica fontes e anos.
+
+Em teste relatado após a última captura da Tela 1, a legenda do mapa de áreas permaneceu igual ao selecionar municípios diferentes. Isso é esperado para os limites globais fixos de 0 a R$ 1.018,22; ainda é necessário conferir se o valor no tooltip e a tonalidade da área distinguem municípios de extremos diferentes, por exemplo Porto Alegre (R$ 4,16/pessoa) e Coqueiro Baixo (R$ 1.018,22/pessoa). Não há captura desse teste comparativo até agora.
 
 ## Roteiro de teste da versão final
 
