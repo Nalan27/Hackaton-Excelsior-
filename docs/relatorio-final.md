@@ -190,7 +190,9 @@ As conferências manuais e visuais estão documentadas nas evidências das Telas
 [`snapshot 11 — Task 19`](../qlik/versoes-do-app/11-task-19/README.md),
 exportado com dados em 18/09/2026, com SHA-256 registrado no respectivo README.
 O responsável informou a reimportação do QVF. Ainda não há captura separada da
-cópia reimportada nem auditoria independente do acesso público.
+cópia reimportada. O link público do Qlik Sense foi dispensado; antes do envio,
+a equipe deve testar o acesso de leitor à pasta compartilhada do Google Drive,
+conforme a [orientação atualizada](atualizacao-submissao-2026-09-18.md).
 
 ## 4. Achados
 
