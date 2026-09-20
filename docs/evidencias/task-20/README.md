@@ -4,6 +4,8 @@
 
 Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md), as [capturas arquivadas das Telas 0 a 6](../../screenshots/tela-6-resumo/) e novas capturas enviadas na conversa em 19/09. As capturas arquivadas são do aplicativo antes da exportação de 18/09. As primeiras capturas novas mostram a cópia do app após a limpeza das pastas de teste; capturas posteriores registram correções nas Telas 0 a 3 e nos títulos das pastas. Falta testar a cópia usada nos prints e no pitch, aplicar as correções abaixo e exportar um **novo QVF com dados**. Este documento não atesta a conclusão da issue.
 
+**Ponto de pausa em 20/09/2026:** o último reteste recebido confirma o gradiente fixo do mapa de áreas, mas não houve novas capturas da Tela 4 nem exportação do QVF final. Ao retomar, abrir **Concentração dos repasses** sem seleções, verificar título e KPI, aplicar o marcador Top 20 e conferir 20 municípios, R$ 98.238.372,09 e 34,03%; depois limpar a seleção e verificar se os rótulos continuam corretos. A revisão das Telas 5 e 6 e o roteiro completo permanecem pendentes.
+
 ## O que foi feito até agora
 
 - A revisão visual das sete telas foi iniciada com as capturas recebidas em 19/09. Os totais da Tela 0 foram comparados com a validação do ETL e permanecem corretos.
