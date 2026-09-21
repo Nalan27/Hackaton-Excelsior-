@@ -14,7 +14,7 @@ sucessor do [snapshot 11](../11-task-19/README.md).
   `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`.
 - Armazenamento: Git LFS, pela regra `*.qvf` em `.gitattributes`.
 - Evidência detalhada: [revisão da Task 20](../../../docs/evidencias/task-20/README.md).
-- Capturas finais: [`docs/evidencias/task-20`](../../../docs/evidencias/task-20/README.md).
+- Capturas finais das Telas 0 a 6: [`docs/evidencias/resumo-final`](../../../docs/evidencias/resumo-final/README.md).
 
 O arquivo ficou menor que o snapshot anterior porque foram excluídas pastas
 de desenvolvimento. Após a recarga, o usuário confirmou sete pastas públicas,
