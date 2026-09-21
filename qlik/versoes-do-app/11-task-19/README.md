@@ -12,7 +12,7 @@ Aplicativo Qlik com a **Tela 6 — Resumo**. É o sucessor do
 - Tamanho verificado: **655.360 bytes**.
 - SHA-256 verificado: `2864377BABD75CC681690DEC6D83A4DC4BDED80C87277EDE03D7CEED5D585BBF`.
 - Armazenamento: Git LFS, pela regra `*.qvf` em `.gitattributes`.
-- Capturas: [Telas 0 a 6](../../../docs/screenshots/tela-6-resumo/).
+- Capturas: [Telas 0 a 6](../../../docs/evidencias/resumo-final/).
 
 As capturas mostram o aplicativo original antes da exportação. Em
 **18/09/2026**, o usuário confirmou que já reimportou este QVF. A restauração
@@ -30,7 +30,7 @@ as [instruções do snapshot 10](../10-task-18/README.md#restauração).
 
 ## Tela 6 — Resumo
 
-![Tela 6 - Resumo](../../../docs/screenshots/tela-6-resumo/tela-6-resumo.png)
+![Tela 6 - Resumo](../../../docs/evidencias/resumo-final/tela-6-resumo.png)
 
 **Achado 1 — Visão geral:** total líquido repassado de R$ 288.699.999,97
 em 334 municípios (média/pessoa e tempo de espera: conferir KPIs da

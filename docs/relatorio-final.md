@@ -311,7 +311,7 @@ imagens aparecem e permanecem legíveis.
 espera arredondada para 40 dias; o cálculo sem arredondamento é 40,13 dias.
 Os filtros de recurso, município e data permitem examinar subconjuntos.
 
-![Tela 0: KPIs da visão geral](screenshots/task-20/tela-0-sem-filtros.png)
+![Tela 0: KPIs da visão geral](evidencias/task-20/02-tela-0-sem-filtros.png)
 
 **Tela 1 — dois mapas municipais.** O mapa de pontos varia o tamanho dos
 marcadores segundo o valor líquido recebido. O mapa de áreas mostra o saldo
@@ -319,7 +319,7 @@ líquido por pessoa, usando a população municipal estimada em 2024 como
 denominador. Os mapas permitem comparar valor absoluto e valor por habitante,
 mas cobrem apenas municípios com movimentação nesta base.
 
-![Tela 1: mapas de valor líquido e valor por pessoa](screenshots/task-20/tela-1-sem-filtros.png)
+![Tela 1: mapas de valor líquido e valor por pessoa](evidencias/task-20/03-tela-1-sem-filtros.png)
 
 **Tela 2 — linha do tempo.** As barras mensais separam créditos positivos,
 ajustes negativos e saldo líquido de maio a setembro de 2024. Junho tem o
@@ -327,7 +327,7 @@ maior volume de créditos e o maior saldo; julho concentra o maior ajuste
 negativo. A altura das barras descreve os registros, sem explicar a causa
 administrativa de cada ajuste.
 
-![Tela 2: evolução mensal de créditos, ajustes e saldo](screenshots/task-20/tela-2-sem-filtros.png)
+![Tela 2: evolução mensal de créditos, ajustes e saldo](evidencias/task-20/04-tela-2-sem-filtros.png)
 
 **Tela 3 — cobertura da lista de afetados.** Os KPIs mostram 478 municípios
 no extrato da Defesa Civil, 334 com movimentação e 144 sem movimentação nesta
@@ -335,7 +335,7 @@ base até 26/09/2024. A tabela permite verificar município, código IBGE,
 situação na lista, quantidade de movimentos e saldo. “Sem registro” não
 significa ausência de assistência por outros meios.
 
-![Tela 3: tabela e KPIs de cobertura](screenshots/task-20/tela-3-sem-filtros.png)
+![Tela 3: tabela e KPIs de cobertura](evidencias/task-20/05-tela-3-sem-filtros.png)
 
 **Tela 4 — concentração.** O gráfico superior ordena os 20 maiores saldos
 líquidos municipais. O gráfico inferior ordena os 20 maiores valores por
@@ -344,7 +344,7 @@ saldo, créditos e ajustes por município, e o cartão apresenta o total
 líquido do recorte. Na base completa, os 20 maiores por saldo concentram
 34,03% do total, conforme o cálculo da seção 4.5.
 
-![Tela 4: rankings, tabela e KPI de concentração](screenshots/task-20/tela-4-sem-filtros.png)
+![Tela 4: rankings, tabela e KPI de concentração](evidencias/task-20/06-tela-4-sem-filtros.png)
 
 **Tela 5 — IDH-M e repasse por pessoa.** Cada ponto do gráfico de dispersão
 representa um município com IDH-M 2010 e saldo por habitante calculado com
@@ -353,7 +353,7 @@ comparação. Entre os 333 municípios comparáveis, as correlações sem filtro
 são próximas de zero; o gráfico não demonstra causalidade nem prioridade
 administrativa.
 
-![Tela 5: dispersão e tabela de vulnerabilidade](screenshots/task-20/tela-5-sem-filtros.png)
+![Tela 5: dispersão e tabela de vulnerabilidade](evidencias/task-20/07-tela-5-sem-filtros.png)
 
 **Tela 6 — resumo dos achados.** Os cartões retomam saldo líquido, saldo por
 pessoa e ajuste negativo de julho. O gráfico de dispersão resume a comparação
@@ -361,7 +361,7 @@ com IDH-M. Os blocos de texto associam cada resultado a uma recomendação e a
 seu limite de interpretação; os valores desta tela representam a visão sem
 filtros do relatório.
 
-![Tela 6: resumo com KPIs, gráfico e interpretações](screenshots/task-20/tela-6-sem-filtros.png)
+![Tela 6: resumo com KPIs, gráfico e interpretações](evidencias/task-20/08-tela-6-sem-filtros.png)
 
 ## 5. Conclusões
 
@@ -493,7 +493,7 @@ reproduzidos pelos scripts do projeto.
 | Conciliação | [`conciliacao.csv`](../data/processed/conciliacao.csv) |
 | Qualidade do ETL | [`relatorio_validacao.csv`](../data/processed/relatorio_validacao.csv) |
 | Cobertura | [`relatorio_cobertura.csv`](../data/processed/relatorio_cobertura.csv) |
-| Evidências visuais | [`docs/evidencias/task-20/`](evidencias/task-20/) e [`docs/screenshots/task-20/`](screenshots/task-20/) |
+| Evidências visuais | [`docs/evidencias/task-20/`](evidencias/task-20/) e [`docs/evidencias/resumo-final/`](evidencias/resumo-final/) |
 | Aplicativo final | [`snapshot 12 — Task 20`](../qlik/versoes-do-app/12-task-20/README.md) |
 | Teste executado | `.venv-1/bin/python -m unittest discover -s tests -v` — 23/23 OK |
 

@@ -2,9 +2,39 @@
 
 ## Escopo e estado
 
-Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md), as [capturas arquivadas das Telas 0 a 6](../../screenshots/tela-6-resumo/) e as novas capturas enviadas na conversa. Os ajustes e retestes foram consolidados no [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md), exportado com dados em 21/09/2026.
+Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md), as [capturas arquivadas das Telas 0 a 6](../resumo-final/) e as novas capturas enviadas na conversa. Os ajustes e retestes foram consolidados no [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md), exportado com dados em 21/09/2026.
 
 **Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas e o relatório passou a apontar para o snapshot 12. Restam testar a reimportação do QVF e confirmar a mesma versão no pitch. O PR #48 permanece em rascunho e a issue #20 aberta.
+
+## Capturas finais
+
+| Arquivo | Estado documentado |
+|---|---|
+| [`01-navegacao-final-7-pastas.png`](01-navegacao-final-7-pastas.png) | Sete pastas públicas após a recarga e a remoção das pastas de desenvolvimento. |
+| [`02-tela-0-sem-filtros.png`](02-tela-0-sem-filtros.png) | Visão geral sem filtros. |
+| [`03-tela-1-sem-filtros.png`](03-tela-1-sem-filtros.png) | Distribuição geográfica sem filtros. |
+| [`04-tela-2-sem-filtros.png`](04-tela-2-sem-filtros.png) | Evolução mensal sem filtros. |
+| [`05-tela-3-sem-filtros.png`](05-tela-3-sem-filtros.png) | Cobertura e lacunas sem filtros. |
+| [`06-tela-4-sem-filtros.png`](06-tela-4-sem-filtros.png) | Concentração sem filtros. |
+| [`07-tela-5-sem-filtros.png`](07-tela-5-sem-filtros.png) | Vulnerabilidade sem filtros. |
+| [`08-tela-6-sem-filtros.png`](08-tela-6-sem-filtros.png) | Resumo e recomendações sem filtros. |
+| [`09-associacao-municipio-porto-alegre-tela-3.png`](09-associacao-municipio-porto-alegre-tela-3.png) | `município = Porto Alegre` chega à cobertura. |
+| [`10-associacao-municipio-cobertura-porto-alegre-tela-0.png`](10-associacao-municipio-cobertura-porto-alegre-tela-0.png) | `municipio_cobertura = Porto Alegre` chega à visão geral. |
+| [`11-julho-dados-exatos.png`](11-julho-dados-exatos.png) | Valores exatos de julho na vista de dados. |
+| [`12-julho-tela-0.png`](12-julho-tela-0.png) | KPIs filtrados por julho. |
+| [`13-julho-tela-1-mapas.png`](13-julho-tela-1-mapas.png) | Mapas filtrados por julho. |
+| [`14-julho-tela-3-cobertura.png`](14-julho-tela-3-cobertura.png) | Cobertura filtrada por julho. |
+| [`15-top-20-tela-4.png`](15-top-20-tela-4.png) | Concentração com o marcador Top 20. |
+| [`16-top-20-tela-3-cobertura.png`](16-top-20-tela-3-cobertura.png) | Cobertura com os 20 municípios selecionados. |
+| [`17-acegua-tela-4-sem-movimentacao.png`](17-acegua-tela-4-sem-movimentacao.png) | Estado sem movimentação para Aceguá. |
+| [`18-pinto-bandeira-tela-5-idhm-ausente.png`](18-pinto-bandeira-tela-5-idhm-ausente.png) | Pinto Bandeira com IDH-M ausente. |
+| [`19-judiciario-tela-1-mapas.png`](19-judiciario-tela-1-mapas.png) | Mapas filtrados pelo recurso Judiciário. |
+| [`20-judiciario-tela-0-kpis.png`](20-judiciario-tela-0-kpis.png) | KPIs filtrados pelo recurso Judiciário. |
+| [`21-tela-4-sem-filtros-sem-linha-nula.png`](21-tela-4-sem-filtros-sem-linha-nula.png) | Tabela da Tela 4 sem a linha nula. |
+| [`22-tela-4-porto-alegre-apos-ajuste.png`](22-tela-4-porto-alegre-apos-ajuste.png) | Tela 4 com Porto Alegre após o ajuste. |
+
+As capturas de Judiciário foram feitas em 20/09/2026. As demais são de
+21/09/2026. Os testes foram repetidos após a correção da associação municipal.
 
 ## O que foi feito até agora
 
@@ -25,7 +55,7 @@ Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-a
 - Nova captura da Tela 4 com `localizacao_cobertura = Aceguá` confirma a correção do estado vazio: o ranking por saldo líquido, a tabela “Participação e ajustes” e o ranking por pessoa exibem “Sem movimentações FUNDEC nesta base para a seleção atual.” O KPI continua em R$ 0,00 e `0.00% do total líquido da base`, sem indicar repasse inexistente. Falta conferir o retorno dos três objetos com um município que tenha movimentação.
 - Com `município = Porto Alegre` selecionado após o ajuste, os dois gráficos voltam a mostrar uma barra e a tabela “Participação e ajustes” volta a mostrar a linha municipal. A tabela registra créditos de R$ 16.247.674,42, ajustes de −R$ 10.465.116,28 e líquido de R$ 5.782.558,14; a soma confere. O KPI mostra R$ 5.782.558,14 e `2.00% do total líquido da base`, compatível com a proporção arredondada. O gráfico por pessoa mostra aproximadamente R$ 4,16. Assim, o estado com dados também foi retestado visualmente após a condição de cálculo.
 - Uma captura ampliada da tabela com Porto Alegre selecionado confirma as colunas “Participação no total” e “R$ por pessoa”: aparecem `2%` e R$ 4,16, respectivamente. A captura do painel de edição mostra a expressão de participação `Sum(valor) / Sum({1} TOTAL valor)`, alinhada à regra documentada na Task 17: o denominador permanece o total da base, inclusive com uma seleção ativa. A linha `-` de valor zero ainda aparece no painel de edição sem seleção; sua origem e eventual ocultação seguem pendentes.
-- **Correção final da tabela da Tela 4 em 21/09:** a [captura sem filtros](../../screenshots/task-20/tela-4-sem-filtros-sem-linha-nula.png) confirma que a linha `-` de R$ 0,00 deixou de aparecer e que as linhas municipais permanecem visíveis. A [captura com Porto Alegre](../../screenshots/task-20/tela-4-porto-alegre-apos-ajuste.png) confirma o retorno dos dois rankings e da tabela, com saldo líquido de R$ 5.782.558,14, créditos de R$ 16.247.674,42 e ajustes de −R$ 10.465.116,28. O KPI continua mostrando R$ 5.782.558,14 e participação arredondada de 2,00% no total líquido da base. A pendência da linha nula está concluída.
+- **Correção final da tabela da Tela 4 em 21/09:** a [captura sem filtros](21-tela-4-sem-filtros-sem-linha-nula.png) confirma que a linha `-` de R$ 0,00 deixou de aparecer e que as linhas municipais permanecem visíveis. A [captura com Porto Alegre](22-tela-4-porto-alegre-apos-ajuste.png) confirma o retorno dos dois rankings e da tabela, com saldo líquido de R$ 5.782.558,14, créditos de R$ 16.247.674,42 e ajustes de −R$ 10.465.116,28. O KPI continua mostrando R$ 5.782.558,14 e participação arredondada de 2,00% no total líquido da base. A pendência da linha nula está concluída.
 - A captura da Tela 5 sem filtros mostra o gráfico “IDH-M 2010 × valor líquido por habitante — FUNDEC 2024” e a tabela com município, código IBGE, IDH-M 2010, população 2024, valor líquido e R$ por habitante. O ponto alto de Coqueiro Baixo está identificado. A nota visível informa 333 municípios comparáveis entre os 334 com repasses, a ausência de IDH-M de Pinto Bandeira, o período de 17/05 a 26/09/2024, as fontes e os limites de interpretação. As correlações 0,0114 (Pearson) e −0,0776 (Spearman) aparecem explicitamente como resultados sem filtros. A tabela ainda não tem título descritivo; seus cabeçalhos não substituem o título do objeto.
 - Nova captura da Tela 5 com o marcador de 20 municípios ativo confirma que a tabela agora tem o título “Municípios com repasse — IDH-M, população e valores FUNDEC”. A nota inferior continua cobrindo dados, cobertura, correlações e fontes, mas aparece como um bloco largo e denso. Como a seleção está ativa, o texto precisa distinguir claramente as estatísticas da base completa dos pontos e linhas filtrados; a própria nota já diz “Sem filtros” antes das correlações. A revisão de legibilidade deve encurtar as frases, usar rótulos e quebras de linha e explicitar que 333/334 também se refere à base completa.
 - A captura seguinte da Tela 5, ainda com `município: 20 de 334`, mostra a nota inferior reorganizada em cinco linhas com rótulos em negrito: Dados, Cobertura da base completa, R$ por habitante, Correlação da base completa sem filtros e Fontes. A nota permanece inteira na área visível, identifica 333/334 e as correlações como informações da base completa e mantém a ressalva sobre população total, causalidade, necessidade e prioridade de atendimento. O gráfico e a tabela continuam respondendo ao marcador enquanto a nota metodológica permanece corretamente identificada como global.
@@ -52,7 +82,7 @@ Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-a
 
 - Após limpar a seleção `recurso = Judiciário`, o usuário informou que os mapas da Tela 1 voltaram ao panorama normal. Esse retorno foi confirmado por relato, sem captura adicional. A conferência numérica do recorte na Tela 0 permanece pendente.
 
-- **Conferência numérica na Tela 0 com `recurso = Judiciário`:** a captura mostra saldo líquido R$ 179.999.999,97, 95 municípios, R$ 30,93 por pessoa e 37 dias até o primeiro repasse. Os quatro indicadores coincidem com a [validação anterior do recurso](../task-12-calculos-reutilizaveis.md): os 36,71 dias calculados foram arredondados para 37 na apresentação. A nota de fonte, período e marco de 24/04/2024 continua visível. Assim, o filtro de recurso foi conferido nos mapas e nos KPIs; o usuário já confirmou o retorno dos mapas ao panorama completo ao limpar a seleção.
+- **Conferência numérica na Tela 0 com `recurso = Judiciário`:** a captura mostra saldo líquido R$ 179.999.999,97, 95 municípios, R$ 30,93 por pessoa e 37 dias até o primeiro repasse. Os quatro indicadores coincidem com a [validação anterior do recurso](../../task-12-calculos-reutilizaveis.md): os 36,71 dias calculados foram arredondados para 37 na apresentação. A nota de fonte, período e marco de 24/04/2024 continua visível. Assim, o filtro de recurso foi conferido nos mapas e nos KPIs; o usuário já confirmou o retorno dos mapas ao panorama completo ao limpar a seleção.
 
 - **Percurso final sem filtros em 21/09:** as sete telas foram abertas em sequência no modo de análise. A Tela 0 confirmou R$ 288.699.999,97 / 334 / R$ 32,89 / 40 dias; os dois mapas da Tela 1 permaneceram no RS com escala por pessoa de R$ 0,00 a R$ 1.018,22; a Tela 2 mostrou maio a setembro em ordem; a Tela 3 confirmou 478 / 334 / 144; a Tela 4 mostrou o total exato e não exibiu mais a linha nula; e as Telas 5 e 6 mantiveram textos, tabela, gráfico e achados legíveis.
 
@@ -60,7 +90,7 @@ Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-a
 
 - **Demais recortes após a recarga em 21/09:** julho foi conferido em todas as telas; a vista de dados confirmou créditos de R$ 80.289.534,88, ajustes de −R$ 11.565.116,28 e líquido de R$ 68.724.418,60, enquanto a Tela 0 mostrou 105 municípios, R$ 14,86 por pessoa e 57 dias, e a Tela 3 mostrou 105 / 105 / 0. O marcador Top 20 voltou a produzir 20 de 334 municípios, R$ 98.238.372,09, 34,03% e 20 / 20 / 0 na cobertura. Aceguá manteve os estados vazios compreensíveis, sem linhas nulas, e KPI de R$ 0,00 / 0,00%. Pinto Bandeira manteve código 4314548, população 2.784, R$ 150.000,00, R$ 53,88 por habitante, IDH-M vazio e a mensagem do gráfico. Judiciário voltou a produzir R$ 179.999.999,97, 95 municípios, R$ 30,93 por pessoa e 37 dias, e o retorno aos valores globais foi confirmado após limpar a seleção. O usuário informou que cada recorte funcionou em todas as telas.
 
-As [capturas finais da Task 20](../../screenshots/task-20/README.md) foram arquivadas com nomes descritivos. Elas incluem as sete telas sem filtros, a navegação, a associação municipal nos dois sentidos e os casos de julho, Top 20, Aceguá, Pinto Bandeira e Judiciário. O [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md) preserva o app final; após a recarga, a visão de pastas mostrou somente as sete pastas públicas na ordem prevista.
+As capturas finais listadas acima foram arquivadas com nomes numerados e descritivos. Elas incluem as sete telas sem filtros, a navegação, a associação municipal nos dois sentidos e os casos de julho, Top 20, Aceguá, Pinto Bandeira e Judiciário. O [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md) preserva o app final; após a recarga, a visão de pastas mostrou somente as sete pastas públicas na ordem prevista.
 
 ## O que falta para concluir a issue
 
@@ -71,7 +101,7 @@ As [capturas finais da Task 20](../../screenshots/task-20/README.md) foram arqui
 
 | Controle | Resultado | Evidência |
 |---|---:|---|
-| Total líquido sem filtros / municípios recebedores | R$ 288.699.999,97 / 334 | [validação do ETL](../../../data/processed/relatorio_validacao.csv), [Tela 0](../../screenshots/tela-6-resumo/tela-0-visao-geral.png) |
+| Total líquido sem filtros / municípios recebedores | R$ 288.699.999,97 / 334 | [validação do ETL](../../../data/processed/relatorio_validacao.csv), [Tela 0](../resumo-final/tela-0-visao-geral.png) |
 | Porto Alegre no mapa | R$ 5.782.558,14; 1.389.322 habitantes; R$ 4,16/pessoa | [Task 14](../task-14/README.md) |
 | Julho de 2024 na timeline | créditos R$ 80.289.534,88; ajustes −R$ 11.565.116,28; líquido R$ 68.724.418,60 | [Task 15](../task-15/README.md) |
 | Cobertura sem filtros | 478 listados; 334 com movimentação; 144 sem registro | [Task 16](../task-16/README.md) |
