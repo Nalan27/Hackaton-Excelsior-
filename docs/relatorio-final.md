@@ -1,6 +1,6 @@
 # Relatório descritivo — repasses do FUNDEC/RS após as enchentes de 2024
 
-**Versão:** 1.0 — consolidada em 18/09/2026  
+**Versão:** 1.1 — revisão final do aplicativo em 21/09/2026
 **Período financeiro analisado:** 17/05/2024 a 26/09/2024  
 **Prazo de submissão comunicado pela organização:** 23/09/2026  
 **Produto relacionado:** aplicativo Qlik Sense com as Telas 0 a 6
@@ -187,10 +187,10 @@ ausência de chave sintética no modelo.
 
 As conferências manuais e visuais estão documentadas nas evidências das Telas
 0 a 6. O snapshot final do aplicativo é o
-[`snapshot 11 — Task 19`](../qlik/versoes-do-app/11-task-19/README.md),
-exportado com dados em 18/09/2026, com SHA-256 registrado no respectivo README.
-O responsável informou a reimportação do QVF. Ainda não há captura separada da
-cópia reimportada. O link público do Qlik Sense foi dispensado; antes do envio,
+[`snapshot 12 — Task 20`](../qlik/versoes-do-app/12-task-20/README.md),
+exportado com dados em 21/09/2026, com tamanho e SHA-256 registrados no
+respectivo README. O teste de reimportação desse QVF como novo aplicativo
+ainda precisa ser registrado. O link público do Qlik Sense foi dispensado; antes do envio,
 a equipe deve testar o acesso de leitor à pasta compartilhada do Google Drive,
 conforme a [orientação atualizada](atualizacao-submissao-2026-09-18.md).
 
@@ -298,8 +298,8 @@ não mede diretamente a vulnerabilidade das enchentes de 2024.
 
 ### 4.7 Capturas do dashboard e explicação dos gráficos
 
-As capturas abaixo foram feitas no aplicativo Qlik do
-[snapshot 11](../qlik/versoes-do-app/11-task-19/README.md). Elas integram este
+As capturas abaixo foram feitas no aplicativo Qlik que originou o
+[snapshot 12](../qlik/versoes-do-app/12-task-20/README.md). Elas integram este
 relatório para compor o documento de texto exigido na
 [orientação de submissão atualizada](atualizacao-submissao-2026-09-18.md).
 Ao levar o texto para o Google Drive, a equipe deve conferir se todas as
@@ -311,7 +311,7 @@ imagens aparecem e permanecem legíveis.
 espera arredondada para 40 dias; o cálculo sem arredondamento é 40,13 dias.
 Os filtros de recurso, município e data permitem examinar subconjuntos.
 
-![Tela 0: KPIs da visão geral](screenshots/tela-6-resumo/tela-0-visao-geral.png)
+![Tela 0: KPIs da visão geral](screenshots/task-20/tela-0-sem-filtros.png)
 
 **Tela 1 — dois mapas municipais.** O mapa de pontos varia o tamanho dos
 marcadores segundo o valor líquido recebido. O mapa de áreas mostra o saldo
@@ -319,7 +319,7 @@ líquido por pessoa, usando a população municipal estimada em 2024 como
 denominador. Os mapas permitem comparar valor absoluto e valor por habitante,
 mas cobrem apenas municípios com movimentação nesta base.
 
-![Tela 1: mapas de valor líquido e valor por pessoa](screenshots/tela-6-resumo/tela-1-mapa.png)
+![Tela 1: mapas de valor líquido e valor por pessoa](screenshots/task-20/tela-1-sem-filtros.png)
 
 **Tela 2 — linha do tempo.** As barras mensais separam créditos positivos,
 ajustes negativos e saldo líquido de maio a setembro de 2024. Junho tem o
@@ -327,7 +327,7 @@ maior volume de créditos e o maior saldo; julho concentra o maior ajuste
 negativo. A altura das barras descreve os registros, sem explicar a causa
 administrativa de cada ajuste.
 
-![Tela 2: evolução mensal de créditos, ajustes e saldo](screenshots/tela-6-resumo/tela-2-linha-do-tempo.png)
+![Tela 2: evolução mensal de créditos, ajustes e saldo](screenshots/task-20/tela-2-sem-filtros.png)
 
 **Tela 3 — cobertura da lista de afetados.** Os KPIs mostram 478 municípios
 no extrato da Defesa Civil, 334 com movimentação e 144 sem movimentação nesta
@@ -335,7 +335,7 @@ base até 26/09/2024. A tabela permite verificar município, código IBGE,
 situação na lista, quantidade de movimentos e saldo. “Sem registro” não
 significa ausência de assistência por outros meios.
 
-![Tela 3: tabela e KPIs de cobertura](screenshots/tela-6-resumo/tela-3-cobertura-lacunas.png)
+![Tela 3: tabela e KPIs de cobertura](screenshots/task-20/tela-3-sem-filtros.png)
 
 **Tela 4 — concentração.** O gráfico superior ordena os 20 maiores saldos
 líquidos municipais. O gráfico inferior ordena os 20 maiores valores por
@@ -344,7 +344,7 @@ saldo, créditos e ajustes por município, e o cartão apresenta o total
 líquido do recorte. Na base completa, os 20 maiores por saldo concentram
 34,03% do total, conforme o cálculo da seção 4.5.
 
-![Tela 4: rankings, tabela e KPI de concentração](screenshots/tela-6-resumo/tela-4-concentracao.png)
+![Tela 4: rankings, tabela e KPI de concentração](screenshots/task-20/tela-4-sem-filtros.png)
 
 **Tela 5 — IDH-M e repasse por pessoa.** Cada ponto do gráfico de dispersão
 representa um município com IDH-M 2010 e saldo por habitante calculado com
@@ -353,7 +353,7 @@ comparação. Entre os 333 municípios comparáveis, as correlações sem filtro
 são próximas de zero; o gráfico não demonstra causalidade nem prioridade
 administrativa.
 
-![Tela 5: dispersão e tabela de vulnerabilidade](screenshots/tela-6-resumo/tela-5-vulnerabilidade-repasses.png)
+![Tela 5: dispersão e tabela de vulnerabilidade](screenshots/task-20/tela-5-sem-filtros.png)
 
 **Tela 6 — resumo dos achados.** Os cartões retomam saldo líquido, saldo por
 pessoa e ajuste negativo de julho. O gráfico de dispersão resume a comparação
@@ -361,7 +361,7 @@ com IDH-M. Os blocos de texto associam cada resultado a uma recomendação e a
 seu limite de interpretação; os valores desta tela representam a visão sem
 filtros do relatório.
 
-![Tela 6: resumo com KPIs, gráfico e interpretações](screenshots/tela-6-resumo/tela-6-resumo.png)
+![Tela 6: resumo com KPIs, gráfico e interpretações](screenshots/task-20/tela-6-sem-filtros.png)
 
 ## 5. Conclusões
 
@@ -474,8 +474,8 @@ reproduzidos pelos scripts do projeto.
   casos de controle e reimportação dos snapshots do Qlik nos documentos de
   evidência.
 - O responsável pelo aplicativo informou a reimportação do snapshot 11 em
-  18/09/2026. Essa conferência é registrada como relato do usuário e não como
-  captura independente.
+  18/09/2026. O snapshot 12 foi exportado com dados em 21/09/2026; sua
+  reimportação como novo aplicativo ainda precisa ser registrada.
 - A redação deste relatório foi confrontada nesta etapa com os CSVs
   processados, scripts e testes. **Ainda falta registrar a revisão final por
   outro integrante**, requisito que permanece aberto antes do envio oficial.
@@ -493,15 +493,15 @@ reproduzidos pelos scripts do projeto.
 | Conciliação | [`conciliacao.csv`](../data/processed/conciliacao.csv) |
 | Qualidade do ETL | [`relatorio_validacao.csv`](../data/processed/relatorio_validacao.csv) |
 | Cobertura | [`relatorio_cobertura.csv`](../data/processed/relatorio_cobertura.csv) |
-| Evidências visuais | [`docs/evidencias/`](evidencias/) e [`docs/screenshots/tela-6-resumo/`](screenshots/tela-6-resumo/) |
-| Aplicativo final | [`snapshot 11 — Task 19`](../qlik/versoes-do-app/11-task-19/README.md) |
+| Evidências visuais | [`docs/evidencias/task-20/`](evidencias/task-20/) e [`docs/screenshots/task-20/`](screenshots/task-20/) |
+| Aplicativo final | [`snapshot 12 — Task 20`](../qlik/versoes-do-app/12-task-20/README.md) |
 | Teste executado | `.venv-1/bin/python -m unittest discover -s tests -v` — 23/23 OK |
 
 ## 10. Dependências, situação e próximos registros
 
 As issues **#13**, **#14** e **#15** são pré-requisitos documentados para a
 conclusão administrativa do relatório. O repositório já contém as evidências
-das telas correspondentes e o snapshot 11 incorpora as sete telas, mas a
+das telas correspondentes e o snapshot 12 incorpora as sete telas, mas a
 dependência deve continuar visível até que os responsáveis a fechem no
 projeto.
 

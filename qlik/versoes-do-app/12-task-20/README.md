@@ -14,6 +14,7 @@ sucessor do [snapshot 11](../11-task-19/README.md).
   `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`.
 - Armazenamento: Git LFS, pela regra `*.qvf` em `.gitattributes`.
 - Evidência detalhada: [revisão da Task 20](../../../docs/evidencias/task-20/README.md).
+- Capturas finais: [`docs/screenshots/task-20`](../../../docs/screenshots/task-20/README.md).
 
 O arquivo ficou menor que o snapshot anterior porque foram excluídas pastas
 de desenvolvimento. Após a recarga, o usuário confirmou sete pastas públicas,
@@ -54,10 +55,8 @@ após a correção e a recarga:
 - recurso Judiciário, seguido da limpeza da seleção.
 
 Os valores de controle e os estados vazios coincidiram com a documentação da
-Task 20. A captura final da visão de pastas confirma as sete pastas públicas.
-As imagens enviadas na conversa precisam ser copiadas para o repositório para
-que todas fiquem preservadas como arquivos; duas capturas da Tela 4 já estão
-em [`docs/screenshots/task-20`](../../../docs/screenshots/task-20/).
+Task 20. As capturas finais arquivadas confirmam as sete pastas públicas, as
+sete telas sem filtros e os principais casos de controle.
 
 ## Restauração
 
