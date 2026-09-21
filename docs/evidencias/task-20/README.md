@@ -4,7 +4,7 @@
 
 Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md) e as capturas enviadas na conversa. Os ajustes e retestes foram consolidados no [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md), exportado com dados em 21/09/2026. As [capturas finais das Telas 0 a 6](../resumo-final/README.md) registram o aplicativo recarregado e sem filtros.
 
-**Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas, o relatório passou a apontar para o snapshot 12 e o usuário confirmou o teste do QVF reimportado. Resta confirmar a mesma versão no pitch. O PR #48 permanece em rascunho e a issue #20 aberta.
+**Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas, o relatório passou a apontar para o snapshot 12 e o usuário confirmou o teste do QVF reimportado. O PR #48 está pronto para revisão e a issue #20 permanece aberta porque o pitch ainda não foi gravado.
 
 ## Capturas finais
 
@@ -94,7 +94,7 @@ As capturas finais listadas acima foram arquivadas com nomes numerados e descrit
 
 ## O que falta para concluir a issue
 
-1. Confirmar que o pitch usa o snapshot 12 e concluir os critérios da issue #20 antes de tirar o PR #48 de rascunho, após a conferência final até 23/09/2026. O relatório já foi atualizado para esta versão.
+1. Gravar o pitch usando o snapshot 12, confirmar a navegação final nessa mesma versão e então concluir o último critério da issue #20. O relatório já foi atualizado e o PR #48 está pronto para revisão.
 
 ## Controles já sustentados por evidências anteriores
 
