@@ -4,7 +4,7 @@
 
 Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md), as [capturas arquivadas das Telas 0 a 6](../../screenshots/tela-6-resumo/) e as novas capturas enviadas na conversa. As capturas arquivadas são anteriores aos ajustes feitos na cópia ativa do Qlik. Este documento registra os retestes parciais dessa cópia e o trabalho que falta para validar a versão usada nos prints e no pitch. Ainda não há um **novo QVF com dados**; portanto, o documento não atesta a conclusão da issue.
 
-**Estado em 21/09/2026:** o percurso final sem filtros pelas Telas 0–6 foi concluído, com valores, textos e estados gerais conferidos. A linha `-` de R$ 0,00 da tabela da Tela 4 foi removida. Durante o percurso com Porto Alegre, foi detectada e corrigida uma incompatibilidade de tipo da `chave_municipal` na carga híbrida do aplicativo; depois da recarga, as seleções `município` e `municipio_cobertura` passaram a funcionar nas duas direções e em todas as telas. Restam repetir os demais recortes após essa recarga, arquivar as capturas finais e exportar o novo QVF **com dados**. O snapshot 11 ainda é o último QVF versionado. O PR #48 permanece em rascunho e a issue #20 aberta.
+**Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. Restam arquivar as capturas finais, exportar o novo QVF **com dados**, registrar sua identificação e confirmar a mesma versão no relatório e no pitch. O snapshot 11 ainda é o último QVF versionado. O PR #48 permanece em rascunho e a issue #20 aberta.
 
 ## O que foi feito até agora
 
@@ -58,13 +58,15 @@ Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-a
 
 - **Correção da associação municipal em 21/09:** no primeiro percurso com `município = Porto Alegre`, as Telas 0–2 responderam corretamente, mas a Tela 3 mostrou 0 / 0 / 0 e campos indefinidos. Selecionar `municipio_cobertura = Porto Alegre` produzia 1 / 1 / 0 na Tela 3, mas estados vazios incorretos nas demais telas. O modelo possuía a ligação nominal por `chave_municipal`, porém a carga híbrida usava a chave sem conversão em `fato_repasses`, `dim_municipio` e `intervalo_primeiro_repasse`, enquanto `cobertura_municipal` aplicava `Text()`. A carga da cobertura foi alinhada às demais com `chave_municipal` sem conversão. A recarga concluiu 133 linhas de calendário, 658 movimentos, 497 linhas de cobertura e 334 linhas em cada dimensão municipal e de intervalo, com zero erros e zero chaves sintéticas. No reteste, `município = Porto Alegre` passou a filtrar a Tela 3 em 1 / 1 / 0, cinco movimentações e R$ 5.782.558,14; `municipio_cobertura = Porto Alegre` passou a produzir R$ 5.782.558,14, um município, R$ 4,16 e 84 dias na Tela 0. O usuário confirmou que os dois campos funcionam em todas as telas.
 
+- **Demais recortes após a recarga em 21/09:** julho foi conferido em todas as telas; a vista de dados confirmou créditos de R$ 80.289.534,88, ajustes de −R$ 11.565.116,28 e líquido de R$ 68.724.418,60, enquanto a Tela 0 mostrou 105 municípios, R$ 14,86 por pessoa e 57 dias, e a Tela 3 mostrou 105 / 105 / 0. O marcador Top 20 voltou a produzir 20 de 334 municípios, R$ 98.238.372,09, 34,03% e 20 / 20 / 0 na cobertura. Aceguá manteve os estados vazios compreensíveis, sem linhas nulas, e KPI de R$ 0,00 / 0,00%. Pinto Bandeira manteve código 4314548, população 2.784, R$ 150.000,00, R$ 53,88 por habitante, IDH-M vazio e a mensagem do gráfico. Judiciário voltou a produzir R$ 179.999.999,97, 95 municípios, R$ 30,93 por pessoa e 37 dias, e o retorno aos valores globais foi confirmado após limpar a seleção. O usuário informou que cada recorte funcionou em todas as telas.
+
 As duas capturas finais da correção da tabela da Tela 4 foram arquivadas em [`docs/screenshots/task-20`](../../screenshots/task-20/). As demais capturas novas continuam apenas na conversa de revisão. O snapshot 11 continua sendo o último QVF versionado; ele não comprova as alterações feitas depois de 18/09.
 
 ## O que falta para concluir a issue
 
-1. Repetir, após a recarga que corrigiu a chave, os recortes de julho, Top 20, Aceguá, Pinto Bandeira e Judiciário do [roteiro interativo da versão final](#roteiro-de-teste-da-versão-final), limpando as seleções entre os casos. O percurso sem filtros e o teste bidirecional com Porto Alegre estão concluídos.
-2. Arquivar as demais capturas finais em modo de análise, incluindo estados com dados e sem movimentação.
-3. Exportar `qlik/versoes-do-app/12-task-20/app.qvf` **com dados**, registrar data, responsável, tamanho e SHA-256, e confirmar que o relatório e o pitch usam essa mesma versão. Só então concluir os critérios da issue #20 e tirar o PR #48 de rascunho, após a conferência final até 23/09/2026.
+1. Arquivar as demais capturas finais em modo de análise, incluindo estados com dados e sem movimentação. As capturas usadas no percurso continuam na conversa, salvo as duas imagens da Tela 4 já versionadas.
+2. Exportar `qlik/versoes-do-app/12-task-20/app.qvf` **com dados** e registrar data, responsável, tamanho e SHA-256.
+3. Confirmar que o relatório e o pitch usam o snapshot 12 e concluir os critérios da issue #20 antes de tirar o PR #48 de rascunho, após a conferência final até 23/09/2026.
 
 ## Controles já sustentados por evidências anteriores
 
@@ -113,6 +115,8 @@ A equipe informou que não precisa alterar a formatação em inglês atualmente 
 ## Roteiro de teste da versão final
 
 Fazer em modo de análise, em janela de tamanho semelhante ao dos prints e sem painéis de edição abertos. Guardar capturas dos resultados e anotar a data, o responsável e a identificação do app/QVF.
+
+**Resultado em 21/09/2026:** os itens 1–7 foram concluídos na cópia ativa após a recarga que corrigiu a associação municipal. O item 8 permanece pendente até o recebimento do QVF e das capturas como arquivos.
 
 1. **Sem seleções:** percorrer as Telas 0–6 pelas setas ou menu. Verificar ordem, títulos, legibilidade, fontes, período, unidades, tooltips e ausência de erro visual. Na Tela 0, conferir R$ 288.699.999,97, 334, R$ 32,89 e 40 dias arredondados. Na Tela 3, conferir 478 / 334 / 144.
 2. **Município:** selecionar Porto Alegre na Tela 0 ou 1 e visitar as demais telas sem limpar a seleção. No mapa, conferir R$ 5.782.558,14, população 1.389.322 e R$ 4,16/pessoa; conferir que o recorte exibido nas outras telas é coerente. Limpar a seleção e verificar retorno aos totais globais.
