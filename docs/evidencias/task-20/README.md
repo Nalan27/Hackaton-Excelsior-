@@ -4,7 +4,7 @@
 
 Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md) e as capturas enviadas na conversa. Os ajustes e retestes foram consolidados no [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md), exportado com dados em 21/09/2026. As [capturas finais das Telas 0 a 6](../resumo-final/README.md) registram o aplicativo recarregado e sem filtros.
 
-**Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas e o relatório passou a apontar para o snapshot 12. Restam testar a reimportação do QVF e confirmar a mesma versão no pitch. O PR #48 permanece em rascunho e a issue #20 aberta.
+**Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas, o relatório passou a apontar para o snapshot 12 e o usuário confirmou o teste do QVF reimportado. Resta confirmar a mesma versão no pitch. O PR #48 permanece em rascunho e a issue #20 aberta.
 
 ## Capturas finais
 
@@ -94,8 +94,7 @@ As capturas finais listadas acima foram arquivadas com nomes numerados e descrit
 
 ## O que falta para concluir a issue
 
-1. Reimportar o snapshot 12 como novo aplicativo e confirmar que as sete pastas e os dados abrem sem recarga.
-2. Confirmar que o pitch usa o snapshot 12 e concluir os critérios da issue #20 antes de tirar o PR #48 de rascunho, após a conferência final até 23/09/2026. O relatório já foi atualizado para esta versão.
+1. Confirmar que o pitch usa o snapshot 12 e concluir os critérios da issue #20 antes de tirar o PR #48 de rascunho, após a conferência final até 23/09/2026. O relatório já foi atualizado para esta versão.
 
 ## Controles já sustentados por evidências anteriores
 
@@ -145,7 +144,7 @@ A equipe informou que não precisa alterar a formatação em inglês atualmente 
 
 Fazer em modo de análise, em janela de tamanho semelhante ao dos prints e sem painéis de edição abertos. Guardar capturas dos resultados e anotar a data, o responsável e a identificação do app/QVF.
 
-**Resultado em 21/09/2026:** os itens 1–7 foram concluídos na cópia ativa após a recarga que corrigiu a associação municipal. O QVF do item 8 foi recebido e identificado no snapshot 12, as capturas foram arquivadas e o relatório foi atualizado. Permanecem pendentes a confirmação do pitch e o teste de reimportação do arquivo exportado.
+**Resultado em 21/09/2026:** os itens 1–7 foram concluídos na cópia ativa após a recarga que corrigiu a associação municipal. O QVF do item 8 foi recebido, identificado no snapshot 12, reimportado e testado pelo usuário responsável. As capturas foram arquivadas e o relatório foi atualizado. Permanece pendente a confirmação do pitch.
 
 1. **Sem seleções:** percorrer as Telas 0–6 pelas setas ou menu. Verificar ordem, títulos, legibilidade, fontes, período, unidades, tooltips e ausência de erro visual. Na Tela 0, conferir R$ 288.699.999,97, 334, R$ 32,89 e 40 dias arredondados. Na Tela 3, conferir 478 / 334 / 144.
 2. **Município:** selecionar Porto Alegre na Tela 0 ou 1 e visitar as demais telas sem limpar a seleção. No mapa, conferir R$ 5.782.558,14, população 1.389.322 e R$ 4,16/pessoa; conferir que o recorte exibido nas outras telas é coerente. Limpar a seleção e verificar retorno aos totais globais.

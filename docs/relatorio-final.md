@@ -189,8 +189,8 @@ As conferências manuais e visuais estão documentadas nas evidências das Telas
 0 a 6. O snapshot final do aplicativo é o
 [`snapshot 12 — Task 20`](../qlik/versoes-do-app/12-task-20/README.md),
 exportado com dados em 21/09/2026, com tamanho e SHA-256 registrados no
-respectivo README. O teste de reimportação desse QVF como novo aplicativo
-ainda precisa ser registrado. O link público do Qlik Sense foi dispensado; antes do envio,
+respectivo README. O usuário responsável confirmou em 21/09/2026 que
+reimportou e testou esse QVF. O link público do Qlik Sense foi dispensado; antes do envio,
 a equipe deve testar o acesso de leitor à pasta compartilhada do Google Drive,
 conforme a [orientação atualizada](atualizacao-submissao-2026-09-18.md).
 
@@ -448,8 +448,8 @@ filtros do relatório.
 - O ranking oficial e a tabela detalhada não conciliam integralmente. Os dois
   artefatos devem continuar disponíveis para auditoria.
 - A validação humana do aplicativo foi registrada pelos responsáveis nas
-  evidências e nos READMEs dos snapshots. A cópia reimportada não tem captura
-  independente no repositório.
+  evidências e nos READMEs dos snapshots. O teste da cópia reimportada foi
+  confirmado pelo usuário, sem captura independente no repositório.
 
 ## 8. Declaração de uso de inteligência artificial
 
@@ -474,8 +474,8 @@ reproduzidos pelos scripts do projeto.
   casos de controle e reimportação dos snapshots do Qlik nos documentos de
   evidência.
 - O responsável pelo aplicativo informou a reimportação do snapshot 11 em
-  18/09/2026. O snapshot 12 foi exportado com dados em 21/09/2026; sua
-  reimportação como novo aplicativo ainda precisa ser registrada.
+  18/09/2026 e confirmou a reimportação e o teste do snapshot 12 em
+  21/09/2026.
 - A redação deste relatório foi confrontada nesta etapa com os CSVs
   processados, scripts e testes. **Ainda falta registrar a revisão final por
   outro integrante**, requisito que permanece aberto antes do envio oficial.

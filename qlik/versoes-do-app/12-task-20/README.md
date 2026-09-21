@@ -62,8 +62,9 @@ sete telas sem filtros e os principais casos de controle.
 
 Faça upload de `app.qvf` no Qlik Cloud como um novo aplicativo. Com as
 seleções limpas, confirme que as sete pastas públicas e os dados aparecem sem
-recarga. Esse teste de reimportação do arquivo exportado ainda não foi
-registrado.
+recarga. Em 21/09/2026, o usuário responsável confirmou que reimportou e
+testou este QVF. A validação foi registrada por relato, sem captura separada
+do aplicativo reimportado.
 
 Se for necessário recarregar, disponibilize os cinco CSVs de
 `data/processed/` na conexão `DataFiles` e preserve uma única estratégia para
@@ -73,5 +74,5 @@ as seções automáticas e as renomeações da carga.
 
 O tamanho e o hash identificam exatamente o arquivo versionado. Eles não
 comprovam, isoladamente, que os dados e todos os objetos foram incorporados;
-essa garantia depende da exportação com dados informada pelo usuário e do
-teste de reimportação descrito acima.
+essa verificação é sustentada pela exportação com dados e pelo teste de
+reimportação informados pelo usuário.
