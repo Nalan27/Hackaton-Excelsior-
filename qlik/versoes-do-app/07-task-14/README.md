@@ -23,7 +23,7 @@ ordem de exportação, não a ordem numérica das tasks ou telas.
 - Arquivo: `app.qvf`
 - Ambiente: Qlik Cloud
 - Exportação: 16/09/2026, com dados
-- Responsável pelo versionamento: MartinsSallys
+- Responsável pelo versionamento: SallysMartins
 - Tamanho: 393.216 bytes
 - SHA-256: `B62100ED2CFC1DA4BF175CBDB7DE055750904A52DDE718DD977685882C2CC526`
 - Armazenamento: Git LFS
