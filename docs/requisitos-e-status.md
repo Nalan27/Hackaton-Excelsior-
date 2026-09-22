@@ -35,7 +35,7 @@ O comunicado não informou horário-limite nem novo período de seleção intern
 | Análises e achados finais | Concluídos no app e consolidados no relatório | A Tela 6 reúne quatro achados, recomendações e limites; o relatório final os vincula às bases, cálculos e evidências |
 | Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; a issue #21 foi concluída, mas ainda faltam revisão por segundo integrante e conferência da cópia no Drive |
 | Vídeo pitch | Pendente | Não há roteiro ou arquivo; deve ter até cinco minutos, mostrar navegação pelo dashboard, apresentador visível e nenhuma narração por IA |
-| Certificados e elegibilidade da equipe | Parcial | A equipe remanescente tem Alan, John-Victor e Martins-Sallys; Henrique saiu em 12/09/2026. Há 11 PDFs em `certificates/` para os três integrantes, ainda sem conferência final ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
+| Certificados da equipe | Resolvido para a entrega | Certificados não foram exigidos como artefato do projeto nem nos comunicados recentes. Os 11 PDFs em `certificates/` permanecem apenas como registro voluntário; a [issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23) foi concluída |
 | Publicação e envio | Pendente | Não há evidência registrada da auditoria da pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
 
 ## 3. Requisitos eliminatórios
@@ -50,7 +50,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [x] **Pelo menos um KPI quantitativo.** A Tela 0 e a Tela 6 exibem KPIs; suas capturas estão no relatório.
 - [ ] **Pendente — Vídeo pitch de até cinco minutos.** Deve navegar pelo dashboard, mostrar quem apresenta e não ter narração por IA.
 - [ ] **Parcial — Documento de texto no Drive.** O [relatório](./relatorio-final.md) contém contexto, bases, capturas, explicação dos gráficos, metodologia, achados, conclusões e recomendações; falta revisar e conferir a cópia com imagens legíveis no Drive.
-- [ ] **A confirmar — Certificados das trilhas.** O comunicado dispensou vídeos individuais, mas não declarou dispensa dos certificados; organizar os PDFs e confirmar se precisam acompanhar o envio.
+- [x] **Não aplicável à entrega — Certificados das trilhas.** Eles não constam como artefato exigido do projeto ou dos comunicados recentes. Os PDFs existentes foram preservados voluntariamente no repositório.
 
 ## 4. Organização e conformidade do repositório
 
@@ -174,8 +174,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [ ] **Parcial — Equipe com três integrantes após saída de Henrique em 12/09/2026.** Alan, John-Victor e Martins-Sallys permanecem; confirmar elegibilidade e inscrição final.
 - [ ] **Não comprovado — Todos os integrantes estão regularmente matriculados e ativos em curso aceito.**
 - [ ] **Não comprovado — Nenhum integrante é colaborador da Unicesumar.**
-- [ ] **Parcial — Trilhas obrigatórias concluídas pela equipe remanescente até 10/09/2026.** Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; falta conferir cursos, nomes e datas de conclusão.
-- [ ] **Parcial — Certificados reunidos e legíveis.** Há PDFs em `certificates/`, mas a conferência de nomes, cursos e legibilidade não foi registrada. O comunicado dispensa vídeos individuais, não afirma dispensa dos certificados.
+- [x] **Concluído para a entrega — Certificados não exigidos.** A equipe manteve 11 PDFs em `certificates/` como registro voluntário, sem tratá-los como entregável ou bloqueio da submissão.
 - [ ] **Não comprovado — Representante responsável pela submissão definido.**
 
 ## 13. Originalidade, ética e uso de IA
@@ -192,7 +191,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [ ] **Pendente — Criar pasta no Google Drive com o nome oficial da equipe e acesso público como Leitor.**
 - [ ] **Pendente — Colocar documento de texto e vídeo pitch na mesma pasta.**
 - [ ] **Pendente — Conferir prints, descrições, áudio e vídeo fora das contas da equipe.**
-- [ ] **A confirmar — Verificar com a organização se os certificados também devem acompanhar a pasta.** Vídeos individuais não são exigidos.
+- [x] **Certificados fora do escopo da pasta de entrega.** Eles não foram exigidos no projeto ou nos comunicados recentes e permanecem apenas como registro voluntário no repositório.
 - [ ] **Pendente — Conferir pesos da rubrica no edital original.** O PDF fornecido não permitiu leitura confiável de toda a coluna.
 - [ ] **Pendente — Realizar revisão independente antes do envio.**
 - [ ] **Pendente — Definir o único integrante que enviará pela [Central Hackathon](https://fabioacs.github.io/painel-hackathon).** Somente quem enviou pode atualizar o projeto.
@@ -202,7 +201,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 
 ### Prioridade 0 — Evitar desclassificação
 
-1. Conferir equipe, trilhas, certificados e responsável pela submissão ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)).
+1. Confirmar a equipe atual e definir o representante responsável pela submissão. A issue #23 foi concluída, e os certificados não são entregáveis obrigatórios.
 2. Revisar o relatório, levar o documento com prints ao Drive e gravar o pitch de até cinco minutos com navegação pelo dashboard ([issues #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21) e [#22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)).
 3. Auditar o acesso de leitor à pasta, ao documento e ao vídeo fora das contas da equipe ([issue #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)); a revisão de usabilidade do dashboard foi concluída na issue #20.
 4. Fazer uma única submissão completa pela Central Hackathon e guardar o comprovante até 23/09/2026 ([issue #25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)).

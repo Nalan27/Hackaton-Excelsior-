@@ -505,9 +505,10 @@ e representa a versão final do aplicativo validada pela equipe.
 
 O documento e o aplicativo estão consolidados, mas a entrega externa permanece
 pendente até a conclusão das issues [**#22 — pitch**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22),
-[**#23 — certificados**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23),
 [**#24 — pasta pública**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)
 e [**#25 — envio**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25).
+Os certificados não foram exigidos como parte da entrega; a issue #23 foi
+concluída e os PDFs permanecem no repositório apenas como registro voluntário.
 O link público do Qlik Sense deixou de ser exigido. As
 tarefas de redação e revisão apoiam este documento, mas não substituem a
 conferência independente.
