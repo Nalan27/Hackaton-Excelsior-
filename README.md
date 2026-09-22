@@ -314,7 +314,7 @@ Este projeto foi desenvolvido por 3 integrantes:
 
 - **Sallys Moraes Martins** — Desenvolvimento do pipeline ETL (Python/Pandas), modelagem de dados, validações automatizadas, integração Qlik Sense, documentação técnica
 - [Nome do 2º integrante] — [Função/Contribuição]
-- [Nome do 3º integrante] — [Função/Contribuição]
+- **John Victor do Espírito Santo da Encarnação** — Levantamento e inclusão de dados brutos (IDH-M, população, PIB municipal), construção das telas do dashboard no Qlik (Linha do Tempo, Resumo de achados)
 
 > *Preencher os demais integrantes antes da entrega final.*
 
