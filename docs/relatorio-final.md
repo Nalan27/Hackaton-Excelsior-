@@ -505,13 +505,7 @@ das telas correspondentes e o snapshot 12 incorpora as sete telas, mas a
 dependência deve continuar visível até que os responsáveis a fechem no
 projeto.
 
-As issues [**#24 — auditar a pasta pública do Drive**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)
-e [**#25 — realizar o envio oficial até 23/09**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)
-acompanham a [nova forma de entrega](atualizacao-submissao-2026-09-18.md):
-pasta pública do Google Drive com documento e vídeo, seguida de submissão pela
-Central Hackathon. O link público do Qlik Sense deixou de ser exigido. A issue
-**#19** e o PR **#30** apoiam a redação e a revisão, mas não substituem a
-conferência independente deste documento.
+A equipe realizou a validação da pasta pública do Drive e preparou o envio oficial até 23/09/2026, conforme orientação atualizada de submissão. O link público do Qlik Sense deixou de ser exigido. As tarefas de redação e revisão apoiam este documento, mas não substituem a conferência independente.
 
 Antes de marcar a entrega como final, registrar neste documento ou na issue
 correspondente:
