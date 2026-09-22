@@ -172,11 +172,6 @@ python -m unittest discover -s tests -v
 
 O método recomendado utiliza os CSVs processados via conexão `DataFiles` e **não requer driver ODBC**.
 
-### Opção 2: Carregar via SQLite (alternativa)
-
-Caso prefira carregar direto do SQLite, o Qlik Sense se comunica via driver ODBC. Instale em:
-https://www.ch-werner.de/sqliteodbd/
-
 Envie os CSVs de `data/processed/` para a conexão `DataFiles` e execute o script no **Data Load Editor** do Qlik Sense:
 
 ```qlik
@@ -207,7 +202,10 @@ snapshot 09. Adicione o arquivo à conexão sem carregá-lo outra vez pelo
 Gerenciador de dados: duas cargas do mesmo CSV criam campos duplicados e uma
 chave sintética.
 
-### Opção 2: Carregar via SQLite
+### Opção 2: Carregar via SQLite (alternativa)
+
+Caso prefira carregar direto do SQLite, o Qlik Sense se comunica via driver ODBC. Instale em:
+https://www.ch-werner.de/sqliteodbd/
 
 ```qlik
 LIB CONNECT TO 'SQLite_FUNDEC';
@@ -313,10 +311,8 @@ ORDER BY f.valor;
 Este projeto foi desenvolvido por 3 integrantes:
 
 - **Sallys Moraes Martins** — Desenvolvimento do pipeline ETL (Python/Pandas), modelagem de dados, validações automatizadas, integração Qlik Sense, documentação técnica
-- [Nome do 2º integrante] — [Função/Contribuição]
+- **Alan da Rosa Lorenz** — Coordenação e integração do projeto, desenvolvimento e validação das análises no Qlik Sense, revisão de usabilidade e consolidação das evidências
 - **John Victor do Espírito Santo da Encarnação** — Levantamento e inclusão de dados brutos (IDH-M, população, PIB municipal), construção das telas do dashboard no Qlik (Linha do Tempo, Resumo de achados)
-
-> *Preencher os demais integrantes antes da entrega final.*
 
 ---
 

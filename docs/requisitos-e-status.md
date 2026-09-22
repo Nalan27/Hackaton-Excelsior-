@@ -3,7 +3,7 @@
 ## 1. Como ler este checklist
 
 Este documento foi iniciado em **16 de setembro de 2026** e revisado em
-**19 de setembro de 2026** após o [comunicado de atualização da entrega](./atualizacao-submissao-2026-09-18.md).
+**22 de setembro de 2026** após o [comunicado de atualização da entrega](./atualizacao-submissao-2026-09-18.md).
 O estado de publicação e das entregas externas ainda precisa ser confirmado
 antes da submissão.
 
@@ -31,12 +31,12 @@ O comunicado não informou horário-limite nem novo período de seleção intern
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Parcial para entrega | Telas 0 a 6 capturadas no [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md); resta testar a navegação usada no pitch. Link público do Qlik Sense foi dispensado |
+| Aplicativo e dashboard Qlik Sense | Concluído no repositório | Telas 0 a 6 capturadas e validadas no [snapshot 12](../qlik/versoes-do-app/12-task-20/README.md); resta gravar a navegação do pitch. Link público do Qlik Sense foi dispensado |
 | Análises e achados finais | Concluídos no app e consolidados no relatório | A Tela 6 reúne quatro achados, recomendações e limites; o relatório final os vincula às bases, cálculos e evidências |
-| Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; faltam revisão por segundo integrante e conferência da cópia no Drive ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
+| Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; a issue #21 foi concluída, mas ainda faltam revisão por segundo integrante e conferência da cópia no Drive |
 | Vídeo pitch | Pendente | Não há roteiro ou arquivo; deve ter até cinco minutos, mostrar navegação pelo dashboard, apresentador visível e nenhuma narração por IA |
 | Certificados e elegibilidade da equipe | Parcial | A equipe remanescente tem Alan, John-Victor e Martins-Sallys; Henrique saiu em 12/09/2026. Há 11 PDFs em `certificates/` para os três integrantes, ainda sem conferência final ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
-| Publicação e envio | Pendente | Não há pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
+| Publicação e envio | Pendente | Não há evidência registrada da auditoria da pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
 
 ## 3. Requisitos eliminatórios
 
@@ -122,7 +122,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 
 - [x] **Calcular participação dos top 5, 10 e 20 municípios.** A [Task 17](./task-17-concentracao.md) registra 10,01%, 19,30% e 34,03% do saldo líquido, respectivamente.
 - [ ] **Pendente — Comparar média, mediana, percentis e distribuição per capita.**
-- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi capturada no snapshot 11, reimportado segundo o usuário. Falta corroboração externa dos casos antes de recomendações sobre atendimento. Ausência de registro não demonstra ausência de atendimento.
+- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi validada no snapshot 12, reimportado e testado. Falta corroboração externa dos casos antes de recomendações sobre atendimento. Ausência de registro não demonstra ausência de atendimento.
 - [ ] **Pendente — Definir critério reproduzível de subatendimento.**
 - [ ] **Parcial — Analisar relação com IDH-M, PIB per capita, população e densidade.** A Task 18 concluiu a comparação descritiva entre IDH-M 2010 e valor líquido por habitante, com teste de sensibilidade por porte populacional. PIB per capita e densidade ainda não foram examinados nessa análise.
 - [x] **Explicar limites e evitar interpretar correlação como causalidade.** A [Task 18](./task-18-vulnerabilidade-repasses.md) e a Tela 6 delimitam o universo de 333 municípios comparáveis, os anos das fontes e o caráter descritivo da associação com IDH-M.
@@ -134,12 +134,12 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [x] **Concluído — Criar página temporal.** (Task 15)
 - [x] **Concluído — Criar página de cobertura e lacunas.** A Tela 3 cruza os 478 municípios listados pela Defesa Civil com as movimentações FUNDEC e identifica 144 sem registro nesta base. (Task 16)
 - [x] **Concluído — Criar página de concentração.** A Tela 4 compara os maiores saldos, a participação no total e valores por pessoa. (Task 17)
-- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; o usuário confirmou a reimportação dos snapshots 10 e 11.
-- [x] **Concluído — Criar página final de resumo.** A Tela 6 reúne quatro achados validados, recomendações e limites; há [captura e QVF no snapshot 11](../qlik/versoes-do-app/11-task-19/README.md). (Task 19)
+- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; a versão final está no snapshot 12, reimportado e testado.
+- [x] **Concluído — Criar página final de resumo.** A Tela 6 reúne quatro achados validados, recomendações e limites; há [captura e QVF no snapshot 12](../qlik/versoes-do-app/12-task-20/README.md). (Tasks 19 e 20)
 - [ ] **Parcial — Exibir método, limitações e recomendações no aplicativo.** A Tela 6 explicita recomendações e limites; a metodologia está distribuída entre telas e documentação, sem página própria de método.
 - [x] **Concluído — Adicionar filtros úteis e consistentes entre páginas.** (Task 13)
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**
-- [ ] **Parcial — Testar legibilidade, contraste, unidades, escalas e tooltips.** Há capturas das sete telas, mas falta a [revisão final de usabilidade](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) com filtros e estados sem dados.
+- [x] **Concluído — Testar legibilidade, contraste, unidades, escalas e tooltips.** A [revisão final de usabilidade](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) percorreu as sete telas com filtros, estados sem dados e casos de controle; as evidências estão no snapshot 12.
 - [ ] **Parcial — Exibir fonte, período e data de atualização.** Fontes e períodos aparecem nas notas de algumas telas; falta conferir cobertura uniforme e explicitar a data de atualização do aplicativo.
 - [ ] **Pendente — Testar a navegação do dashboard que será gravada no vídeo pitch.**
 
@@ -204,7 +204,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 
 1. Conferir equipe, trilhas, certificados e responsável pela submissão ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)).
 2. Revisar o relatório, levar o documento com prints ao Drive e gravar o pitch de até cinco minutos com navegação pelo dashboard ([issues #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21) e [#22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)).
-3. Testar usabilidade do dashboard e acesso de leitor à pasta, ao documento e ao vídeo fora das contas da equipe ([issues #20](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) e [#24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)).
+3. Auditar o acesso de leitor à pasta, ao documento e ao vídeo fora das contas da equipe ([issue #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)); a revisão de usabilidade do dashboard foi concluída na issue #20.
 4. Fazer uma única submissão completa pela Central Hackathon e guardar o comprovante até 23/09/2026 ([issue #25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)).
 
 ### Prioridade 1 — Garantir consistência analítica

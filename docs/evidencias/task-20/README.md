@@ -4,7 +4,7 @@
 
 Revisão iniciada em 19/09/2026 sobre o [snapshot 11](../../../qlik/versoes-do-app/11-task-19/README.md) e as capturas enviadas na conversa. Os ajustes e retestes foram consolidados no [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md), exportado com dados em 21/09/2026. As [capturas finais das Telas 0 a 6](../resumo-final/README.md) registram o aplicativo recarregado e sem filtros.
 
-**Estado em 21/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas, o relatório passou a apontar para o snapshot 12 e o usuário confirmou o teste do QVF reimportado. O PR #48 está pronto para revisão e a issue #20 permanece aberta porque o pitch ainda não foi gravado.
+**Estado em 22/09/2026:** o roteiro funcional foi concluído após a correção da `chave_municipal` e a recarga sem erros ou chaves sintéticas. Foram percorridas as Telas 0–6 sem filtros e testados Porto Alegre nos dois sentidos, julho, o marcador Top 20, Aceguá, Pinto Bandeira e Judiciário. O usuário confirmou que as seleções funcionam em todas as telas. O snapshot 12 foi exportado com dados, tem 589.824 bytes e SHA-256 `F4BB66B6DA6A437348A8599258E861714304E59135115E79D3FA8095346045F4`. Seu tamanho menor é esperado porque pastas de desenvolvimento foram excluídas. As capturas finais foram arquivadas, o relatório passou a apontar para o snapshot 12 e o usuário confirmou o teste do QVF reimportado. O PR #48 foi mergeado e a issue #20 foi concluída; a gravação do pitch é acompanhada separadamente pela issue #22.
 
 ## Capturas finais
 
@@ -92,9 +92,9 @@ As capturas de Judiciário foram feitas em 20/09/2026. As demais são de
 
 As capturas finais listadas acima foram arquivadas com nomes numerados e descritivos. Elas incluem as sete telas sem filtros, a navegação, a associação municipal nos dois sentidos e os casos de julho, Top 20, Aceguá, Pinto Bandeira e Judiciário. O [snapshot 12](../../../qlik/versoes-do-app/12-task-20/README.md) preserva o app final; após a recarga, a visão de pastas mostrou somente as sete pastas públicas na ordem prevista.
 
-## O que falta para concluir a issue
+## Próxima etapa externa
 
-1. Gravar o pitch usando o snapshot 12, confirmar a navegação final nessa mesma versão e então concluir o último critério da issue #20. O relatório já foi atualizado e o PR #48 está pronto para revisão.
+Gravar o pitch usando o snapshot 12 e confirmar a navegação final nessa mesma versão, conforme a issue #22. O relatório já foi atualizado e o PR #48 foi mergeado.
 
 ## Controles já sustentados por evidências anteriores
 
@@ -155,7 +155,7 @@ Fazer em modo de análise, em janela de tamanho semelhante ao dos prints e sem p
 7. **Recurso:** selecionar Judiciário na Tela 1. Conferir os dois mapas e, na Tela 0, R$ 179.999.999,97, 95 municípios, R$ 30,93 por pessoa e 37 dias arredondados. Limpar a seleção e verificar o retorno dos mapas e KPIs.
 8. **Capturas e pitch:** repetir a navegação no **mesmo app** que será gravado, com seleções limpas ao iniciar. Fazer os prints finais em modo de análise, atualizar o relatório com essas imagens e exportar `qlik/versoes-do-app/12-task-20/app.qvf` **com dados**. Registrar tamanho, SHA-256, data, responsável e o resultado dos testes no README do novo snapshot.
 
-Repetir uma inspeção breve em 21/09 e uma conferência final até 23/09/2026, como previsto na issue. Problemas encontrados devem ter captura antes/depois e resultado do reteste; só então marcar os critérios da [issue #20](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20).
+A inspeção final foi concluída em 21/09/2026 e registrada nesta pasta. Novos problemas devem ter captura antes/depois e resultado do reteste; o pitch e a auditoria externa da entrega seguem nas issues #22 a #25.
 
 ## Referências de configuração Qlik
 

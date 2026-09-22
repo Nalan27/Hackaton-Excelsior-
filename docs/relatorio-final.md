@@ -499,13 +499,18 @@ reproduzidos pelos scripts do projeto.
 
 ## 10. Dependências, situação e próximos registros
 
-As issues **#13**, **#14** e **#15** são pré-requisitos documentados para a
-conclusão administrativa do relatório. O repositório já contém as evidências
-das telas correspondentes e o snapshot 12 incorpora as sete telas, mas a
-dependência deve continuar visível até que os responsáveis a fechem no
-projeto.
+As issues **#13**, **#14** e **#15** foram concluídas, e o repositório contém
+as evidências das telas correspondentes. O snapshot 12 incorpora as sete telas
+e representa a versão final do aplicativo validada pela equipe.
 
-A equipe realizou a validação da pasta pública do Drive e preparou o envio oficial até 23/09/2026, conforme orientação atualizada de submissão. O link público do Qlik Sense deixou de ser exigido. As tarefas de redação e revisão apoiam este documento, mas não substituem a conferência independente.
+O documento e o aplicativo estão consolidados, mas a entrega externa permanece
+pendente até a conclusão das issues [**#22 — pitch**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22),
+[**#23 — certificados**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23),
+[**#24 — pasta pública**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)
+e [**#25 — envio**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25).
+O link público do Qlik Sense deixou de ser exigido. As
+tarefas de redação e revisão apoiam este documento, mas não substituem a
+conferência independente.
 
 Antes de marcar a entrega como final, registrar neste documento ou na issue
 correspondente:
