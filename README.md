@@ -136,6 +136,7 @@ pip install -r requirements.txt
 ```bash
 python etl/analis_de_dados.py
 python etl/cobertura_municipal.py
+python etl/analise_idhm_repasses.py
 ```
 
 ### 3. Validar a saída
@@ -167,12 +168,14 @@ python -m unittest discover -s tests -v
 
 ## Conectar no Qlik Sense
 
-### Pré-requisito: Driver ODBC
-
-O Qlik Sense se comunica com o SQLite via driver ODBC. Instale em:
-https://www.ch-werner.de/sqliteodbd/
-
 ### Opção 1: Carregar via CSV (recomendado)
+
+O método recomendado utiliza os CSVs processados via conexão `DataFiles` e **não requer driver ODBC**.
+
+### Opção 2: Carregar via SQLite (alternativa)
+
+Caso prefira carregar direto do SQLite, o Qlik Sense se comunica via driver ODBC. Instale em:
+https://www.ch-werner.de/sqliteodbd/
 
 Envie os CSVs de `data/processed/` para a conexão `DataFiles` e execute o script no **Data Load Editor** do Qlik Sense:
 
@@ -302,6 +305,18 @@ JOIN dim_municipio d ON f.chave_municipal = d.chave_municipal
 WHERE f.valor < 0
 ORDER BY f.valor;
 ```
+
+---
+
+## Equipe
+
+Este projeto foi desenvolvido por 3 integrantes:
+
+- **Sallys Moraes Martins** — Desenvolvimento do pipeline ETL (Python/Pandas), modelagem de dados, validações automatizadas, integração Qlik Sense, documentação técnica
+- [Nome do 2º integrante] — [Função/Contribuição]
+- [Nome do 3º integrante] — [Função/Contribuição]
+
+> *Preencher os demais integrantes antes da entrega final.*
 
 ---
 

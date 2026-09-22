@@ -22,6 +22,8 @@ Os dados das seguintes fontes foram extraídos e organizados para análise:
 | **Convênios e outros acordos firmados** | Convênios firmados pelo mesmo favorecido. | [Acessar](https://portaldatransparencia.gov.br/convenios/consulta?convenente=319734) |
 | **Atlas Cidade — Dados Municipais** | Base compilada com IDH-M (2010), população, PIB e código IBGE dos municípios brasileiros. | [Acessar](https://www.atlascidade.com.br/dados) |
 | **Defesa Civil do RS — Municípios Afetados** | Extrato nominal gerado em 11/06/2024 às 10:06, com 478 municípios afetados; não é lista de elegibilidade ao FUNDEC. | [PDF oficial](https://estado.rs.gov.br/upload/arquivos/202407/municipios-afetados-defesa-civil-8-7-2024.pdf) |
+| **repasses_fundec_2024.csv** | 658 transferências individuais do FUNDEC (Calamidade Pública 2024) — base operacional da tabela fato. | [Portal da Transparência RS](https://www.transparencia.rs.gov.br/calamidade-publica-2024/1-2-tematico-fundo-de-defesa-civil-fundec/dados/) |
+| **ranking_oficial_fundec_2024.csv** | Ranking oficial dos 334 municípios por valor total pago — referência para conciliação. | [Portal da Transparência RS](https://www.transparencia.rs.gov.br/calamidade-publica-2024/1-2-tematico-fundo-de-defesa-civil-fundec/dados/) |
 
 O art. 1º do Decreto nº 57.604/2024 registra 24/04/2024 como início do
 período estadual dos eventos climáticos. A task 10 usa essa data somente como
