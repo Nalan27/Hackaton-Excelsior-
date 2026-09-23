@@ -58,10 +58,12 @@ comunicado não informou horário-limite. Guardar o comprovante de envio.
 - **Vídeo individual de cada integrante para comprovar as trilhas da Qlik:**
   dispensado.
 
-Os **certificados das trilhas** não constam entre os artefatos exigidos do
-projeto ou dos comunicados recentes revisados pela equipe. A pasta
-[`certificates/`](../certificates/) permanece no repositório apenas como
-registro voluntário de Alan, John-Victor e Martins-Sallys. Henrique deixou a
+Os **certificados das trilhas** não constam entre os arquivos que os
+comunicados recentes mandam anexar à pasta atual de entrega. Isso não equivale
+à dispensa da obrigação de concluir e comprovar as trilhas prevista no
+edital. A pasta [`certificates/`](../certificates/) permanece no repositório
+com 11 PDFs de Alan, John-Victor e Martins-Sallys, que ainda precisam ser
+conferidos quanto a nomes, cursos, datas e legibilidade. Henrique deixou a
 equipe em 12/09/2026 e não faz parte da relação atual de integrantes.
 
 ## Conferência antes do envio

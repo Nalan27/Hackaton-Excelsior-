@@ -505,10 +505,12 @@ e representa a versão final do aplicativo validada pela equipe.
 
 O documento e o aplicativo estão consolidados, mas a entrega externa permanece
 pendente até a conclusão das issues [**#22 — pitch**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22),
+[**#23 — trilhas e certificados**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23),
 [**#24 — pasta pública**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)
 e [**#25 — envio**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25).
-Os certificados não foram exigidos como parte da entrega; a issue #23 foi
-concluída e os PDFs permanecem no repositório apenas como registro voluntário.
+Os certificados não precisam integrar a pasta atual de entrega, mas a
+conclusão e a comprovação das trilhas previstas no edital ainda precisam ser
+conferidas.
 O link público do Qlik Sense deixou de ser exigido. As
 tarefas de redação e revisão apoiam este documento, mas não substituem a
 conferência independente.
@@ -538,7 +540,7 @@ correspondente:
 - [x] Capturas das Telas 0 a 6 e explicação dos gráficos no relatório.
 - [ ] Revisão final por outro integrante registrada.
 - [ ] Documento transferido ao Drive com imagens legíveis.
-- [ ] Vídeo pitch com até cinco minutos e navegação pelo dashboard concluído.
+- [ ] Vídeo pitch gravado e editado, com 4min44s e apresentador visível; faltam confirmar ausência de narração por IA, enviar ao Drive e testar a reprodução externa.
 - [ ] Pasta pública do Drive testada como leitor fora das contas da equipe.
 - [ ] Envio oficial concluído.
 

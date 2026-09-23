@@ -221,7 +221,7 @@ A pasta deve conter, no mínimo:
 1. **Documento de texto** com contexto do problema, bases utilizadas, metodologia, principais achados, conclusões e recomendações fundamentadas. O documento deve trazer prints do dashboard com uma visualização geográfica por município, uma análise temporal dos repasses ou pagamentos e um KPI quantitativo, além da explicação de cada gráfico apresentado.
 2. **Vídeo pitch** de até cinco minutos, com navegação pelo dashboard. Quem apresentar deve aparecer no vídeo; a apresentação não pode ter narração por IA. A equipe escolhe os apresentadores, sem obrigação de todos aparecerem.
 
-O link público do Qlik Sense e os vídeos individuais dos integrantes para comprovar trilhas foram dispensados. Os certificados não constam entre os artefatos exigidos da entrega nos comunicados recentes revisados pela equipe; os PDFs existentes são preservados apenas como registro voluntário.
+O link público do Qlik Sense e os vídeos individuais dos integrantes para comprovar trilhas foram dispensados. Os certificados não constam entre os arquivos exigidos na pasta atual de entrega pelos comunicados recentes, mas o edital mantém a obrigação de concluir e comprovar as trilhas. Os 11 PDFs existentes ainda precisam ser conferidos.
 
 ## 13. Checklist da entrega atualizada
 
@@ -234,7 +234,7 @@ Antes do envio, conferir:
 5. um único representante responsável pelo envio e por eventuais atualizações;
 6. submissão pela Central Hackathon até 23/09/2026 e comprovante guardado.
 
-Os certificados não integram a pasta obrigatória de entrega. A preservação dos PDFs no repositório é uma decisão documental da equipe e não um bloqueio para a submissão.
+Os certificados não integram o conjunto de arquivos exigidos na pasta atual de entrega. Essa decisão operacional não dispensa a obrigação de participação registrada no edital; a conferência dos PDFs permanece pendente na issue #23.
 
 ## 14. Critérios de avaliação
 
@@ -371,6 +371,7 @@ O projeto só deve ser considerado finalizado quando:
 - os achados tiverem evidência rastreável e limitações explícitas;
 - o documento no Drive contiver resultados, conclusões, recomendações, prints e explicações de cada gráfico;
 - o vídeo no Drive tiver até cinco minutos, navegação pelo dashboard, apresentador visível e nenhuma narração por IA;
+- a conclusão das trilhas e os certificados da equipe atual tiverem sido conferidos, ainda que os PDFs não precisem integrar a pasta da entrega;
 - a declaração de uso de IA tiver sido revisada;
 - uma segunda pessoa tiver executado o checklist e testado o acesso à pasta, ao documento e ao vídeo fora das contas da equipe.
 

@@ -94,7 +94,7 @@ As capturas finais listadas acima foram arquivadas com nomes numerados e descrit
 
 ## Próxima etapa externa
 
-Gravar o pitch usando o snapshot 12 e confirmar a navegação final nessa mesma versão, conforme a issue #22. O relatório já foi atualizado e o PR #48 foi mergeado.
+O pitch foi gravado e editado com duração informada de 4min44s. Alan aparece durante todo o vídeo com o dashboard ao fundo. Falta enviar o arquivo ao Drive, confirmar a ausência de narração por IA e testar áudio, imagem, navegação e reprodução fora da conta da equipe, conforme a issue #22. O texto do roteiro não é um entregável e não foi versionado.
 
 ## Controles já sustentados por evidências anteriores
 
@@ -144,7 +144,7 @@ A equipe informou que não precisa alterar a formatação em inglês atualmente 
 
 Fazer em modo de análise, em janela de tamanho semelhante ao dos prints e sem painéis de edição abertos. Guardar capturas dos resultados e anotar a data, o responsável e a identificação do app/QVF.
 
-**Resultado em 21/09/2026:** os itens 1–7 foram concluídos na cópia ativa após a recarga que corrigiu a associação municipal. O QVF do item 8 foi recebido, identificado no snapshot 12, reimportado e testado pelo usuário responsável. As capturas foram arquivadas e o relatório foi atualizado. Permanece pendente a confirmação do pitch.
+**Resultado atualizado em 23/09/2026:** os itens 1–7 foram concluídos na cópia ativa após a recarga que corrigiu a associação municipal. O QVF do item 8 foi recebido, identificado no snapshot 12, reimportado e testado pelo usuário responsável. As capturas foram arquivadas e o relatório foi atualizado. O pitch foi gravado e editado; permanece pendente sua validação externa no Drive.
 
 1. **Sem seleções:** percorrer as Telas 0–6 pelas setas ou menu. Verificar ordem, títulos, legibilidade, fontes, período, unidades, tooltips e ausência de erro visual. Na Tela 0, conferir R$ 288.699.999,97, 334, R$ 32,89 e 40 dias arredondados. Na Tela 3, conferir 478 / 334 / 144.
 2. **Município:** selecionar Porto Alegre na Tela 0 ou 1 e visitar as demais telas sem limpar a seleção. No mapa, conferir R$ 5.782.558,14, população 1.389.322 e R$ 4,16/pessoa; conferir que o recorte exibido nas outras telas é coerente. Limpar a seleção e verificar retorno aos totais globais.
