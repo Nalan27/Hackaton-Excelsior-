@@ -3,7 +3,7 @@
 ## 1. Como ler este checklist
 
 Este documento foi iniciado em **16 de setembro de 2026** e revisado em
-**19 de setembro de 2026** após o [comunicado de atualização da entrega](./atualizacao-submissao-2026-09-18.md).
+**22 de setembro de 2026** após o [comunicado de atualização da entrega](./atualizacao-submissao-2026-09-18.md).
 O estado de publicação e das entregas externas ainda precisa ser confirmado
 antes da submissão.
 
@@ -31,12 +31,12 @@ O comunicado não informou horário-limite nem novo período de seleção intern
 | Documentação do problema e dos requisitos | Concluído | Documentos desta pasta |
 | Pipeline de tratamento reproduzível | Concluído | `etl/analis_de_dados.py` lê CSVs corretamente, trata tipos, preserva negativos e gera CSVs validados |
 | Banco analítico validado | Parcial | CSVs validados em `data/processed/`; banco SQLite gerado mas `*.db` está no `.gitignore` |
-| Aplicativo e dashboard Qlik Sense | Parcial para entrega | Telas 0 a 6 capturadas no [snapshot 11](../qlik/versoes-do-app/11-task-19/README.md); resta testar a navegação usada no pitch. Link público do Qlik Sense foi dispensado |
+| Aplicativo e dashboard Qlik Sense | Concluído no repositório | Telas 0 a 6 capturadas e validadas no [snapshot 12](../qlik/versoes-do-app/12-task-20/README.md); o pitch foi gravado com o dashboard ao fundo e ainda precisa ser validado no Drive. Link público do Qlik Sense foi dispensado |
 | Análises e achados finais | Concluídos no app e consolidados no relatório | A Tela 6 reúne quatro achados, recomendações e limites; o relatório final os vincula às bases, cálculos e evidências |
-| Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; faltam revisão por segundo integrante e conferência da cópia no Drive ([issue #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21)) |
-| Vídeo pitch | Pendente | Não há roteiro ou arquivo; deve ter até cinco minutos, mostrar navegação pelo dashboard, apresentador visível e nenhuma narração por IA |
-| Certificados e elegibilidade da equipe | Parcial | A equipe remanescente tem Alan, John-Victor e Martins-Sallys; Henrique saiu em 12/09/2026. Há 11 PDFs em `certificates/` para os três integrantes, ainda sem conferência final ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
-| Publicação e envio | Pendente | Não há pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
+| Documento descritivo final | Consolidado para revisão | [Relatório](relatorio-final.md) com capturas e explicação dos gráficos; a issue #21 foi concluída, mas ainda faltam revisão por segundo integrante e conferência da cópia no Drive |
+| Vídeo pitch | Produzido; validação externa pendente | Roteiro final concluído e vídeo de 4min44s gravado e editado por Alan, que aparece durante toda a apresentação com o dashboard ao fundo. Faltam upload no Drive, confirmação de ausência de narração por IA e teste externo de áudio, imagem e reprodução ([issue #22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)) |
+| Trilhas e certificados da equipe | Parcial | Os certificados não precisam ser anexados à pasta atual de entrega, mas o edital mantém a exigência de conclusão e comprovação das trilhas. Há 11 PDFs em `certificates/`; falta conferir nomes, cursos, datas e legibilidade ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)) |
+| Publicação e envio | Pendente | Não há evidência registrada da auditoria da pasta pública do Drive nem comprovante de submissão pela Central Hackathon ([issues #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24) e [#25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)) |
 
 ## 3. Requisitos eliminatórios
 
@@ -48,9 +48,9 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [x] **Visualização geográfica por município.** A Tela 1 tem dois mapas e sua captura está no [relatório](./relatorio-final.md#47-capturas-do-dashboard-e-explicação-dos-gráficos).
 - [x] **Análise temporal dos repasses ou pagamentos.** A Tela 2 apresenta créditos, ajustes e saldo líquido por mês; a captura está no relatório.
 - [x] **Pelo menos um KPI quantitativo.** A Tela 0 e a Tela 6 exibem KPIs; suas capturas estão no relatório.
-- [ ] **Pendente — Vídeo pitch de até cinco minutos.** Deve navegar pelo dashboard, mostrar quem apresenta e não ter narração por IA.
+- [ ] **Parcial — Vídeo pitch de até cinco minutos.** O vídeo final tem 4min44s e mostra Alan com o dashboard ao fundo. Faltam confirmar a ausência de narração por IA, enviá-lo ao Drive e testar a reprodução fora da conta da equipe.
 - [ ] **Parcial — Documento de texto no Drive.** O [relatório](./relatorio-final.md) contém contexto, bases, capturas, explicação dos gráficos, metodologia, achados, conclusões e recomendações; falta revisar e conferir a cópia com imagens legíveis no Drive.
-- [ ] **A confirmar — Certificados das trilhas.** O comunicado dispensou vídeos individuais, mas não declarou dispensa dos certificados; organizar os PDFs e confirmar se precisam acompanhar o envio.
+- [ ] **Parcial — Trilhas e certificados.** Os PDFs não constam entre os arquivos exigidos na pasta atual de entrega, mas isso não dispensa a obrigação de participação registrada no edital. Conferir os 11 certificados ou obter confirmação explícita da organização.
 
 ## 4. Organização e conformidade do repositório
 
@@ -122,7 +122,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 
 - [x] **Calcular participação dos top 5, 10 e 20 municípios.** A [Task 17](./task-17-concentracao.md) registra 10,01%, 19,30% e 34,03% do saldo líquido, respectivamente.
 - [ ] **Pendente — Comparar média, mediana, percentis e distribuição per capita.**
-- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi capturada no snapshot 11, reimportado segundo o usuário. Falta corroboração externa dos casos antes de recomendações sobre atendimento. Ausência de registro não demonstra ausência de atendimento.
+- [ ] **Parcial — Comparar municípios afetados com registros FUNDEC.** A Task 16 cruza os 478 nomes do extrato da Defesa Civil de 11/06/2024 com a base detalhada até 26/09/2024 e identifica 144 listados sem movimentação nessa base. A Tela 3 foi validada no snapshot 12, reimportado e testado. Falta corroboração externa dos casos antes de recomendações sobre atendimento. Ausência de registro não demonstra ausência de atendimento.
 - [ ] **Pendente — Definir critério reproduzível de subatendimento.**
 - [ ] **Parcial — Analisar relação com IDH-M, PIB per capita, população e densidade.** A Task 18 concluiu a comparação descritiva entre IDH-M 2010 e valor líquido por habitante, com teste de sensibilidade por porte populacional. PIB per capita e densidade ainda não foram examinados nessa análise.
 - [x] **Explicar limites e evitar interpretar correlação como causalidade.** A [Task 18](./task-18-vulnerabilidade-repasses.md) e a Tela 6 delimitam o universo de 333 municípios comparáveis, os anos das fontes e o caráter descritivo da associação com IDH-M.
@@ -134,14 +134,14 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [x] **Concluído — Criar página temporal.** (Task 15)
 - [x] **Concluído — Criar página de cobertura e lacunas.** A Tela 3 cruza os 478 municípios listados pela Defesa Civil com as movimentações FUNDEC e identifica 144 sem registro nesta base. (Task 16)
 - [x] **Concluído — Criar página de concentração.** A Tela 4 compara os maiores saldos, a participação no total e valores por pessoa. (Task 17)
-- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; o usuário confirmou a reimportação dos snapshots 10 e 11.
-- [x] **Concluído — Criar página final de resumo.** A Tela 6 reúne quatro achados validados, recomendações e limites; há [captura e QVF no snapshot 11](../qlik/versoes-do-app/11-task-19/README.md). (Task 19)
+- [x] **Concluído — Criar página de vulnerabilidade e repasses.** A Tela 5 da Task 18 mostra IDH-M 2010 × valor líquido por habitante, tabela municipal e nota metodológica; a versão final está no snapshot 12, reimportado e testado.
+- [x] **Concluído — Criar página final de resumo.** A Tela 6 reúne quatro achados validados, recomendações e limites; há [captura e QVF no snapshot 12](../qlik/versoes-do-app/12-task-20/README.md). (Tasks 19 e 20)
 - [ ] **Parcial — Exibir método, limitações e recomendações no aplicativo.** A Tela 6 explicita recomendações e limites; a metodologia está distribuída entre telas e documentação, sem página própria de método.
 - [x] **Concluído — Adicionar filtros úteis e consistentes entre páginas.** (Task 13)
 - [ ] **Pendente — Implementar navegação e títulos dinâmicos.**
-- [ ] **Parcial — Testar legibilidade, contraste, unidades, escalas e tooltips.** Há capturas das sete telas, mas falta a [revisão final de usabilidade](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) com filtros e estados sem dados.
+- [x] **Concluído — Testar legibilidade, contraste, unidades, escalas e tooltips.** A [revisão final de usabilidade](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) percorreu as sete telas com filtros, estados sem dados e casos de controle; as evidências estão no snapshot 12.
 - [ ] **Parcial — Exibir fonte, período e data de atualização.** Fontes e períodos aparecem nas notas de algumas telas; falta conferir cobertura uniforme e explicitar a data de atualização do aplicativo.
-- [ ] **Pendente — Testar a navegação do dashboard que será gravada no vídeo pitch.**
+- [ ] **Parcial — Validar a navegação gravada no pitch.** O vídeo foi produzido com o dashboard ao fundo; falta assistir ao arquivo final no Drive e confirmar a navegação e a reprodução completas.
 
 ## 10. Documento descritivo final
 
@@ -160,11 +160,12 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 
 ## 11. Vídeo pitch
 
-- [ ] **Pendente — Criar roteiro com problema, método, insights, diferenciais, conclusões e recomendações.**
-- [ ] **Pendente — Selecionar apenas visualizações essenciais para a narrativa.**
-- [ ] **Pendente — Gravar navegação pelo dashboard e editar o vídeo.**
-- [ ] **Pendente — Garantir duração máxima de 5 minutos.**
-- [ ] **Pendente — Mostrar no vídeo quem apresentar; não usar narração por IA.** Nem todos os integrantes precisam apresentar.
+- [x] **Concluído — Criar roteiro com problema, método, insights, diferenciais, conclusões e recomendações.** John colaborou na concepção e na primeira versão; Alan preparou a versão final. O texto do roteiro não é um entregável e não foi versionado.
+- [x] **Concluído — Selecionar as visualizações essenciais para a narrativa.**
+- [x] **Concluído — Gravar a apresentação pelo dashboard e editar o vídeo.** Alan realizou a apresentação, a gravação e a edição.
+- [x] **Concluído — Garantir duração máxima de 5 minutos.** O arquivo final informado tem 4min44s.
+- [x] **Concluído — Mostrar o apresentador.** Alan aparece durante todo o vídeo com o dashboard ao fundo.
+- [ ] **Pendente — Confirmar que não há narração por IA.**
 - [ ] **Pendente — Colocar o vídeo na pasta pública do Drive.**
 - [ ] **Pendente — Testar áudio, imagem e reprodução fora da conta da equipe.**
 
@@ -174,8 +175,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [ ] **Parcial — Equipe com três integrantes após saída de Henrique em 12/09/2026.** Alan, John-Victor e Martins-Sallys permanecem; confirmar elegibilidade e inscrição final.
 - [ ] **Não comprovado — Todos os integrantes estão regularmente matriculados e ativos em curso aceito.**
 - [ ] **Não comprovado — Nenhum integrante é colaborador da Unicesumar.**
-- [ ] **Parcial — Trilhas obrigatórias concluídas pela equipe remanescente até 10/09/2026.** Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys; falta conferir cursos, nomes e datas de conclusão.
-- [ ] **Parcial — Certificados reunidos e legíveis.** Há PDFs em `certificates/`, mas a conferência de nomes, cursos e legibilidade não foi registrada. O comunicado dispensa vídeos individuais, não afirma dispensa dos certificados.
+- [ ] **Parcial — Trilhas obrigatórias e certificados da equipe atual.** Há 11 PDFs versionados para Alan, John-Victor e Martins-Sallys. Embora não precisem ser anexados à pasta atual de entrega, falta conferir nomes, cursos, datas e legibilidade ou obter confirmação explícita da organização sobre a exigência de participação.
 - [ ] **Não comprovado — Representante responsável pela submissão definido.**
 
 ## 13. Originalidade, ética e uso de IA
@@ -192,7 +192,7 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 - [ ] **Pendente — Criar pasta no Google Drive com o nome oficial da equipe e acesso público como Leitor.**
 - [ ] **Pendente — Colocar documento de texto e vídeo pitch na mesma pasta.**
 - [ ] **Pendente — Conferir prints, descrições, áudio e vídeo fora das contas da equipe.**
-- [ ] **A confirmar — Verificar com a organização se os certificados também devem acompanhar a pasta.** Vídeos individuais não são exigidos.
+- [x] **Certificados fora do conjunto de arquivos da pasta de entrega.** Os comunicados recentes exigem documento e vídeo. Essa decisão não dispensa a conclusão e a comprovação das trilhas previstas no edital.
 - [ ] **Pendente — Conferir pesos da rubrica no edital original.** O PDF fornecido não permitiu leitura confiável de toda a coluna.
 - [ ] **Pendente — Realizar revisão independente antes do envio.**
 - [ ] **Pendente — Definir o único integrante que enviará pela [Central Hackathon](https://fabioacs.github.io/painel-hackathon).** Somente quem enviou pode atualizar o projeto.
@@ -202,9 +202,9 @@ A entrega externa só estará pronta quando os itens aplicáveis forem conferido
 
 ### Prioridade 0 — Evitar desclassificação
 
-1. Conferir equipe, trilhas, certificados e responsável pela submissão ([issue #23](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23)).
+1. Confirmar a equipe atual, conferir as trilhas e os certificados na issue #23 e definir o representante responsável pela submissão. Os PDFs não precisam acompanhar a pasta, mas a exigência de participação permanece registrada no edital.
 2. Revisar o relatório, levar o documento com prints ao Drive e gravar o pitch de até cinco minutos com navegação pelo dashboard ([issues #21](https://github.com/Nalan27/Hackaton-Excelsior-/issues/21) e [#22](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22)).
-3. Testar usabilidade do dashboard e acesso de leitor à pasta, ao documento e ao vídeo fora das contas da equipe ([issues #20](https://github.com/Nalan27/Hackaton-Excelsior-/issues/20) e [#24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)).
+3. Auditar o acesso de leitor à pasta, ao documento e ao vídeo fora das contas da equipe ([issue #24](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)); a revisão de usabilidade do dashboard foi concluída na issue #20.
 4. Fazer uma única submissão completa pela Central Hackathon e guardar o comprovante até 23/09/2026 ([issue #25](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25)).
 
 ### Prioridade 1 — Garantir consistência analítica

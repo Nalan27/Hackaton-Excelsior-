@@ -221,7 +221,7 @@ A pasta deve conter, no mínimo:
 1. **Documento de texto** com contexto do problema, bases utilizadas, metodologia, principais achados, conclusões e recomendações fundamentadas. O documento deve trazer prints do dashboard com uma visualização geográfica por município, uma análise temporal dos repasses ou pagamentos e um KPI quantitativo, além da explicação de cada gráfico apresentado.
 2. **Vídeo pitch** de até cinco minutos, com navegação pelo dashboard. Quem apresentar deve aparecer no vídeo; a apresentação não pode ter narração por IA. A equipe escolhe os apresentadores, sem obrigação de todos aparecerem.
 
-O link público do Qlik Sense e os vídeos individuais dos integrantes para comprovar trilhas foram dispensados. O comunicado não afirma que os certificados das trilhas foram dispensados; a equipe deve preservá-los e confirmar se precisam acompanhar a entrega.
+O link público do Qlik Sense e os vídeos individuais dos integrantes para comprovar trilhas foram dispensados. Os certificados não constam entre os arquivos exigidos na pasta atual de entrega pelos comunicados recentes, mas o edital mantém a obrigação de concluir e comprovar as trilhas. Os 11 PDFs existentes ainda precisam ser conferidos.
 
 ## 13. Checklist da entrega atualizada
 
@@ -234,7 +234,7 @@ Antes do envio, conferir:
 5. um único representante responsável pelo envio e por eventuais atualizações;
 6. submissão pela Central Hackathon até 23/09/2026 e comprovante guardado.
 
-A exigência residual de certificados deve ser confirmada com a organização; a dispensa de vídeos individuais não equivale à dispensa das trilhas.
+Os certificados não integram o conjunto de arquivos exigidos na pasta atual de entrega. Essa decisão operacional não dispensa a obrigação de participação registrada no edital; a conferência dos PDFs permanece pendente na issue #23.
 
 ## 14. Critérios de avaliação
 
@@ -320,6 +320,11 @@ O PDF indicava seleção interna de 16/09 a 30/09/2026. Como esse período come�
 - colaboradores da Unicesumar não podem participar;
 - todos os integrantes precisam concluir as trilhas obrigatórias e apresentar os certificados.
 
+Esse último item registra a regra de participação descrita no edital original;
+ele não significa que os certificados devam ser anexados à pasta atual do
+projeto. Os artefatos de submissão exigidos nos comunicados recentes são o
+documento e o vídeo pitch.
+
 O edital lista cursos como Análise e Desenvolvimento de Sistemas, Banco de Dados, Segurança Cibernética/Cibersegurança, Ciência de Dados e Análise de Comportamento, Desenvolvimento de Aplicativos Móveis, Engenharia de Software, Gestão em Tecnologia da Informação, Inteligência Artificial e Machine Learning, Jogos Digitais, Redes de Computadores e Sistemas para Internet. A elegibilidade individual deve ser confirmada no original.
 
 ## 17. Premiação
@@ -366,7 +371,7 @@ O projeto só deve ser considerado finalizado quando:
 - os achados tiverem evidência rastreável e limitações explícitas;
 - o documento no Drive contiver resultados, conclusões, recomendações, prints e explicações de cada gráfico;
 - o vídeo no Drive tiver até cinco minutos, navegação pelo dashboard, apresentador visível e nenhuma narração por IA;
-- os certificados tiverem sido reunidos enquanto sua exigência residual é confirmada;
+- a conclusão das trilhas e os certificados da equipe atual tiverem sido conferidos, ainda que os PDFs não precisem integrar a pasta da entrega;
 - a declaração de uso de IA tiver sido revisada;
 - uma segunda pessoa tiver executado o checklist e testado o acesso à pasta, ao documento e ao vídeo fora das contas da equipe.
 
