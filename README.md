@@ -310,9 +310,9 @@ ORDER BY f.valor;
 
 Este projeto foi desenvolvido por 3 integrantes:
 
-- **Sallys Moraes Martins** — Desenvolvimento do pipeline ETL (Python/Pandas), modelagem de dados, validações automatizadas, integração Qlik Sense, documentação técnica
-- **Alan da Rosa Lorenz** — Coordenação e integração do projeto, desenvolvimento e validação das análises no Qlik Sense, revisão de usabilidade e consolidação das evidências
-- **John Victor do Espírito Santo da Encarnação** — Levantamento e inclusão de dados brutos (IDH-M, população, PIB municipal), construção das telas do dashboard no Qlik (Linha do Tempo, Resumo de achados)
+- **Sallys Moraes Martins** — Desenvolvimento do pipeline ETL em Python/Pandas, modelagem e tratamento dos dados, validações automatizadas, integração com o Qlik Sense e documentação técnica do projeto.
+- **Alan da Rosa Lorenz** — Coordenação e integração do projeto, desenvolvimento e validação das análises no Qlik Sense, revisão de usabilidade, consolidação das evidências, adaptação do roteiro final, apresentação, gravação e edição do pitch.
+- **John Victor do Espírito Santo da Encarnação** — Levantamento e inclusão de dados brutos, incluindo IDH-M, população e PIB municipal, construção das telas de Linha do Tempo e Resumo de Achados no Qlik e colaboração na concepção e na primeira versão do roteiro do pitch.
 
 ---
 
