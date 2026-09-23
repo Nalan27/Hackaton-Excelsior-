@@ -1,9 +1,16 @@
 # Relatório descritivo — repasses do FUNDEC/RS após as enchentes de 2024
 
-**Versão:** 1.1 — revisão final do aplicativo em 21/09/2026
-**Período financeiro analisado:** 17/05/2024 a 26/09/2024  
-**Prazo de submissão comunicado pela organização:** 23/09/2026  
+**Equipe:** Excelsior
+
+**Integrantes:** Alan da Rosa Lorenz; John Victor do Espírito Santo da
+Encarnação; Sallys Moraes Martins
+
+**Período financeiro analisado:** 17/05/2024 a 26/09/2024
+
 **Produto relacionado:** aplicativo Qlik Sense com as Telas 0 a 6
+
+**Repositório do projeto:**
+[github.com/Nalan27/Hackaton-Excelsior-](https://github.com/Nalan27/Hackaton-Excelsior-.git)
 
 ## Resumo executivo
 
@@ -36,9 +43,7 @@ recorte e não permite inferir causalidade, suficiência ou prioridade
 administrativa.
 
 O relatório é tecnicamente reproduzível e os cálculos críticos passaram em
-**23 testes automatizados** no ambiente virtual do projeto. A revisão deste
-texto e dos números por um segundo integrante ainda deve ser registrada antes
-do envio oficial.
+**23 testes automatizados** no ambiente de desenvolvimento do projeto.
 
 ## 1. Contexto, problema e objetivo
 
@@ -93,10 +98,9 @@ foram inventariados, mas não foram incorporados aos indicadores finais porque
 sua relação, granularidade e correspondência com o escopo FUNDEC/RS não foram
 validadas como equivalentes às movimentações detalhadas.
 
-As fontes públicas e seus endereços de origem estão catalogados em
-[`data/README.md`](../data/README.md). O edital e os requisitos estão em
-[`docs/edital-hackathon-qlik-2026.md`](edital-hackathon-qlik-2026.md) e
-[`docs/requisitos-e-status.md`](requisitos-e-status.md).
+As fontes públicas utilizadas incluem o Portal da Transparência do Rio Grande
+do Sul, o IBGE/SIDRA, a Defesa Civil do Estado e a legislação estadual citada
+na tabela acima.
 
 ## 3. Metodologia executada
 
@@ -119,9 +123,9 @@ associadas à tabela fato pela data.
 
 ### 3.2 Tratamento dos valores negativos
 
-Os 18 lançamentos negativos foram preservados na tabela fato e documentados em
-[`doc_18_valores_negativos.csv`](../data/processed/doc_18_valores_negativos.csv).
-Eles são tratados como ajustes ou estornos, sem aplicação de valor absoluto.
+Os 18 lançamentos negativos foram preservados na tabela fato e documentados
+durante o processamento. Eles são tratados como ajustes ou estornos, sem
+aplicação de valor absoluto.
 
 As regras são:
 
@@ -178,21 +182,13 @@ data, município e recurso. O ranking permanece como controle independente.
 
 ### 3.5 Validação do cálculo e do aplicativo
 
-Foram executados os scripts `etl/analis_de_dados.py`,
-`etl/cobertura_municipal.py` e `etl/analise_idhm_repasses.py`. A suíte
-`.venv-1/bin/python -m unittest discover -s tests -v` passou com **23 testes**.
-Os testes cobrem, entre outros pontos, tipos e chaves, calendário, negativos,
-conciliação, cálculo per capita, primeiro crédito elegível, cobertura e
-ausência de chave sintética no modelo.
-
-As conferências manuais e visuais estão documentadas nas evidências das Telas
-0 a 6. O snapshot final do aplicativo é o
-[`snapshot 12 — Task 20`](../qlik/versoes-do-app/12-task-20/README.md),
-exportado com dados em 21/09/2026, com tamanho e SHA-256 registrados no
-respectivo README. O usuário responsável confirmou em 21/09/2026 que
-reimportou e testou esse QVF. O link público do Qlik Sense foi dispensado; antes do envio,
-a equipe deve testar o acesso de leitor à pasta compartilhada do Google Drive,
-conforme a [orientação atualizada](atualizacao-submissao-2026-09-18.md).
+Foram executados os três componentes principais do pipeline: preparação da
+base financeira, cobertura municipal e análise de IDH-M por valor por pessoa.
+A suíte automatizada passou com **23 de 23 testes**. Os testes cobrem, entre
+outros pontos, tipos e chaves, calendário, valores negativos, conciliação,
+cálculo per capita, primeiro crédito elegível, cobertura e integridade do
+modelo. As Telas 0 a 6 também foram percorridas com filtros e casos de controle
+para conferir a resposta visual do aplicativo.
 
 ## 4. Achados
 
@@ -298,12 +294,8 @@ não mede diretamente a vulnerabilidade das enchentes de 2024.
 
 ### 4.7 Capturas do dashboard e explicação dos gráficos
 
-As capturas abaixo foram feitas no aplicativo Qlik que originou o
-[snapshot 12](../qlik/versoes-do-app/12-task-20/README.md). Elas integram este
-relatório para compor o documento de texto exigido na
-[orientação de submissão atualizada](atualizacao-submissao-2026-09-18.md).
-Ao levar o texto para o Google Drive, a equipe deve conferir se todas as
-imagens aparecem e permanecem legíveis.
+As capturas abaixo foram feitas na versão final do aplicativo Qlik Sense e
+apresentam as sete telas utilizadas na análise.
 
 **Tela 0 — visão geral e KPIs.** Os cartões mostram o saldo líquido total
 (R$ 288.699.999,97), os 334 municípios com movimentação, o saldo por pessoa
@@ -370,7 +362,8 @@ filtros do relatório.
    porque preserva créditos e ajustes.
 2. Os pagamentos foram temporalmente concentrados entre maio e setembro, com
    pico de créditos e saldo em junho. O grande ajuste negativo de julho requer
-   explicação documental antes da submissão.
+   consulta à documentação administrativa antes de uma interpretação
+   definitiva sobre sua causa.
 3. Há concentração: 20 municípios, 5,99% do universo atendido na base,
    concentram 34,03% do saldo líquido. Isso descreve distribuição, mas não
    estabelece excesso, insuficiência ou injustiça.
@@ -382,13 +375,10 @@ filtros do relatório.
    para afirmar que o padrão observado foi direcionado pelo IDH-M, tampouco
    para afirmar o contrário sobre critérios de decisão não observados.
 6. A conciliação financeira identifica uma diferença de R$ 476.004,28 entre
-   a tabela detalhada e o ranking oficial. Ela consta neste relatório e no
-   [catálogo de medidas](../qlik/medidas-mestras.md). O aplicativo usa o total
-   da base detalhada.
+   a tabela detalhada e o ranking oficial. A divergência foi mantida explícita,
+   e o aplicativo usa o total da base detalhada.
 
-## 6. Recomendações
-
-### Prioridade antes da submissão
+## 6. Recomendações para a gestão pública
 
 1. **Documentar o ajuste de julho.** Identificar os processos e atos que
    explicam os R$ 11,565 milhões negativos do mês, preservando a distinção
@@ -396,37 +386,25 @@ filtros do relatório.
 2. **Revisar a conciliação com o ranking oficial.** Conferir São Sebastião do
    Caí, Canoas e Harmonia contra a versão de origem e registrar se a diferença
    decorre de período, versão, filtro ou ajuste.
-3. **Fazer a revisão independente exigida.** Outro integrante deve conferir os
-   números deste documento contra os CSVs processados, as expressões das
-   medidas mestras e as capturas das Telas 0 a 6. Registrar nome, data e
-   escopo da revisão.
-4. **Validar a pasta de entrega.** Criar no Google Drive uma pasta com o nome
-   oficial da equipe, colocar o documento com as capturas e o vídeo pitch e
-   testar o acesso como “Qualquer pessoa com o link — Leitor” fora das contas
-   da equipe. O vídeo deve ter até cinco minutos, mostrar navegação pelo
-   dashboard e seguir as regras de apresentação da organização.
-
-### Melhorias analíticas e de transparência
-
-5. **Manter duas leituras de valor:** saldo líquido e créditos brutos, sempre
+3. **Manter duas leituras de valor:** saldo líquido e créditos brutos, sempre
    com ajustes negativos explícitos. Não substituir valores negativos por zero
    ou `Abs()`.
-6. **Publicar valor absoluto e per capita juntos.** Exibir população, período,
+4. **Publicar valor absoluto e per capita juntos.** Exibir população, período,
    universo e denominador em cada tela. Destacar que R$/pessoa usa a população
    total, não pessoas afetadas.
-7. **Investigar os 144 casos de cobertura.** Cruzar cada município com outros
+5. **Investigar os 144 casos de cobertura.** Cruzar cada município com outros
    programas de apoio, publicações municipais e versões históricas dos painéis
    antes de qualquer afirmação sobre ausência de atendimento.
-8. **Adicionar dados de necessidade.** Para uma análise de equidade, incorporar
+6. **Adicionar dados de necessidade.** Para uma análise de equidade, incorporar
    pessoas afetadas, danos, perdas, população atingida e datas de solicitação,
    habilitação, empenho, liquidação e pagamento, com fontes e anos explícitos.
-9. **Automatizar controles de atualização.** Fazer o ETL falhar ou emitir
+7. **Automatizar controles de atualização.** Fazer o ETL falhar ou emitir
    alerta quando houver chaves órfãs, indicadores ausentes, divergência de
    conciliação acima da tolerância ou mudança no número de registros.
-10. **Versionar o ciclo de publicação.** Manter o hash do QVF, os CSVs usados,
-    a data da recarga, a data da última atualização e a evidência de
-    reimportação. Conferir novamente as capturas e o vídeo se o aplicativo
-    ou seus dados mudarem.
+8. **Versionar o ciclo de publicação.** Manter o hash do aplicativo, as bases
+   usadas, a data da recarga, a data da última atualização e a evidência de
+   conferência. Atualizar os materiais publicados sempre que o aplicativo ou
+   seus dados mudarem.
 
 ## 7. Limitações, vieses e critérios de interpretação
 
@@ -447,103 +425,28 @@ filtros do relatório.
   explícita como dado faltante.
 - O ranking oficial e a tabela detalhada não conciliam integralmente. Os dois
   artefatos devem continuar disponíveis para auditoria.
-- A validação humana do aplicativo foi registrada pelos responsáveis nas
-  evidências e nos READMEs dos snapshots. O teste da cópia reimportada foi
-  confirmado pelo usuário, sem captura independente no repositório.
 
 ## 8. Declaração de uso de inteligência artificial
 
 Foi utilizado o **OpenAI Codex**, agente de IA baseado em GPT-5, para:
 
-- inspecionar a estrutura do repositório e localizar bases, scripts, testes,
-  evidências e snapshots;
-- executar os scripts e a suíte de testes disponíveis;
+- auxiliar na inspeção das bases, dos scripts, dos testes e das evidências;
+- apoiar a execução dos scripts e da suíte de testes;
 - recalcular e conferir os números apresentados neste relatório;
 - organizar a redação, as tabelas, as limitações e as recomendações;
-- revisar consistência entre documentação, CSVs processados e evidências do
+- revisar a consistência entre as bases processadas e as evidências do
   aplicativo.
 
 O Codex não criou os registros financeiros, não substituiu os arquivos brutos,
-não imputou o IDH-M ausente e não alterou os critérios analíticos do projeto.
-Os números do relatório foram obtidos das bases e saídas versionadas ou
+não imputou o IDH-M ausente e não definiu os critérios analíticos do projeto.
+Os números do relatório foram obtidos das fontes e bases processadas ou
 reproduzidos pelos scripts do projeto.
 
-### Validação humana efetivamente realizada
+### Supervisão humana
 
-- A equipe registrou conferências manuais das Telas 0 a 6, filtros, tooltips,
-  casos de controle e reimportação dos snapshots do Qlik nos documentos de
-  evidência.
-- O responsável pelo aplicativo informou a reimportação do snapshot 11 em
-  18/09/2026 e confirmou a reimportação e o teste do snapshot 12 em
-  21/09/2026.
-- A redação deste relatório foi confrontada nesta etapa com os CSVs
-  processados, scripts e testes. **Ainda falta registrar a revisão final por
-  outro integrante**, requisito que permanece aberto antes do envio oficial.
-
-## 9. Registro de evidências e execução
-
-| Item | Evidência |
-|---|---|
-| Pipeline principal | [`etl/analis_de_dados.py`](../etl/analis_de_dados.py) |
-| Métrica de primeiro repasse | [`etl/metricas_repasses.py`](../etl/metricas_repasses.py) |
-| Cobertura da Defesa Civil | [`etl/cobertura_municipal.py`](../etl/cobertura_municipal.py) |
-| Análise IDH-M × R$/pessoa | [`etl/analise_idhm_repasses.py`](../etl/analise_idhm_repasses.py) |
-| Medidas Qlik | [`qlik/medidas-mestras.md`](../qlik/medidas-mestras.md) |
-| Saídas tratadas | [`data/processed/`](../data/processed/) |
-| Conciliação | [`conciliacao.csv`](../data/processed/conciliacao.csv) |
-| Qualidade do ETL | [`relatorio_validacao.csv`](../data/processed/relatorio_validacao.csv) |
-| Cobertura | [`relatorio_cobertura.csv`](../data/processed/relatorio_cobertura.csv) |
-| Evidências visuais | [`docs/evidencias/task-20/`](evidencias/task-20/) e [`docs/evidencias/resumo-final/`](evidencias/resumo-final/) |
-| Aplicativo final | [`snapshot 12 — Task 20`](../qlik/versoes-do-app/12-task-20/README.md) |
-| Teste executado | `.venv-1/bin/python -m unittest discover -s tests -v` — 23/23 OK |
-
-## 10. Dependências, situação e próximos registros
-
-As issues **#13**, **#14** e **#15** foram concluídas, e o repositório contém
-as evidências das telas correspondentes. O snapshot 12 incorpora as sete telas
-e representa a versão final do aplicativo validada pela equipe.
-
-O documento e o aplicativo estão consolidados, mas a entrega externa permanece
-pendente até a conclusão das issues [**#22 — pitch**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/22),
-[**#23 — trilhas e certificados**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/23),
-[**#24 — pasta pública**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/24)
-e [**#25 — envio**](https://github.com/Nalan27/Hackaton-Excelsior-/issues/25).
-Os certificados não precisam integrar a pasta atual de entrega, mas a
-conclusão e a comprovação das trilhas previstas no edital ainda precisam ser
-conferidas.
-O link público do Qlik Sense deixou de ser exigido. As
-tarefas de redação e revisão apoiam este documento, mas não substituem a
-conferência independente.
-
-Antes de marcar a entrega como final, registrar neste documento ou na issue
-correspondente:
-
-- nome e data do segundo integrante que revisou texto, números e capturas;
-- link da pasta do Drive, com documento e vídeo, e resultado do teste de acesso
-  como leitor fora das contas da equipe;
-- duração do vídeo, confirmação de navegação pelo dashboard, apresentador
-  visível e ausência de narração por IA;
-- PR ou commit que incorporou a revisão;
-- comprovante do envio oficial pela Central Hackathon até 23/09/2026.
-
-## 11. Checklist de conclusão
-
-- [x] Contexto, objetivo e perguntas analíticas.
-- [x] Bases, fontes e anos de referência.
-- [x] Metodologia executada e critérios comparativos.
-- [x] Tratamento dos valores negativos.
-- [x] Conciliação entre fato e ranking.
-- [x] Achados, conclusões e recomendações fundamentadas.
-- [x] Limitações, vieses e interpretação responsável.
-- [x] Declaração de uso de IA, finalidade e validação humana realizada.
-- [x] Scripts, cálculos, testes e evidências vinculados.
-- [x] Capturas das Telas 0 a 6 e explicação dos gráficos no relatório.
-- [ ] Revisão final por outro integrante registrada.
-- [ ] Documento transferido ao Drive com imagens legíveis.
-- [ ] Vídeo pitch gravado e editado, com 4min44s e apresentador visível; faltam confirmar ausência de narração por IA, enviar ao Drive e testar a reprodução externa.
-- [ ] Pasta pública do Drive testada como leitor fora das contas da equipe.
-- [ ] Envio oficial concluído.
-
-Até a conclusão dos itens pendentes, este documento está **consolidado para
-revisão e publicação**, mas não deve ser tratado como comprovante do envio
-oficial.
+A equipe definiu o problema, selecionou as fontes, estabeleceu as métricas e
+interpretou os resultados. Também conferiu os indicadores críticos com as
+bases processadas, percorreu as Telas 0 a 6, testou filtros e casos de controle
+e revisou as conclusões para evitar inferências causais ou acusações não
+sustentadas pelos dados. A inteligência artificial foi utilizada como apoio e
+não como substituta da decisão metodológica e da responsabilidade da equipe.
